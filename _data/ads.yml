@@ -1,0 +1,28 @@
+# ============================================
+# SISTEMA DE PUBLICIDADE DO PORTAL AO VIVO
+# Aqui ficam os 3 espaços de anúncio do site.
+# Para ativar um anúncio, cole o código HTML/JS
+# do seu anunciante no campo "codigo" e defina
+# "ativo: true".
+# ============================================
+
+# 1) BANNER TOPO - aparece no topo, acima das manchetes (formato 728x90 ou similar)
+topo:
+  ativo: false
+  codigo: |
+    <!-- Cole aqui o código do anúncio do TOPO -->
+    <div style="background:#eee;padding:20px;text-align:center;color:#888;">Publicidade - Banner Topo (728x90)</div>
+
+# 2) BANNER LATERAL - aparece na coluna lateral, entre as matérias (formato 300x250)
+lateral:
+  ativo: false
+  codigo: |
+    <!-- Cole aqui o código do anúncio da LATERAL -->
+    <div style="background:#eee;padding:40px 20px;text-align:center;color:#888;">Publicidade - Banner Lateral (300x250)</div>
+
+# 3) BANNER RODAPÉ - aparece no fim de cada matéria (formato 728x90 ou 300x250)
+rodape:
+  ativo: false
+  codigo: |
+    <!-- Cole aqui o código do anúncio do RODAPÉ -->
+    <div style="background:#eee;padding:20px;text-align:center;color:#888;">Publicidade - Banner Rodapé</div>

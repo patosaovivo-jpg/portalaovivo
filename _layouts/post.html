@@ -1,0 +1,46 @@
+---
+---
+<article class="post">
+  <header class="post-header">
+    <span class="tag">{{ page.tema }}</span>
+    <h1 class="post-titulo">{{ page.title | escape }}</h1>
+    <div class="meta">
+      {{ page.date | date: "%d/%m/%Y %H:%M" }}
+      · {{ page.fonte }}
+    </div>
+  </header>
+
+  {% if page.image %}
+  <figure class="post-figura">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+  </figure>
+  {% endif %}
+
+  <div class="post-corpo">
+    {{ content }}
+  </div>
+
+  {% if site.data.ads.rodape.ativo %}
+  <div class="ad-slot ad-rodape">{{ site.data.ads.rodape.codigo | markdownify }}</div>
+  {% endif %}
+
+  <div class="post-fonte-box">
+    <strong>Fonte original:</strong>
+    <a href="{{ page.fonte_link }}" target="_blank" rel="noopener">{{ page.fonte }}</a>
+  </div>
+
+  <nav class="post-nav">
+    {% if page.previous %}
+    <div class="post-nav-prev">
+      <span>Matéria anterior</span>
+      <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title | escape }}</a>
+    </div>
+    {% endif %}
+    {% if page.next %}
+    <div class="post-nav-next">
+      <span>Próxima matéria</span>
+      <a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }}</a>
+    </div>
+    {% endif %}
+  </nav>
+</article>

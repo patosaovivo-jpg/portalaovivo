@@ -1,0 +1,57 @@
+---
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.image %}<meta property="og:image" content="{{ site.url }}{{ page.image }}">{% endif %}
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-name">PORTAL</span>
+        <span class="brand-sufixo">AO VIVO</span>
+      </a>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Início</a>
+        <a href="{{ '/categoria/politica/' | relative_url }}">Política</a>
+        <a href="{{ '/categoria/local/' | relative_url }}">Cidades</a>
+        <a href="{{ '/categoria/esportes/' | relative_url }}">Esportes</a>
+        <a href="{{ '/categoria/geral/' | relative_url }}">Geral</a>
+      </nav>
+    </div>
+  </header>
+
+  {% if site.data.ads.topo.ativo %}
+  <div class="ad-slot ad-topo">
+    <div class="container">{{ site.data.ads.topo.codigo | markdownify }}</div>
+  </div>
+  {% endif %}
+
+  <main class="container content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>{{ site.title }}</strong> — {{ site.tagline }}</p>
+      <p class="footer-disclaimer">
+        Conteúdo resumido automaticamente a partir de veículos de imprensa, sempre com
+        link para a fonte original. Imagens ilustrativas geradas por inteligência artificial.
+      </p>
+      <p class="footer-copy">© {{ 'now' | date: "%Y" }} {{ site.title }}. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

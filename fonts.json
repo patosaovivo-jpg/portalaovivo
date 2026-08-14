@@ -1,0 +1,116 @@
+{
+  "fonts": [
+    {
+      "id": "g1-triangulo",
+      "nome": "G1 Triângulo e Alto Paranaíba",
+      "tipo": "rss",
+      "url": "https://g1.globo.com/dynamo/minas-gerais/triangulo-mineiro/rss2.xml",
+      "link_pattern": ""
+    },
+    {
+      "id": "patos-noticias",
+      "nome": "Patos Notícias (PN)",
+      "tipo": "rss",
+      "url": "https://patosnoticias.com.br/feed",
+      "link_pattern": ""
+    },
+    {
+      "id": "po-noticias",
+      "nome": "P.O Notícias",
+      "tipo": "rss",
+      "url": "https://ponoticias.com.br/feed",
+      "link_pattern": ""
+    },
+    {
+      "id": "portal-serralitrense",
+      "nome": "Portal Serralitrense (Serra do Salitre)",
+      "tipo": "rss",
+      "url": "https://portalserralitrense.com.br/feed",
+      "link_pattern": ""
+    },
+    {
+      "id": "jornal-serralitrense",
+      "nome": "Jornal Serralitrense",
+      "tipo": "rss",
+      "url": "https://jornalserralitrense.com.br/feed",
+      "link_pattern": ""
+    },
+    {
+      "id": "jornal-coromandel",
+      "nome": "Jornal de Coromandel",
+      "tipo": "rss",
+      "url": "https://jornaldecoromandel.com.br/feed",
+      "link_pattern": ""
+    },
+    {
+      "id": "difusora-patrocino",
+      "nome": "Difusora FM 95.3 (Patrocínio)",
+      "tipo": "rss",
+      "url": "https://difusora95.com.br/feed",
+      "link_pattern": ""
+    },
+    {
+      "id": "paranaiba-agora",
+      "nome": "Paranaíba Agora",
+      "tipo": "rss",
+      "url": "https://paranaibaagora.com.br/feed",
+      "link_pattern": ""
+    },
+    {
+      "id": "patos-hoje",
+      "nome": "Patos Hoje",
+      "tipo": "sitemap",
+      "url": "https://patoshoje.com.br/noticias.xml",
+      "link_pattern": "noticias/.*\\.html"
+    },
+    {
+      "id": "patos-ja",
+      "nome": "PatosJá",
+      "tipo": "sitemap",
+      "url": "https://www.patosja.com.br/sitemap.xml",
+      "link_pattern": ""
+    },
+    {
+      "id": "ibia-em-foco",
+      "nome": "Ibiá em Foco",
+      "tipo": "sitemap",
+      "url": "https://www.ibiaemfoco.com/sitemap.xml",
+      "link_pattern": ""
+    },
+    {
+      "id": "patos-em-destaque",
+      "nome": "Patos em Destaque",
+      "tipo": "scrape",
+      "url": "https://patosemdestaque.com.br/",
+      "link_pattern": "noticias/\\?n="
+    },
+    {
+      "id": "patos-agora",
+      "nome": "Patos Agora",
+      "tipo": "scrape",
+      "url": "https://patosagora.net/",
+      "link_pattern": "noticia/"
+    },
+    {
+      "id": "patos-1",
+      "nome": "Patos 1",
+      "tipo": "scrape",
+      "url": "https://www.patos1.com.br/",
+      "link_pattern": "noticia/"
+    },
+    {
+      "id": "patrocinio-online",
+      "nome": "Patrocínio Online",
+      "tipo": "scrape",
+      "url": "https://www.patrocinioonline.com.br/",
+      "link_pattern": "noticia/"
+    },
+    {
+      "id": "prefeitura-patos",
+      "nome": "Prefeitura de Patos de Minas",
+      "tipo": "scrape",
+      "url": "https://www.patosdeminas.mg.gov.br/",
+      "link_pattern": "noticia"
+    }
+  ]
+}

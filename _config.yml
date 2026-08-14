@@ -1,0 +1,32 @@
+title: Portal Ao Vivo
+tagline: Notícias de Patos de Minas e região
+description: Portal de notícias automático cobrindo Patos de Minas, Alto Paranaíba, Triângulo Mineiro e cidades da região.
+url: "https://portalaovivo.com.br"
+baseurl: ""
+permalink: /:categories/:title/
+locale: pt_BR
+
+author:
+  name: Portal Ao Vivo
+
+paginate: 12
+paginate_path: "/pagina/:num/"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Publicidade: edite os códigos em _data/ads.yml

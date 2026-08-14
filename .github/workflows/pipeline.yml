@@ -1,0 +1,74 @@
+name: Publicacao Automatica
+
+on:
+  schedule:
+    # A cada hora, no minuto 0 (UTC). Ajuste o fuso se quiser: horario BR = UTC-3
+    - cron: "0 * * * *"
+  workflow_dispatch: # permite rodar manualmente pela aba Actions
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    name: Coletar e publicar materias
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --quiet --disable-pip-version-check -r scripts/requirements.txt
+
+      - name: Rodar pipeline (coleta + resumo + imagem + publicacao)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python scripts/pipeline.py || echo "::warning::Pipeline encerrou sem novas materias ou com avisos"
+
+      - name: Commit das materias geradas
+        run: |
+          git config user.name "Portal Ao Vivo Bot"
+          git config user.email "bot@portalaovivo.com.br"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteracao para publicar"
+          else
+            git commit -m "Bot: publicacao automatica $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
+  build:
+    name: Build do site
+    needs: pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/jekyll-build-pages@v1
+      - uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    name: Deploy no GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
