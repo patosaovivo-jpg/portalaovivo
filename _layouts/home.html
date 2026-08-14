@@ -1,77 +1,121 @@
+﻿---
+layout: default
 ---
----
-<div class="layout-home">
-  <section class="home-destaque">
-    {% assign destaque = site.posts | first %}
-    {% if destaque %}
-    <article class="destaque-card">
-      {% if destaque.image %}
-      <a href="{{ destaque.url | relative_url }}">
-        <img class="destaque-img" src="{{ destaque.image | relative_url }}" alt="{{ destaque.title | escape }}">
-      </a>
-      {% endif %}
-      <div class="destaque-body">
-        <span class="tag tag-vermelho">{{ destaque.tema }}</span>
-        <h1 class="destaque-titulo">
-          <a href="{{ destaque.url | relative_url }}">{{ destaque.title | escape }}</a>
-        </h1>
-        <p class="destaque-resumo">{{ destaque.excerpt | strip_html | truncatewords: 35 }}</p>
-        <span class="meta">{{ destaque.date | date: "%d/%m/%Y %H:%M" }}</span>
-      </div>
-    </article>
-    {% endif %}
-  </section>
 
-  <div class="home-grade">
-    <div class="grade-principal">
-      {% for post in site.posts offset:1 limit:8 %}
-      <article class="materia-card">
+{% assign posts = site.posts %}
+{% assign top5 = posts | slice: 0, 5 %}
+
+<!-- ===== SLIDER COM AS 5 ÚLTIMAS NOTÍCIAS ===== -->
+{% if top5.size > 0 %}
+<section class="slider-wrap" id="ultimas" aria-label="Destaques">
+  <div class="slider" data-slider>
+    {% for post in top5 %}
+    <div class="slide {% if forloop.first %}ativo{% endif %}">
+      <a href="{{ post.url | relative_url }}" class="slide-link">
+        {% if post.image %}
+        <img class="slide-img" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+        {% endif %}
+        <div class="slide-overlay">
+          <span class="tag">{{ post.tema | default: "Notícias" }}</span>
+          <h2 class="slide-titulo">{{ post.title }}</h2>
+          <p class="slide-resumo">{{ post.resumo | default: post.excerpt | strip_html | truncate: 160 }}</p>
+          <span class="slide-meta">
+            {{ post.date | date: "%d/%m/%Y %H:%M" }} {% if post.fonte %} &middot; {{ post.fonte }}{% endif %}
+          </span>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+  <button class="slider-btn slider-prev" aria-label="Anterior" data-slider-prev>&#10094;</button>
+  <button class="slider-btn slider-next" aria-label="Próximo" data-slider-next>&#10095;</button>
+  <div class="slider-dots" data-slider-dots>
+    {% for post in top5 %}
+    <button class="slider-dot {% if forloop.first %}ativo{% endif %}" data-slider-dot="{{ forloop.index0 }}" aria-label="Ir para o destaque {{ forloop.index }}"></button>
+    {% endfor %}
+  </div>
+  <span class="slider-badge">DESTAQUES</span>
+</section>
+{% endif %}
+
+<!-- ===== ÁREA DE CONTEÚDO EM 3 COLUNAS ===== -->
+<div class="layout-3col">
+
+  <!-- COLUNA ESQUERDA: PUBLICIDADE -->
+  <aside class="col-esquerda">
+    <div class="bloco-esquerda">
+      <span class="ad-label">Publicidade</span>
+      {% if site.data.ads.esquerda.ativo %}
+      {{ site.data.ads.esquerda.codigo }}
+      {% else %}
+      <div class="ph-ph ph-esquerda">Anúncio<br>(160x600)</div>
+      {% endif %}
+    </div>
+
+    <div class="bloco-esquerda">
+      <h3 class="bloco-titulo">Menu</h3>
+      <ul class="menu-vertical">
+        <li><a href="#ultimas">&#9654; Últimas notícias</a></li>
+        <li><a href="#politica">&#9654; Política</a></li>
+        <li><a href="#cidades">&#9654; Cidades</a></li>
+        <li><a href="#esportes">&#9654; Esportes</a></li>
+        <li><a href="#geral">&#9654; Geral</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- COLUNA CENTRAL: GRADE DE MATÉRIAS -->
+  <section class="col-central">
+    <h3 class="bloco-titulo bloco-titulo-principal">Últimas Notícias</h3>
+    <div class="grade-noticias">
+      {% for post in site.posts limit: 12 %}
+      <article class="card-noticia">
         {% if post.image %}
         <a href="{{ post.url | relative_url }}">
-          <img class="materia-img" src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}">
+          <img class="card-img" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
         </a>
         {% endif %}
-        <div class="materia-body">
-          <span class="tag">{{ post.tema }}</span>
-          <h2 class="materia-titulo">
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h2>
-          <p class="materia-resumo">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-          <span class="meta">{{ post.date | date: "%d/%m/%Y %H:%M" }} · {{ post.fonte }}</span>
+        <div class="card-corpo">
+          <span class="tag">{{ post.tema | default: "Notícias" }}</span>
+          <h2 class="card-titulo"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p class="card-resumo">{{ post.resumo | default: post.excerpt | strip_html | truncate: 140 }}</p>
+          <span class="card-meta">{{ post.date | date: "%d/%m/%Y %H:%M" }} &middot; {{ post.fonte }}</span>
         </div>
       </article>
       {% endfor %}
     </div>
+  </section>
 
-    <aside class="coluna-lateral">
+  <!-- COLUNA LATERAL DIREITA -->
+  <aside class="col-lateral">
+    <div class="bloco-lateral">
+      <span class="ad-label">Publicidade</span>
       {% if site.data.ads.lateral.ativo %}
-      <div class="ad-slot ad-lateral">{{ site.data.ads.lateral.codigo | markdownify }}</div>
+      {{ site.data.ads.lateral.codigo }}
+      {% else %}
+      <div class="ph-ph ph-lateral">Anúncio<br>(300x250)</div>
       {% endif %}
+    </div>
 
-      <div class="lateral-blocos">
-        <h3 class="lateral-titulo">Mais Lidas</h3>
-        <ol class="mais-lidas">
-          {% for post in site.posts limit:5 %}
-          <li><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></li>
-          {% endfor %}
-        </ol>
-      </div>
+    <div class="bloco-lateral">
+      <h3 class="bloco-titulo">Mais Lidas</h3>
+      <ol class="mais-lidas">
+        {% for post in site.posts limit: 6 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
 
-      <div class="lateral-blocos">
-        <h3 class="lateral-titulo">Fonte das Notícias</h3>
-        <ul class="lista-fontes">
-          <li>G1 Triângulo e Alto Paranaíba</li>
-          <li>Patos Notícias · P.O Notícias</li>
-          <li>Patos Hoje · PatosJá · Patos 1</li>
-          <li>Patos Agora · Patos em Destaque</li>
-          <li>Jornal de Coromandel</li>
-          <li>Portal Serralitrense</li>
-          <li>Difusora FM 95.3</li>
-          <li>Paranaíba Agora · Ibiá em Foco</li>
-          <li>Patrocínio Online</li>
-          <li>Prefeitura de Patos de Minas</li>
-        </ul>
-      </div>
-    </aside>
-  </div>
+    <div class="bloco-lateral">
+      <h3 class="bloco-titulo">Fonte das Notícias</h3>
+      <ul class="lista-fontes">
+        {% assign fontes = site.posts | map: "fonte" | uniq %}
+        {% for fonte in fontes %}<li>{{ fonte }}</li>{% endfor %}
+      </ul>
+    </div>
+  </aside>
+
 </div>
+
+<!-- ===== SCROLL PARA OS SCRIPTS DO SLIDER ===== -->
+<script src="{{ '/assets/js/slider.js' | relative_url }}"></script>

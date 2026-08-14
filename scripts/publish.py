@@ -26,6 +26,8 @@ def gerar_markdown(item, resumo, imagem_rel):
         arquivo = os.path.join(POSTS_DIR, f"{data_str}-{slug}.md")
 
     titulo = item.get("titulo") or resumo.split("\n")[0][:100]
+    primeiro_par = resumo.strip().split("\n")[0].strip()
+    resumo_curto = primeiro_par[:180] + ("..." if len(primeiro_par) > 180 else "")
     frontmatter = (
         "---\n"
         f'title: "{esc(titulo)}"\n'
@@ -34,6 +36,7 @@ def gerar_markdown(item, resumo, imagem_rel):
         f'tema: {item.get("tema", "Geral")}\n'
         f'fonte: "{esc(item["fonte"])}"\n'
         f'fonte_link: "{esc(item["link"])}"\n'
+        f'resumo: "{esc(resumo_curto)}"\n'
         "---\n\n"
     )
 

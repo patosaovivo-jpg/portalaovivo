@@ -1,46 +1,87 @@
 ---
 ---
-<article class="post">
-  <header class="post-header">
-    <span class="tag">{{ page.tema }}</span>
-    <h1 class="post-titulo">{{ page.title | escape }}</h1>
-    <div class="meta">
-      {{ page.date | date: "%d/%m/%Y %H:%M" }}
-      · {{ page.fonte }}
+<div class="post-layout">
+
+  <!-- ARTIGO -->
+  <article class="post-artigo">
+    <header class="post-cabecalho">
+      <span class="tag tag-vermelho">{{ page.tema | default: "Notícias" }}</span>
+      <h1 class="post-titulo">{{ page.title | escape }}</h1>
+      <div class="post-meta">
+        {{ page.date | date: "%d/%m/%Y às %H:%M" }}
+        &middot; <a href="{{ page.fonte_link }}" target="_blank" rel="noopener">{{ page.fonte }}</a>
+      </div>
+    </header>
+
+    {% if page.image %}
+    <figure class="post-imagem">
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+      <figcaption class="post-credito">Imagem ilustrativa gerada por IA</figcaption>
+    </figure>
+    {% endif %}
+
+    <div class="post-corpo">
+      {{ content }}
     </div>
-  </header>
 
-  {% if page.image %}
-  <figure class="post-figura">
-    <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
-  </figure>
-  {% endif %}
+    <div class="post-fonte">
+      <strong>Fonte original:</strong>
+      <a href="{{ page.fonte_link }}" target="_blank" rel="noopener">{{ page.fonte }}</a>
+      <span style="display:block;font-size:12px;color:#999;margin-top:6px;">
+        Acesse o texto completo no site do veículo.
+      </span>
+    </div>
 
-  <div class="post-corpo">
-    {{ content }}
-  </div>
-
-  {% if site.data.ads.rodape.ativo %}
-  <div class="ad-slot ad-rodape">{{ site.data.ads.rodape.codigo | markdownify }}</div>
-  {% endif %}
-
-  <div class="post-fonte-box">
-    <strong>Fonte original:</strong>
-    <a href="{{ page.fonte_link }}" target="_blank" rel="noopener">{{ page.fonte }}</a>
-  </div>
-
-  <nav class="post-nav">
-    {% if page.previous %}
-    <div class="post-nav-prev">
-      <span>Matéria anterior</span>
-      <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title | escape }}</a>
+    {% if site.data.ads.rodape.ativo %}
+    <div class="post-ads">
+      <span class="ad-label">Publicidade</span>
+      {{ site.data.ads.rodape.codigo }}
     </div>
     {% endif %}
-    {% if page.next %}
-    <div class="post-nav-next">
-      <span>Próxima matéria</span>
-      <a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }}</a>
+
+    <nav class="post-nav">
+      {% if page.previous %}
+      <div class="post-nav-prev">
+        <span>Matéria anterior</span>
+        <a href="{{ page.previous.url | relative_url }}">{{ page.previous.title | escape }}</a>
+      </div>
+      {% endif %}
+      {% if page.next %}
+      <div class="post-nav-next">
+        <span>Próxima matéria</span>
+        <a href="{{ page.next.url | relative_url }}">{{ page.next.title | escape }}</a>
+      </div>
+      {% endif %}
+    </nav>
+  </article>
+
+  <!-- COLUNA LATERAL -->
+  <aside class="col-lateral">
+    <div class="bloco-lateral">
+      <span class="ad-label">Publicidade</span>
+      {% if site.data.ads.lateral.ativo %}
+      {{ site.data.ads.lateral.codigo }}
+      {% else %}
+      <div class="ph-ph ph-lateral">Anúncio<br>(300x250)</div>
+      {% endif %}
     </div>
-    {% endif %}
-  </nav>
-</article>
+
+    <div class="bloco-lateral">
+      <h3 class="bloco-titulo">Mais Lidas</h3>
+      <ol class="mais-lidas">
+        {% for post in site.posts limit: 6 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+
+    <div class="bloco-lateral">
+      <h3 class="bloco-titulo">Fonte das Notícias</h3>
+      <ul class="lista-fontes">
+        {% assign fontes = site.posts | map: "fonte" | uniq %}
+        {% for fonte in fontes %}<li>{{ fonte }}</li>{% endfor %}
+      </ul>
+    </div>
+  </aside>
+
+</div>
