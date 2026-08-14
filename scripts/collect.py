@@ -193,6 +193,16 @@ def filtrar_excluir(titulo, themes):
     return any(e.lower() in t for e in themes["excluir"])
 
 
+def qualidade_minima(item, texto):
+    """Rejeita materias de baixa qualidade (titulo curto, texto pequeno ou spam)."""
+    titulo = item.get("titulo", "")
+    if len(titulo) < 20:
+        return False
+    if len(texto.strip()) < 300:
+        return False
+    return True
+
+
 def e_recente(link):
     """Descarta links de anos anteriores ao atual (ex.: noticia/2025/)."""
     for ano in range(ANO_ATUAL - 5, ANO_ATUAL):
@@ -241,12 +251,32 @@ def coleta_completa():
 
 
 def processar_candidatas(candidatas, themes, max_itens=6):
-    """Extrai texto e classifica, retornando as que devem virar matéria."""
+    """Extrai texto e classifica, retornando as que devem virar matéria.
+    Diversifica as fontes (nao deixa uma unica fonte dominar)."""
     selecionadas = []
-    for item in candidatas[:max_itens * 3]:
+    por_fonte = {}
+    for item in candidatas:
+        por_fonte.setdefault(item["fonte"], []).append(item)
+
+    # roda round-robin entre as fontes (uma de cada vez)
+    filas = list(por_fonte.values())
+    idx = 0
+    tentativas = 0
+    limite_tentativas = max_itens * 5
+    while len(selecionadas) < max_itens and tentativas < limite_tentativas:
+        tentativas += 1
+        if not filas:
+            break
+        fila = filas[idx % len(filas)]
+        idx += 1
+        if not fila:
+            continue
+        item = fila.pop(0)
         print(f"[TEXTO] {item['fonte']}: {item['titulo'][:60]}")
         texto = extrair_texto(item["link"])
         if not texto:
+            continue
+        if not qualidade_minima(item, texto):
             continue
         tema = classificar(item["titulo"], texto, themes)
         if not tema:
@@ -254,8 +284,6 @@ def processar_candidatas(candidatas, themes, max_itens=6):
         item["texto"] = texto
         item["tema"] = tema
         selecionadas.append(item)
-        if len(selecionadas) >= max_itens:
-            break
         time.sleep(0.5)
     return selecionadas
 

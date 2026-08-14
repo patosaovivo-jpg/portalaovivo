@@ -1,5 +1,13 @@
-import json
 import os
+
+# Modelos em ordem de preferencia. Alguns sao descontinuados/indisponiveis
+# para contas novas, entao tentamos em sequencia ate um funcionar.
+MODELOS = [
+    "gemini-3.5-flash-lite",
+    "gemini-flash-lite-latest",
+    "gemini-flash-latest",
+    "gemini-2.5-flash",
+]
 
 PROMPT = (
     "Você é um editor-chefe de um portal de notícias regional chamado 'Portal Ao Vivo'. "
@@ -13,35 +21,46 @@ PROMPT = (
 )
 
 
-def resumir_texto(texto, api_key, model="gemini-2.5-flash"):
+def _gerar(prompt, api_key, temperature, max_tokens):
     import google.generativeai as genai
 
     genai.configure(api_key=api_key)
-    model_inst = genai.GenerativeModel(model)
-    resp = model_inst.generate_content(
+    erros = []
+    for model in MODELOS:
+        try:
+            model_inst = genai.GenerativeModel(model)
+            resp = model_inst.generate_content(
+                prompt,
+                generation_config=genai.types.GenerationConfig(
+                    temperature=temperature,
+                    max_output_tokens=max_tokens,
+                ),
+            )
+            texto = resp.text.strip()
+            if texto:
+                return texto
+            erros.append(f"{model}: resposta vazia")
+        except Exception as e:
+            erros.append(f"{model}: {e}")
+    raise RuntimeError("Nenhum modelo Gemini respondeu. Erros: " + " | ".join(erros))
+
+
+def resumir_texto(texto, api_key):
+    return _gerar(
         PROMPT.format(texto=texto[:15000]),
-        generation_config=genai.types.GenerationConfig(
-            temperature=0.4,
-            max_output_tokens=800,
-        ),
+        api_key,
+        temperature=0.4,
+        max_tokens=800,
     )
-    return resp.text.strip()
 
 
-def gerar_titulo(texto, api_key, model="gemini-2.5-flash"):
-    import google.generativeai as genai
-
-    genai.configure(api_key=api_key)
-    model_inst = genai.GenerativeModel(model)
-    resp = model_inst.generate_content(
+def gerar_titulo(texto, api_key):
+    prompt = (
         "Crie um título jornalístico curto e chamativo (máximo 10 palavras) para a "
-        "notícia abaixo. Responda APENAS com o título, sem aspas.\n\n" + texto[:4000],
-        generation_config=genai.types.GenerationConfig(
-            temperature=0.7,
-            max_output_tokens=60,
-        ),
+        "notícia abaixo. Responda APENAS com o título, sem aspas.\n\n" + texto[:4000]
     )
-    return resp.text.strip().strip('"').strip()
+    titulo = _gerar(prompt, api_key, temperature=0.7, max_tokens=60)
+    return titulo.strip().strip('"').strip()
 
 
 if __name__ == "__main__":
