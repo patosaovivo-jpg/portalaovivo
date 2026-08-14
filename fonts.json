@@ -3,9 +3,9 @@
     {
       "id": "g1-triangulo",
       "nome": "G1 Triângulo e Alto Paranaíba",
-      "tipo": "rss",
-      "url": "https://g1.globo.com/dynamo/minas-gerais/triangulo-mineiro/rss2.xml",
-      "link_pattern": ""
+      "tipo": "scrape",
+      "url": "https://g1.globo.com/mg/triangulo-mineiro/ultimas-noticias/",
+      "link_pattern": "noticia/{ano}/"
     },
     {
       "id": "patos-noticias",

@@ -13,7 +13,7 @@ PROMPT = (
 )
 
 
-def resumir_texto(texto, api_key, model="gemini-2.0-flash"):
+def resumir_texto(texto, api_key, model="gemini-2.5-flash"):
     import google.generativeai as genai
 
     genai.configure(api_key=api_key)
@@ -28,7 +28,7 @@ def resumir_texto(texto, api_key, model="gemini-2.0-flash"):
     return resp.text.strip()
 
 
-def gerar_titulo(texto, api_key, model="gemini-2.0-flash"):
+def gerar_titulo(texto, api_key, model="gemini-2.5-flash"):
     import google.generativeai as genai
 
     genai.configure(api_key=api_key)

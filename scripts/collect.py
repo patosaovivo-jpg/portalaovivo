@@ -20,6 +20,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36 PortalAoVivo"
 }
 JANELA_HORAS = 48
+ANO_ATUAL = datetime.now().year
 
 
 def load_json(path):
@@ -86,9 +87,13 @@ def coletar_rss(fonte):
     return items
 
 
+def aplicar_padrao(fonte):
+    return (fonte.get("link_pattern") or "noticia|news").replace("{ano}", str(ANO_ATUAL))
+
+
 def coletar_sitemap(fonte):
     items = []
-    pattern = fonte.get("link_pattern") or "noticia|news"
+    pattern = aplicar_padrao(fonte)
 
     def parse(url):
         r = fetch(url)
@@ -125,7 +130,7 @@ def coletar_scrape(fonte):
         return items
     soup = BeautifulSoup(r.content, "lxml")
     seen = set()
-    pattern = fonte.get("link_pattern") or "noticia"
+    pattern = aplicar_padrao(fonte)
     for a in soup.find_all("a", href=True):
         href = a["href"].strip()
         if not href or href.startswith(("#", "mailto:", "tel:", "javascript")):
@@ -188,6 +193,14 @@ def filtrar_excluir(titulo, themes):
     return any(e.lower() in t for e in themes["excluir"])
 
 
+def e_recente(link):
+    """Descarta links de anos anteriores ao atual (ex.: noticia/2025/)."""
+    for ano in range(ANO_ATUAL - 5, ANO_ATUAL):
+        if f"/{ano}/" in link:
+            return False
+    return True
+
+
 def coleta_completa():
     fonts = load_json(FONTS_FILE)["fonts"]
     themes = load_json(THEMES_FILE)
@@ -215,6 +228,8 @@ def coleta_completa():
             if link in published_links:
                 continue
             if filtrar_excluir(item["titulo"], themes):
+                continue
+            if not e_recente(link):
                 continue
             candidatas.append(item)
             novas += 1
