@@ -262,6 +262,7 @@ def processar_candidatas(candidatas, themes, max_itens=6):
     filas = list(por_fonte.values())
     idx = 0
     tentativas = 0
+    links_vistos = set()
     limite_tentativas = max_itens * 5
     while len(selecionadas) < max_itens and tentativas < limite_tentativas:
         tentativas += 1
@@ -272,6 +273,8 @@ def processar_candidatas(candidatas, themes, max_itens=6):
         if not fila:
             continue
         item = fila.pop(0)
+        if item["link"] in links_vistos:
+            continue
         print(f"[TEXTO] {item['fonte']}: {item['titulo'][:60]}")
         texto = extrair_texto(item["link"])
         if not texto:
@@ -283,6 +286,7 @@ def processar_candidatas(candidatas, themes, max_itens=6):
             continue
         item["texto"] = texto
         item["tema"] = tema
+        links_vistos.add(item["link"])
         selecionadas.append(item)
         time.sleep(0.5)
     return selecionadas
