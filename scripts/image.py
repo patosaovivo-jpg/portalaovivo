@@ -32,19 +32,25 @@ def gerar_prompt_imagem(resumo, titulo, tema):
 
 
 def baixar_imagem(prompt, destino, largura=900, altura=500):
-    """Gera e baixa a imagem via Pollinations.ai (gratuito, sem chave)."""
-    url = "https://image.pollinations.ai/prompt/" + urllib.parse.quote(prompt)
-    url += f"?width={largura}&height={altura}&nologo=true&model=flux"
-    try:
-        r = requests.get(url, timeout=90)
-        r.raise_for_status()
-        if r.headers.get("content-type", "").startswith("image"):
-            os.makedirs(os.path.dirname(destino), exist_ok=True)
-            with open(destino, "wb") as f:
-                f.write(r.content)
-            return destino
-    except Exception as e:
-        print(f"  [ERRO] imagem Pollinations: {e}")
+    """Gera e baixa a imagem via Pollinations.ai (gratuito, sem chave).
+    Tenta o prompt completo; se falhar, tenta versao simplificada com o titulo."""
+    tentativas = [
+        prompt,
+        gerar_prompt_imagem("", "Ilustracao jornalistica", ""),
+    ]
+    for tentativa in tentativas:
+        url = "https://image.pollinations.ai/prompt/" + urllib.parse.quote(tentativa)
+        url += f"?width={largura}&height={altura}&nologo=true&model=flux"
+        try:
+            r = requests.get(url, timeout=90)
+            r.raise_for_status()
+            if r.headers.get("content-type", "").startswith("image"):
+                os.makedirs(os.path.dirname(destino), exist_ok=True)
+                with open(destino, "wb") as f:
+                    f.write(r.content)
+                return destino
+        except Exception as e:
+            print(f"  [ERRO] imagem Pollinations: {e}")
     return None
 
 
