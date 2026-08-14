@@ -17,7 +17,10 @@ Coleta (RSS + sitemap + scraping) → extrai texto → resume com Gemini → ger
 - `scripts/` — pipeline Python (`collect.py`, `summarize.py`, `image.py`, `publish.py`)
 - `.github/workflows/pipeline.yml` — roda a cada hora + build Jekyll + deploy Pages
 - `_posts/` — matérias publicadas (geradas automaticamente)
-- `_data/ads.yml` — **3 espaços de publicidade** do site
+- `_data/ads.yml` — **4 espaços de publicidade** (topo, lateral, rodapé e esquerda)
+- `_layouts/` — layout estilo portal: logo, menu, slider com as 5 últimas notícias e 3 colunas
+- `assets/js/slider.js` — carrossel automático dos destaques
+- `assets/css/style.scss` — tema preto/vermelho/branco
 
 ## Configurar (primeira vez)
 
@@ -41,5 +44,14 @@ Coleta (RSS + sitemap + scraping) → extrai texto → resume com Gemini → ger
 
 ## Publicidade
 
-No arquivo `_data/ads.yml` há 3 espaços prontos (topo, lateral e rodapé). Basta colar o código
-do seu anunciante no campo `codigo` e definir `ativo: true`.
+No arquivo `_data/ads.yml` há **4 espaços prontos**:
+
+| Espaço | Local | Formato sugerido |
+|--------|-------|------------------|
+| `topo` | Topo da página, acima dos destaques | 970x90 / 728x90 |
+| `esquerda` | Coluna fixa à esquerda | 160x600 / 300x250 |
+| `lateral` | Coluna lateral direita | 300x250 |
+| `rodape` | Fim de cada matéria | 728x90 / 300x250 |
+
+Basta colar o código do seu anunciante no campo `codigo` e definir `ativo: true`.
+Enquanto estiverem inativos, o site exibe um **placeholder tracejado** no lugar.
