@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel Admin | Portal Ao Vivo</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <script src="config.js"></script>
+</head>
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <div id="tela-login" class="tela-login">
+    <div class="card-login">
+      <div class="logo">
+        <span class="logo-play">&#9654;</span>
+        <span class="logo-texto">
+          <span class="logo-linha1">PORTAL</span>
+          <span class="logo-linha2">AO&nbsp;VIVO</span>
+        </span>
+      </div>
+      <h1>Painel de Admin</h1>
+      <p class="sub">Gerenciar hashtags do Instagram monitoradas pelo portal.</p>
+      <input type="password" id="campo-senha" placeholder="Senha de acesso" autocomplete="current-password">
+      <button id="btn-login" class="btn btn-vermelho">Entrar</button>
+      <p id="erro-login" class="erro" style="display:none;">Senha incorreta.</p>
+    </div>
+  </div>
+
+  <!-- PAINEL -->
+  <div id="tela-painel" class="tela-painel" style="display:none;">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <div class="logo logo-pequeno">
+          <span class="logo-play">&#9654;</span>
+          <span class="logo-texto">
+            <span class="logo-linha1">PORTAL</span>
+            <span class="logo-linha2">AO&nbsp;VIVO</span>
+          </span>
+        </div>
+        <span class="admin-titulo">Painel de Hashtags</span>
+        <button id="btn-sair" class="btn btn-claro">Sair</button>
+      </div>
+    </header>
+
+    <main class="admin-corpo">
+      <div class="aviso">
+        <strong>Como funciona:</strong> o portal busca no Instagram os posts públicos marcados com as
+        hashtags abaixo. Edite a lista (uma hashtag por linha) e clique em
+        <strong>"Gerar JSON e copiar"</strong>. Depois cole o conteúdo no arquivo
+        <code>hashtags.json</code> no GitHub e confirme o commit. O sistema lê a lista a cada coleta.
+      </div>
+
+      <div class="grid-admin">
+        <section class="painel-card">
+          <h2>Hashtags monitoradas</h2>
+          <div id="status-carregar" class="status">Carregando...</div>
+          <textarea id="lista-hashtags" rows="14" placeholder="patosdeminas&#10;acipatos&#10;..."></textarea>
+          <div class="acoes">
+            <button id="btn-gerar" class="btn btn-vermelho">Gerar JSON e copiar</button>
+            <button id="btn-recarga" class="btn btn-claro">Recarregar lista</button>
+          </div>
+        </section>
+
+        <section class="painel-card">
+          <h2>JSON gerado</h2>
+          <p class="dica">Copie o conteúdo abaixo e cole em <code>hashtags.json</code> no repositório.</p>
+          <textarea id="json-saida" rows="14" readonly placeholder='{"hashtags": ["..."]}'></textarea>
+          <div class="acoes">
+            <button id="btn-abrir-github" class="btn btn-vermelho">Abrir hashtags.json no GitHub</button>
+            <button id="btn-copiar" class="btn btn-claro">Copiar JSON</button>
+          </div>
+          <p id="msg-copiado" class="ok" style="display:none;">Copiado para a área de transferência!</p>
+        </section>
+      </div>
+
+      <section class="painel-card dicas-card">
+        <h2>Dicas de hashtags da região</h2>
+        <ul id="lista-dicas" class="lista-dicas"></ul>
+        <p class="dica">Clique em uma sugestão para adicionar à lista acima.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

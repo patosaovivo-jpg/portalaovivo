@@ -4,12 +4,18 @@
 
   <!-- ARTIGO -->
   <article class="post-artigo">
+    <nav class="post-breadcrumb" aria-label="Trilha de navegação">
+      <a href="{{ '/' | relative_url }}">Início</a>
+      <span class="sep">›</span>
+      <span>{{ page.tema | default: "Notícias" }}</span>
+    </nav>
+
     <header class="post-cabecalho">
       <span class="tag tag-vermelho">{{ page.tema | default: "Notícias" }}</span>
       <h1 class="post-titulo">{{ page.title | escape }}</h1>
       <div class="post-meta">
-        {{ page.date | date: "%d/%m/%Y às %H:%M" }}
-        &middot; <a href="{{ page.fonte_link }}" target="_blank" rel="noopener">{{ page.fonte }}</a>
+        <span class="meta-item">{{ page.date | date: "%d/%m/%Y às %H:%M" }}</span>
+        <span class="meta-item meta-tempo-leitura" data-conteudo="{{ content | strip_html | strip_newlines }}"></span>
       </div>
     </header>
 
@@ -24,6 +30,13 @@
       {{ content }}
     </div>
 
+    <div class="post-compartilhar">
+      <span class="share-label">Compartilhe:</span>
+      <a class="share-btn share-whatsapp" href="https://wa.me/?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp">WhatsApp</a>
+      <a class="share-btn share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener" aria-label="Compartilhar no Facebook">Facebook</a>
+      <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url | uri_escape }}" target="_blank" rel="noopener" aria-label="Compartilhar no X">X</a>
+    </div>
+
     <div class="post-fonte">
       <strong>Fonte original:</strong>
       <a href="{{ page.fonte_link }}" target="_blank" rel="noopener">{{ page.fonte }}</a>
@@ -36,6 +49,24 @@
     <div class="post-ads">
       <span class="ad-label">Publicidade</span>
       {{ site.data.ads.rodape.codigo }}
+    </div>
+    {% endif %}
+
+    <!-- RELACIONADAS (mesmo tema) -->
+    {% assign relacionadas = site.posts | where: "tema", page.tema | where_exp: "post", "post.url != page.url" %}
+    {% if relacionadas.size > 0 %}
+    <div class="post-relacionadas">
+      <h3 class="bloco-titulo">Notícias Relacionadas</h3>
+      <div class="relacionadas-grid">
+        {% for post in relacionadas limit: 3 %}
+        <a class="relacionada-card" href="{{ post.url | relative_url }}">
+          {% if post.image %}
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+          {% endif %}
+          <span class="relacionada-titulo">{{ post.title }}</span>
+        </a>
+        {% endfor %}
+      </div>
     </div>
     {% endif %}
 
@@ -85,3 +116,15 @@
   </aside>
 
 </div>
+
+<script>
+  // Tempo de leitura estimado (~200 palavras/min)
+  (function () {
+    var el = document.querySelector('.meta-tempo-leitura');
+    if (!el) return;
+    var texto = el.getAttribute('data-conteudo') || '';
+    var palavras = texto.trim().split(/\s+/).filter(Boolean).length;
+    var minutos = Math.max(1, Math.round(palavras / 200));
+    el.textContent = '· ' + minutos + ' min de leitura';
+  })();
+</script>

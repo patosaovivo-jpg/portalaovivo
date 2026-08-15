@@ -377,6 +377,80 @@ img { max-width: 100%; display: block; }
 .post-nav a:hover { color: #e50914; }
 .post-nav-next { text-align: right; }
 
+/* ---------- BREADCRUMB ---------- */
+.post-breadcrumb {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.post-breadcrumb a { color: #e50914; font-weight: 600; }
+.post-breadcrumb a:hover { text-decoration: underline; }
+.post-breadcrumb .sep { margin: 0 6px; color: #bbb; }
+
+/* ---------- COMPARTILHAR ---------- */
+.post-compartilhar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+  padding: 14px 16px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+.share-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  margin-right: 4px;
+}
+.share-btn {
+  padding: 7px 14px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  transition: opacity .2s;
+}
+.share-btn:hover { opacity: .85; }
+.share-whatsapp { background: #25d366; }
+.share-facebook { background: #1877f2; }
+.share-x { background: #000; }
+
+/* ---------- RELACIONADAS ---------- */
+.post-relacionadas { margin-top: 28px; }
+.relacionadas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 12px;
+}
+.relacionada-card {
+  display: block;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+}
+.relacionada-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.12); }
+.relacionada-card img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+}
+.relacionada-titulo {
+  display: block;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111;
+}
+.relacionada-card:hover .relacionada-titulo { color: #e50914; }
+
 /* ---------- RODAPÉ ---------- */
 .site-footer {
   background: #111;
@@ -440,4 +514,9 @@ img { max-width: 100%; display: block; }
   .post-artigo { padding: 18px; }
   .post-titulo { font-size: 24px; }
   .footer-grid { grid-template-columns: 1fr; }
+  .relacionadas-grid { grid-template-columns: 1fr; }
+  .relacionada-card img { height: 140px; }
+  .post-compartilhar { flex-wrap: wrap; }
+  .post-nav { flex-direction: column; }
+  .post-nav-next { text-align: left; }
 }

@@ -20,7 +20,7 @@ layout: default
           <h2 class="slide-titulo">{{ post.title }}</h2>
           <p class="slide-resumo">{{ post.resumo | default: post.excerpt | strip_html | truncate: 160 }}</p>
           <span class="slide-meta">
-            {{ post.date | date: "%d/%m/%Y %H:%M" }} {% if post.fonte %} &middot; {{ post.fonte }}{% endif %}
+            {{ post.date | date: "%d/%m/%Y %H:%M" }}
           </span>
         </div>
       </a>
@@ -79,7 +79,7 @@ layout: default
           <span class="tag">{{ post.tema | default: "Notícias" }}</span>
           <h2 class="card-titulo"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           <p class="card-resumo">{{ post.resumo | default: post.excerpt | strip_html | truncate: 140 }}</p>
-          <span class="card-meta">{{ post.date | date: "%d/%m/%Y %H:%M" }} &middot; {{ post.fonte }}</span>
+          <span class="card-meta">{{ post.date | date: "%d/%m/%Y %H:%M" }}</span>
         </div>
       </article>
       {% endfor %}

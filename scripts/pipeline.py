@@ -61,7 +61,8 @@ def main():
             prompt = image.gerar_prompt_imagem(resumo, item["titulo"], item["tema"])
             nome_img = f"{slugify(item['titulo'])}.jpg"
             destino = os.path.join(BASE_DIR, "assets", "images", nome_img)
-            img = image.baixar_imagem(prompt, destino)
+            imagem_orig = item.get("imagem") or None
+            img = image.baixar_imagem(prompt, destino, imagem_orig=imagem_orig)
             if img:
                 imagem_rel = f"/assets/images/{nome_img}"
             else:

@@ -194,11 +194,15 @@ def filtrar_excluir(titulo, themes):
 
 
 def qualidade_minima(item, texto):
-    """Rejeita materias de baixa qualidade (titulo curto, texto pequeno ou spam)."""
+    """Rejeita materias de baixa qualidade (titulo curto, texto pequeno ou spam).
+    Para o Instagram (legendas curtas), o minimo de texto e menor."""
     titulo = item.get("titulo", "")
     if len(titulo) < 20:
         return False
-    if len(texto.strip()) < 300:
+    if item.get("tipo") == "instagram":
+        if len(texto.strip()) < 80:
+            return False
+    elif len(texto.strip()) < 300:
         return False
     return True
 
@@ -246,6 +250,23 @@ def coleta_completa():
         print(f"  -> {len(itens)} itens, {novas} novas candidatas")
         time.sleep(0.5)
 
+    # ===== Instagram (busca por hashtag) =====
+    try:
+        import instagram as ig
+
+        ig_items = ig.coletar_instagram()
+        for item in ig_items:
+            if item["link"] in published_links:
+                continue
+            if item.get("titulo") and filtrar_excluir(item["titulo"], themes):
+                continue
+            item["tipo"] = "instagram"
+            candidatas.append(item)
+    except ImportError:
+        print("[IG] modulo instagram nao encontrado. Ignorando.")
+    except Exception as e:
+        print(f"[IG] erro ao coletar Instagram: {e}")
+
     print(f"\n[COLETA] {len(candidatas)} candidatas novas no total")
     return candidatas, published
 
@@ -276,7 +297,12 @@ def processar_candidatas(candidatas, themes, max_itens=6):
         if item["link"] in links_vistos:
             continue
         print(f"[TEXTO] {item['fonte']}: {item['titulo'][:60]}")
-        texto = extrair_texto(item["link"])
+
+        # Itens do Instagram já vêm com texto e imagem (legenda). Não precisam de extração.
+        if item.get("tipo") == "instagram" and item.get("texto"):
+            texto = item["texto"]
+        else:
+            texto = extrair_texto(item["link"])
         if not texto:
             continue
         if not qualidade_minima(item, texto):
