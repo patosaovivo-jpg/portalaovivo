@@ -1,0 +1,42 @@
+---
+layout: null
+---
+<!-- ===== RODAPÉ (fragmento único - vale para todo o site) ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <span class="logo-play">&#9654;</span>
+          <span class="logo-texto">
+            <span class="logo-linha1">PORTAL</span>
+            <span class="logo-linha2">AO&nbsp;VIVO</span>
+          </span>
+        </div>
+        <p>{{ site.tagline }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>Editorias</h4>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}#politica">Política</a></li>
+          <li><a href="{{ '/' | relative_url }}#cidades">Cidades</a></li>
+          <li><a href="{{ '/' | relative_url }}#esportes">Esportes</a></li>
+          <li><a href="{{ '/' | relative_url }}#geral">Geral</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-disclaimer">
+      Conteúdo resumido automaticamente a partir de veículos de imprensa, sempre com link para a
+      fonte original. Imagens ilustrativas geradas por inteligência artificial.
+    </p>
+    <p class="footer-copy">© {{ 'now' | date: "%Y" }} {{ site.title }}. Todos os direitos reservados.</p>
+  </div>
+</footer>

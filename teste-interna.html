@@ -1,0 +1,140 @@
+---
+layout: null
+title: Protótipo de Matéria
+---
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Protótipo de Matéria | {{ site.title }}</title>
+  <meta name="description" content="Página de exemplo para definir o layout das matérias internas do portal.">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+</head>
+<body>
+
+  <!-- Header puxado dinamicamente -->
+  <div data-fragment="{{ '/parts/header.html' | relative_url }}"></div>
+  <!-- Banner de publicidade do topo puxado dinamicamente -->
+  <div data-fragment="{{ '/parts/banner-topo.html' | relative_url }}"></div>
+
+  <main class="container content">
+
+    <div class="layout-3col">
+
+      <!-- Coluna esquerda puxada dinamicamente -->
+      <div data-fragment="{{ '/parts/barra-esquerda.html' | relative_url }}"></div>
+
+      <!-- Coluna central: a matéria -->
+      <section class="col-central">
+        <article class="post-artigo">
+
+          <nav class="post-breadcrumb" aria-label="Trilha de navegação">
+            <a href="{{ '/' | relative_url }}">Início</a>
+            <span class="sep">›</span>
+            <span>Geral</span>
+          </nav>
+
+          <header class="post-cabecalho">
+            <span class="tag tag-vermelho">Geral</span>
+            <h1 class="post-titulo">Título de exemplo para definir o layout das matérias internas</h1>
+            <div class="post-meta">
+              <span class="meta-item">15/08/2026 às 09:00</span>
+              <span class="meta-item">· 3 min de leitura</span>
+            </div>
+          </header>
+
+          <figure class="post-imagem">
+            <img src="{{ '/assets/images/ciclista-de-71-anos-morre-aps-coliso-com-moto-em-lagoa-formo.jpg' | relative_url }}" alt="Imagem de exemplo da matéria">
+            <figcaption class="post-credito">Imagem ilustrativa gerada por IA</figcaption>
+          </figure>
+
+          <div class="post-corpo">
+            <p>Este é o primeiro parágrafo da matéria. Ele deve vir logo abaixo da imagem de abertura e,
+            idealmente, conter o resumo mais importante da notícia, pois é o trecho que aparece nos
+            resultados de busca e no compartilhamento em redes sociais.</p>
+            <p>O restante do corpo do texto segue aqui, em parágrafos com o mesmo espaçamento e tamanho
+            de fonte. O conteúdo das notícias é gerado automaticamente pelo pipeline do portal e
+            inserido nesta área, mantendo sempre um link para a fonte original.</p>
+            <p>Aqui ficam os detalhes adicionais da matéria, com mais um parágrafo para mostrar como o
+            texto flui dentro da coluna central do layout de três colunas.</p>
+          </div>
+
+          <!-- Publicidade dentro da matéria -->
+          {% if site.data.ads.materia.ativo %}
+          <div class="post-ads">
+            <span class="ad-label">Publicidade</span>
+            <iframe class="ad-frame ad-frame-materia" src="{{ '/ads_materia/' | relative_url }}" title="Publicidade na matéria" loading="lazy"></iframe>
+          </div>
+          {% endif %}
+
+          <div class="post-compartilhar">
+            <span class="share-label">Compartilhe:</span>
+            <a class="share-btn share-whatsapp" href="https://wa.me/?text=Titulo%20de%20exemplo" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp">WhatsApp</a>
+            <a class="share-btn share-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ '/' | absolute_url }}" target="_blank" rel="noopener" aria-label="Compartilhar no Facebook">Facebook</a>
+            <a class="share-btn share-x" href="https://twitter.com/intent/tweet?text=Titulo%20de%20exemplo" target="_blank" rel="noopener" aria-label="Compartilhar no X">X</a>
+          </div>
+
+          <div class="post-fonte">
+            <strong>Fonte original:</strong>
+            <a href="#" target="_blank" rel="noopener">Exemplo de Veículo de Imprensa</a>
+            <span style="display:block;font-size:12px;color:#999;margin-top:6px;">
+              Acesse o texto completo no site do veículo.
+            </span>
+          </div>
+
+          <!-- Publicidade do rodapé da matéria -->
+          {% if site.data.ads.rodape.ativo %}
+          <div class="post-ads">
+            <span class="ad-label">Publicidade</span>
+            <iframe class="ad-frame ad-frame-rodape" src="{{ '/ads_rodape/' | relative_url }}" title="Publicidade rodapé da matéria" loading="lazy"></iframe>
+          </div>
+          {% endif %}
+
+          <!-- Matérias relacionadas -->
+          <div class="post-relacionadas">
+            <h3 class="bloco-titulo">Notícias Relacionadas</h3>
+            <div class="relacionadas-grid">
+              <a class="relacionada-card" href="#">
+                <img src="{{ '/assets/images/fenaminas-2026-encerra-edio-histrica-com-r-770-milhes-em-neg.jpg' | relative_url }}" alt="Matéria relacionada" loading="lazy">
+                <span class="relacionada-titulo">Fenaminas 2026 encerra edição histórica com recorde de negócios</span>
+              </a>
+              <a class="relacionada-card" href="#">
+                <img src="{{ '/assets/images/definidos-os-semifinalistas-do-campeonato-regional-da-liga-p.jpg' | relative_url }}" alt="Matéria relacionada" loading="lazy">
+                <span class="relacionada-titulo">Definidos os semifinalistas do campeonato regional</span>
+              </a>
+              <a class="relacionada-card" href="#">
+                <img src="{{ '/assets/images/carreata-abre-festividades-de-nossa-senhora-da-abadia-em-ser.jpg' | relative_url }}" alt="Matéria relacionada" loading="lazy">
+                <span class="relacionada-titulo">Carreata abre festividades de Nossa Senhora da Abadia</span>
+              </a>
+            </div>
+          </div>
+
+          <nav class="post-nav">
+            <div class="post-nav-prev">
+              <span>Matéria anterior</span>
+              <a href="#">Título da matéria anterior aparece aqui</a>
+            </div>
+            <div class="post-nav-next">
+              <span>Próxima matéria</span>
+              <a href="#">Título da próxima matéria aparece aqui</a>
+            </div>
+          </nav>
+
+        </article>
+      </section>
+
+      <!-- Coluna lateral direita puxada dinamicamente -->
+      <div data-fragment="{{ '/parts/barra-lateral.html' | relative_url }}"></div>
+
+    </div>
+
+  </main>
+
+  <!-- Rodapé puxado dinamicamente -->
+  <div data-fragment="{{ '/parts/footer.html' | relative_url }}"></div>
+
+  <script src="{{ '/assets/js/layout.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+---
+layout: null
+---
+<!-- ===== COLUNA LATERAL DIREITA (fragmento único) ===== -->
+<aside class="col-lateral">
+  <div class="bloco-lateral">
+    <span class="ad-label">Publicidade</span>
+    {% if site.data.ads.lateral.ativo %}
+    <iframe class="ad-frame ad-frame-lateral" src="{{ '/ads_lateral/' | relative_url }}" title="Publicidade coluna lateral" loading="lazy"></iframe>
+    {% else %}
+    <div class="ph-ph ph-lateral">Anúncio<br>(300x250)</div>
+    {% endif %}
+  </div>
+
+  <div class="bloco-lateral">
+    <h3 class="bloco-titulo">Mais Lidas</h3>
+    <ol class="mais-lidas">
+      {% for post in site.posts limit: 6 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  <div class="bloco-lateral">
+    <h3 class="bloco-titulo">Fonte das Notícias</h3>
+    <ul class="lista-fontes">
+      {% assign fontes = site.posts | map: "fonte" | uniq %}
+      {% for fonte in fontes %}<li>{{ fonte }}</li>{% endfor %}
+    </ul>
+  </div>
+</aside>

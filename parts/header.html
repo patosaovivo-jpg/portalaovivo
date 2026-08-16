@@ -1,0 +1,26 @@
+---
+layout: null
+---
+<!-- ===== CABEÇALHO COM LOGO (fragmento único - vale para todo o site) ===== -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-top">
+      <a class="logo" href="{{ '/' | relative_url }}" aria-label="Portal Ao Vivo">
+        <span class="logo-play">&#9654;</span>
+        <span class="logo-texto">
+          <span class="logo-linha1">PORTAL</span>
+          <span class="logo-linha2">AO&nbsp;VIVO</span>
+        </span>
+      </a>
+      <div class="header-data">{{ 'now' | date: "%A, %d de %B de %Y" }}</div>
+    </div>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}">Início</a>
+      <a href="{{ '/' | relative_url }}#ultimas">Últimas</a>
+      <a href="{{ '/' | relative_url }}#politica">Política</a>
+      <a href="{{ '/' | relative_url }}#cidades">Cidades</a>
+      <a href="{{ '/' | relative_url }}#esportes">Esportes</a>
+      <a href="{{ '/' | relative_url }}#geral">Geral</a>
+    </nav>
+  </div>
+</header>

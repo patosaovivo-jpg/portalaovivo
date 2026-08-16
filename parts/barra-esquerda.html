@@ -1,0 +1,25 @@
+---
+layout: null
+---
+<!-- ===== COLUNA ESQUERDA (fragmento único) ===== -->
+<aside class="col-esquerda">
+  <div class="bloco-esquerda">
+    <span class="ad-label">Publicidade</span>
+    {% if site.data.ads.esquerda.ativo %}
+    <iframe class="ad-frame ad-frame-esquerda" src="{{ '/ads_esquerda/' | relative_url }}" title="Publicidade coluna esquerda" loading="lazy"></iframe>
+    {% else %}
+    <div class="ph-ph ph-esquerda">Anúncio<br>(160x600)</div>
+    {% endif %}
+  </div>
+
+  <div class="bloco-esquerda">
+    <h3 class="bloco-titulo">Menu</h3>
+    <ul class="menu-vertical">
+      <li><a href="{{ '/' | relative_url }}">&#9654; Últimas notícias</a></li>
+      <li><a href="{{ '/' | relative_url }}#politica">&#9654; Política</a></li>
+      <li><a href="{{ '/' | relative_url }}#cidades">&#9654; Cidades</a></li>
+      <li><a href="{{ '/' | relative_url }}#esportes">&#9654; Esportes</a></li>
+      <li><a href="{{ '/' | relative_url }}#geral">&#9654; Geral</a></li>
+    </ul>
+  </div>
+</aside>
