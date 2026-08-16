@@ -22,7 +22,9 @@ Coleta (RSS + sitemap + scraping + Instagram #hashtag) → extrai texto → resu
 - `_data/ads.yml` — ativa/desativa os espaços de publicidade (topo, esquerda, lateral, matéria e rodapé)
 - `ads_topo/`, `ads_esquerda/`, `ads_lateral/`, `ads_materia/`, `ads_rodape/` — pastas com as imagens dos anúncios
 - `admin/` — **painel de admin** para gerenciar as hashtags do Instagram
-- `_layouts/` — layout estilo portal: logo, menu, slider com as 5 últimas notícias e 3 colunas
+- `_layouts/` — layout estilo portal: home com 3 colunas; matérias com **75% conteúdo + 25% lateral**
+- `parts/` — **fragmentos únicos** do layout (header, banner-topo, footer, barra-esquerda, barra-lateral) puxados via JavaScript
+- `assets/js/layout.js` — carrega os fragmentos em todas as páginas (sistema semi-dinâmico)
 - `assets/js/slider.js` — carrossel automático dos destaques
 - `assets/css/style.scss` — tema preto/vermelho/branco
 
