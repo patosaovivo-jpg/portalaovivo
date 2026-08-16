@@ -1,35 +1,31 @@
 # ============================================
 # SISTEMA DE PUBLICIDADE DO PORTAL AO VIVO
-# Aqui ficam os 4 espaços de anúncio do site.
-# Para ativar um anúncio, cole o código HTML/JS
-# do seu anunciante no campo "codigo" e defina
-# "ativo: true".
+# Cada espaço exibe um iframe que busca uma
+# IMAGEM ALEATÓRIA da pasta correspondente.
+#
+# Pastas: ads_topo, ads_esquerda, ads_lateral,
+#         ads_materia, ads_rodape
+# Para anunciar: coloque a imagem na pasta e
+# adicione o nome em assets/js/ads.js.
+# Defina "ativo: true" para exibir o anúncio.
 # ============================================
 
-# 1) BANNER TOPO - aparece no topo, acima do slider (formato 970x90 ou 728x90)
+# 1) BANNER TOPO - acima do slider (970x90 / 728x90)
 topo:
-  ativo: false
-  codigo: |
-    <!-- Cole aqui o código do anúncio do TOPO -->
-    <div style="background:#eee;padding:20px;text-align:center;color:#888;">Publicidade - Banner Topo (728x90)</div>
+  ativo: true
 
-# 2) BANNER LATERAL DIREITA - aparece na coluna lateral, entre as matérias (formato 300x250)
-lateral:
-  ativo: false
-  codigo: |
-    <!-- Cole aqui o código do anúncio da LATERAL -->
-    <div style="background:#eee;padding:40px 20px;text-align:center;color:#888;">Publicidade - Banner Lateral (300x250)</div>
-
-# 3) BANNER RODAPÉ - aparece no fim de cada matéria (formato 728x90 ou 300x250)
-rodape:
-  ativo: false
-  codigo: |
-    <!-- Cole aqui o código do anúncio do RODAPÉ -->
-    <div style="background:#eee;padding:20px;text-align:center;color:#888;">Publicidade - Banner Rodapé</div>
-
-# 4) BANNER ESQUERDA - aparece na coluna da esquerda (formato 160x600 ou 300x250)
+# 2) BANNER ESQUERDA - coluna da esquerda (160x600)
 esquerda:
-  ativo: false
-  codigo: |
-    <!-- Cole aqui o código do anúncio da ESQUERDA -->
-    <div style="background:#eee;padding:60px 20px;text-align:center;color:#888;">Publicidade - Banner Esquerda (160x600)</div>
+  ativo: true
+
+# 3) BANNER LATERAL DIREITA - coluna lateral (300x250)
+lateral:
+  ativo: true
+
+# 4) BANNER MATÉRIA - dentro da matéria (728x90)
+materia:
+  ativo: true
+
+# 5) BANNER RODAPÉ - fim de cada matéria (728x90)
+rodape:
+  ativo: true

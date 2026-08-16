@@ -43,21 +43,16 @@
   </header>
 
   <!-- ===== BANNER PUBLICIDADE - TOPO ===== -->
-  {% if site.data.ads.topo.ativo %}
   <div class="ad-banner ad-topo">
     <div class="container">
       <span class="ad-label">Publicidade</span>
-      {{ site.data.ads.topo.codigo }}
-    </div>
-  </div>
-  {% else %}
-  <div class="ad-banner ad-topo ad-placeholder">
-    <div class="container">
-      <span class="ad-label">Publicidade</span>
+      {% if site.data.ads.topo.ativo %}
+      <iframe class="ad-frame ad-frame-topo" src="{{ '/ads_topo/' | relative_url }}" title="Publicidade topo" loading="lazy"></iframe>
+      {% else %}
       <div class="ph-ph ph-topo">Espaço para banner (970x90 / 728x90)</div>
+      {% endif %}
     </div>
   </div>
-  {% endif %}
 
   <main class="container content">
     {{ content }}

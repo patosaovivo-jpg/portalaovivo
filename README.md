@@ -19,7 +19,8 @@ Coleta (RSS + sitemap + scraping + Instagram #hashtag) → extrai texto → resu
 - `scripts/` — pipeline Python (`collect.py`, `summarize.py`, `image.py`, `publish.py`, `instagram.py`)
 - `.github/workflows/pipeline.yml` — roda a cada hora + build Jekyll + deploy Pages
 - `_posts/` — matérias publicadas (geradas automaticamente)
-- `_data/ads.yml` — **4 espaços de publicidade** (topo, lateral, rodapé e esquerda)
+- `_data/ads.yml` — ativa/desativa os espaços de publicidade (topo, esquerda, lateral, matéria e rodapé)
+- `ads_topo/`, `ads_esquerda/`, `ads_lateral/`, `ads_materia/`, `ads_rodape/` — pastas com as imagens dos anúncios
 - `admin/` — **painel de admin** para gerenciar as hashtags do Instagram
 - `_layouts/` — layout estilo portal: logo, menu, slider com as 5 últimas notícias e 3 colunas
 - `assets/js/slider.js` — carrossel automático dos destaques
@@ -78,14 +79,25 @@ Acesse **`https://portalaovivo.com.br/admin/`**:
 
 ## Publicidade
 
-No arquivo `_data/ads.yml` há **4 espaços prontos**:
+O site usa **pastas de anúncios** com sorteio de imagem aleatória. Cada espaço é um iframe que aponta
+para uma pasta; a pasta mostra uma imagem sorteada (script `assets/js/ads.js`).
 
-| Espaço | Local | Formato sugerido |
-|--------|-------|------------------|
-| `topo` | Topo da página, acima dos destaques | 970x90 / 728x90 |
-| `esquerda` | Coluna fixa à esquerda | 160x600 / 300x250 |
-| `lateral` | Coluna lateral direita | 300x250 |
-| `rodape` | Fim de cada matéria | 728x90 / 300x250 |
+Pastas (já criadas com imagens genéricas):
 
-Basta colar o código do seu anunciante no campo `codigo` e definir `ativo: true`.
-Enquanto estiverem inativos, o site exibe um **placeholder tracejado** no lugar.
+| Pasta | Local | Formato sugerido |
+|-------|-------|------------------|
+| `ads_topo/` | Topo da página, acima dos destaques | 970x90 / 728x90 |
+| `ads_esquerda/` | Coluna fixa à esquerda | 160x600 / 300x250 |
+| `ads_lateral/` | Coluna lateral direita | 300x250 |
+| `ads_materia/` | Dentro de cada matéria | 728x90 |
+| `ads_rodape/` | Fim de cada matéria | 728x90 |
+
+Para **anunciar**: coloque a imagem do anúncio na pasta (ex.: `ads_topo/`) e acrescente o nome do
+arquivo na lista correspondente em `assets/js/ads.js`. Exemplo:
+
+```js
+'ads_topo': ['banner1.png', 'banner2.png'],
+```
+
+Para **ativar/desativar** um espaço, use `ativo: true/false` em `_data/ads.yml`. Enquanto inativos,
+o site exibe um **placeholder tracejado** no lugar.

@@ -46,7 +46,7 @@ layout: default
     <div class="bloco-esquerda">
       <span class="ad-label">Publicidade</span>
       {% if site.data.ads.esquerda.ativo %}
-      {{ site.data.ads.esquerda.codigo }}
+      <iframe class="ad-frame ad-frame-esquerda" src="{{ '/ads_esquerda/' | relative_url }}" title="Publicidade coluna esquerda" loading="lazy"></iframe>
       {% else %}
       <div class="ph-ph ph-esquerda">Anúncio<br>(160x600)</div>
       {% endif %}
@@ -91,7 +91,7 @@ layout: default
     <div class="bloco-lateral">
       <span class="ad-label">Publicidade</span>
       {% if site.data.ads.lateral.ativo %}
-      {{ site.data.ads.lateral.codigo }}
+      <iframe class="ad-frame ad-frame-lateral" src="{{ '/ads_lateral/' | relative_url }}" title="Publicidade coluna lateral" loading="lazy"></iframe>
       {% else %}
       <div class="ph-ph ph-lateral">Anúncio<br>(300x250)</div>
       {% endif %}

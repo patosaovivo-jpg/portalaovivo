@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="600" viewBox="0 0 160 600">
+  <rect width="160" height="600" fill="#111"/>
+  <rect x="0" y="0" width="160" height="600" fill="none" stroke="#e50914" stroke-width="4"/>
+  <text x="80" y="280" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#fff" text-anchor="middle">PUBLICIDADE</text>
+  <text x="80" y="310" font-family="Arial, sans-serif" font-size="12" fill="#e50914" text-anchor="middle">160x600</text>
+</svg>
