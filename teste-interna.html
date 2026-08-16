@@ -22,12 +22,9 @@ permalink: /teste-interna.html
 
   <main class="container content">
 
-    <div class="layout-3col">
+    <div class="post-layout-2col">
 
-      <!-- Coluna esquerda puxada dinamicamente -->
-      <div data-fragment="{{ '/parts/barra-esquerda.html' | relative_url }}"></div>
-
-      <!-- Coluna central: a matéria -->
+      <!-- Coluna principal: a matéria (75%) -->
       <section class="col-central">
         <article class="post-artigo">
 
@@ -126,7 +123,7 @@ permalink: /teste-interna.html
         </article>
       </section>
 
-      <!-- Coluna lateral direita puxada dinamicamente -->
+      <!-- Coluna lateral direita (25%): puxada dinamicamente -->
       <div data-fragment="{{ '/parts/barra-lateral.html' | relative_url }}"></div>
 
     </div>

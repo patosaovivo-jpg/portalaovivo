@@ -312,6 +312,13 @@ img { max-width: 100%; display: block; }
 }
 
 /* ---------- PÁGINA DE MATÉRIA ---------- */
+.post-layout-2col {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 24px;
+  margin: 24px 0 40px;
+  align-items: start;
+}
 .post-artigo {
   background: #fff;
   border-radius: 6px;
@@ -500,6 +507,7 @@ img { max-width: 100%; display: block; }
 /* ---------- RESPONSIVO ---------- */
 @media (max-width: 1024px) {
   .layout-3col { grid-template-columns: 1fr; }
+  .post-layout-2col { grid-template-columns: 1fr; }
   .col-esquerda { display: none; }
   .col-lateral { position: static; }
   .slider { height: 360px; }

@@ -18,85 +18,19 @@
 </head>
 <body>
 
-  <!-- ===== CABEÇALHO COM LOGO ===== -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-top">
-        <a class="logo" href="{{ '/' | relative_url }}" aria-label="Portal Ao Vivo">
-          <span class="logo-play">&#9654;</span>
-          <span class="logo-texto">
-            <span class="logo-linha1">PORTAL</span>
-            <span class="logo-linha2">AO&nbsp;VIVO</span>
-          </span>
-        </a>
-        <div class="header-data">{{ 'now' | date: "%A, %d de %B de %Y" }}</div>
-      </div>
-      <nav class="site-nav">
-        <a href="{{ '/' | relative_url }}">Início</a>
-        <a href="#ultimas">Últimas</a>
-        <a href="#politica">Política</a>
-        <a href="#cidades">Cidades</a>
-        <a href="#esportes">Esportes</a>
-        <a href="#geral">Geral</a>
-      </nav>
-    </div>
-  </header>
+  <!-- Header puxado dinamicamente do fragmento único -->
+  <div data-fragment="{{ '/parts/header.html' | relative_url }}"></div>
 
-  <!-- ===== BANNER PUBLICIDADE - TOPO ===== -->
-  <div class="ad-banner ad-topo">
-    <div class="container">
-      <span class="ad-label">Publicidade</span>
-      {% if site.data.ads.topo.ativo %}
-      <iframe class="ad-frame ad-frame-topo" src="{{ '/ads_topo/' | relative_url }}" title="Publicidade topo" loading="lazy"></iframe>
-      {% else %}
-      <div class="ph-ph ph-topo">Espaço para banner (970x90 / 728x90)</div>
-      {% endif %}
-    </div>
-  </div>
+  <!-- Banner de publicidade do topo puxado dinamicamente -->
+  <div data-fragment="{{ '/parts/banner-topo.html' | relative_url }}"></div>
 
   <main class="container content">
     {{ content }}
   </main>
 
-  <!-- ===== RODAPÉ ===== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <div class="footer-logo">
-            <span class="logo-play">&#9654;</span>
-            <span class="logo-texto">
-              <span class="logo-linha1">PORTAL</span>
-              <span class="logo-linha2">AO&nbsp;VIVO</span>
-            </span>
-          </div>
-          <p>{{ site.tagline }}</p>
-        </div>
-        <div class="footer-col">
-          <h4>Editorias</h4>
-          <ul>
-            <li><a href="#politica">Política</a></li>
-            <li><a href="#cidades">Cidades</a></li>
-            <li><a href="#esportes">Esportes</a></li>
-            <li><a href="#geral">Geral</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Institucional</h4>
-          <ul>
-            <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Política de privacidade</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="footer-disclaimer">
-        Conteúdo resumido automaticamente a partir de veículos de imprensa, sempre com link para a
-        fonte original. Imagens ilustrativas geradas por inteligência artificial.
-      </p>
-      <p class="footer-copy">© {{ 'now' | date: "%Y" }} {{ site.title }}. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+  <!-- Rodapé puxado dinamicamente do fragmento único -->
+  <div data-fragment="{{ '/parts/footer.html' | relative_url }}"></div>
 
+  <script src="{{ '/assets/js/layout.js' | relative_url }}"></script>
 </body>
 </html>

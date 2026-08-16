@@ -41,28 +41,8 @@ layout: default
 <!-- ===== ÁREA DE CONTEÚDO EM 3 COLUNAS ===== -->
 <div class="layout-3col">
 
-  <!-- COLUNA ESQUERDA: PUBLICIDADE -->
-  <aside class="col-esquerda">
-    <div class="bloco-esquerda">
-      <span class="ad-label">Publicidade</span>
-      {% if site.data.ads.esquerda.ativo %}
-      <iframe class="ad-frame ad-frame-esquerda" src="{{ '/ads_esquerda/' | relative_url }}" title="Publicidade coluna esquerda" loading="lazy"></iframe>
-      {% else %}
-      <div class="ph-ph ph-esquerda">Anúncio<br>(160x600)</div>
-      {% endif %}
-    </div>
-
-    <div class="bloco-esquerda">
-      <h3 class="bloco-titulo">Menu</h3>
-      <ul class="menu-vertical">
-        <li><a href="#ultimas">&#9654; Últimas notícias</a></li>
-        <li><a href="#politica">&#9654; Política</a></li>
-        <li><a href="#cidades">&#9654; Cidades</a></li>
-        <li><a href="#esportes">&#9654; Esportes</a></li>
-        <li><a href="#geral">&#9654; Geral</a></li>
-      </ul>
-    </div>
-  </aside>
+  <!-- COLUNA ESQUERDA: puxada dinamicamente do fragmento único -->
+  <div data-fragment="{{ '/parts/barra-esquerda.html' | relative_url }}"></div>
 
   <!-- COLUNA CENTRAL: GRADE DE MATÉRIAS -->
   <section class="col-central">
@@ -86,34 +66,8 @@ layout: default
     </div>
   </section>
 
-  <!-- COLUNA LATERAL DIREITA -->
-  <aside class="col-lateral">
-    <div class="bloco-lateral">
-      <span class="ad-label">Publicidade</span>
-      {% if site.data.ads.lateral.ativo %}
-      <iframe class="ad-frame ad-frame-lateral" src="{{ '/ads_lateral/' | relative_url }}" title="Publicidade coluna lateral" loading="lazy"></iframe>
-      {% else %}
-      <div class="ph-ph ph-lateral">Anúncio<br>(300x250)</div>
-      {% endif %}
-    </div>
-
-    <div class="bloco-lateral">
-      <h3 class="bloco-titulo">Mais Lidas</h3>
-      <ol class="mais-lidas">
-        {% for post in site.posts limit: 6 %}
-        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ol>
-    </div>
-
-    <div class="bloco-lateral">
-      <h3 class="bloco-titulo">Fonte das Notícias</h3>
-      <ul class="lista-fontes">
-        {% assign fontes = site.posts | map: "fonte" | uniq %}
-        {% for fonte in fontes %}<li>{{ fonte }}</li>{% endfor %}
-      </ul>
-    </div>
-  </aside>
+  <!-- COLUNA LATERAL DIREITA: puxada dinamicamente do fragmento único -->
+  <div data-fragment="{{ '/parts/barra-lateral.html' | relative_url }}"></div>
 
 </div>
 
