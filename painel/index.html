@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel de Controle | Portal Ao Vivo</title>
+  <link rel="stylesheet" href="painel.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <script src="config.js"></script>
+</head>
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <div id="tela-login" class="tela-login">
+    <div class="card-login">
+      <div class="logo">
+        <span class="logo-play">&#9654;</span>
+        <span class="logo-texto">
+          <span class="logo-linha1">PORTAL</span>
+          <span class="logo-linha2">AO&nbsp;VIVO</span>
+        </span>
+      </div>
+      <h1>Painel de Controle</h1>
+      <p class="sub">Gerenciar fontes, banners, hashtags e temas do portal.</p>
+      <input type="password" id="campo-senha" placeholder="Senha de acesso" autocomplete="current-password">
+      <button id="btn-login" class="btn btn-vermelho">Entrar</button>
+      <p id="erro-login" class="erro" style="display:none;">Senha incorreta.</p>
+    </div>
+  </div>
+
+  <!-- PAINEL -->
+  <div id="tela-painel" class="tela-painel" style="display:none;">
+    <header class="painel-header">
+      <div class="painel-header-inner">
+        <div class="logo logo-pequeno">
+          <span class="logo-play">&#9654;</span>
+          <span class="logo-texto">
+            <span class="logo-linha1">PORTAL</span>
+            <span class="logo-linha2">AO&nbsp;VIVO</span>
+          </span>
+        </div>
+        <span class="painel-titulo">Painel de Controle</span>
+        <button id="btn-sair" class="btn btn-claro">Sair</button>
+      </div>
+    </header>
+
+    <!-- TABS -->
+    <nav class="tabs">
+      <button class="tab ativo" data-tab="fontes">Fontes</button>
+      <button class="tab" data-tab="banners">Banners</button>
+      <button class="tab" data-tab="hashtags">Hashtags</button>
+      <button class="tab" data-tab="temas">Temas</button>
+      <button class="tab" data-tab="publicar">Como Publicar</button>
+    </nav>
+
+    <main class="painel-corpo">
+
+      <!-- ==================== FONTES ==================== -->
+      <section id="sec-fontes" class="secao ativo">
+        <div class="aviso">
+          <strong>Fontes de Noticias:</strong> edite a lista de fontes RSS/scrape que o pipeline usa para coletar noticias.
+          Cada fonte tem nome, tipo (rss/sitemap/scrape), URL e padrao de link.
+        </div>
+        <div class="grid-2col">
+          <div class="painel-card">
+            <h2>Fontes cadastradas</h2>
+            <div id="status-fontes" class="status">Carregando...</div>
+            <div id="lista-fontes"></div>
+            <button id="btn-add-fonte" class="btn btn-claro">+ Adicionar fonte</button>
+          </div>
+          <div class="painel-card">
+            <h2>JSON gerado</h2>
+            <p class="dica">Copie e cole em <code>fonts.json</code> no GitHub.</p>
+            <textarea id="json-fontes" rows="20" readonly placeholder='[{"nome":"...", "tipo":"rss", "url":"...", "link_pattern":"..."}]'></textarea>
+            <div class="acoes">
+              <button id="btn-abrir-fontes" class="btn btn-vermelho">Abrir no GitHub</button>
+              <button id="btn-copiar-fontes" class="btn btn-claro">Copiar</button>
+            </div>
+            <p id="msg-fontes" class="ok" style="display:none;">Copiado!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== BANNERS ==================== -->
+      <section id="sec-banners" class="secao" style="display:none;">
+        <div class="aviso">
+          <strong>Banners/Publicidade:</strong> ative/desative espacos e gerencie as imagens de cada espaco.
+          Para adicionar imagem: envie o arquivo na pasta <code>ads_*</code> pelo GitHub e adicione o nome abaixo.
+        </div>
+        <div id="status-banners" class="status">Carregando...</div>
+        <div id="lista-espacos"></div>
+        <div class="painel-card">
+          <h2>Manifesto gerado</h2>
+          <p class="dica">Copie e cole em <code>assets/js/ads-imagens.json</code> no GitHub.</p>
+          <textarea id="json-banners" rows="12" readonly></textarea>
+          <div class="acoes">
+            <button id="btn-abrir-banners" class="btn btn-vermelho">Abrir no GitHub</button>
+            <button id="btn-copiar-banners" class="btn btn-claro">Copiar</button>
+          </div>
+          <p id="msg-banners" class="ok" style="display:none;">Copiado!</p>
+        </div>
+      </section>
+
+      <!-- ==================== HASHTAGS ==================== -->
+      <section id="sec-hashtags" class="secao" style="display:none;">
+        <div class="aviso">
+          <strong>Hashtags do Instagram:</strong> edite a lista de hashtags monitoradas pelo portal (uma por linha).
+        </div>
+        <div class="grid-2col">
+          <div class="painel-card">
+            <h2>Hashtags</h2>
+            <div id="status-hashtags" class="status">Carregando...</div>
+            <textarea id="lista-hashtags" rows="16" placeholder="patosdeminas&#10;acipatos&#10;..."></textarea>
+          </div>
+          <div class="painel-card">
+            <h2>JSON gerado</h2>
+            <p class="dica">Copie e cole em <code>hashtags.json</code> no GitHub.</p>
+            <textarea id="json-hashtags" rows="16" readonly placeholder='{"hashtags": ["..."]}'></textarea>
+            <div class="acoes">
+              <button id="btn-abrir-hashtags" class="btn btn-vermelho">Abrir no GitHub</button>
+              <button id="btn-copiar-hashtags" class="btn btn-claro">Copiar</button>
+            </div>
+            <p id="msg-hashtags" class="ok" style="display:none;">Copiado!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TEMAS ==================== -->
+      <section id="sec-temas" class="secao" style="display:none;">
+        <div class="aviso">
+          <strong>Cidades e Temas:</strong> edite as cidades e temas de curadoria do portal (JSON).
+        </div>
+        <div class="grid-2col">
+          <div class="painel-card">
+            <h2>JSON do themes.json</h2>
+            <div id="status-temas" class="status">Carregando...</div>
+            <textarea id="json-temas-entrada" rows="20" placeholder='{"cidades":[...],"temas":{...}}'></textarea>
+          </div>
+          <div class="painel-card">
+            <h2>JSON formatado</h2>
+            <p class="dica">Copie e cole em <code>themes.json</code> no GitHub.</p>
+            <textarea id="json-temas-saida" rows="20" readonly></textarea>
+            <div class="acoes">
+              <button id="btn-validar-temas" class="btn btn-vermelho">Validar e formatar</button>
+              <button id="btn-abrir-temas" class="btn btn-claro">Abrir no GitHub</button>
+              <button id="btn-copiar-temas" class="btn btn-claro">Copiar</button>
+            </div>
+            <p id="msg-temas" class="ok" style="display:none;">Copiado!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== COMO PUBLICAR ==================== -->
+      <section id="sec-publicar" class="secao" style="display:none;">
+        <div class="painel-card">
+          <h2>Como publicar alteracoes</h2>
+          <ol class="lista-passos">
+            <li>Edite a configuracao na aba correspondente</li>
+            <li>Clique em <strong>"Gerar e copiar"</strong> ou <strong>"Copiar"</strong></li>
+            <li>Clique em <strong>"Abrir no GitHub"</strong> (abre o arquivo para edicao)</li>
+            <li>Cole o conteudo gerado no campo de edicao do GitHub</li>
+            <li>Clique em <strong>"Commit changes"</strong></li>
+            <li>Para ver as mudancas no ar, va em <a href="#" id="link-actions">Actions</a> e clique em <strong>"Run workflow"</strong></li>
+          </ol>
+          <p class="dica">Ou aguarde a proxima execucao automatica (a cada hora).</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="painel.js"></script>
+</body>
+</html>

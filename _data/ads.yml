@@ -14,9 +14,9 @@
 topo:
   ativo: true
 
-# 2) BANNER ESQUERDA - coluna da esquerda (160x600)
+# 2) BANNER ESQUERDA - coluna da esquerda (160x600) - desativado (coluna removida da home)
 esquerda:
-  ativo: true
+  ativo: false
 
 # 3) BANNER LATERAL DIREITA - coluna lateral (300x250)
 lateral:

@@ -24,25 +24,24 @@ def slugify(texto):
 def main():
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key:
-        print("[ERRO] GEMINI_API_KEY não definida. Abortando.")
-        sys.exit(1)
+        print("[AVISO] GEMINI_API_KEY nao definida. Geradores gratuitos continuam funcionando.")
 
     themes = collect.load_json(os.path.join(BASE_DIR, "themes.json"))
 
     print("=" * 60)
-    print("ETAPA 1/4 - Coleta de notícias")
+    print("ETAPA 1/4 - Coleta de noticias")
     print("=" * 60)
     candidatas, _ = collect.coleta_completa()
     if not candidatas:
-        print("Nenhuma notícia nova encontrada. Encerrando.")
+        print("Nenhuma noticia nova encontrada. Encerrando.")
         return
 
     print("\n" + "=" * 60)
-    print("ETAPA 2/4 - Extração de texto e classificação")
+    print("ETAPA 2/4 - Extracao de texto e classificacao")
     print("=" * 60)
     selecionadas = collect.processar_candidatas(candidatas, themes, max_itens=6)
     if not selecionadas:
-        print("Nenhuma matéria aproveitável. Encerrando.")
+        print("Nenhuma materia aproveitavel. Encerrando.")
         return
 
     print("\n" + "=" * 60)
@@ -57,24 +56,27 @@ def main():
             if titulo_ia and len(titulo_ia) > 10:
                 item["titulo"] = titulo_ia
 
-            print("[IMAGEM] Gerando ilustração...")
+            print("[IMAGEM] Gerando ilustracao...")
             prompt = image.gerar_prompt_imagem(resumo, item["titulo"], item["tema"])
-            nome_img = f"{slugify(item['titulo'])}.jpg"
-            destino = os.path.join(BASE_DIR, "assets", "images", nome_img)
+            nome_slug = slugify(item["titulo"])
+            destino_jpg = os.path.join(BASE_DIR, "assets", "images", f"{nome_slug}.jpg")
             imagem_orig = item.get("imagem") or None
-            img = image.baixar_imagem(prompt, destino, imagem_orig=imagem_orig)
+            img = image.baixar_imagem(
+                prompt, destino_jpg, imagem_orig=imagem_orig, api_key=api_key,
+            )
             if img:
-                imagem_rel = f"/assets/images/{nome_img}"
+                nome_final = os.path.basename(img)
+                imagem_rel = f"/assets/images/{nome_final}"
             else:
                 imagem_rel = ""
 
-            print("[PUBLICAÇÃO] Salvando matéria...")
+            print("[PUBLICACAO] Salvando materia...")
             publish.publicar_materia(item, resumo, imagem_rel)
             publicadas += 1
         except Exception as e:
             print(f"[ERRO] falha ao processar {item.get('titulo', '?')}: {e}")
 
-    print(f"\n[FIM] {publicadas} matéria(s) publicadas nesta rodada.")
+    print(f"\n[FIM] {publicadas} materia(s) publicadas nesta rodada.")
 
 
 if __name__ == "__main__":

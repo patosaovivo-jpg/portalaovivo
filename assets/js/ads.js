@@ -1,16 +1,26 @@
 /* ============================================================
    PORTAL AO VIVO - SISTEMA DE PUBLICIDADE
-   Mostra uma IMAGEM ALEATÓRIA de cada pasta de anúncios.
-   Para adicionar um anúncio: coloque a imagem na pasta (ex:
-   ads_topo/) e acrescente o nome do arquivo na lista abaixo.
+   Carrega imagens do manifesto ads-imagens.json.
+   Para adicionar um anuncio: coloque a imagem na pasta
+   (ex: ads_topo/) e adicione o nome no manifesto JSON.
    ============================================================ */
-var ADS_IMAGENS = {
-  'ads_topo':      ['topo1.svg', 'topo2.svg'],
-  'ads_esquerda':  ['esquerda1.svg', 'esquerda2.svg'],
-  'ads_lateral':   ['lateral1.svg', 'lateral2.svg'],
-  'ads_materia':   ['materia1.svg', 'materia2.svg'],
-  'ads_rodape':    ['rodape1.svg', 'rodape2.svg']
-};
+
+var ADS_IMAGENS = {};
+
+(function() {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '/assets/js/ads-imagens.json', true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      try {
+        ADS_IMAGENS = JSON.parse(xhr.responseText);
+      } catch(e) {
+        console.warn('[ADS] Erro ao ler manifesto:', e);
+      }
+    }
+  };
+  xhr.send();
+})();
 
 function ADS_aleatorio(lista) {
   return lista[Math.floor(Math.random() * lista.length)];

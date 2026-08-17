@@ -30,3 +30,14 @@ defaults:
       layout: page
 
 # Publicidade: edite os códigos em _data/ads.yml
+
+exclude:
+  - admin
+  - painel
+  - scripts
+  - "*.py"
+  - "*.txt"
+  - "*.md"
+  - "*.sh"
+  - "*.bat"
+  - "*.bat"
