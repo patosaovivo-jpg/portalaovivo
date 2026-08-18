@@ -24,7 +24,7 @@ layout: null
         </span>
       </div>
       <h1>Painel de Admin</h1>
-      <p class="sub">Gerenciar hashtags do Instagram monitoradas pelo portal.</p>
+      <p class="sub">Gerenciar hashtags e publicar matérias.</p>
       <input type="password" id="campo-senha" placeholder="Senha de acesso" autocomplete="current-password">
       <button id="btn-login" class="btn btn-vermelho">Entrar</button>
       <p id="erro-login" class="erro" style="display:none;">Senha incorreta.</p>
@@ -42,47 +42,153 @@ layout: null
             <span class="logo-linha2">AO&nbsp;VIVO</span>
           </span>
         </div>
-        <span class="admin-titulo">Painel de Hashtags</span>
+        <span class="admin-titulo">Painel de Admin</span>
         <button id="btn-sair" class="btn btn-claro">Sair</button>
       </div>
     </header>
 
+    <!-- TABS -->
+    <nav class="admin-tabs">
+      <button class="admin-tab ativo" data-tab="materia">Nova Matéria</button>
+      <button class="admin-tab" data-tab="hashtags">Hashtags</button>
+    </nav>
+
     <main class="admin-corpo">
-      <div class="aviso">
-        <strong>Como funciona:</strong> o portal busca no Instagram os posts públicos marcados com as
-        hashtags abaixo. Edite a lista (uma hashtag por linha) e clique em
-        <strong>"Gerar JSON e copiar"</strong>. Depois cole o conteúdo no arquivo
-        <code>hashtags.json</code> no GitHub e confirme o commit. O sistema lê a lista a cada coleta.
-      </div>
 
-      <div class="grid-admin">
-        <section class="painel-card">
-          <h2>Hashtags monitoradas</h2>
-          <div id="status-carregar" class="status">Carregando...</div>
-          <textarea id="lista-hashtags" rows="14" placeholder="patosdeminas&#10;acipatos&#10;..."></textarea>
-          <div class="acoes">
-            <button id="btn-gerar" class="btn btn-vermelho">Gerar JSON e copiar</button>
-            <button id="btn-recarga" class="btn btn-claro">Recarregar lista</button>
-          </div>
-        </section>
+      <!-- ==================== NOVA MATÉRIA ==================== -->
+      <section id="sec-materia" class="secao-admin ativo">
+        <div class="aviso">
+          <strong>Publicar matéria:</strong> preencha os campos abaixo e clique em
+          <strong>"Gerar e copiar"</strong>. Depois abra o GitHub e cole o conteúdo.
+        </div>
 
-        <section class="painel-card">
-          <h2>JSON gerado</h2>
-          <p class="dica">Copie o conteúdo abaixo e cole em <code>hashtags.json</code> no repositório.</p>
-          <textarea id="json-saida" rows="14" readonly placeholder='{"hashtags": ["..."]}'></textarea>
-          <div class="acoes">
-            <button id="btn-abrir-github" class="btn btn-vermelho">Abrir hashtags.json no GitHub</button>
-            <button id="btn-copiar" class="btn btn-claro">Copiar JSON</button>
-          </div>
-          <p id="msg-copiado" class="ok" style="display:none;">Copiado para a área de transferência!</p>
-        </section>
-      </div>
+        <div class="grid-admin">
+          <!-- COLUNA ESQUERDA: FORMULÁRIO -->
+          <section class="painel-card">
+            <h2>Dados da matéria</h2>
 
-      <section class="painel-card dicas-card">
-        <h2>Dicas de hashtags da região</h2>
-        <ul id="lista-dicas" class="lista-dicas"></ul>
-        <p class="dica">Clique em uma sugestão para adicionar à lista acima.</p>
+            <label class="campo-label">Título *</label>
+            <input type="text" id="materia-titulo" class="campo-input" placeholder="Ex: Prefeitura de Patos inaugura nova escola" maxlength="200">
+
+            <label class="campo-label">Texto da matéria *</label>
+            <textarea id="materia-texto" class="campo-textarea" rows="12" placeholder="Cole ou digite o texto completo da notícia aqui...&#10;&#10;Parágrafos separados por linha em branco."></textarea>
+
+            <div class="campo-row">
+              <div class="campo-col">
+                <label class="campo-label">Imagem (URL)</label>
+                <input type="text" id="materia-imagem" class="campo-input" placeholder="https://exemplo.com/foto.jpg">
+              </div>
+              <div class="campo-col">
+                <label class="campo-label">YouTube (URL ou ID)</label>
+                <input type="text" id="materia-youtube" class="campo-input" placeholder="https://youtube.com/watch?v=... ou ID">
+              </div>
+            </div>
+
+            <div class="campo-row">
+              <div class="campo-col">
+                <label class="campo-label">Tema/Categoria</label>
+                <select id="materia-tema" class="campo-select">
+                  <option value="Notícias">Notícias</option>
+                  <option value="Política">Política</option>
+                  <option value="Economia">Economia</option>
+                  <option value="Esportes">Esportes</option>
+                  <option value="Cultura">Cultura</option>
+                  <option value="Saúde">Saúde</option>
+                  <option value="Educação">Educação</option>
+                  <option value="Segurança">Segurança</option>
+                  <option value="Entretenimento">Entretenimento</option>
+                  <option value="Agronegócio">Agronegócio</option>
+                  <option value="Tecnologia">Tecnologia</option>
+                </select>
+              </div>
+              <div class="campo-col">
+                <label class="campo-label">Fonte (nome)</label>
+                <input type="text" id="materia-fonte-nome" class="campo-input" placeholder="Ex: Portal da Cidade">
+              </div>
+            </div>
+
+            <div class="campo-row">
+              <div class="campo-col">
+                <label class="campo-label">Link da fonte</label>
+                <input type="text" id="materia-fonte-link" class="campo-input" placeholder="https://...">
+              </div>
+              <div class="campo-col">
+                <label class="campo-label">Resumo (auto se vazio)</label>
+                <input type="text" id="materia-resumo" class="campo-input" placeholder="Resumo para exibir nos cards" maxlength="200">
+              </div>
+            </div>
+
+            <div class="acoes" style="margin-top:16px;">
+              <button id="btn-gerar-materia" class="btn btn-vermelho">Gerar e copiar</button>
+              <button id="btn-limpar-materia" class="btn btn-claro">Limpar</button>
+            </div>
+            <p id="msg-materia-copiado" class="ok" style="display:none;">Matéria copiada para a área de transferência!</p>
+          </section>
+
+          <!-- COLUNA DIREITA: PRÉ-VISUALIZAÇÃO -->
+          <section class="painel-card">
+            <h2>Pré-visualização</h2>
+            <div class="preview-meta">
+              <span id="preview-filename" class="preview-filename"></span>
+            </div>
+            <textarea id="preview-materia" rows="22" readonly placeholder="O markdown gerado aparecerá aqui..."></textarea>
+            <div class="acoes">
+              <button id="btn-abrir-github-materia" class="btn btn-vermelho">Criar no GitHub</button>
+              <button id="btn-copiar-materia" class="btn btn-claro">Copiar</button>
+            </div>
+
+            <div class="aviso" style="margin-top:16px; font-size:13px;">
+              <strong>Como publicar:</strong>
+              <ol class="lista-passos">
+                <li>Preencha os dados e clique <strong>"Gerar e copiar"</strong></li>
+                <li>Clique <strong>"Criar no GitHub"</strong> (abre com o nome do arquivo pronto)</li>
+                <li>Cole o conteúdo no campo de edição</li>
+                <li>Se tiver imagem: salve o arquivo na pasta <code>assets/images/</code> antes</li>
+                <li>Clique <strong>"Commit changes"</strong></li>
+              </ol>
+            </div>
+          </section>
+        </div>
       </section>
+
+      <!-- ==================== HASHTAGS ==================== -->
+      <section id="sec-hashtags" class="secao-admin" style="display:none;">
+        <div class="aviso">
+          <strong>Hashtags do Instagram:</strong> o portal busca posts públicos marcados com as
+          hashtags abaixo. Edite a lista e clique em <strong>"Gerar JSON e copiar"</strong>.
+          Depois cole no arquivo <code>hashtags.json</code> no GitHub.
+        </div>
+
+        <div class="grid-admin">
+          <section class="painel-card">
+            <h2>Hashtags monitoradas</h2>
+            <div id="status-carregar" class="status">Carregando...</div>
+            <textarea id="lista-hashtags" rows="14" placeholder="patosdeminas&#10;acipatos&#10;..."></textarea>
+            <div class="acoes">
+              <button id="btn-gerar" class="btn btn-vermelho">Gerar JSON e copiar</button>
+              <button id="btn-recarga" class="btn btn-claro">Recarregar lista</button>
+            </div>
+          </section>
+
+          <section class="painel-card">
+            <h2>JSON gerado</h2>
+            <p class="dica">Copie e cole em <code>hashtags.json</code> no repositório.</p>
+            <textarea id="json-saida" rows="14" readonly placeholder='{"hashtags": ["..."]}'></textarea>
+            <div class="acoes">
+              <button id="btn-abrir-github" class="btn btn-vermelho">Abrir hashtags.json no GitHub</button>
+              <button id="btn-copiar" class="btn btn-claro">Copiar JSON</button>
+            </div>
+            <p id="msg-copiado" class="ok" style="display:none;">Copiado!</p>
+          </section>
+        </div>
+
+        <section class="painel-card dicas-card">
+          <h2>Dicas de hashtags da região</h2>
+          <ul id="lista-dicas" class="lista-dicas"></ul>
+          <p class="dica">Clique em uma sugestão para adicionar à lista acima.</p>
+        </section>
+      </section>
+
     </main>
   </div>
 

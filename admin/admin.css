@@ -59,10 +59,10 @@ code {
 .card-login input:focus { outline: none; border-color: #e50914; }
 .erro { color: #e50914; font-size: 13px; margin-top: 10px; }
 
-/* ---------- CABEÇALHO ---------- */
+/* ---------- CABECALHO ---------- */
 .admin-header { background: #111; color: #fff; border-bottom: 4px solid #e50914; }
 .admin-header-inner {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 14px 20px;
   display: flex;
@@ -72,8 +72,32 @@ code {
 .logo-pequeno .logo-linha1 { color: #fff; }
 .admin-titulo { flex: 1; font-size: 18px; font-weight: 800; text-transform: uppercase; }
 
+/* ---------- TABS ---------- */
+.admin-tabs {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 4px;
+  background: #fff;
+  border-bottom: 2px solid #ddd;
+}
+.admin-tab {
+  border: none;
+  background: transparent;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: color .2s, border-color .2s;
+}
+.admin-tab:hover { color: #111; }
+.admin-tab.ativo { color: #e50914; border-bottom-color: #e50914; }
+
 /* ---------- CORPO ---------- */
-.admin-corpo { max-width: 1000px; margin: 24px auto; padding: 0 20px; }
+.admin-corpo { max-width: 1100px; margin: 24px auto; padding: 0 20px; }
 .aviso {
   background: #fff3cd;
   border: 1px solid #ffd97a;
@@ -112,7 +136,59 @@ textarea[readonly] { background: #fafafa; color: #333; }
 .acoes { display: flex; gap: 10px; flex-wrap: wrap; }
 .dica { font-size: 13px; color: #666; margin: 0 0 10px; }
 
-/* ---------- BOTÕES ---------- */
+/* ---------- CAMPOS DO FORMULARIO ---------- */
+.campo-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 4px;
+  margin-top: 10px;
+}
+.campo-label:first-child { margin-top: 0; }
+.campo-input, .campo-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+}
+.campo-input:focus, .campo-select:focus, .campo-textarea:focus {
+  outline: none;
+  border-color: #e50914;
+}
+.campo-textarea {
+  width: 100%;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+.campo-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ---------- PREVIEW ---------- */
+.preview-meta {
+  margin-bottom: 10px;
+}
+.preview-filename {
+  display: inline-block;
+  background: #111;
+  color: #0f0;
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+/* ---------- BOTOES ---------- */
 .btn {
   border: none;
   border-radius: 4px;
@@ -144,7 +220,12 @@ textarea[readonly] { background: #fafafa; color: #333; }
 }
 .lista-dicas li:hover { background: #e50914; }
 
+/* ---------- PASSOS ---------- */
+.lista-passos { font-size: 13px; line-height: 1.7; margin: 8px 0 0 16px; padding: 0; }
+.lista-passos li { margin-bottom: 4px; }
+
 @media (max-width: 700px) {
   .grid-admin { grid-template-columns: 1fr; }
+  .campo-row { grid-template-columns: 1fr; }
   .admin-header-inner { flex-wrap: wrap; }
 }
