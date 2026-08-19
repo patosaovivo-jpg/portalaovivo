@@ -156,7 +156,8 @@ def coletar_scrape(fonte):
 def extrair_texto(link):
     r = fetch(link)
     if not r:
-        return None
+        return None, None
+    imagem = extrair_imagem(r, link)
     try:
         import trafilatura
 
@@ -168,9 +169,42 @@ def extrair_texto(link):
             favor_recall=False,
         )
         if text and len(text.strip()) > 200:
-            return text.strip()
+            return text.strip(), imagem
     except Exception as e:
         print(f"  [ERRO] trafilatura em {link}: {e}")
+    return None, imagem
+
+
+def extrair_imagem(resp, link):
+    """Extrai a imagem principal (og:image) de uma pagina."""
+    try:
+        soup = BeautifulSoup(resp.content, "html.parser")
+        # 1) og:image
+        og = soup.find("meta", property="og:image")
+        if og and og.get("content"):
+            url = normalize_url(og["content"].strip())
+            if url.startswith("http") and not url.endswith(".svg"):
+                return url
+        # 2) twitter:image
+        tw = soup.find("meta", attrs={"name": "twitter:image"})
+        if tw and tw.get("content"):
+            url = normalize_url(tw["content"].strip())
+            if url.startswith("http") and not url.endswith(".svg"):
+                return url
+        # 3) primeira imagem grande do artigo
+        for img in soup.find_all("img", src=True):
+            src = img["src"].strip()
+            if not src or src.endswith(".svg"):
+                continue
+            # pular icons, logos, avatares
+            if any(x in src.lower() for x in ["logo", "icon", "avatar", "favicon", "sprite"]):
+                continue
+            w = img.get("width", "")
+            if w and w.isdigit() and int(w) < 200:
+                continue
+            return normalize_url(src)
+    except Exception:
+        pass
     return None
 
 
@@ -301,8 +335,9 @@ def processar_candidatas(candidatas, themes, max_itens=6):
         # Itens do Instagram já vêm com texto e imagem (legenda). Não precisam de extração.
         if item.get("tipo") == "instagram" and item.get("texto"):
             texto = item["texto"]
+            imagem = item.get("imagem")
         else:
-            texto = extrair_texto(item["link"])
+            texto, imagem = extrair_texto(item["link"])
         if not texto:
             continue
         if not qualidade_minima(item, texto):
@@ -312,6 +347,8 @@ def processar_candidatas(candidatas, themes, max_itens=6):
             continue
         item["texto"] = texto
         item["tema"] = tema
+        if imagem:
+            item["imagem_original"] = imagem
         links_vistos.add(item["link"])
         selecionadas.append(item)
         time.sleep(0.5)

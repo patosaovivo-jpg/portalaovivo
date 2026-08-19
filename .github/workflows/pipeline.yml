@@ -3,7 +3,7 @@ name: Publicacao Automatica
 on:
   schedule:
     # A cada hora, no minuto 0 (UTC). Ajuste o fuso se quiser: horario BR = UTC-3
-    - cron: "0 * * * *"
+    - cron: "0 */3 * * *"
   workflow_dispatch: # permite rodar manualmente pela aba Actions
 
 permissions:
@@ -38,6 +38,8 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           INSTAGRAM_IG_USER_ID: ${{ secrets.INSTAGRAM_IG_USER_ID }}
+          GA_SERVICE_ACCOUNT: ${{ secrets.GA_SERVICE_ACCOUNT }}
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
         run: |
           python scripts/pipeline.py || echo "::warning::Pipeline encerrou sem novas materias ou com avisos"
 

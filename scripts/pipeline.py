@@ -56,19 +56,42 @@ def main():
             if titulo_ia and len(titulo_ia) > 10:
                 item["titulo"] = titulo_ia
 
-            print("[IMAGEM] Gerando ilustracao...")
-            prompt = image.gerar_prompt_imagem(resumo, item["titulo"], item["tema"])
+            print("[IMAGEM] Verificando imagem original...")
+            imagem_orig = item.get("imagem_original") or item.get("imagem") or None
             nome_slug = slugify(item["titulo"])
             destino_jpg = os.path.join(BASE_DIR, "assets", "images", f"{nome_slug}.jpg")
-            imagem_orig = item.get("imagem") or None
-            img = image.baixar_imagem(
-                prompt, destino_jpg, imagem_orig=imagem_orig, api_key=api_key,
-            )
-            if img:
-                nome_final = os.path.basename(img)
-                imagem_rel = f"/assets/images/{nome_final}"
-            else:
-                imagem_rel = ""
+
+            if imagem_orig:
+                # Tenta baixar a imagem original primeiro
+                print(f"  [ORIGINAL] {imagem_orig[:80]}...")
+                try:
+                    import requests as _req
+                    resp = _req.get(imagem_orig, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+                    if resp.status_code == 200 and len(resp.content) > 5000:
+                        with open(destino_jpg, "wb") as f:
+                            f.write(resp.content)
+                        nome_final = os.path.basename(destino_jpg)
+                        imagem_rel = f"/assets/images/{nome_final}"
+                        print(f"  [OK] Imagem original salva: {nome_final}")
+                    else:
+                        print(f"  [AVISO] Imagem original invalida ({resp.status_code}), gerando...")
+                        imagem_orig = None
+                except Exception as e:
+                    print(f"  [AVISO] Falha ao baixar original: {e}, gerando...")
+                    imagem_orig = None
+
+            # Gera imagem apenas se nao tem original
+            if not imagem_orig:
+                print("[IMAGEM] Gerando ilustracao com IA...")
+                prompt = image.gerar_prompt_imagem(resumo, item["titulo"], item["tema"])
+                img = image.baixar_imagem(
+                    prompt, destino_jpg, api_key=api_key,
+                )
+                if img:
+                    nome_final = os.path.basename(img)
+                    imagem_rel = f"/assets/images/{nome_final}"
+                else:
+                    imagem_rel = ""
 
             print("[PUBLICACAO] Salvando materia...")
             publish.publicar_materia(item, resumo, imagem_rel)
@@ -77,6 +100,15 @@ def main():
             print(f"[ERRO] falha ao processar {item.get('titulo', '?')}: {e}")
 
     print(f"\n[FIM] {publicadas} materia(s) publicadas nesta rodada.")
+
+    print("\n" + "=" * 60)
+    print("ETAPA 5/5 - Atualizar paginas mais acessadas (Analytics)")
+    print("=" * 60)
+    try:
+        import analytics
+        analytics.salvar_popular(dias=7, limite=10)
+    except Exception as e:
+        print(f"[ANALYTICS] Pulou: {e}")
 
 
 if __name__ == "__main__":
