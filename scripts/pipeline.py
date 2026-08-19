@@ -126,9 +126,7 @@ def main():
         import analytics
         analytics.salvar_popular(dias=7, limite=10)
     except Exception as e:
-        import traceback
         print(f"[ANALYTICS] Pulou: {e}")
-        traceback.print_exc()
 
 
 if __name__ == "__main__":
