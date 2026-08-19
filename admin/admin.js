@@ -99,24 +99,56 @@
   function extrairYoutube(texto) {
     if (!texto) return null;
     texto = texto.trim();
+    var id = null;
+    var start = 0;
+
     // Already embed URL
     if (texto.indexOf("youtube.com/embed/") > -1) {
       var m = texto.match(/youtube\.com\/embed\/([^?&/]+)/);
-      return m ? m[1] : null;
+      id = m ? m[1] : null;
     }
     // watch URL
-    if (texto.indexOf("youtube.com/watch") > -1) {
+    else if (texto.indexOf("youtube.com/watch") > -1) {
       var m2 = texto.match(/[?&]v=([^&]+)/);
-      return m2 ? m2[1] : null;
+      id = m2 ? m2[1] : null;
     }
     // youtu.be short URL
-    if (texto.indexOf("youtu.be/") > -1) {
+    else if (texto.indexOf("youtu.be/") > -1) {
       var m3 = texto.match(/youtu\.be\/([^?&/]+)/);
-      return m3 ? m3[3] : null;
+      id = m3 ? m3[1] : null;
     }
     // Just the ID (11 chars)
-    if (/^[A-Za-z0-9_-]{11}$/.test(texto)) return texto;
-    return null;
+    else if (/^[A-Za-z0-9_-]{11}$/.test(texto)) {
+      id = texto;
+    }
+
+    if (!id) return null;
+
+    // Extract timestamp (t=5342s, t=1h30m, etc.)
+    var tMatch = texto.match(/[?&]t=([^&]+)/);
+    if (tMatch) {
+      var raw = tMatch[1].toLowerCase();
+      var secs = 0;
+      if (raw.indexOf("s") > -1) {
+        secs = parseInt(raw) || 0;
+      } else if (raw.indexOf("m") > -1 || raw.indexOf("h") > -1) {
+        var hM = raw.match(/(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s?)?/);
+        if (hM) {
+          secs += (parseInt(hM[1]) || 0) * 3600;
+          secs += (parseInt(hM[2]) || 0) * 60;
+          secs += (parseInt(hM[3]) || 0);
+        }
+      } else {
+        secs = parseInt(raw) || 0;
+      }
+      if (secs > 0) start = secs;
+    }
+
+    return { id: id, start: start };
+  }
+
+  function youtubeThumbUrl(id) {
+    return "https://img.youtube.com/vi/" + id + "/maxresdefault.jpg";
   }
 
   // ============================================================
@@ -146,11 +178,19 @@
     var filename = data + "-" + slug + ".md";
     var datetime = agoraUTC();
     var imagem = campoImagem.value.trim();
-    var youtubeId = extrairYoutube(campoYoutube.value);
+    var yt = extrairYoutube(campoYoutube.value);
+    var youtubeId = yt ? yt.id : null;
+    var youtubeStart = yt ? yt.start : 0;
     var tema = campoTema.value;
     var fonteNome = campoFonteNome.value.trim();
     var fonteLink = campoFonteLink.value.trim();
     var resumo = campoResumo.value.trim();
+
+    // Auto-thumb: se tem YouTube e imagem está vazia, usa a thumb do vídeo
+    if (youtubeId && !imagem) {
+      imagem = youtubeThumbUrl(youtubeId);
+      campoImagem.value = imagem;
+    }
 
     // Auto-resumo se vazio
     if (!resumo) {
@@ -186,8 +226,10 @@
 
     // YouTube embed
     if (youtubeId) {
+      var embedSrc = "https://www.youtube.com/embed/" + youtubeId;
+      if (youtubeStart > 0) embedSrc += "?start=" + youtubeStart;
       body += '<div class="video-container">\n';
-      body += '<iframe width="100%" height="400" src="https://www.youtube.com/embed/' + youtubeId + '" frameborder="0" allowfullscreen></iframe>\n';
+      body += '<iframe width="100%" height="400" src="' + embedSrc + '" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>\n';
       body += '</div>\n\n';
     }
 
@@ -214,6 +256,17 @@
         gerarMarkdownMateria();
       }
     });
+  });
+
+  // Auto-thumb: quando colar link do YouTube, preenche a imagem com a thumb
+  campoYoutube.addEventListener("input", function () {
+    var yt = extrairYoutube(campoYoutube.value);
+    if (yt && yt.id) {
+      var thumb = youtubeThumbUrl(yt.id);
+      if (!campoImagem.value.trim() || campoImagem.value.indexOf("img.youtube.com") > -1) {
+        campoImagem.value = thumb;
+      }
+    }
   });
 
   document.getElementById("btn-gerar-materia").addEventListener("click", function () {
