@@ -87,7 +87,7 @@ def buscar_paginas_populares(dias=7, limite=10):
 def salvar_popular(dias=7, limite=10):
     """Busca e salva em data/popular.json."""
     resultados = buscar_paginas_populares(dias=dias, limite=limite)
-    destino = os.path.join(BASE_DIR, "data", "popular.json")
+    destino = os.path.join(BASE_DIR, "_data", "popular.json")
     os.makedirs(os.path.dirname(destino), exist_ok=True)
     with open(destino, "w", encoding="utf-8") as f:
         json.dump({"atualizado": __import__("datetime").datetime.utcnow().isoformat() + "Z",
