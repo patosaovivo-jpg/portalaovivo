@@ -39,6 +39,9 @@ def buscar_paginas_populares(dias=7, limite=10):
 
     try:
         info = json.loads(service_account_json)
+        # GitHub Actions armazena \n como literal, nao como nova linha
+        if "private_key" in info:
+            info["private_key"] = info["private_key"].replace("\\n", "\n")
         credentials = sa.Credentials.from_service_account_info(
             info,
             scopes=["https://www.googleapis.com/auth/analytics.readonly"],
