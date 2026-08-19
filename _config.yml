@@ -15,7 +15,6 @@ paginate_path: "/pagina/:num/"
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-seo-tag
 
 defaults:
   - scope:
