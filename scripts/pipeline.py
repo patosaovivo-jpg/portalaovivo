@@ -9,6 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 import collect
 import image
 import publish
+import social_poster
 import summarize
 
 
@@ -29,7 +30,7 @@ def main():
     themes = collect.load_json(os.path.join(BASE_DIR, "themes.json"))
 
     print("=" * 60)
-    print("ETAPA 1/4 - Coleta de noticias")
+    print("ETAPA 1/6 - Coleta de noticias")
     print("=" * 60)
     candidatas, _ = collect.coleta_completa()
     if not candidatas:
@@ -37,7 +38,7 @@ def main():
         return
 
     print("\n" + "=" * 60)
-    print("ETAPA 2/4 - Extracao de texto e classificacao")
+    print("ETAPA 2/6 - Extracao de texto e classificacao")
     print("=" * 60)
     selecionadas = collect.processar_candidatas(candidatas, themes, max_itens=6)
     if not selecionadas:
@@ -45,9 +46,10 @@ def main():
         return
 
     print("\n" + "=" * 60)
-    print("ETAPA 3/4 - Resumo com IA + imagem")
+    print("ETAPA 3/6 - Resumo com IA + imagem")
     print("=" * 60)
     publicadas = 0
+    materias_para_social = []
     for item in selecionadas:
         try:
             print(f"\n[IA] Resumindo: {item['titulo'][:60]}")
@@ -96,19 +98,37 @@ def main():
             print("[PUBLICACAO] Salvando materia...")
             publish.publicar_materia(item, resumo, imagem_rel)
             publicadas += 1
+
+            materias_para_social.append({
+                "titulo": item["titulo"],
+                "link": item["link"],
+                "fonte": item["fonte"],
+                "tema": item.get("tema", "Geral"),
+                "resumo": resumo,
+                "imagem": imagem_rel,
+            })
         except Exception as e:
             print(f"[ERRO] falha ao processar {item.get('titulo', '?')}: {e}")
 
     print(f"\n[FIM] {publicadas} materia(s) publicadas nesta rodada.")
 
+    if materias_para_social:
+        pending_file = os.path.join(BASE_DIR, "data", "pending_social.json")
+        os.makedirs(os.path.dirname(pending_file), exist_ok=True)
+        with open(pending_file, "w", encoding="utf-8") as f:
+            json.dump(materias_para_social, f, ensure_ascii=False, indent=2)
+        print(f"[SOCIAL] {len(materias_para_social)} materia(s) salva(s) para postagem posterior")
+
     print("\n" + "=" * 60)
-    print("ETAPA 5/5 - Atualizar paginas mais acessadas (Analytics)")
+    print("ETAPA 6/6 - Atualizar paginas mais acessadas (Analytics)")
     print("=" * 60)
     try:
         import analytics
         analytics.salvar_popular(dias=7, limite=10)
     except Exception as e:
+        import traceback
         print(f"[ANALYTICS] Pulou: {e}")
+        traceback.print_exc()
 
 
 if __name__ == "__main__":

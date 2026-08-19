@@ -38,6 +38,7 @@ def buscar_paginas_populares(dias=7, limite=10):
         return []
 
     try:
+        print(f"[ANALYTICS] SA JSON length={len(service_account_json)}, prop_id={property_id}")
         info = json.loads(service_account_json)
         # GitHub Actions armazena \n como literal, nao como nova linha
         if "private_key" in info:
@@ -77,7 +78,9 @@ def buscar_paginas_populares(dias=7, limite=10):
         return resultados
 
     except Exception as e:
+        import traceback
         print(f"[ANALYTICS] Erro ao buscar dados: {e}")
+        traceback.print_exc()
         return []
 
 
