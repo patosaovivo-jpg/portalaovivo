@@ -47,7 +47,7 @@ def buscar_paginas_populares(dias=7, limite=10):
 
         request = RunReportRequest(
             property=f"properties/{property_id}",
-            date_ranges=[DateRange(start_date=f"-{dias}d", end_date="today")],
+            date_ranges=[DateRange(start_date=f"{dias}daysAgo", end_date="today")],
             dimensions=[Dimension(name="pagePath"), Dimension(name="pageTitle")],
             metrics=[Metric(name="screenPageViews")],
             order_bys=[
