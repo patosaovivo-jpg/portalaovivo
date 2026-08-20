@@ -6,6 +6,8 @@
    ============================================================ */
 
 var ADS_IMAGENS = {};
+var ADS_READY = false;
+var ADS_QUEUE = [];
 
 (function() {
   var xhr = new XMLHttpRequest();
@@ -17,6 +19,11 @@ var ADS_IMAGENS = {};
       } catch(e) {
         console.warn('[ADS] Erro ao ler manifesto:', e);
       }
+      ADS_READY = true;
+      for (var i = 0; i < ADS_QUEUE.length; i++) {
+        ADS_QUEUE[i]();
+      }
+      ADS_QUEUE = [];
     }
   };
   xhr.send();
@@ -27,6 +34,10 @@ function ADS_aleatorio(lista) {
 }
 
 function ADS_mostrar(pasta, idElemento) {
+  if (!ADS_READY) {
+    ADS_QUEUE.push(function() { ADS_mostrar(pasta, idElemento); });
+    return;
+  }
   var el = document.getElementById(idElemento);
   if (!el) return;
   var lista = ADS_IMAGENS[pasta];
