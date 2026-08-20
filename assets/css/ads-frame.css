@@ -1,6 +1,6 @@
 /* Folha de estilo usada dentro do iframe de cada pasta de anúncios */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body { width: 100%; height: 100%; overflow: hidden; background: transparent; }
-#ad { width: 100%; height: 100%; }
+#ad { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
 #ad a { display: block; width: 100%; height: 100%; }
 #ad img { width: 100%; height: 100%; object-fit: contain; display: block; }

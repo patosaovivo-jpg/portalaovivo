@@ -37,4 +37,13 @@ permalink: /parts/barra-lateral.html
     </ol>
     {% endif %}
   </div>
+
+  <div class="bloco-lateral">
+    <span class="ad-label">Publicidade</span>
+    {% if site.data.ads.lateral_2.ativo %}
+    <iframe class="ad-frame ad-frame-lateral" src="{{ '/ads_lateral_2/' | relative_url }}" title="Publicidade coluna lateral" loading="lazy"></iframe>
+    {% else %}
+    <div class="ph-ph ph-lateral">Anúncio<br>(300x250)</div>
+    {% endif %}
+  </div>
 </aside>

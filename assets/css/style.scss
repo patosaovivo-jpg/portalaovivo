@@ -227,11 +227,11 @@ img { max-width: 100%; display: block; }
 
 /* ---------- IFRAMES DE PUBLICIDADE ---------- */
 .ad-frame { border: 0; display: block; width: 100%; background: transparent; }
-.ad-frame-topo { height: 90px; }
-.ad-frame-esquerda { height: 600px; }
-.ad-frame-lateral { height: 250px; }
-.ad-frame-materia { height: 90px; }
-.ad-frame-rodape { height: 90px; }
+.ad-frame-topo { height: auto; max-width: 970px; margin: 0 auto; aspect-ratio: 970 / 90; }
+.ad-frame-esquerda { height: auto; max-width: 160px; aspect-ratio: 160 / 600; }
+.ad-frame-lateral { height: auto; max-width: 300px; margin: 0 auto; aspect-ratio: 300 / 250; }
+.ad-frame-materia { height: auto; max-width: 728px; margin: 0 auto; aspect-ratio: 728 / 90; }
+.ad-frame-rodape { height: auto; max-width: 728px; margin: 0 auto; aspect-ratio: 728 / 90; }
 
 /* ---------- MAIS LIDAS ---------- */
 .mais-lidas {
@@ -593,6 +593,8 @@ img { max-width: 100%; display: block; }
   .col-esquerda { display: none; }
   .col-lateral { position: static; }
   .slider { height: 360px; }
+  .ad-frame-esquerda { display: none; }
+  .ph-esquerda { display: none; }
 }
 @media (max-width: 640px) {
   .grade-noticias { grid-template-columns: 1fr; }
@@ -610,4 +612,9 @@ img { max-width: 100%; display: block; }
   .post-compartilhar { flex-wrap: wrap; }
   .post-nav { flex-direction: column; }
   .post-nav-next { text-align: left; }
+  .ad-frame-topo { max-width: 100%; }
+  .ad-frame-lateral { max-width: 100%; }
+  .ad-frame-materia { max-width: 100%; }
+  .ad-frame-rodape { max-width: 100%; }
+  .ph-topo { max-width: 100%; }
 }

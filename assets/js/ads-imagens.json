@@ -2,6 +2,7 @@
   "ads_topo": ["topo1.svg", "topo2.svg", "topo-1787264594319.png", "topo-1787264616693.png"],
   "ads_esquerda": ["esquerda1.svg", "esquerda2.svg"],
   "ads_lateral": ["lateral1.svg", "lateral2.svg"],
+  "ads_lateral_2": ["lateral2_1.svg", "lateral2_2.svg"],
   "ads_materia": ["materia1.svg", "materia2.svg"],
   "ads_rodape": ["rodape1.svg", "rodape2.svg"]
 }
