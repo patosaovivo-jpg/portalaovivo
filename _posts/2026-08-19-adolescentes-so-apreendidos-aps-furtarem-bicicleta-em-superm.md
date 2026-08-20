@@ -6,6 +6,8 @@ tema: Local e Cidades
 fonte: "Patrocínio Online"
 fonte_link: "https://www.patrocinioonline.com.br/noticia/dois-menores-sao-apreendidos-apos-furtarem-bicicleta-passando-a-por-cima-do-alambrado-do-estabelecimento-no-bairro-santo-antonio-e-tentarem-fugir-da-pm-87485.html"
 resumo: "Na noite de quarta-feira, 19 de agosto, por volta das 20h22min, a Polícia Militar foi acionada para atender a uma ocorrência de furto de uma bicicleta estacionada no pátio de um su..."
+destaque: true
+destaque_ate: "2026-08-21T23:58:27.602Z"
 ---
 
 Na noite de quarta-feira, 19 de agosto, por volta das 20h22min, a Polícia Militar foi acionada para atender a uma ocorrência de furto de uma bicicleta estacionada no pátio de um supermercado, localizado no bairro Santo Antônio, em Patrocínio (MG).
