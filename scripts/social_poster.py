@@ -8,7 +8,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOCIAL_LOG = os.path.join(BASE_DIR, "data", "social_log.json")
 
 BUFFER_API_URL = "https://api.buffer.com"
-LIMITE_INSTAGRAM_DIA = 3
+LIMITE_INSTAGRAM_DIA = 8
+LIMITE_INSTAGRAM_ALTA = 10
+LIMITE_VIEWS_ALTA = 500
 
 SITE_URL = "https://portalaovivo.com.br"
 
@@ -127,23 +129,34 @@ def buscar_mais_vistas_3h():
         return []
 
 
-def selecionar_materia_mais_vista(materias_pendentes):
-    """Seleciona a materia mais vista entre as pendentes."""
+def selecionar_materias_por_popularidade(materias_pendentes):
+    """Ordena materias por popularidade (GA4) e retorna lista ordenada."""
     populares = buscar_mais_vistas_3h()
     if not populares:
-        print("[SOCIAL] Sem dados de analytics, pegando primeira materia")
-        return materias_pendentes[0] if materias_pendentes else None
+        print("[SOCIAL] Sem dados de analytics, mantendo ordem original")
+        return materias_pendentes
 
+    populares_map = {}
     for pop in populares:
         path_popular = pop["path"].rstrip("/")
         for mat in materias_pendentes:
             link_mat = mat.get("link", "")
             if path_popular in link_mat or link_mat.endswith(path_popular):
-                print(f"[SOCIAL] Mais vista: {pop['titulo'][:60]} ({pop['visualizacoes']} views)")
-                return mat
+                populares_map[mat["link"]] = pop["visualizacoes"]
+                mat["_views"] = pop["visualizacoes"]
+                print(f"[SOCIAL] Match: {pop['titulo'][:50]} ({pop['visualizacoes']} views)")
 
-    print("[SOCIAL] Nenhuma materia popular encontrada entre pendentes, pegando primeira")
-    return materias_pendentes[0] if materias_pendentes else None
+    ordenadas = sorted(materias_pendentes, key=lambda m: m.get("_views", 0), reverse=True)
+    return ordenadas
+
+
+def eh_trafego_alto(materias):
+    """Verifica se o trafego justifica posts extras."""
+    for m in materias:
+        if m.get("_views", 0) >= LIMITE_VIEWS_ALTA:
+            print(f"[SOCIAL] Trafego alto detectado: {m.get('_views', 0)} views")
+            return True
+    return False
 
 
 # ============================================================
@@ -327,10 +340,6 @@ def postar_materias(materias):
 
     print(f"[SOCIAL] Hoje: {posts_ig} posts Instagram")
 
-    if posts_ig >= LIMITE_INSTAGRAM_DIA:
-        print(f"[SOCIAL] Limite diario atingido ({LIMITE_INSTAGRAM_DIA})")
-        return 0
-
     materias_filtradas = [
         m for m in materias
         if m.get("tema", "") in TEMAS_SOCIAIS and not ja_postou(log, m["link"])
@@ -340,30 +349,45 @@ def postar_materias(materias):
         print("[SOCIAL] Nenhuma materia nova para postar")
         return 0
 
-    escolhida = selecionar_materia_mais_vista(materias_filtradas)
-    if not escolhida:
+    materias_ordenadas = selecionar_materias_por_popularidade(materias_filtradas)
+
+    if eh_trafego_alto(materias_ordenadas):
+        limite = LIMITE_INSTAGRAM_ALTA
+    else:
+        limite = LIMITE_INSTAGRAM_DIA
+
+    vagas = limite - posts_ig
+    if vagas <= 0:
+        print(f"[SOCIAL] Limite diario atingido ({limite})")
         return 0
 
-    imagem_url = imagem_url_para_site(escolhida.get("imagem", ""))
-    if not imagem_url:
-        print(f"[SOCIAL] Sem imagem: {escolhida.get('titulo', '')[:50]}")
-        return 0
+    total = 0
+    for mat in materias_ordenadas:
+        if total >= vagas:
+            break
 
-    print(f"\n[SOCIAL] Postando: {escolhida.get('titulo', '')[:60]}")
+        imagem_url = imagem_url_para_site(mat.get("imagem", ""))
+        if not imagem_url:
+            print(f"[SOCIAL] Sem imagem: {mat.get('titulo', '')[:50]}")
+            continue
 
-    sucesso = postar_instagram_buffer(escolhida, escolhida.get("resumo", ""), imagem_url)
+        print(f"\n[SOCIAL] Postando ({total + 1}/{vagas}): {mat.get('titulo', '')[:60]}")
 
-    if sucesso:
-        log["posts"].append({
-            "link": escolhida["link"],
-            "titulo": escolhida.get("titulo", ""),
-            "plataforma": "instagram",
-            "data": datetime.now(timezone.utc).isoformat(),
-        })
+        sucesso = postar_instagram_buffer(mat, mat.get("resumo", ""), imagem_url)
+
+        if sucesso:
+            log["posts"].append({
+                "link": mat["link"],
+                "titulo": mat.get("titulo", ""),
+                "plataforma": "instagram",
+                "data": datetime.now(timezone.utc).isoformat(),
+            })
+            total += 1
+
+    if total > 0:
         save_social_log(log)
-        return 1
 
-    return 0
+    return total
 
 
 def processar_pendentes():
