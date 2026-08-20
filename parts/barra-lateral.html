@@ -14,19 +14,28 @@ permalink: /parts/barra-lateral.html
   </div>
 
   <div class="bloco-lateral">
+    {% if site.data.popular.mais_lidas.size > 0 %}
+    <h3 class="bloco-titulo">Mais Lidas da Semana</h3>
+    <ol class="mais-lidas-lista mais-lidas-lateral">
+      {% for item in site.data.popular.mais_lidas %}
+      <li class="mais-lidas-item">
+        <a href="{{ item.path }}" class="mais-lidas-link">
+          <span class="mais-lidas-num">{{ forloop.index }}</span>
+          <div class="mais-lidas-info">
+            <span class="mais-lidas-titulo">{{ item.titulo }}</span>
+            <span class="mais-lidas-views">{{ item.visualizacoes }} views</span>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
     <h3 class="bloco-titulo">Mais Lidas</h3>
     <ol class="mais-lidas">
       {% for post in site.posts limit: 6 %}
       <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ol>
-  </div>
-
-  <div class="bloco-lateral">
-    <h3 class="bloco-titulo">Fonte das Notícias</h3>
-    <ul class="lista-fontes">
-      {% assign fontes = site.posts | map: "fonte" | uniq %}
-      {% for fonte in fontes %}<li>{{ fonte }}</li>{% endfor %}
-    </ul>
+    {% endif %}
   </div>
 </aside>

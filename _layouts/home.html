@@ -68,27 +68,5 @@ layout: default
 
 </div>
 
-<!-- ===== MAIS LIDAS (Google Analytics) ===== -->
-{% if site.data.popular.mais_lidas.size > 0 %}
-<section class="mais-lidas">
-  <h3 class="bloco-titulo bloco-titulo-principal">
-    <span class="mais-lidas-icone">&#128293;</span> Mais Lidas da Semana
-  </h3>
-  <ol class="mais-lidas-lista">
-    {% for item in site.data.popular.mais_lidas %}
-    <li class="mais-lidas-item">
-      <a href="{{ item.path }}" class="mais-lidas-link">
-        <span class="mais-lidas-num">{{ forloop.index }}</span>
-        <div class="mais-lidas-info">
-          <span class="mais-lidas-titulo">{{ item.titulo }}</span>
-          <span class="mais-lidas-views">{{ item.visualizacoes }} visualizações</span>
-        </div>
-      </a>
-    </li>
-    {% endfor %}
-  </ol>
-</section>
-{% endif %}
-
 <!-- ===== SCROLL PARA OS SCRIPTS DO SLIDER ===== -->
 <script src="{{ '/assets/js/slider.js' | relative_url }}"></script>
