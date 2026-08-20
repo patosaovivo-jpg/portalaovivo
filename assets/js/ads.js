@@ -44,10 +44,10 @@ function ADS_mostrar(pasta, idElemento) {
   if (!lista || !lista.length) return;
   var nome = ADS_aleatorio(lista);
   var link = document.createElement('a');
-  link.href = pasta + '/' + nome;
+  link.href = '/' + pasta + '/' + nome;
   link.target = '_blank';
   var img = document.createElement('img');
-  img.src = pasta + '/' + nome;
+  img.src = '/' + pasta + '/' + nome;
   img.alt = 'Publicidade';
   link.appendChild(img);
   el.innerHTML = '';
