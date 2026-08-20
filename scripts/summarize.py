@@ -3,10 +3,10 @@ import os
 # Modelos em ordem de preferencia. Alguns sao descontinuados/indisponiveis
 # para contas novas, entao tentamos em sequencia ate um funcionar.
 MODELOS = [
-    "gemini-3.5-flash-lite",
-    "gemini-flash-lite-latest",
-    "gemini-flash-latest",
-    "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-2.0-flash-lite",
+    "gemini-1.5-flash",
+    "gemini-1.5-flash-8b",
 ]
 
 PROMPT = (
@@ -46,6 +46,8 @@ def _gerar(prompt, api_key, temperature, max_tokens):
 
 
 def resumir_texto(texto, api_key):
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY nao definida")
     return _gerar(
         PROMPT.format(texto=texto[:15000]),
         api_key,
@@ -54,7 +56,18 @@ def resumir_texto(texto, api_key):
     )
 
 
+def resumir_fallback(texto):
+    """Gera resumo sem IA pegando os primeiros paragrafos do texto original."""
+    paragrafos = [p.strip() for p in texto.split("\n") if len(p.strip()) > 30]
+    resumo = "\n\n".join(paragrafos[:4])
+    if len(resumo) > 1000:
+        resumo = resumo[:997] + "..."
+    return resumo
+
+
 def gerar_titulo(texto, api_key):
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY nao definida")
     prompt = (
         "Crie um título jornalístico curto e chamativo (máximo 10 palavras) para a "
         "notícia abaixo. Responda APENAS com o título, sem aspas.\n\n" + texto[:4000]

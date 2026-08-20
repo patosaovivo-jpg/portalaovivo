@@ -52,11 +52,32 @@ def main():
     materias_para_social = []
     for item in selecionadas:
         try:
-            print(f"\n[IA] Resumindo: {item['titulo'][:60]}")
-            resumo = summarize.resumir_texto(item["texto"], api_key)
-            titulo_ia = summarize.gerar_titulo(resumo, api_key)
-            if titulo_ia and len(titulo_ia) > 10:
-                item["titulo"] = titulo_ia
+            titulo = item["titulo"]
+            texto = item["texto"]
+
+            # Resumo: tentar IA, fallback para texto original
+            resumo = None
+            if api_key:
+                try:
+                    print(f"[IA] Resumindo: {titulo[:60]}")
+                    resumo = summarize.resumir_texto(texto, api_key)
+                except Exception as e:
+                    print(f"[IA] Fallback resumo: {e}")
+                    resumo = summarize.resumir_fallback(texto)
+            else:
+                print(f"[FALLBACK] Sem API_KEY, resumindo localmente: {titulo[:60]}")
+                resumo = summarize.resumir_fallback(texto)
+
+            # Titulo: tentar IA, fallback para titulo original
+            if api_key:
+                try:
+                    titulo_ia = summarize.gerar_titulo(resumo, api_key)
+                    if titulo_ia and len(titulo_ia) > 10:
+                        titulo = titulo_ia
+                except Exception as e:
+                    print(f"[IA] Fallback titulo: {e}")
+
+            item["titulo"] = titulo
 
             print("[IMAGEM] Verificando imagem original...")
             imagem_orig = item.get("imagem_original") or item.get("imagem") or None
