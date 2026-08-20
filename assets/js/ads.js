@@ -11,7 +11,7 @@ var ADS_QUEUE = [];
 
 (function() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', '/assets/js/ads-imagens.json', true);
+  xhr.open('GET', '/assets/js/ads-imagens.json?v=2', true);
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
       try {
