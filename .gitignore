@@ -5,3 +5,5 @@ Gemfile.lock
 __pycache__/
 *.pyc
 .env
+font_frequency.json
+local-admin/
