@@ -7,6 +7,7 @@ e GA_PROPERTY_ID (ID da propriedade GA4, ex: 435987654).
 """
 import json
 import os
+from datetime import datetime, timezone, timedelta
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -86,8 +87,9 @@ def salvar_popular(dias=7, limite=10):
     resultados = buscar_paginas_populares(dias=dias, limite=limite)
     destino = os.path.join(BASE_DIR, "_data", "popular.json")
     os.makedirs(os.path.dirname(destino), exist_ok=True)
+    agora = datetime.now(timezone(timedelta(hours=-3)))
     with open(destino, "w", encoding="utf-8") as f:
-        json.dump({"atualizado": __import__("datetime").datetime.utcnow().isoformat() + "Z",
+        json.dump({"atualizado": agora.isoformat(),
                     "mais_lidas": resultados}, f, ensure_ascii=False, indent=2)
     print(f"[ANALYTICS] Salvo em {destino}")
     return resultados

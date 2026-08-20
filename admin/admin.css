@@ -224,6 +224,16 @@ textarea[readonly] { background: #fafafa; color: #333; }
 .lista-passos { font-size: 13px; line-height: 1.7; margin: 8px 0 0 16px; padding: 0; }
 .lista-passos li { margin-bottom: 4px; }
 
+/* ---------- TABELA FONTES ---------- */
+.tabela-fontes { width: 100%; border-collapse: collapse; font-size: 13px; }
+.tabela-fontes th { background: #111; color: #fff; padding: 8px 10px; text-align: left; font-weight: 600; }
+.tabela-fontes td { padding: 6px 10px; border-bottom: 1px solid #e0e0e0; vertical-align: middle; }
+.tabela-fontes tr:hover { background: #f9f9f9; }
+.fonte-nome { font-weight: 600; min-width: 200px; }
+.fonte-tipo { text-transform: uppercase; font-size: 11px; color: #888; min-width: 80px; }
+.fonte-url { font-size: 11px; color: #555; word-break: break-all; }
+.freq-select { min-width: 140px; padding: 4px 6px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; }
+
 @media (max-width: 700px) {
   .grid-admin { grid-template-columns: 1fr; }
   .campo-row { grid-template-columns: 1fr; }

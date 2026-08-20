@@ -19,6 +19,7 @@
       telaPainel.style.display = "block";
       lerHashtagsDoGitHub();
       carregarDicas();
+      carregarFontes();
     } else {
       document.getElementById("erro-login").style.display = "block";
     }
@@ -385,5 +386,111 @@
   if (telaLogin && document.getElementById("campo-senha")) {
     document.getElementById("campo-senha").focus();
   }
+
+  // ============================================================
+  // FONTES (Gerenciamento de frequencia)
+  // ============================================================
+  var FREQ_OPcoes = [
+    { valor: 3, label: "A cada 3h (alta)" },
+    { valor: 6, label: "A cada 6h" },
+    { valor: 12, label: "A cada 12h (1x/dia)" },
+    { valor: 24, label: "A cada 24h (1x/dia)" },
+    { valor: 48, label: "A cada 2 dias" },
+    { valor: 168, label: "1x por semana" }
+  ];
+
+  var fontsData = [];
+
+  function carregarFontes() {
+    var status = document.getElementById("status-fontes");
+    status.textContent = "Carregando fonts.json do GitHub...";
+    var url = "https://raw.githubusercontent.com/" + REPO_OWNER + "/" + REPO_NAME + "/main/fonts.json";
+    return fetch(url)
+      .then(function (r) {
+        if (!r.ok) throw new Error("status " + r.status);
+        return r.json();
+      })
+      .then(function (data) {
+        fontsData = data.fonts || [];
+        renderizarFontes();
+        status.textContent = "Carregadas " + fontsData.length + " fonte(s).";
+      })
+      .catch(function (e) {
+        status.textContent = "Erro ao carregar: " + e.message;
+      });
+  }
+
+  function renderizarFontes() {
+    var container = document.getElementById("lista-fontes-admin");
+    container.innerHTML = "";
+    var table = document.createElement("table");
+    table.className = "tabela-fontes";
+    table.innerHTML = "<thead><tr><th>Nome</th><th>Tipo</th><th>Frequência</th><th>URL</th></tr></thead>";
+    var tbody = document.createElement("tbody");
+
+    fontsData.forEach(function (fonte, idx) {
+      var tr = document.createElement("tr");
+      var tdNome = document.createElement("td");
+      tdNome.textContent = fonte.nome;
+      tdNome.className = "fonte-nome";
+      var tdTipo = document.createElement("td");
+      tdTipo.textContent = fonte.tipo;
+      tdTipo.className = "fonte-tipo";
+      var tdFreq = document.createElement("td");
+      var select = document.createElement("select");
+      select.className = "campo-select freq-select";
+      select.setAttribute("data-idx", idx);
+      FREQ_OPcoes.forEach(function (op) {
+        var opt = document.createElement("option");
+        opt.value = op.valor;
+        opt.textContent = op.label;
+        if (fonte.frequencia_horas === op.valor) opt.selected = true;
+        select.appendChild(opt);
+      });
+      select.addEventListener("change", function () {
+        fontsData[idx].frequencia_horas = parseInt(this.value);
+      });
+      tdFreq.appendChild(select);
+      var tdUrl = document.createElement("td");
+      var link = document.createElement("a");
+      link.href = fonte.url;
+      link.textContent = fonte.url;
+      link.target = "_blank";
+      link.className = "fonte-url";
+      tdUrl.appendChild(link);
+      tr.appendChild(tdNome);
+      tr.appendChild(tdTipo);
+      tr.appendChild(tdFreq);
+      tr.appendChild(tdUrl);
+      tbody.appendChild(tr);
+    });
+
+    table.appendChild(tbody);
+    container.appendChild(table);
+  }
+
+  function gerarJsonFontes() {
+    var json = JSON.stringify({ fonts: fontsData }, null, 2);
+    document.getElementById("json-fontes-saida").value = json;
+    return json;
+  }
+
+  document.getElementById("btn-salvar-fontes").addEventListener("click", function () {
+    gerarJsonFontes();
+    copiarCampo("json-fontes-saida", "msg-fontes-salvo");
+  });
+
+  document.getElementById("btn-recarregar-fontes").addEventListener("click", carregarFontes);
+
+  document.getElementById("btn-copiar-fontes").addEventListener("click", function () {
+    gerarJsonFontes();
+    copiarCampo("json-fontes-saida", "msg-fontes-copiado");
+  });
+
+  document.getElementById("btn-abrir-github-fontes").addEventListener("click", function () {
+    gerarJsonFontes();
+    var url = "https://github.com/" + REPO_OWNER + "/" + REPO_NAME + "/blob/main/fonts.json";
+    window.open(url, "_blank");
+  });
 
 })();

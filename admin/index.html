@@ -51,6 +51,7 @@ layout: null
     <nav class="admin-tabs">
       <button class="admin-tab ativo" data-tab="materia">Nova Matéria</button>
       <button class="admin-tab" data-tab="hashtags">Hashtags</button>
+      <button class="admin-tab" data-tab="fontes">Fontes</button>
     </nav>
 
     <main class="admin-corpo">
@@ -187,6 +188,37 @@ layout: null
           <ul id="lista-dicas" class="lista-dicas"></ul>
           <p class="dica">Clique em uma sugestão para adicionar à lista acima.</p>
         </section>
+      </section>
+
+      <!-- ==================== FONTES ==================== -->
+      <section id="sec-fontes" class="secao-admin" style="display:none;">
+        <div class="aviso">
+          <strong>Fontes de notícias:</strong> configure a frequência de coleta de cada site.
+          Fontes de alta frequência (3h) coletam a cada 3 horas; média (12h) uma vez ao dia;
+          baixa (24h+) coletam menos vezes.
+        </div>
+
+        <div class="painel-card">
+          <h2>Gerenciar fontes e frequência</h2>
+          <div id="status-fontes" class="status">Carregando...</div>
+          <div id="lista-fontes-admin"></div>
+          <div class="acoes" style="margin-top:16px;">
+            <button id="btn-salvar-fontes" class="btn btn-vermelho">Salvar alterações</button>
+            <button id="btn-recarregar-fontes" class="btn btn-claro">Recarregar</button>
+          </div>
+          <p id="msg-fontes-salvo" class="ok" style="display:none;">Fontes salvas! Copie e cole no GitHub.</p>
+        </div>
+
+        <div class="painel-card" style="margin-top:16px;">
+          <h2>JSON gerado (fonts.json)</h2>
+          <p class="dica">Copie e cole em <code>fonts.json</code> no repositório.</p>
+          <textarea id="json-fontes-saida" rows="14" readonly placeholder='{"fonts": [...]}'></textarea>
+          <div class="acoes">
+            <button id="btn-copiar-fontes" class="btn btn-claro">Copiar JSON</button>
+            <button id="btn-abrir-github-fontes" class="btn btn-vermelho">Abrir fonts.json no GitHub</button>
+          </div>
+          <p id="msg-fontes-copiado" class="ok" style="display:none;">Copiado!</p>
+        </div>
       </section>
 
     </main>

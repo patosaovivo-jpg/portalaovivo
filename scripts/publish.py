@@ -1,7 +1,9 @@
 import json
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
+
+BRT = timezone(timedelta(hours=-3))
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 POSTS_DIR = os.path.join(BASE_DIR, "_posts")
@@ -15,8 +17,12 @@ def slugify(texto):
     return texto[:60].strip("-")
 
 
+def agora_brt():
+    return datetime.now(BRT)
+
+
 def gerar_markdown(item, resumo, imagem_rel):
-    agora = datetime.now(timezone.utc)
+    agora = agora_brt()
     data_str = agora.strftime("%Y-%m-%d")
     slug = slugify(item["titulo"]) or slugify(item["link"])
     arquivo = os.path.join(POSTS_DIR, f"{data_str}-{slug}.md")
@@ -31,7 +37,7 @@ def gerar_markdown(item, resumo, imagem_rel):
     frontmatter = (
         "---\n"
         f'title: "{esc(titulo)}"\n'
-        f'date: {agora.strftime("%Y-%m-%d %H:%M:%S %z")}\n'
+        f'date: {agora.strftime("%Y-%m-%d %H:%M:%S -0300")}\n'
         f'image: {imagem_rel}\n'
         f'tema: {item.get("tema", "Geral")}\n'
         f'fonte: "{esc(item["fonte"])}"\n'
@@ -64,9 +70,8 @@ def registrar_publicado(item, arquivo):
         "link": item["link"],
         "titulo": item.get("titulo", ""),
         "arquivo": os.path.basename(arquivo),
-        "publicado": datetime.now(timezone.utc).isoformat(),
+        "publicado": agora_brt().isoformat(),
     })
-    # mantém apenas os últimos 2000 links para não crescer demais
     lista = lista[-2000:]
     os.makedirs(os.path.dirname(PUBLISHED_FILE), exist_ok=True)
     with open(PUBLISHED_FILE, "w", encoding="utf-8") as f:

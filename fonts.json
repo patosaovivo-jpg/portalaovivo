@@ -2,59 +2,235 @@
   "fonts": [
     {
       "id": "g1-triangulo",
-      "nome": "G1 Triângulo e Alto Paranaíba",
+      "nome": "G1 Triangulo e Alto Paranaiba",
       "tipo": "scrape",
       "url": "https://g1.globo.com/mg/triangulo-mineiro/ultimas-noticias/",
-      "link_pattern": "noticia/{ano}/"
-    },
-    {
-      "id": "patos-noticias",
-      "nome": "Patos Notícias",
-      "tipo": "rss",
-      "url": "https://patosnoticias.com.br/feed",
-      "link_pattern": ""
-    },
-    {
-      "id": "portal-serralitrense",
-      "nome": "Portal Serralitrense",
-      "tipo": "rss",
-      "url": "https://portalserralitrense.com.br/feed",
-      "link_pattern": ""
-    },
-    {
-      "id": "jornal-coromandel",
-      "nome": "Jornal de Coromandel",
-      "tipo": "rss",
-      "url": "https://jornaldecoromandel.com.br/feed",
-      "link_pattern": ""
-    },
-    {
-      "id": "patos-em-destaque",
-      "nome": "Patos em Destaque",
-      "tipo": "scrape",
-      "url": "https://patosemdestaque.com.br/",
-      "link_pattern": "noticias/\\?n="
+      "link_pattern": "noticia/{ano}/",
+      "frequencia_horas": 3
     },
     {
       "id": "patos-1",
       "nome": "Patos 1",
       "tipo": "scrape",
       "url": "https://www.patos1.com.br/",
-      "link_pattern": "noticia/"
+      "link_pattern": "noticia/",
+      "frequencia_horas": 3
     },
     {
-      "id": "paranaiba-agora",
-      "nome": "Paranaíba Agora",
-      "tipo": "rss",
-      "url": "https://paranaibaagora.com.br/feed",
-      "link_pattern": ""
+      "id": "patos-agora",
+      "nome": "Patos Agora",
+      "tipo": "scrape",
+      "url": "https://patosagora.net/",
+      "link_pattern": "noticia|post",
+      "frequencia_horas": 6
     },
     {
-      "id": "patos-hoje",
-      "nome": "Patos Hoje",
-      "tipo": "sitemap",
-      "url": "https://patoshoje.com.br/noticias.xml",
-      "link_pattern": "noticias/.*\\.html"
+      "id": "patrocinio-online",
+      "nome": "Patrocinio Online",
+      "tipo": "scrape",
+      "url": "https://www.patrocinioonline.com.br/",
+      "link_pattern": "noticia|post",
+      "frequencia_horas": 6
+    },
+    {
+      "id": "portal-serralitrense",
+      "nome": "Portal Serralitrense",
+      "tipo": "scrape",
+      "url": "https://portalserralitrense.com.br/",
+      "link_pattern": "noticia|post",
+      "frequencia_horas": 6
+    },
+    {
+      "id": "oi-patos",
+      "nome": "Oi Patos",
+      "tipo": "scrape",
+      "url": "https://www.oipatos.com.br/",
+      "link_pattern": "noticia|post",
+      "frequencia_horas": 6
+    },
+    {
+      "id": "pref-patos",
+      "nome": "Prefeitura de Patos de Minas",
+      "tipo": "scrape",
+      "url": "https://www.patosdeminas.mg.gov.br/",
+      "link_pattern": "noticia|imprensa|publicacao",
+      "frequencia_horas": 12
+    },
+    {
+      "id": "camara-patos",
+      "nome": "Camara de Patos de Minas",
+      "tipo": "scrape",
+      "url": "https://camarapatos.mg.gov.br/",
+      "link_pattern": "noticia|materia",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-patrocinio",
+      "nome": "Prefeitura de Patrocinio",
+      "tipo": "scrape",
+      "url": "https://pmp.patrocinio.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-lagoa-formosa",
+      "nome": "Prefeitura de Lagoa Formosa",
+      "tipo": "scrape",
+      "url": "https://lagoaformosa.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-carmo-paranaiba",
+      "nome": "Prefeitura de Carmo do Paranaiba",
+      "tipo": "scrape",
+      "url": "https://carmodoparanaiba.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-sao-gotardo",
+      "nome": "Prefeitura de Sao Gotardo",
+      "tipo": "scrape",
+      "url": "https://www.saogotardo.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-rio-paranaiba",
+      "nome": "Prefeitura de Rio Paranaiba",
+      "tipo": "scrape",
+      "url": "https://rioparanaiba.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-patricinio-olegario",
+      "nome": "Prefeitura de Presidente Olegario",
+      "tipo": "scrape",
+      "url": "https://presidenteolegario.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-coromandel",
+      "nome": "Prefeitura de Coromandel",
+      "tipo": "scrape",
+      "url": "https://coromandel.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-guimarania",
+      "nome": "Prefeitura de Guimarania",
+      "tipo": "scrape",
+      "url": "https://guimarania.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-ibia",
+      "nome": "Prefeitura de Ibia",
+      "tipo": "scrape",
+      "url": "https://www.ibia.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-varjao",
+      "nome": "Prefeitura de Varjao de Minas",
+      "tipo": "scrape",
+      "url": "https://varjaodeminas.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-serra-salitre",
+      "nome": "Prefeitura de Serra do Salitre",
+      "tipo": "scrape",
+      "url": "https://serradosalitre.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-tiros",
+      "nome": "Prefeitura de Tiros",
+      "tipo": "scrape",
+      "url": "https://tiros.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-arapua",
+      "nome": "Prefeitura de Arapua",
+      "tipo": "scrape",
+      "url": "https://arapua.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-matutina",
+      "nome": "Prefeitura de Matutina",
+      "tipo": "scrape",
+      "url": "https://matutina.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-sg-abaete",
+      "nome": "Prefeitura de Sao Goncalo do Abaete",
+      "tipo": "scrape",
+      "url": "https://saogoncalodoabaete.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-pratinha",
+      "nome": "Prefeitura de Pratinha",
+      "tipo": "scrape",
+      "url": "https://pratinha.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-campos-altos",
+      "nome": "Prefeitura de Campos Altos",
+      "tipo": "scrape",
+      "url": "https://camposaltos.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "pref-lagamar",
+      "nome": "Prefeitura de Lagamar",
+      "tipo": "scrape",
+      "url": "https://lagamar.mg.gov.br/",
+      "link_pattern": "noticia|imprensa",
+      "frequencia_horas": 24
+    },
+    {
+      "id": "gov-mg",
+      "nome": "Governo de Minas Gerais",
+      "tipo": "scrape",
+      "url": "https://www.mg.gov.br/",
+      "link_pattern": "noticia|noticias",
+      "frequencia_horas": 12
+    },
+    {
+      "id": "pm-mg",
+      "nome": "Policia Militar de MG",
+      "tipo": "scrape",
+      "url": "https://www.policiamilitar.mg.gov.br/",
+      "link_pattern": "noticia|destaque",
+      "frequencia_horas": 12
+    },
+    {
+      "id": "diario-patos",
+      "nome": "Diario Oficial Patos de Minas",
+      "tipo": "diario_oficial",
+      "url": "https://www.patosdeminas.mg.gov.br/portal/diario-oficial",
+      "link_pattern": "",
+      "frequencia_horas": 24
     }
   ]
 }
