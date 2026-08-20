@@ -57,12 +57,10 @@ jobs:
 
       - name: Postar nas redes sociais
         env:
-          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
-          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
-          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
-          INSTAGRAM_IG_USER_ID: ${{ secrets.INSTAGRAM_IG_USER_ID }}
-          GITHUB_REPO: ${{ github.repository }}
-          GITHUB_BRANCH: ${{ github.ref_name }}
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          BUFFER_IG_CHANNEL_ID: ${{ secrets.BUFFER_IG_CHANNEL_ID }}
+          GA_SERVICE_ACCOUNT: ${{ secrets.GA_SERVICE_ACCOUNT }}
+          GA_PROPERTY_ID: ${{ secrets.GA_PROPERTY_ID }}
         run: |
           python scripts/social_poster.py || echo "::warning::Postagem nas redes sociais falhou ou sem pendentes"
 
