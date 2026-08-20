@@ -3,7 +3,25 @@ layout: default
 ---
 
 {% assign posts = site.posts %}
-{% assign top5 = posts | slice: 0, 5 %}
+{% assign destaques = "" | split: "" %}
+{% assign now_seconds = 'now' | date: "%s" | plus: 0 %}
+{% for post in posts %}
+  {% if post.destaque == true %}
+    {% if post.destaque_ate != blank and post.destaque_ate != "" %}
+      {% assign ate_seconds = post.destaque_ate | date: "%s" | plus: 0 %}
+      {% if ate_seconds > now_seconds %}
+        {% assign destaques = destaques | push: post %}
+      {% endif %}
+    {% else %}
+      {% assign destaques = destaques | push: post %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% if destaques.size > 0 %}
+  {% assign top5 = destaques %}
+{% else %}
+  {% assign top5 = posts | slice: 0, 5 %}
+{% endif %}
 
 <!-- ===== SLIDER COM AS 5 ÚLTIMAS NOTÍCIAS ===== -->
 {% if top5.size > 0 %}
