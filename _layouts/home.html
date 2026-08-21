@@ -1,24 +1,21 @@
-﻿---
+---
 layout: default
 ---
 
 {% assign posts = site.posts %}
-{% assign destaques = "" | split: "" %}
-{% assign now_seconds = 'now' | date: "%s" | plus: 0 %}
-{% for post in posts %}
-  {% if post.destaque == true %}
-    {% if post.destaque_ate != blank and post.destaque_ate != "" %}
-      {% assign ate_seconds = post.destaque_ate | date: "%s" | plus: 0 %}
-      {% if ate_seconds > now_seconds %}
-        {% assign destaques = destaques | push: post %}
+{% assign slider_data = site.data.slider %}
+{% assign slider_posts = "" | split: "" %}
+{% if slider_data and slider_data.posts %}
+  {% for sp in slider_data.posts %}
+    {% for post in posts %}
+      {% if post.url contains sp.path %}
+        {% assign slider_posts = slider_posts | push: post %}
       {% endif %}
-    {% else %}
-      {% assign destaques = destaques | push: post %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-{% if destaques.size > 0 %}
-  {% assign top5 = destaques %}
+    {% endfor %}
+  {% endfor %}
+{% endif %}
+{% if slider_posts.size > 0 %}
+  {% assign top5 = slider_posts %}
 {% else %}
   {% assign top5 = posts | slice: 0, 5 %}
 {% endif %}
@@ -31,7 +28,7 @@ layout: default
     <div class="slide {% if forloop.first %}ativo{% endif %}">
       <a href="{{ post.url | relative_url }}" class="slide-link">
         {% if post.image %}
-        <img class="slide-img" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+        <img class="slide-img" src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}" alt="{{ post.title }}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}" onerror="this.onerror=null;this.src='{{ '/assets/images/default.jpg' | relative_url }}';">
         {% endif %}
         <div class="slide-overlay">
           <span class="tag">{{ post.tema | default: "Notícias" }}</span>
@@ -52,7 +49,7 @@ layout: default
     <button class="slider-dot {% if forloop.first %}ativo{% endif %}" data-slider-dot="{{ forloop.index0 }}" aria-label="Ir para o destaque {{ forloop.index }}"></button>
     {% endfor %}
   </div>
-  <span class="slider-badge">DESTAQUES</span>
+  <span class="slider-badge">EM ALTA</span>
 </section>
 {% endif %}
 
@@ -67,7 +64,7 @@ layout: default
       <article class="card-noticia">
         {% if post.image %}
         <a href="{{ post.url | relative_url }}">
-          <img class="card-img" src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy">
+          <img class="card-img" src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ post.image | relative_url }}{% endif %}" alt="{{ post.title }}" loading="lazy" onerror="this.onerror=null;this.src='{{ '/assets/images/default.jpg' | relative_url }}';">
         </a>
         {% endif %}
         <div class="card-corpo">
