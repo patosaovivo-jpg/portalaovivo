@@ -79,6 +79,14 @@ def main():
 
             item["titulo"] = titulo
 
+            # Validacao final: pular posts com titulo-URL ou resumo vazio
+            if titulo.startswith("http"):
+                print(f"[SKIP] Titulo e URL, pulando: {titulo[:60]}")
+                continue
+            if not resumo or len(resumo.strip()) < 100:
+                print(f"[SKIP] Resumo muito curto ou vazio, pulando: {titulo[:60]}")
+                continue
+
             print("[IMAGEM] Verificando imagem original...")
             imagem_orig = item.get("imagem_original") or item.get("imagem") or None
             nome_slug = slugify(item["titulo"])
@@ -90,17 +98,17 @@ def main():
                 try:
                     import requests as _req
                     resp = _req.get(imagem_orig, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
-                    if resp.status_code == 200 and len(resp.content) > 5000:
+                    if resp.status_code == 200 and len(resp.content) > 2000:
                         with open(destino_jpg, "wb") as f:
                             f.write(resp.content)
                         nome_final = os.path.basename(destino_jpg)
                         imagem_rel = f"/assets/images/{nome_final}"
                         print(f"  [OK] Imagem original salva: {nome_final}")
                     else:
-                        print(f"  [AVISO] Imagem original invalida ({resp.status_code}), gerando...")
+                        print(f"  [AVISO] Imagem original invalida ({resp.status_code}, {len(resp.content)} bytes), gerando com IA...")
                         imagem_orig = None
                 except Exception as e:
-                    print(f"  [AVISO] Falha ao baixar original: {e}, gerando...")
+                    print(f"  [AVISO] Falha ao baixar original: {e}, gerando com IA...")
                     imagem_orig = None
 
             # Gera imagem apenas se nao tem original
@@ -141,13 +149,18 @@ def main():
         print(f"[SOCIAL] {len(materias_para_social)} materia(s) salva(s) para postagem posterior")
 
     print("\n" + "=" * 60)
-    print("ETAPA 6/6 - Atualizar paginas mais acessadas (Analytics)")
+    print("ETAPA 6/6 - Atualizar analytics + slider automatico")
     print("=" * 60)
     try:
         import analytics
         analytics.salvar_popular(dias=7, limite=10)
     except Exception as e:
         print(f"[ANALYTICS] Pulou: {e}")
+    try:
+        import slider
+        slider.salvar_slider(limite_minimo=3)
+    except Exception as e:
+        print(f"[SLIDER] Pulou: {e}")
 
 
 if __name__ == "__main__":
