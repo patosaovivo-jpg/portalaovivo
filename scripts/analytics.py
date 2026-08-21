@@ -1,8 +1,8 @@
 """
-Busca as páginas mais acessadas no Google Analytics 4.
+Busca as pÃ¡ginas mais acessadas no Google Analytics 4.
 Gera data/popular.json para exibir "Mais Lidas" na home.
 
-Requer o secret GA_SERVICE_ACCOUNT (JSON da conta de serviço)
+Requer o secret GA_SERVICE_ACCOUNT (JSON da conta de serviÃ§o)
 e GA_PROPERTY_ID (ID da propriedade GA4, ex: 435987654).
 """
 import json
@@ -67,12 +67,20 @@ def buscar_paginas_populares(dias=7, limite=10):
             path = row.dimension_values[0].value
             titulo = row.dimension_values[1].value
             views = int(row.metric_values[0].value)
-            if path and path != "/" and views > 0:
-                resultados.append({
-                    "path": path,
-                    "titulo": titulo.split(" | ")[0].strip() if titulo else "",
-                    "visualizacoes": views,
-                })
+            if not path or path == "/" or views < 1:
+                continue
+            titulo = titulo.split(" | ")[0].strip() if titulo else ""
+            # Filtrar titulos genericos do site
+            if titulo.lower() in ("portal ao vivo", "portal", ""):
+                continue
+            # Filtrar paths que nao sao de posts (pagina inicial, categorias, etc.)
+            if path.count("/") < 3:
+                continue
+            resultados.append({
+                "path": path,
+                "titulo": titulo,
+                "visualizacoes": views,
+            })
 
         print(f"[ANALYTICS] {len(resultados)} paginas populares encontradas.")
         return resultados
