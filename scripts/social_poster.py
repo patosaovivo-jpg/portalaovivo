@@ -9,8 +9,6 @@ SOCIAL_LOG = os.path.join(BASE_DIR, "data", "social_log.json")
 
 BUFFER_API_URL = "https://api.buffer.com"
 LIMITE_INSTAGRAM_DIA = 8
-LIMITE_INSTAGRAM_ALTA = 10
-LIMITE_VIEWS_ALTA = 500
 
 SITE_URL = "https://portalaovivo.com.br"
 
@@ -136,27 +134,16 @@ def selecionar_materias_por_popularidade(materias_pendentes):
         print("[SOCIAL] Sem dados de analytics, mantendo ordem original")
         return materias_pendentes
 
-    populares_map = {}
     for pop in populares:
         path_popular = pop["path"].rstrip("/")
         for mat in materias_pendentes:
             link_mat = mat.get("link", "")
             if path_popular in link_mat or link_mat.endswith(path_popular):
-                populares_map[mat["link"]] = pop["visualizacoes"]
                 mat["_views"] = pop["visualizacoes"]
                 print(f"[SOCIAL] Match: {pop['titulo'][:50]} ({pop['visualizacoes']} views)")
 
     ordenadas = sorted(materias_pendentes, key=lambda m: m.get("_views", 0), reverse=True)
     return ordenadas
-
-
-def eh_trafego_alto(materias):
-    """Verifica se o trafego justifica posts extras."""
-    for m in materias:
-        if m.get("_views", 0) >= LIMITE_VIEWS_ALTA:
-            print(f"[SOCIAL] Trafego alto detectado: {m.get('_views', 0)} views")
-            return True
-    return False
 
 
 # ============================================================
@@ -340,6 +327,10 @@ def postar_materias(materias):
 
     print(f"[SOCIAL] Hoje: {posts_ig} posts Instagram")
 
+    if posts_ig >= LIMITE_INSTAGRAM_DIA:
+        print(f"[SOCIAL] Limite diario atingido ({LIMITE_INSTAGRAM_DIA})")
+        return 0
+
     materias_filtradas = [
         m for m in materias
         if m.get("tema", "") in TEMAS_SOCIAIS and not ja_postou(log, m["link"])
@@ -351,43 +342,28 @@ def postar_materias(materias):
 
     materias_ordenadas = selecionar_materias_por_popularidade(materias_filtradas)
 
-    if eh_trafego_alto(materias_ordenadas):
-        limite = LIMITE_INSTAGRAM_ALTA
-    else:
-        limite = LIMITE_INSTAGRAM_DIA
+    escolhida = materias_ordenadas[0]
 
-    vagas = limite - posts_ig
-    if vagas <= 0:
-        print(f"[SOCIAL] Limite diario atingido ({limite})")
+    imagem_url = imagem_url_para_site(escolhida.get("imagem", ""))
+    if not imagem_url:
+        print(f"[SOCIAL] Sem imagem: {escolhida.get('titulo', '')[:50]}")
         return 0
 
-    total = 0
-    for mat in materias_ordenadas:
-        if total >= vagas:
-            break
+    print(f"\n[SOCIAL] Postando: {escolhida.get('titulo', '')[:60]}")
 
-        imagem_url = imagem_url_para_site(mat.get("imagem", ""))
-        if not imagem_url:
-            print(f"[SOCIAL] Sem imagem: {mat.get('titulo', '')[:50]}")
-            continue
+    sucesso = postar_instagram_buffer(escolhida, escolhida.get("resumo", ""), imagem_url)
 
-        print(f"\n[SOCIAL] Postando ({total + 1}/{vagas}): {mat.get('titulo', '')[:60]}")
-
-        sucesso = postar_instagram_buffer(mat, mat.get("resumo", ""), imagem_url)
-
-        if sucesso:
-            log["posts"].append({
-                "link": mat["link"],
-                "titulo": mat.get("titulo", ""),
-                "plataforma": "instagram",
-                "data": datetime.now(timezone.utc).isoformat(),
-            })
-            total += 1
-
-    if total > 0:
+    if sucesso:
+        log["posts"].append({
+            "link": escolhida["link"],
+            "titulo": escolhida.get("titulo", ""),
+            "plataforma": "instagram",
+            "data": datetime.now(timezone.utc).isoformat(),
+        })
         save_social_log(log)
+        return 1
 
-    return total
+    return 0
 
 
 def processar_pendentes():
@@ -400,8 +376,22 @@ def processar_pendentes():
     if not materias:
         print("[SOCIAL] Lista vazia")
         return 0
+
     total = postar_materias(materias)
-    os.remove(pending_file)
+
+    log = load_social_log()
+    materias_restantes = [
+        m for m in materias
+        if not ja_postou(log, m["link"])
+    ]
+
+    if materias_restantes:
+        with open(pending_file, "w", encoding="utf-8") as f:
+            json.dump(materias_restantes, f, ensure_ascii=False, indent=2)
+        print(f"[SOCIAL] {len(materias_restantes)} materia(s) restante(s) para proximas rodadas")
+    else:
+        os.remove(pending_file)
+
     return total
 
 
