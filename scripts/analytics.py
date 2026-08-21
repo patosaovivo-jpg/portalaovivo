@@ -1,8 +1,8 @@
 """
-Busca as pÃ¡ginas mais acessadas no Google Analytics 4.
+Busca as páginas mais acessadas no Google Analytics 4.
 Gera data/popular.json para exibir "Mais Lidas" na home.
 
-Requer o secret GA_SERVICE_ACCOUNT (JSON da conta de serviÃ§o)
+Requer o secret GA_SERVICE_ACCOUNT (JSON da conta de serviço)
 e GA_PROPERTY_ID (ID da propriedade GA4, ex: 435987654).
 """
 import json
