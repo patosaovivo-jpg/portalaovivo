@@ -1,8 +1,8 @@
 ---
 title: "Lagoa Formosa aprova financiamento milionário para saneamento básico"
-date: 2026-08-19 16:57:03 +0000
-image: 
-tema: Política
+date: 2026-08-19 13:57:00 -0300
+image: https://patos1.com.br/site/upload/noticias/53700/770x420-64422043-1383-4e72-84dc-faffcb3906ac.jfif
+tema: 
 fonte: "Patos 1"
 fonte_link: "https://www.patos1.com.br/noticia/vereadores-de-lagoa-formosa-votam-projeto-de-lei-que-visa-ampliacao-no-sistema-de-abastecimento-de-agua-no-municipio"
 resumo: "Os vereadores de Lagoa Formosa realizaram na noite desta terça-feira (18/8), a partir das 19h30, a 21ª Reunião Ordinária de 2026 no Plenário Juquinha Souto, sob a direção do presid..."
@@ -21,3 +21,9 @@ A pauta da sessão também incluiu a aprovação em 2ª votação dos Projetos d
 ---
 
 *Conteúdo resumido automaticamente pelo Portal Ao Vivo.*
+
+*Leia a materia completa na fonte original:* [Patos 1](https://www.patos1.com.br/noticia/vereadores-de-lagoa-formosa-votam-projeto-de-lei-que-visa-ampliacao-no-sistema-de-abastecimento-de-agua-no-municipio)
+
+---
+
+*Conteudo resumido automaticamente pelo Portal Ao Vivo.*
