@@ -1,7 +1,7 @@
 ---
 title: "ESCANDALO DAS DIARIAS: Vereadores de Varjao de Minas rebatem publicacao."
 date: 2026-08-20 20:30:00 -0300
-image: /assets/images/escandalo-das-diarias-vereadores-de-varjao-de-minas-rebatem-.jpg
+image: https://img.youtube.com/vi/1dU-YrYA_TE/hqdefault.jpg
 tema: Politica
 fonte: "Portal Ao Vivo"
 fonte_link: "portalaovivo.com.br"
