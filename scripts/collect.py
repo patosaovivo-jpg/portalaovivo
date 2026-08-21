@@ -177,15 +177,28 @@ def coletar_scrape(fonte):
         href = a["href"].strip()
         if not href or href.startswith(("#", "mailto:", "tel:", "javascript")):
             continue
-        if not re.search(pattern, href, re.IGNORECASE):
-            continue
         link = normalize_url(urljoin(fonte["url"], href))
+        # Bloquear paginas de categorias/tags/search
+        if re.search(r"/(noticias?/i/|categoria/|tag/|category/|search|pesquisar)", link, re.IGNORECASE):
+            continue
+        # Bloquear links com query string apenas (buscas, filtros)
+        if "?" in link.split("/")[-1]:
+            continue
+        # Bloquear links muito curtos (paginas institucionais)
+        caminho = link.rstrip("/").split("/")[-1]
+        if len(caminho) < 5:
+            continue
+        if not re.search(pattern, link, re.IGNORECASE):
+            continue
         if link in seen:
             continue
         seen.add(link)
         titulo = a.get_text(" ", strip=True)
+        # Pular se titulo e curto demais ou e uma URL
         if len(titulo) < 15:
-            titulo = link
+            continue
+        if titulo.startswith("http"):
+            continue
         items.append({
             "titulo": titulo[:200],
             "link": link,
@@ -216,7 +229,7 @@ def coletar_diario_oficial(fonte):
             info_text = parent.get_text(" ", strip=True) if parent else text
 
             # Extrair numero da edicao
-            ed_match = re.search(r'n[ºo°]\s*(\d+)', info_text)
+            ed_match = re.search(r'n[ÂºoÂ°]\s*(\d+)', info_text)
             edicao_num = ed_match.group(1) if ed_match else "?"
 
             # Extrair data de postagem
@@ -391,6 +404,8 @@ def qualidade_minima(item, texto):
     titulo = item.get("titulo", "")
     if len(titulo) < 20:
         return False
+    if titulo.startswith("http"):
+        return False
     if item.get("tipo") == "instagram":
         if len(texto.strip()) < 80:
             return False
@@ -483,6 +498,7 @@ def processar_candidatas(candidatas, themes, max_itens=6):
     idx = 0
     tentativas = 0
     links_vistos = set()
+    fontes_usadas = set()
     limite_tentativas = max_itens * 5
     while len(selecionadas) < max_itens and tentativas < limite_tentativas:
         tentativas += 1
@@ -494,6 +510,13 @@ def processar_candidatas(candidatas, themes, max_itens=6):
             continue
         item = fila.pop(0)
         if item["link"] in links_vistos:
+            continue
+        # Limitar 1 post por fonte por execucao
+        if item["fonte"] in fontes_usadas:
+            continue
+        # Pular titulos que sao URLs
+        titulo = item.get("titulo", "")
+        if titulo.startswith("http"):
             continue
         print(f"[TEXTO] {item['fonte']}: {item['titulo'][:60]}")
 
@@ -525,6 +548,7 @@ def processar_candidatas(candidatas, themes, max_itens=6):
         if imagem:
             item["imagem_original"] = imagem
         links_vistos.add(item["link"])
+        fontes_usadas.add(item["fonte"])
         selecionadas.append(item)
         time.sleep(0.5)
     return selecionadas
