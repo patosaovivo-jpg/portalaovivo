@@ -3,7 +3,7 @@
     {
       "frequencia_horas": 3,
       "id": "g1-triangulo",
-      "link_pattern": "noticia/{ano}/",
+      "link_pattern": "triangulo-mineiro/.+/",
       "nome": "G1 Triangulo e Alto Paranaiba",
       "tipo": "scrape",
       "url": "https://g1.globo.com/mg/triangulo-mineiro/ultimas-noticias/"

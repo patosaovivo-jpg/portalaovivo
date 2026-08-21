@@ -1,0 +1,25 @@
+name: Keepalive
+
+on:
+  schedule:
+    - cron: "30 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Keepalive $(date -u +'%Y-%m-%d %H:%M UTC') - repo ativa" >> .github/keepalive.log
+      - run: |
+          git config user.name "Portal Ao Vivo Bot"
+          git config user.email "bot@portalaovivo.com.br"
+          git add .github/keepalive.log
+          if git diff --cached --quiet; then
+            echo "Nada para commitar"
+          else
+            git commit -m "Keepalive $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

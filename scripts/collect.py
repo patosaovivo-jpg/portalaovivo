@@ -194,6 +194,14 @@ def coletar_scrape(fonte):
             continue
         seen.add(link)
         titulo = a.get_text(" ", strip=True)
+        # Fallback: usar alt do img dentro do link
+        if len(titulo) < 10:
+            img = a.find("img")
+            if img:
+                titulo = img.get("alt", "").strip()
+        # Fallback: usar titulo do title attribute
+        if len(titulo) < 10:
+            titulo = a.get("title", "").strip()
         # Pular se titulo e curto demais ou e uma URL
         if len(titulo) < 15:
             continue
