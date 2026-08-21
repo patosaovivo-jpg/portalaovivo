@@ -1,7 +1,7 @@
 ---
 ---
 /* ============================================================
-   PORTAL AO VIVO - LAYOUT DE PORTAL DE NOTÍCIAS
+   PORTAL AO VIVO - LAYOUT DE PORTAL DE NOTÃCIAS
    Cores: PRETO (#111) | VERMELHO (#e50914) | BRANCO (#fff)
    ============================================================ */
 
@@ -20,7 +20,7 @@ body {
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 
-/* ---------- CABEÇALHO ---------- */
+/* ---------- CABEÃ‡ALHO ---------- */
 .site-header {
   background: #111;
   color: #fff;
@@ -55,6 +55,18 @@ img { max-width: 100%; display: block; }
   font-size: 13px;
   color: #ccc;
   text-transform: capitalize;
+}
+.header-ad {
+  flex: 0 0 auto;
+  max-width: 180px;
+  max-height: 60px;
+  overflow: hidden;
+}
+.header-ad img {
+  max-width: 100%;
+  max-height: 60px;
+  border-radius: 4px;
+  display: block;
 }
 .site-nav {
   display: flex;
@@ -327,7 +339,7 @@ img { max-width: 100%; display: block; }
 }
 .menu-vertical a:hover { color: #e50914; padding-left: 10px; }
 
-/* ---------- GRADE DE NOTÍCIAS ---------- */
+/* ---------- GRADE DE NOTÃCIAS ---------- */
 .grade-noticias {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -379,7 +391,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- MAIS LIDAS (sidebar antiga - removida) ---------- */
 
-/* ---------- PÁGINA DE MATÉRIA ---------- */
+/* ---------- PÃGINA DE MATÃ‰RIA ---------- */
 .post-layout-2col {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -442,7 +454,7 @@ img { max-width: 100%; display: block; }
 .post-fonte a:hover { text-decoration: underline; }
 .post-ads { margin-top: 24px; }
 
-/* ---------- NAVEGAÇÃO ENTRE MATÉRIAS ---------- */
+/* ---------- NAVEGAÃ‡ÃƒO ENTRE MATÃ‰RIAS ---------- */
 .post-nav {
   display: flex;
   justify-content: space-between;
@@ -542,7 +554,7 @@ img { max-width: 100%; display: block; }
 }
 .relacionada-card:hover .relacionada-titulo { color: #e50914; }
 
-/* ---------- RODAPÉ ---------- */
+/* ---------- RODAPÃ‰ ---------- */
 .site-footer {
   background: #111;
   color: #ccc;
@@ -599,6 +611,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 640px) {
   .grade-noticias { grid-template-columns: 1fr; }
   .header-top { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .header-ad { display: none; }
   .site-nav { flex-wrap: wrap; }
   .site-nav a { padding: 6px 10px; font-size: 12px; }
   .slider { height: 300px; }
