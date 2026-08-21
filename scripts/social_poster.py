@@ -243,9 +243,11 @@ def gerar_legenda(item, resumo):
 
 
 def imagem_url_para_site(imagem_rel):
-    """Converte caminho relativo para URL publica do site."""
+    """Converte caminho relativo para URL publica do site. Ja retorna URLs completas."""
     if not imagem_rel:
         return None
+    if imagem_rel.startswith("http"):
+        return imagem_rel
     caminho = imagem_rel.lstrip("/")
     return f"{SITE_URL}/{caminho}"
 
