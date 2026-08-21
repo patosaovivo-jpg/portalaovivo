@@ -12,7 +12,7 @@ LIMITE_INSTAGRAM_DIA = 8
 
 SITE_URL = "https://portalaovivo.com.br"
 
-TEMAS_SOCIAIS = ["Local e Cidades", "Politica"]
+TEMAS_SOCIAIS = ["Local e Cidades", "Politica", "Esportes", "Geral"]
 
 TIMEOUT = 30
 
