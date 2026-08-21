@@ -2,7 +2,7 @@
 layout: null
 permalink: /parts/header.html
 ---
-<!-- ===== CABEÇALHO COM LOGO (fragmento único - vale para todo o site) ===== -->
+<!-- ===== CABEÃ‡ALHO COM LOGO (fragmento Ãºnico - vale para todo o site) ===== -->
 <header class="site-header">
   <div class="container">
     <div class="header-top">
@@ -13,23 +13,51 @@ permalink: /parts/header.html
           <span class="logo-linha2">AO&nbsp;VIVO</span>
         </span>
       </a>
+      <div class="header-ad" id="ads-header-div"></div>
       <div class="header-data" id="header-data"></div>
     </div>
     <nav class="site-nav">
-      <a href="{{ '/' | relative_url }}">Início</a>
-      <a href="{{ '/' | relative_url }}#ultimas">Últimas</a>
-      <a href="{{ '/' | relative_url }}#politica">Política</a>
+      <a href="{{ '/' | relative_url }}">InÃ­cio</a>
+      <a href="{{ '/' | relative_url }}#ultimas">Ãšltimas</a>
+      <a href="{{ '/' | relative_url }}#politica">PolÃ­tica</a>
       <a href="{{ '/' | relative_url }}#cidades">Cidades</a>
       <a href="{{ '/' | relative_url }}#esportes">Esportes</a>
       <a href="{{ '/' | relative_url }}#geral">Geral</a>
+      <a href="https://wa.me/5534996988262?text=Ol%C3%A1%2C%20vim%20pelo%20Portal%20Ao%20Vivo!" target="_blank" rel="noopener">Contato</a>
     </nav>
   </div>
   <script>
   (function(){
-    var dias=['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
-    var meses=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+    var dias=['Domingo','Segunda-feira','TerÃ§a-feira','Quarta-feira','Quinta-feira','Sexta-feira','SÃ¡bado'];
+    var meses=['janeiro','fevereiro','marÃ§o','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
     var d=new Date();
     document.getElementById('header-data').textContent=dias[d.getDay()]+', '+d.getDate()+' de '+meses[d.getMonth()]+' de '+d.getFullYear();
+    if (typeof ADS_mostrar === 'function') {
+      var pasta='ads_topo', el=document.getElementById('ads-header-div');
+      if (el && ADS_READY) {
+        var lista=ADS_IMAGENS[pasta];
+        if (lista && lista.length) {
+          var ultima=sessionStorage.getItem('ads_last_header')||'';
+          var disp=lista.filter(function(n){return n!==ultima;});
+          if(!disp.length) disp=lista;
+          var nome=disp[Math.floor(Math.random()*disp.length)];
+          sessionStorage.setItem('ads_last_header',nome);
+          var link=document.createElement('a');
+          link.href='/'+pasta+'/'+nome;
+          link.target='_blank';
+          var img=document.createElement('img');
+          img.src='/'+pasta+'/'+nome;
+          img.alt='Publicidade';
+          link.appendChild(img);
+          el.innerHTML='';
+          el.appendChild(link);
+        }
+      } else if (!ADS_READY) {
+        ADS_QUEUE.push(function(){
+          if(typeof ADS_mostrar==='function') ADS_mostrar(pasta,'ads-header-div');
+        });
+      }
+    }
   })();
   </script>
 </header>
