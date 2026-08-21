@@ -22,3 +22,7 @@ materia:
 rodape:
   ativo: true
 
+# BANNER LATERAL 2 - abaixo das mais lidas (300x250)
+lateral_2:
+  ativo: true
+
