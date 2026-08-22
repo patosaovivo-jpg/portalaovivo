@@ -1,7 +1,7 @@
 ---
 title: "URT recebe proposta de R$ 90 milhões para venda de 90% da SAF"
 date: 2026-08-21 22:25:00 -0300
-image: https://img.lightshot.app/npB_EYs5QH-bDtmfGVPjZA.png
+image: https://i.ibb.co/4ZBq3YjF/b67da682-959a-4b8a-98e3-94d2139d9a3d.png
 tema: Esportes
 fonte: "Radio Trovão"
 fonte_link: ""
