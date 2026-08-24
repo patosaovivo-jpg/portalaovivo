@@ -144,9 +144,19 @@ def main():
     if materias_para_social:
         pending_file = os.path.join(BASE_DIR, "data", "pending_social.json")
         os.makedirs(os.path.dirname(pending_file), exist_ok=True)
+
+        existentes = []
+        if os.path.exists(pending_file):
+            with open(pending_file, "r", encoding="utf-8") as f:
+                existentes = json.load(f)
+
+        links_existentes = {m["link"] for m in existentes}
+        novas = [m for m in materias_para_social if m["link"] not in links_existentes]
+        combinadas = existentes + novas
+
         with open(pending_file, "w", encoding="utf-8") as f:
-            json.dump(materias_para_social, f, ensure_ascii=False, indent=2)
-        print(f"[SOCIAL] {len(materias_para_social)} materia(s) salva(s) para postagem posterior")
+            json.dump(combinadas, f, ensure_ascii=False, indent=2)
+        print(f"[SOCIAL] {len(novas)} nova(s) + {len(existentes)} existente(s) = {len(combinadas)} materia(s) na fila")
 
     print("\n" + "=" * 60)
     print("ETAPA 6/6 - Atualizar analytics + slider automatico")

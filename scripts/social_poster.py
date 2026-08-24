@@ -333,6 +333,9 @@ def postar_materias(materias):
         print(f"[SOCIAL] Limite diario atingido ({LIMITE_INSTAGRAM_DIA})")
         return 0
 
+    vagas = LIMITE_INSTAGRAM_DIA - posts_ig
+    max_por_rodada = min(3, vagas)
+
     materias_filtradas = [
         m for m in materias
         if m.get("tema", "") in TEMAS_SOCIAIS and not ja_postou(log, m["link"])
@@ -343,29 +346,34 @@ def postar_materias(materias):
         return 0
 
     materias_ordenadas = selecionar_materias_por_popularidade(materias_filtradas)
+    escolhidas = materias_ordenadas[:max_por_rodada]
 
-    escolhida = materias_ordenadas[0]
+    postadas = 0
+    for i, escolhida in enumerate(escolhidas):
+        imagem_url = imagem_url_para_site(escolhida.get("imagem", ""))
+        if not imagem_url:
+            print(f"[SOCIAL] Sem imagem: {escolhida.get('titulo', '')[:50]}")
+            continue
 
-    imagem_url = imagem_url_para_site(escolhida.get("imagem", ""))
-    if not imagem_url:
-        print(f"[SOCIAL] Sem imagem: {escolhida.get('titulo', '')[:50]}")
-        return 0
+        if i > 0:
+            print(f"[SOCIAL] Aguardando 60s entre posts...")
+            time.sleep(60)
 
-    print(f"\n[SOCIAL] Postando: {escolhida.get('titulo', '')[:60]}")
+        print(f"\n[SOCIAL] Postando ({postadas + 1}/{len(escolhidas)}): {escolhida.get('titulo', '')[:60]}")
 
-    sucesso = postar_instagram_buffer(escolhida, escolhida.get("resumo", ""), imagem_url)
+        sucesso = postar_instagram_buffer(escolhida, escolhida.get("resumo", ""), imagem_url)
 
-    if sucesso:
-        log["posts"].append({
-            "link": escolhida["link"],
-            "titulo": escolhida.get("titulo", ""),
-            "plataforma": "instagram",
-            "data": datetime.now(timezone.utc).isoformat(),
-        })
-        save_social_log(log)
-        return 1
+        if sucesso:
+            log["posts"].append({
+                "link": escolhida["link"],
+                "titulo": escolhida.get("titulo", ""),
+                "plataforma": "instagram",
+                "data": datetime.now(timezone.utc).isoformat(),
+            })
+            save_social_log(log)
+            postadas += 1
 
-    return 0
+    return postadas
 
 
 def processar_pendentes():
