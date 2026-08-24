@@ -1,4 +1,5 @@
 import base64
+import io
 import json
 import os
 import re
@@ -6,8 +7,78 @@ import time
 import urllib.parse
 
 import requests
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+CYBERPUNK_WIDTH = 900
+CYBERPUNK_HEIGHT = 500
+
+
+def baixar_e_cyberpunk(url, destino):
+    """Baixa imagem externa, otimiza e aplica efeito cyberpunk.
+    Retorna True se sucesso, False se falhar."""
+    try:
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        resp = requests.get(url, timeout=20, headers=headers)
+        if resp.status_code != 200 or len(resp.content) < 2000:
+            return False
+        img = Image.open(io.BytesIO(resp.content)).convert("RGB")
+        img = _aplicar_cyberpunk(img)
+        os.makedirs(os.path.dirname(destino), exist_ok=True)
+        img.save(destino, "JPEG", quality=88, optimize=True)
+        print(f"  [CYBERPUNK] OK: {os.path.basename(destino)}")
+        return True
+    except Exception as e:
+        print(f"  [CYBERPUNK] Erro: {e}")
+        return False
+
+
+def _aplicar_cyberpunk(img):
+    """Aplica efeito cyberpunk: resize, contraste alto, tons neon, vinheta."""
+    img = _crop_center(img, CYBERPUNK_WIDTH, CYBERPUNK_HEIGHT)
+    img = ImageEnhance.Contrast(img).enhance(1.5)
+    img = ImageEnhance.Color(img).enhance(1.4)
+    img = ImageEnhance.Brightness(img).enhance(1.05)
+    r, g, b = img.split()
+    r = ImageEnhance.Brightness(r).enhance(0.88)
+    g = ImageEnhance.Brightness(g).enhance(0.95)
+    b = ImageEnhance.Brightness(b).enhance(1.15)
+    img = Image.merge("RGB", (r, g, b))
+    img = ImageEnhance.Sharpness(img).enhance(1.3)
+    overlay = Image.new("RGB", img.size, (10, 0, 30))
+    img = Image.blend(img, overlay, 0.08)
+    img = _aplicar_vinheta(img, intensidade=0.35)
+    return img
+
+
+def _crop_center(img, tw, th):
+    """Crop central com redimensionamento inteligente."""
+    iw, ih = img.size
+    ratio = max(tw / iw, th / ih)
+    nw, nh = int(iw * ratio), int(ih * ratio)
+    img = img.resize((nw, nh), Image.LANCZOS)
+    left = (nw - tw) // 2
+    top = (nh - th) // 2
+    return img.crop((left, top, left + tw, top + th))
+
+
+def _aplicar_vinheta(img, intensidade=0.35):
+    """Vinheta circular escura nas bordas."""
+    w, h = img.size
+    mask = Image.new("L", (w, h), 255)
+    pixels = mask.load()
+    cx, cy = w // 2, h // 2
+    max_dist = (cx ** 2 + cy ** 2) ** 0.5
+    for y in range(h):
+        for x in range(w):
+            dist = ((x - cx) ** 2 + (y - cy) ** 2) ** 0.5
+            fator = dist / max_dist
+            escuro = max(0, int(255 * (1 - fator * intensidade * 2)))
+            pixels[x, y] = escuro
+    vinheta = Image.new("RGB", (w, h), (0, 0, 0))
+    img = Image.composite(img, vinheta, mask)
+    return img
 
 # ============================================================
 # PROMPTS MELHORADOS - FOTOJORNALISMO

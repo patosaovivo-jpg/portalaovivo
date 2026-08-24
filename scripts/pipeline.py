@@ -93,22 +93,19 @@ def main():
             destino_jpg = os.path.join(BASE_DIR, "assets", "images", f"{nome_slug}.jpg")
 
             if imagem_orig:
-                # Tenta baixar a imagem original primeiro
+                # Baixa imagem original e aplica efeito cyberpunk
                 print(f"  [ORIGINAL] {imagem_orig[:80]}...")
                 try:
-                    import requests as _req
-                    resp = _req.get(imagem_orig, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
-                    if resp.status_code == 200 and len(resp.content) > 2000:
-                        with open(destino_jpg, "wb") as f:
-                            f.write(resp.content)
+                    cyber_ok = image.baixar_e_cyberpunk(imagem_orig, destino_jpg)
+                    if cyber_ok:
                         nome_final = os.path.basename(destino_jpg)
                         imagem_rel = f"/assets/images/{nome_final}"
-                        print(f"  [OK] Imagem original salva: {nome_final}")
+                        print(f"  [OK] Imagem cyberpunk salva: {nome_final}")
                     else:
-                        print(f"  [AVISO] Imagem original invalida ({resp.status_code}, {len(resp.content)} bytes), gerando com IA...")
+                        print(f"  [AVISO] Cyberpunk falhou, gerando com IA...")
                         imagem_orig = None
                 except Exception as e:
-                    print(f"  [AVISO] Falha ao baixar original: {e}, gerando com IA...")
+                    print(f"  [AVISO] Falha ao processar imagem: {e}, gerando com IA...")
                     imagem_orig = None
 
             # Gera imagem apenas se nao tem original
