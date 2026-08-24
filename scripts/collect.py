@@ -419,6 +419,15 @@ def qualidade_minima(item, texto):
             return False
     elif len(texto.strip()) < 300:
         return False
+    padroes_bloquear = [
+        r"assistam\w*\s+(?:aos?\s+)?(?:telejornais|programa)",
+        r"programa[çc][aã]o\s+de\s+tv",
+        r"ao\s+vivo:\s*assista",
+        r"tv\s+\w+\s+(?:ao\s+vivo|assista)",
+    ]
+    for padrao in padroes_bloquear:
+        if re.search(padrao, titulo, re.IGNORECASE):
+            return False
     return True
 
 
