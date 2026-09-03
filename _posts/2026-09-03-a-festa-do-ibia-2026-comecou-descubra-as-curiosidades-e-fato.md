@@ -1,12 +1,11 @@
 ---
 title: "A Festa do Ibiá 2026 Começou: Descubra as Curiosidades e Fatos Históricos do Evento Mais Aguardado do Alto Paranaíba"
 date: 2026-09-03 01:16:00 -0300
-image: /assets/images/default.jpg
+image: /assets/images/2026-09-03-a-festa-do-ibia-2026-comecou-descubra-as-curiosidades-e-fato.png
 tema: Local e Cidades
 fonte: "Portal Ao Vivo"
 fonte_link: ""
 youtube: "https://www.youtube.com/live/ZEAWroeEDKI"
-destaque: true
 ---
 
 A espera finalmente acabou! De hoje, 3 de setembro, até o próximo domingo, dia 7, o Parque de Exposições Manuel Terra Cruz se transforma na capital da emoção, da música sertaneja e do reencontro em Minas Gerais. A Festa do Ibiaense 2026 abre suas portas celebrando a emancipação política do município com portões abertos para a pista em todas as noites e uma grade de shows de peso nacional.
