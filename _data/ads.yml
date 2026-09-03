@@ -6,6 +6,10 @@
 topo:
   ativo: true
 
+# BANNER HEADER - ao lado da logo no topo (180x60)
+header:
+  ativo: true
+
 # BANNER ESQUERDA - coluna da esquerda (160x600)
 esquerda:
   ativo: false

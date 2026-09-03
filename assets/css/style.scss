@@ -59,8 +59,6 @@ img { max-width: 100%; display: block; }
 .header-ad {
   flex: 0 0 auto;
   max-width: 180px;
-  max-height: 60px;
-  overflow: hidden;
 }
 .header-ad img {
   max-width: 100%;
@@ -68,6 +66,7 @@ img { max-width: 100%; display: block; }
   border-radius: 4px;
   display: block;
 }
+.adsbygoogle.ad-frame-header { border-radius: 4px; min-height: 60px; box-sizing: border-box; }
 .site-nav {
   display: flex;
   gap: 4px;
@@ -250,7 +249,8 @@ img { max-width: 100%; display: block; }
 .adsbygoogle.ad-frame-esquerda,
 .adsbygoogle.ad-frame-lateral,
 .adsbygoogle.ad-frame-materia,
-.adsbygoogle.ad-frame-rodape {
+.adsbygoogle.ad-frame-rodape,
+.adsbygoogle.ad-frame-header {
   background: #f0f0f5;
   border: 2px dashed #b0b0c0;
   border-radius: 6px;
@@ -263,13 +263,15 @@ img { max-width: 100%; display: block; }
 .adsbygoogle.ad-frame-lateral { background: #d8f5e3; border-color: #a0d0b0; }
 .adsbygoogle.ad-frame-materia { background: #fff3d6; border-color: #e0c080; }
 .adsbygoogle.ad-frame-rodape { background: #eadcff; border-color: #c0a0e0; }
+.adsbygoogle.ad-frame-header { background: #f2e3ff; border-color: #c9a8e8; }
 
 /* Texto indicativo dentro de cada area de ad enquanto o AdSense nao ativa */
 .adsbygoogle.ad-frame-topo::before,
 .adsbygoogle.ad-frame-esquerda::before,
 .adsbygoogle.ad-frame-lateral::before,
 .adsbygoogle.ad-frame-materia::before,
-.adsbygoogle.ad-frame-rodape::before {
+.adsbygoogle.ad-frame-rodape::before,
+.adsbygoogle.ad-frame-header::before {
   content: attr(data-ads-placeholder);
   display: flex;
   align-items: center;
@@ -286,6 +288,7 @@ img { max-width: 100%; display: block; }
 .adsbygoogle.ad-frame-lateral::before { content: "Área Publicidade — 300x250"; }
 .adsbygoogle.ad-frame-materia::before { content: "Área Publicidade — Matéria"; }
 .adsbygoogle.ad-frame-rodape::before { content: "Área Publicidade — Rodapé"; }
+.adsbygoogle.ad-frame-header::before { content: "Área Publicidade — Topo Logo"; }
 
 /* ---------- MAIS LIDAS ---------- */
 .mais-lidas {
