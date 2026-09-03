@@ -1,7 +1,7 @@
 ---
 title: "A Festa do Ibiá 2026 Começou: Descubra as Curiosidades e Fatos Históricos do Evento Mais Aguardado do Alto Paranaíba"
 date: 2026-09-03 01:16:00 -0300
-image: /assets/images/2026-09-03-a-festa-do-ibia-2026-comecou-descubra-as-curiosidades-e-fato.png
+image: /assets/images/2026-09-03-a-festa-do-ibia-2026-comecou-descubra-as-curiosidades-e-fato.jpg
 tema: Local e Cidades
 fonte: "Portal Ao Vivo"
 fonte_link: ""
