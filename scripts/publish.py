@@ -21,7 +21,7 @@ def agora_brt():
     return datetime.now(BRT)
 
 
-def gerar_markdown(item, resumo, imagem_rel):
+def gerar_markdown(item, resumo, imagem_rel, sem_fonte=False):
     agora = agora_brt()
     data_str = agora.strftime("%Y-%m-%d")
     slug = slugify(item["titulo"]) or slugify(item["link"])
@@ -47,9 +47,10 @@ def gerar_markdown(item, resumo, imagem_rel):
     )
 
     body = resumo + "\n\n"
-    body += f'*Leia a matéria completa na fonte original:* [{esc(item["fonte"])}]({esc(item["link"])})\n'
+    if not sem_fonte:
+        body += f'*Leia a matéria completa na fonte original:* [{esc(item["fonte"])}]({esc(item["link"])})\n'
     body += "\n---\n"
-    body += "\n*Conteúdo resumido automaticamente pelo Portal Ao Vivo.*\n"
+    body += "\n*Conteúdo produzido pelo Portal Ao Vivo.*\n"
 
     conteudo = frontmatter + body
     with open(arquivo, "w", encoding="utf-8") as f:
@@ -78,8 +79,8 @@ def registrar_publicado(item, arquivo):
         json.dump(lista, f, ensure_ascii=False, indent=2)
 
 
-def publicar_materia(item, resumo, imagem_rel):
-    arquivo = gerar_markdown(item, resumo, imagem_rel)
+def publicar_materia(item, resumo, imagem_rel, sem_fonte=False):
+    arquivo = gerar_markdown(item, resumo, imagem_rel, sem_fonte)
     registrar_publicado(item, arquivo)
     print(f"[PUBLICADO] {arquivo}")
     return arquivo

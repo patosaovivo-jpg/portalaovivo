@@ -486,6 +486,9 @@ def coleta_completa():
                 continue
             if not e_recente(link):
                 continue
+            item["fonte_id"] = fonte.get("id", "")
+            item["imagem_ia"] = fonte.get("imagem_ia", False)
+            item["sem_fonte"] = fonte.get("sem_fonte", False)
             candidatas.append(item)
             novas += 1
         print(f"  -> {len(itens)} itens, {novas} novas candidatas")

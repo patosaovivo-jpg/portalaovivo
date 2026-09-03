@@ -96,6 +96,10 @@ def main():
 
             print("[IMAGEM] Verificando imagem original...")
             imagem_orig = item.get("imagem_original") or item.get("imagem") or None
+            forca_ia = item.get("imagem_ia", False)
+            if forca_ia:
+                print("  [IA] Fonte marcada para imagem IA, ignorando imagem original")
+                imagem_orig = None
             nome_slug = slugify(item["titulo"])
             destino_jpg = os.path.join(BASE_DIR, "assets", "images", f"{nome_slug}.jpg")
 
@@ -130,7 +134,8 @@ def main():
                     imagem_rel = "/assets/images/default.jpg"
 
             print("[PUBLICACAO] Salvando materia...")
-            publish.publicar_materia(item, resumo, imagem_rel)
+            sem_fonte = item.get("sem_fonte", False)
+            publish.publicar_materia(item, resumo, imagem_rel, sem_fonte)
             publicadas += 1
 
             materias_para_social.append({

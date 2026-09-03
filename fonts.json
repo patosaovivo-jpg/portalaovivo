@@ -2,14 +2,6 @@
   "fonts": [
     {
       "frequencia_horas": 3,
-      "id": "g1-triangulo",
-      "link_pattern": "triangulo-mineiro/.+/",
-      "nome": "G1 Triangulo e Alto Paranaiba",
-      "tipo": "scrape",
-      "url": "https://g1.globo.com/mg/triangulo-mineiro/ultimas-noticias/"
-    },
-    {
-      "frequencia_horas": 3,
       "id": "patos-1",
       "link_pattern": "noticia/",
       "nome": "Patos 1",
@@ -33,28 +25,12 @@
       "url": "https://portalserralitrense.com.br/"
     },
     {
-      "frequencia_horas": 6,
-      "id": "oi-patos",
-      "link_pattern": "noticia|post",
-      "nome": "Oi Patos",
-      "tipo": "scrape",
-      "url": "https://www.oipatos.com.br/"
-    },
-    {
       "frequencia_horas": 12,
       "id": "pref-patos",
       "link_pattern": "noticia|imprensa|publicacao",
       "nome": "Prefeitura de Patos de Minas",
       "tipo": "scrape",
       "url": "https://www.patosdeminas.mg.gov.br/"
-    },
-    {
-      "frequencia_horas": 24,
-      "id": "camara-patos",
-      "link_pattern": "noticia|materia",
-      "nome": "Camara de Patos de Minas",
-      "tipo": "scrape",
-      "url": "https://camarapatos.mg.gov.br/"
     },
     {
       "frequencia_horas": 24,
@@ -202,14 +178,6 @@
     },
     {
       "frequencia_horas": 12,
-      "id": "gov-mg",
-      "link_pattern": "noticia|noticias",
-      "nome": "Governo de Minas Gerais",
-      "tipo": "scrape",
-      "url": "https://www.mg.gov.br/"
-    },
-    {
-      "frequencia_horas": 12,
       "id": "pm-mg",
       "link_pattern": "noticia|destaque",
       "nome": "Policia Militar de MG",
@@ -218,27 +186,63 @@
     },
     {
       "frequencia_horas": 24,
-      "id": "diario-patos",
-      "link_pattern": "",
-      "nome": "Diario Oficial Patos de Minas",
-      "tipo": "diario_oficial",
-      "url": "https://www.patosdeminas.mg.gov.br/portal/diario-oficial"
-    },
-    {
-      "id": "nova-1787265734570",
+      "id": "patos-esportes",
       "nome": "Patos Esportes",
       "tipo": "scrape",
       "url": "https://patosesportes.com.br",
-      "link_pattern": "noticia",
-      "frequencia_horas": 24
+      "link_pattern": "noticia"
     },
     {
-      "id": "nova-1787265763825",
+      "frequencia_horas": 24,
+      "id": "ag-esportes",
       "nome": "AG Esportes",
       "tipo": "scrape",
       "url": "https://www.agesporte.com.br/",
-      "link_pattern": "noticia",
-      "frequencia_horas": 24
+      "link_pattern": "noticia"
+    },
+    {
+      "frequencia_horas": 24,
+      "id": "fiemg-regional",
+      "nome": "FIEMG Alto Paranaiba",
+      "tipo": "scrape",
+      "url": "https://www.fiemg.com.br/regional-alto-paranaiba/noticias/",
+      "link_pattern": "noticia|noticias"
+    },
+    {
+      "frequencia_horas": 24,
+      "id": "noticias-triangulo",
+      "nome": "Noticias do Triangulo",
+      "tipo": "scrape",
+      "url": "https://noticiasdotriangulo.com.br/",
+      "link_pattern": "noticia"
+    },
+    {
+      "frequencia_horas": 24,
+      "id": "portal-paranaiba",
+      "nome": "Portal Paranaiba",
+      "tipo": "scrape",
+      "url": "https://www.portalparanaiba.com.br/",
+      "link_pattern": "noticia"
+    },
+    {
+      "frequencia_horas": 24,
+      "id": "hypescience",
+      "nome": "Hypescience",
+      "tipo": "scrape",
+      "url": "https://hypescience.com/",
+      "link_pattern": "noticia|post",
+      "imagem_ia": true,
+      "sem_fonte": true
+    },
+    {
+      "frequencia_horas": 24,
+      "id": "ovicio",
+      "nome": "Ovicio",
+      "tipo": "scrape",
+      "url": "https://ovicio.com.br/",
+      "link_pattern": "post|noticia",
+      "imagem_ia": true,
+      "sem_fonte": true
     }
   ]
 }
