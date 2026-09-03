@@ -57,10 +57,14 @@ def main():
 
             # Resumo: tentar IA, fallback para texto original
             resumo = None
+            eh_edital = item.get("tipo") == "edital"
             if api_key:
                 try:
-                    print(f"[IA] Resumindo: {titulo[:60]}")
-                    resumo = summarize.resumir_texto(texto, api_key)
+                    print(f"[IA] {'Resumindo edital' if eh_edital else 'Resumindo'}: {titulo[:60]}")
+                    if eh_edital:
+                        resumo = summarize.resumir_edital(texto, api_key)
+                    else:
+                        resumo = summarize.resumir_texto(texto, api_key)
                 except Exception as e:
                     print(f"[IA] Fallback resumo: {e}")
                     resumo = summarize.resumir_fallback(texto)
@@ -71,7 +75,10 @@ def main():
             # Titulo: tentar IA, fallback para titulo original
             if api_key:
                 try:
-                    titulo_ia = summarize.gerar_titulo(resumo, api_key)
+                    if eh_edital:
+                        titulo_ia = summarize.gerar_titulo_edital(resumo, api_key)
+                    else:
+                        titulo_ia = summarize.gerar_titulo(resumo, api_key)
                     if titulo_ia and len(titulo_ia) > 10:
                         titulo = titulo_ia
                 except Exception as e:
@@ -157,7 +164,18 @@ def main():
         print(f"[SOCIAL] {len(novas)} nova(s) + {len(existentes)} existente(s) = {len(combinadas)} materia(s) na fila")
 
     print("\n" + "=" * 60)
-    print("ETAPA 6/6 - Atualizar analytics + slider automatico")
+    print("ETAPA 6/6 - Pesquisa viral (historias e curiosidades regionais)")
+    print("=" * 60)
+    try:
+        import research_viral
+        viral = research_viral.executar_pesquisa_viral(max_posts=1, um_por_dia=True)
+        for v in viral:
+            print(f"[VIRAL] Publicado: {v['titulo']}")
+    except Exception as e:
+        print(f"[VIRAL] Passo de pesquisa viral falhou: {e}")
+
+    print("\n" + "=" * 60)
+    print("ETAPA 7/7 - Atualizar analytics + slider automatico")
     print("=" * 60)
     try:
         import analytics

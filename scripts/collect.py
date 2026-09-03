@@ -561,8 +561,22 @@ def processar_candidatas(candidatas, themes, max_itens=6):
         if not texto:
             continue
 
+        # Detectar edital/convocacao no texto para tratar de forma especial
+        edital_match = re.search(
+            r'(edital\s+(?:de\s+)?(?:convocação|convocacao|credenciamento|licita[çc][aã]o|chamamento)?\s*[nº#]?\s*\d+)',
+            item.get("titulo", "") + " " + texto[:2000],
+            re.IGNORECASE,
+        )
+        eh_edital = bool(edital_match) or re.search(
+            r'\bedital\b|convocad[oa]|convocação para',
+            texto[:3000],
+            re.IGNORECASE,
+        )
+        if eh_edital:
+            item["tipo"] = "edital"
+
         # Diario oficial: relajar qualidade minima (PDFs curtos)
-        if item.get("tipo") == "diario_oficial":
+        if item.get("tipo") in ("diario_oficial", "edital"):
             if len(texto.strip()) < 100:
                 continue
         elif not qualidade_minima(item, texto):
