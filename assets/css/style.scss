@@ -237,13 +237,13 @@ img { max-width: 100%; display: block; }
 .ph-esquerda { width: 100%; height: 400px; }
 .ph-lateral { width: 100%; height: 250px; }
 
-/* ---------- IFRAMES DE PUBLICIDADE ---------- */
-.ad-frame { border: 0; display: block; width: 100%; background: transparent; }
-.ad-frame-topo { height: auto; max-width: 970px; margin: 0 auto; aspect-ratio: 970 / 90; }
-.ad-frame-esquerda { height: auto; max-width: 160px; aspect-ratio: 160 / 600; }
-.ad-frame-lateral { height: auto; max-width: 300px; margin: 0 auto; aspect-ratio: 300 / 250; }
-.ad-frame-materia { height: auto; max-width: 728px; margin: 0 auto; aspect-ratio: 728 / 90; }
-.ad-frame-rodape { height: auto; max-width: 728px; margin: 0 auto; aspect-ratio: 728 / 90; }
+/* ---------- IFRAMES / ADSENSE PUBLICIDADE ---------- */
+.ad-frame, .adsbygoogle { border: 0; display: block; width: 100%; background: transparent; }
+.ad-frame-topo { height: auto; max-width: 728px; margin: 0 auto; }
+.ad-frame-esquerda { height: auto; max-width: 160px; }
+.ad-frame-lateral { height: auto; max-width: 300px; margin: 0 auto; }
+.ad-frame-materia { height: auto; max-width: 728px; margin: 0 auto; }
+.ad-frame-rodape { height: auto; max-width: 728px; margin: 0 auto; }
 
 /* ---------- MAIS LIDAS ---------- */
 .mais-lidas {
@@ -605,7 +605,7 @@ img { max-width: 100%; display: block; }
   .col-esquerda { display: none; }
   .col-lateral { position: static; }
   .slider { height: 360px; }
-  .ad-frame-esquerda { display: none; }
+  .ad-frame-esquerda, .adsbygoogle.ad-frame-esquerda { display: none; }
   .ph-esquerda { display: none; }
 }
 @media (max-width: 640px) {
@@ -625,9 +625,9 @@ img { max-width: 100%; display: block; }
   .post-compartilhar { flex-wrap: wrap; }
   .post-nav { flex-direction: column; }
   .post-nav-next { text-align: left; }
-  .ad-frame-topo { max-width: 100%; }
-  .ad-frame-lateral { max-width: 100%; }
-  .ad-frame-materia { max-width: 100%; }
-  .ad-frame-rodape { max-width: 100%; }
+  .ad-frame-topo, .adsbygoogle.ad-frame-topo { max-width: 100%; }
+  .ad-frame-lateral, .adsbygoogle.ad-frame-lateral { max-width: 100%; }
+  .ad-frame-materia, .adsbygoogle.ad-frame-materia { max-width: 100%; }
+  .ad-frame-rodape, .adsbygoogle.ad-frame-rodape { max-width: 100%; }
   .ph-topo { max-width: 100%; }
 }

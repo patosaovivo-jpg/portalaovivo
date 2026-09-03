@@ -7,7 +7,11 @@ permalink: /parts/barra-lateral.html
   <div class="bloco-lateral">
     <span class="ad-label">Publicidade</span>
     {% if site.data.ads.lateral.ativo %}
-    <iframe class="ad-frame ad-frame-lateral" src="{{ '/ads_lateral/' | relative_url }}" title="Publicidade coluna lateral" loading="lazy"></iframe>
+    <ins class="adsbygoogle ad-frame-lateral"
+         style="display:inline-block;width:300px;height:250px"
+         data-ad-client="ca-pub-0558735938398559"
+         data-ad-slot="0"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     {% else %}
     <div class="ph-ph ph-lateral">Anúncio<br>(300x250)</div>
     {% endif %}
@@ -41,7 +45,11 @@ permalink: /parts/barra-lateral.html
   <div class="bloco-lateral">
     <span class="ad-label">Publicidade</span>
     {% if site.data.ads.lateral_2.ativo %}
-    <iframe class="ad-frame ad-frame-lateral" src="{{ '/ads_lateral_2/' | relative_url }}" title="Publicidade coluna lateral" loading="lazy"></iframe>
+    <ins class="adsbygoogle ad-frame-lateral"
+         style="display:inline-block;width:300px;height:250px"
+         data-ad-client="ca-pub-0558735938398559"
+         data-ad-slot="0"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     {% else %}
     <div class="ph-ph ph-lateral">Anúncio<br>(300x250)</div>
     {% endif %}

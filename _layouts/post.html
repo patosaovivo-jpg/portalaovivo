@@ -32,11 +32,15 @@ layout: default
         {{ content }}
       </div>
 
-      <!-- PUBLICIDADE DENTRO DA MATÉRIA -->
+      <!-- PUBLICIDADE DENTRO DA MATÉRIA (Google AdSense) -->
       {% if site.data.ads.materia.ativo %}
       <div class="post-ads">
         <span class="ad-label">Publicidade</span>
-        <iframe class="ad-frame ad-frame-materia" src="{{ '/ads_materia/' | relative_url }}" title="Publicidade na matéria" loading="lazy"></iframe>
+        <ins class="adsbygoogle ad-frame-materia"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-0558735938398559"
+             data-ad-slot="0"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
       {% endif %}
 
@@ -55,11 +59,15 @@ layout: default
         </span>
       </div>
 
-      <!-- PUBLICIDADE RODAPÉ DA MATÉRIA -->
+      <!-- PUBLICIDADE RODAPÉ DA MATÉRIA (Google AdSense) -->
       {% if site.data.ads.rodape.ativo %}
       <div class="post-ads">
         <span class="ad-label">Publicidade</span>
-        <iframe class="ad-frame ad-frame-rodape" src="{{ '/ads_rodape/' | relative_url }}" title="Publicidade rodapé da matéria" loading="lazy"></iframe>
+        <ins class="adsbygoogle ad-frame-rodape"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-0558735938398559"
+             data-ad-slot="0"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
       {% endif %}
 
@@ -98,8 +106,53 @@ layout: default
     </article>
   </section>
 
-  <!-- COLUNA LATERAL DIREITA (25%): puxada dinamicamente do fragmento único -->
-  <div data-fragment="{{ '/parts/barra-lateral.html' | relative_url }}"></div>
+  <!-- ===== COLUNA LATERAL DIREITA (renderizada no servidor com AdSense) ===== -->
+  <aside class="col-lateral">
+    {% if site.data.ads.lateral.ativo %}
+    <div class="bloco-lateral">
+      <span class="ad-label">Publicidade</span>
+      <ins class="adsbygoogle ad-frame-lateral"
+           style="display:inline-block;width:300px;height:250px"
+           data-ad-client="ca-pub-0558735938398559"
+           data-ad-slot="0"></ins>
+    </div>
+    {% endif %}
+
+    <div class="bloco-lateral">
+      {% if site.data.popular.mais_lidas.size > 0 %}
+      <h3 class="bloco-titulo">Mais Lidas da Semana</h3>
+      <ol class="mais-lidas-lista mais-lidas-lateral">
+        {% for item in site.data.popular.mais_lidas %}
+        <li class="mais-lidas-item">
+          <a href="{{ item.path }}" class="mais-lidas-link">
+            <span class="mais-lidas-num">{{ forloop.index }}</span>
+            <div class="mais-lidas-info">
+              <span class="mais-lidas-titulo">{{ item.titulo }}</span>
+            </div>
+          </a>
+        </li>
+        {% endfor %}
+      </ol>
+      {% else %}
+      <h3 class="bloco-titulo">Mais Lidas</h3>
+      <ol class="mais-lidas">
+        {% for post in site.posts limit: 6 %}
+        <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    </div>
+
+    {% if site.data.ads.lateral_2.ativo %}
+    <div class="bloco-lateral">
+      <span class="ad-label">Publicidade</span>
+      <ins class="adsbygoogle ad-frame-lateral"
+           style="display:inline-block;width:300px;height:250px"
+           data-ad-client="ca-pub-0558735938398559"
+           data-ad-slot="0"></ins>
+    </div>
+    {% endif %}
+  </aside>
 
 </div>
 

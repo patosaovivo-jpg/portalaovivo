@@ -7,7 +7,11 @@ permalink: /parts/barra-esquerda.html
   <div class="bloco-esquerda">
     <span class="ad-label">Publicidade</span>
     {% if site.data.ads.esquerda.ativo %}
-    <iframe class="ad-frame ad-frame-esquerda" src="{{ '/ads_esquerda/' | relative_url }}" title="Publicidade coluna esquerda" loading="lazy"></iframe>
+    <ins class="adsbygoogle ad-frame-esquerda"
+         style="display:inline-block;width:160px;height:600px"
+         data-ad-client="ca-pub-0558735938398559"
+         data-ad-slot="0"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     {% else %}
     <div class="ph-ph ph-esquerda">Anúncio<br>(160x600)</div>
     {% endif %}

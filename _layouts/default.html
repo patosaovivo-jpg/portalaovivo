@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
   <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+  <meta name="google-adsense-account" content="ca-pub-0558735938398559">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0558735938398559" crossorigin="anonymous"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4768MW81VJ"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4768MW81VJ');</script>
 </head>
@@ -42,8 +44,18 @@
   <!-- Header puxado dinamicamente do fragmento único -->
   <div data-fragment="{{ '/parts/header.html' | relative_url }}"></div>
 
-  <!-- Banner de publicidade do topo puxado dinamicamente -->
-  <div data-fragment="{{ '/parts/banner-topo.html' | relative_url }}"></div>
+  <!-- ===== BANNER PUBLICIDADE - TOPO (Google AdSense, renderizado no servidor) ===== -->
+  {% if site.data.ads.topo.ativo %}
+  <div class="ad-banner ad-topo">
+    <div class="container">
+      <span class="ad-label">Publicidade</span>
+      <ins class="adsbygoogle ad-frame-topo"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-0558735938398559"
+           data-ad-slot="0"></ins>
+    </div>
+  </div>
+  {% endif %}
 
   <main class="container content">
     {{ content }}
@@ -53,5 +65,17 @@
   <div data-fragment="{{ '/parts/footer.html' | relative_url }}"></div>
 
   <script src="{{ '/assets/js/layout.js' | relative_url }}"></script>
+  <script>
+    (function () {
+      function pushAds() {
+        if (window.adsbygoogle) {
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        } else {
+          setTimeout(pushAds, 300);
+        }
+      }
+      if (document.readyState === 'complete') { pushAds(); } else { window.addEventListener('load', pushAds); }
+    })();
+  </script>
 </body>
 </html>

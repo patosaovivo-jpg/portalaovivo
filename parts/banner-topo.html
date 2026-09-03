@@ -2,14 +2,18 @@
 layout: null
 permalink: /parts/banner-topo.html
 ---
-<!-- ===== BANNER PUBLICIDADE - TOPO (fragmento único) ===== -->
+<!-- ===== BANNER PUBLICIDADE - TOPO (Google AdSense) ===== -->
 <div class="ad-banner ad-topo">
   <div class="container">
     <span class="ad-label">Publicidade</span>
     {% if site.data.ads.topo.ativo %}
-    <iframe class="ad-frame ad-frame-topo" src="{{ '/ads_topo/' | relative_url }}?v=2" title="Publicidade topo" loading="lazy"></iframe>
+    <ins class="adsbygoogle ad-frame-topo"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-0558735938398559"
+         data-ad-slot="0"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     {% else %}
-    <div class="ph-ph ph-topo">Espaço para banner (970x90 / 728x90)</div>
+    <div class="ph-ph ph-topo">Espaço para banner (728x90)</div>
     {% endif %}
   </div>
 </div>
