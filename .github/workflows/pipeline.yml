@@ -64,6 +64,18 @@ jobs:
         run: |
           python scripts/social_poster.py || echo "::warning::Postagem nas redes sociais falhou ou sem pendentes"
 
+      - name: Commit do estado das redes sociais
+        run: |
+          git config user.name "Portal Ao Vivo Bot"
+          git config user.email "bot@portalaovivo.com.br"
+          git add data/social_log.json data/pending_social.json
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteracao no estado das redes sociais"
+          else
+            git commit -m "Bot: estado das redes sociais $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
   build:
     name: Build do site
     needs: pipeline
