@@ -1,5 +1,6 @@
 import json
 import os
+import time
 from datetime import datetime, timezone, timedelta
 
 import requests
@@ -12,7 +13,7 @@ LIMITE_INSTAGRAM_DIA = 8
 
 SITE_URL = "https://portalaovivo.com.br"
 
-TEMAS_SOCIAIS = ["Local e Cidades", "Politica", "Esportes", "Geral"]
+TEMAS_SOCIAIS = ["Local e Cidades", "Politica", "Esportes", "Geral", "Historia Regional"]
 
 TIMEOUT = 30
 
@@ -289,7 +290,7 @@ def postar_instagram_buffer(item, resumo, imagem_url):
             "text": legenda,
             "channelId": channel_id,
             "schedulingType": "automatic",
-            "mode": "addToQueue",
+            "mode": "shareNow",
             "metadata": {
                 "instagram": {
                     "type": "post",
@@ -311,7 +312,7 @@ def postar_instagram_buffer(item, resumo, imagem_url):
     if "post" in post_data:
         post_id = post_data["post"].get("id", "?")
         due = post_data["post"].get("dueAt", "?")
-        print(f"[BUFFER] OK Post agendado (ID: {post_id}, para: {due})")
+        print(f"[BUFFER] OK Post publicado (ID: {post_id}, para: {due})")
         return True
     else:
         msg = post_data.get("message", "erro desconhecido")
