@@ -17,6 +17,8 @@ PROMPT = (
     "NÃO invente informações que não estejam no texto original. "
     "NÃO comece com 'Em resumo' nem com o nome do portal. "
     "Termine o texto sem assinaturas. Responda APENAS com o texto resumido.\n\n"
+    "Se o texto contiver formatação quebrada, caracteres estranhos ou parecer extraído de PDF, "
+    "ignore os erros de formatação e extraia apenas as informações relevantes.\n\n"
     "TEXTO ORIGINAL:\n{texto}"
 )
 

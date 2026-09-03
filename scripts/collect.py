@@ -320,8 +320,7 @@ def extrair_texto_diario(pdf_url):
 
         texto_completo = []
         with pdfplumber.open(tmp_path) as pdf:
-            # Pega apenas as primeiras 10 paginas (resumo)
-            max_pages = min(len(pdf.pages), 10)
+            max_pages = min(len(pdf.pages), 15)
             for i in range(max_pages):
                 page_text = pdf.pages[i].extract_text()
                 if page_text:
@@ -330,9 +329,21 @@ def extrair_texto_diario(pdf_url):
         os.unlink(tmp_path)
 
         if not texto_completo:
+            print("  [AVISO] PDF sem texto extraivel (provavelmente imagem/scanned)")
             return None
 
-        return "\n\n".join(texto_completo)
+        texto = "\n\n".join(texto_completo)
+        # Limpar caracteres estranhos de encoding
+        texto = re.sub(r'[^\w\s.,;:!?\-()/°ºª©®™§#\$%&@°\n]', ' ', texto)
+        texto = re.sub(r'\s+', ' ', texto)
+        texto = texto.strip()
+
+        if len(texto) < 50:
+            print(f"  [AVISO] Texto do PDF muito curto ({len(texto)} chars)")
+            return None
+
+        print(f"  [PDF] Texto extraido: {len(texto)} chars de {max_pages} paginas")
+        return texto
 
     except Exception as e:
         print(f"  [ERRO] Ao extrair texto do PDF: {e}")

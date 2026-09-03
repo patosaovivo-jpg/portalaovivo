@@ -119,7 +119,8 @@ def main():
                     nome_final = os.path.basename(img)
                     imagem_rel = f"/assets/images/{nome_final}"
                 else:
-                    imagem_rel = ""
+                    print("[IMAGEM] Todos os geradores falharam, usando default.jpg")
+                    imagem_rel = "/assets/images/default.jpg"
 
             print("[PUBLICACAO] Salvando materia...")
             publish.publicar_materia(item, resumo, imagem_rel)
