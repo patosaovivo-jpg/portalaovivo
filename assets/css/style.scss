@@ -258,11 +258,11 @@ img { max-width: 100%; display: block; }
   color: #9090a0;
   text-align: center;
 }
-.adsbygoogle.ad-frame-topo { background: linear-gradient(135deg, #ffe0e6, #fff0f3); border-color: #e0a0ac; }
-.adsbygoogle.ad-frame-esquerda { background: linear-gradient(135deg, #dbe7ff, #eef3ff); border-color: #a0b8e0; }
-.adsbygoogle.ad-frame-lateral { background: linear-gradient(135deg, #d8f5e3, #eefaf2); border-color: #a0d0b0; }
-.adsbygoogle.ad-frame-materia { background: linear-gradient(135deg, #fff3d6, #fff8ea); border-color: #e0c080; }
-.adsbygoogle.ad-frame-rodape { background: linear-gradient(135deg, #eadcff, #f4ecff); border-color: #c0a0e0; }
+.adsbygoogle.ad-frame-topo { background: #ffe0e6; border-color: #e0a0ac; }
+.adsbygoogle.ad-frame-esquerda { background: #dbe7ff; border-color: #a0b8e0; }
+.adsbygoogle.ad-frame-lateral { background: #d8f5e3; border-color: #a0d0b0; }
+.adsbygoogle.ad-frame-materia { background: #fff3d6; border-color: #e0c080; }
+.adsbygoogle.ad-frame-rodape { background: #eadcff; border-color: #c0a0e0; }
 
 /* Texto indicativo dentro de cada area de ad enquanto o AdSense nao ativa */
 .adsbygoogle.ad-frame-topo::before,
