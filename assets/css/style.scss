@@ -245,6 +245,48 @@ img { max-width: 100%; display: block; }
 .ad-frame-materia { height: auto; max-width: 728px; margin: 0 auto; }
 .ad-frame-rodape { height: auto; max-width: 728px; margin: 0 auto; }
 
+/* ===== PLACEHOLDER VISIVEL DAS AREAS DE ADS (ate o AdSense ativar) ===== */
+.adsbygoogle.ad-frame-topo,
+.adsbygoogle.ad-frame-esquerda,
+.adsbygoogle.ad-frame-lateral,
+.adsbygoogle.ad-frame-materia,
+.adsbygoogle.ad-frame-rodape {
+  background: #f0f0f5;
+  border: 2px dashed #b0b0c0;
+  border-radius: 6px;
+  min-height: 60px;
+  color: #9090a0;
+  text-align: center;
+}
+.adsbygoogle.ad-frame-topo { background: linear-gradient(135deg, #ffe0e6, #fff0f3); border-color: #e0a0ac; }
+.adsbygoogle.ad-frame-esquerda { background: linear-gradient(135deg, #dbe7ff, #eef3ff); border-color: #a0b8e0; }
+.adsbygoogle.ad-frame-lateral { background: linear-gradient(135deg, #d8f5e3, #eefaf2); border-color: #a0d0b0; }
+.adsbygoogle.ad-frame-materia { background: linear-gradient(135deg, #fff3d6, #fff8ea); border-color: #e0c080; }
+.adsbygoogle.ad-frame-rodape { background: linear-gradient(135deg, #eadcff, #f4ecff); border-color: #c0a0e0; }
+
+/* Texto indicativo dentro de cada area de ad enquanto o AdSense nao ativa */
+.adsbygoogle.ad-frame-topo::before,
+.adsbygoogle.ad-frame-esquerda::before,
+.adsbygoogle.ad-frame-lateral::before,
+.adsbygoogle.ad-frame-materia::before,
+.adsbygoogle.ad-frame-rodape::before {
+  content: attr(data-ads-placeholder);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 60px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.adsbygoogle.ad-frame-topo::before { content: "Área Publicidade — 728x90"; }
+.adsbygoogle.ad-frame-esquerda::before { content: "Área Publicidade — 160x600"; }
+.adsbygoogle.ad-frame-lateral::before { content: "Área Publicidade — 300x250"; }
+.adsbygoogle.ad-frame-materia::before { content: "Área Publicidade — Matéria"; }
+.adsbygoogle.ad-frame-rodape::before { content: "Área Publicidade — Rodapé"; }
+
 /* ---------- MAIS LIDAS ---------- */
 .mais-lidas {
   max-width: 800px;
