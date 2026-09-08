@@ -253,6 +253,28 @@ def imagem_url_para_site(imagem_rel):
     return f"{SITE_URL}/{caminho}"
 
 
+def imagem_acessivel(url, timeout=20):
+    """Verifica se a imagem esta acessivel publicamente (HTTP 200 + content-type de imagem)."""
+    if not url:
+        return False
+    try:
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        r = requests.head(url, timeout=timeout, headers=headers, allow_redirects=True)
+        if r.status_code == 405:
+            r = requests.get(url, timeout=timeout, headers=headers, stream=True)
+        if r.status_code != 200:
+            print(f"  [IMG] Falhou HTTP {r.status_code}: {url[:90]}")
+            return False
+        ctype = r.headers.get("Content-Type", "") or r.headers.get("content-type", "")
+        if ctype and not ctype.lower().startswith("image"):
+            print(f"  [IMG] Content-Type nao e imagem ({ctype}): {url[:90]}")
+            return False
+        return True
+    except Exception as e:
+        print(f"  [IMG] Erro ao checar imagem: {e}")
+        return False
+
+
 def postar_instagram_buffer(item, resumo, imagem_url):
     """Posta no Instagram via Buffer API."""
     channel_id = obter_channel_id_instagram()
@@ -354,6 +376,10 @@ def postar_materias(materias):
         imagem_url = imagem_url_para_site(escolhida.get("imagem", ""))
         if not imagem_url:
             print(f"[SOCIAL] Sem imagem: {escolhida.get('titulo', '')[:50]}")
+            continue
+
+        if not imagem_acessivel(imagem_url):
+            print(f"[SOCIAL] Imagem inacessivel, pulando: {escolhida.get('titulo', '')[:50]}")
             continue
 
         if i > 0:

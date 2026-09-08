@@ -34,6 +34,96 @@ def baixar_e_cyberpunk(url, destino):
         return False
 
 
+# ============================================================
+# IMAGEM SOCIAL 1:1 (INSTAGRAM) - baixa, corta e aplica grafite
+# ============================================================
+
+SOCIAL_SIZE = 1080  # Instagram feed: quadrado 1:1
+
+def baixar_e_grafite(url, destino):
+    """Baixa imagem original, corta para 1:1 (1080x1080) e aplica efeito grafite.
+    Retorna True se sucesso, False se falhar."""
+    try:
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        resp = requests.get(url, timeout=20, headers=headers)
+        if resp.status_code != 200 or len(resp.content) < 2000:
+            return False
+        img = Image.open(io.BytesIO(resp.content)).convert("RGB")
+        img = _crop_social_1x1(img)
+        img = _aplicar_grafite(img)
+        os.makedirs(os.path.dirname(destino), exist_ok=True)
+        img.save(destino, "JPEG", quality=90, optimize=True)
+        print(f"  [GRAFITE] OK 1:1: {os.path.basename(destino)}")
+        return True
+    except Exception as e:
+        print(f"  [GRAFITE] Erro: {e}")
+        return False
+
+
+def processar_grafite_local(arquivo_origem, destino):
+    """Abre imagem local, corta 1:1 e aplica grafite. Retorna True se sucesso."""
+    try:
+        img = Image.open(arquivo_origem).convert("RGB")
+        img = _crop_social_1x1(img)
+        img = _aplicar_grafite(img)
+        os.makedirs(os.path.dirname(destino), exist_ok=True)
+        img.save(destino, "JPEG", quality=90, optimize=True)
+        print(f"  [GRAFITE] OK 1:1 local: {os.path.basename(destino)}")
+        return True
+    except Exception as e:
+        print(f"  [GRAFITE] Erro local: {e}")
+        return False
+
+
+def _crop_social_1x1(img):
+    """Crop central para quadrado 1:1 (SOCIAL_SIZE x SOCIAL_SIZE)."""
+    iw, ih = img.size
+    lado = min(iw, ih)
+    ratio = SOCIAL_SIZE / lado
+    nw, nh = int(iw * ratio), int(ih * ratio)
+    img = img.resize((nw, nh), Image.LANCZOS)
+    left = (nw - SOCIAL_SIZE) // 2
+    top = (nh - SOCIAL_SIZE) // 2
+    return img.crop((left, top, left + SOCIAL_SIZE, top + SOCIAL_SIZE))
+
+
+def _aplicar_grafite(img):
+    """Efeito grafite/pintura spray: posterize + cor vibrante + contorno escuro + vinheta."""
+    # Posterize reduz o numero de tons, dando aspecto de pintura spray
+    img = ImageOps.posterize(img, 5)
+    # Cor e contraste fortes (estilo mural)
+    img = ImageEnhance.Color(img).enhance(1.6)
+    img = ImageEnhance.Contrast(img).enhance(1.35)
+    img = ImageEnhance.Brightness(img).enhance(1.05)
+    # Nitidez para destacar tracos
+    img = ImageEnhance.Sharpness(img).enhance(1.4)
+    # Bordas escuras tipo contorno (vai dar aspecto de stencil / grafite)
+    borda = ImageOps.invert(img.convert("L"))
+    borda = borda.filter(ImageFilter.MaxFilter(5))
+    borda = borda.filter(ImageFilter.GaussianBlur(1))
+    mascara = ImageEnhance.Brightness(borda.convert("RGB")).enhance(0.55)
+    img = Image.blend(img, mascara, 0.18)
+    # Vinheta leve para destacar o centro
+    img = _aplicar_vinheta_leve(img, intensidade=0.25)
+    return img
+
+
+def _aplicar_vinheta_leve(img, intensidade=0.25):
+    """Vinheta circular nas bordas (mais suave que a cyberpunk)."""
+    w, h = img.size
+    mask = Image.new("L", (w, h), 255)
+    pixels = mask.load()
+    cx, cy = w // 2, h // 2
+    max_dist = (cx ** 2 + cy ** 2) ** 0.5
+    for y in range(h):
+        for x in range(w):
+            dist = ((x - cx) ** 2 + (y - cy) ** 2) ** 0.5
+            fator = dist / max_dist
+            pixels[x, y] = max(0, int(255 * (1 - fator * intensidade * 2)))
+    vinheta = Image.new("RGB", (w, h), (0, 0, 0))
+    return Image.composite(img, vinheta, mask)
+
+
 def _aplicar_cyberpunk(img):
     """Aplica efeito cyberpunk: resize, contraste alto, tons neon, vinheta."""
     img = _crop_center(img, CYBERPUNK_WIDTH, CYBERPUNK_HEIGHT)

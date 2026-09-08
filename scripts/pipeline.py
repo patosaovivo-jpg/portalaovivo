@@ -138,13 +138,26 @@ def main():
             publish.publicar_materia(item, resumo, imagem_rel, sem_fonte)
             publicadas += 1
 
+            # Gera versao social 1:1 grafite (para Instagram)
+            imagem_social = imagem_rel
+            try:
+                if imagem_rel and imagem_rel != "/assets/images/default.jpg":
+                    origem_local = os.path.join(BASE_DIR, "assets", "images", os.path.basename(imagem_rel))
+                    destino_social_nome = "social-" + os.path.basename(imagem_rel)
+                    destino_social = os.path.join(BASE_DIR, "assets", "images", destino_social_nome)
+                    if os.path.exists(origem_local):
+                        if image.processar_grafite_local(origem_local, destino_social):
+                            imagem_social = f"/assets/images/{destino_social_nome}"
+            except Exception as e:
+                print(f"  [GRAFITE] Falha ao preparar img social: {e}")
+
             materias_para_social.append({
                 "titulo": item["titulo"],
                 "link": item["link"],
                 "fonte": item["fonte"],
                 "tema": item.get("tema", "Geral"),
                 "resumo": resumo,
-                "imagem": imagem_rel,
+                "imagem": imagem_social,
             })
         except Exception as e:
             print(f"[ERRO] falha ao processar {item.get('titulo', '?')}: {e}")
