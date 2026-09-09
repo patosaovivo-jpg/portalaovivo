@@ -2,15 +2,15 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 5  
+**Leads ativos:** 7  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
-| urgente | 2 |
-| monitorar | 3 |
-| **Total** | **5** |
+| urgente | 3 |
+| monitorar | 4 |
+| **Total** | **7** |
 
 ## Prioridade de hoje
 
@@ -18,10 +18,13 @@
    - Motivo: Evento 'festival', faltam 1 dias.
 2. **Feira (7), depois** [Patos de Minas] — janela `urgente`, prioridade `urgente`, faltam 5 dias, score 7.3.
    - Motivo: Evento 'feira', em patos de minas, faltam 5 dias.
+3. **Notícias Fique por dentro das novidades Ver mais** [São Gonçalo do Abaeté] — janela `muito_tarde`, prioridade `urgente`, faltam 2 dias, score 8.0.
+   - Motivo: Em são gonçalo do abaeté, faltam 2 dias, organizador em evidência.
 
 ## Perdendo o timing
 
 - Feira 8H ATRÁS [-] — muito perto do evento (faltam 1 dias).
+- Notícias Fique por dentro das novidades Ver mais [São Gonçalo do Abaeté] — muito perto do evento (faltam 2 dias).
 
 ## Rascunhos de abordagem (não enviados)
 
