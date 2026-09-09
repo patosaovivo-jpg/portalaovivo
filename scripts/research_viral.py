@@ -528,10 +528,11 @@ INSTRUCOES:
 3. Inclua dados historicos e curiosidades reais
 4. Comece com um gancho forte (pergunta, dado surpreendente ou frase impactante)
 5. Termine com algo que faca o leitor querer saber mais
-6. Use emojis com moderação no titulo
+6. Use emojis com moderacao no titulo
 7. NAO invente informacoes - use apenas o que esta nos dados fornecidos
-8. Escreva em portugues do Brasil, linguagem acessivel
-9. Maximo de 800 caracteres no corpo do texto
+8. Se o texto mencionar uma lista, ranking ou enumeracao (ex.: "lista das pessoas mais ricas"), INCLUA os itens dessa lista em formato enumerado no corpo. Nunca cite uma lista sem apresenta-la.
+9. Escreva em portugues do Brasil, linguagem acessivel
+10. Maximo de 1200 caracteres no corpo do texto
 
 DADOS DA PESQUISA:
 {json.dumps(resultados[:5], ensure_ascii=False, indent=2)}
@@ -576,27 +577,47 @@ RETORNE APENAS UM JSON COM:
 
 
 def gerar_conteudo_fallback(resultados, categoria_config):
-    """Gera conteudo sem IA usando os resultados da pesquisa."""
+    """Gera conteudo sem IA usando os resultados da pesquisa.
+
+    Junta trechos de varios resultados distintos (ate 3 fontes) para
+    formar um texto mais completo ao inves de truncar o 1o resultado.
+    """
     if not resultados:
         return None
 
-    primeiro = resultados[0]
-    texto = primeiro.get("texto", "") or primeiro.get("titulo", "")
+    # Limpa cada resultado
+    textos = []
+    for r in resultados:
+        t = r.get("texto", "") or r.get("titulo", "")
+        t = re.sub(r"<[^>]+>", "", t)
+        t = re.sub(r"&#\d+;|&[a-zA-Z]+;", " ", t)
+        t = re.sub(r"[\[\]]", "", t)
+        t = re.sub(r"\s+", " ", t).strip()
+        if len(t) >= 60:
+            textos.append(t)
 
-    # Limpar tags HTML
-    texto = re.sub(r"<[^>]+>", "", texto)
-    texto = re.sub(r"&#\d+;|&[a-zA-Z]+;", " ", texto)
-    texto = re.sub(r"[\[\]]", "", texto)
-    texto = re.sub(r"\s+", " ", texto).strip()
-
-    if len(texto) < 60:
+    if not textos:
         texto = (
             f"Uma historia fascinante sobre {categoria_config['nome'].lower()} "
             "no Alto Paranaiba, em Minas Gerais. Essa regiao guarda segredos e "
             "historias que poucos conhecem."
         )
+    else:
+        # Junta trechos de ate 3 resultados distintos (dedupe simples)
+        vistos = set()
+        trechos = []
+        for t in textos:
+            chave = t[:120].lower()
+            if chave in vistos:
+                continue
+            vistos.add(chave)
+            trechos.append(t)
+            if len(trechos) >= 3:
+                break
+        texto = " ".join(trechos)
 
     # Montar titulo viral a partir do nome do artigo/categoria
+    primeiro = resultados[0]
     titulo_base = primeiro.get("titulo", "") or categoria_config["nome"]
     titulo_base = titulo_base.split(" - ")[0].strip()
     if len(titulo_base) > 65:
@@ -606,8 +627,8 @@ def gerar_conteudo_fallback(resultados, categoria_config):
     if len(titulo_viral) > 100:
         titulo_viral = titulo_viral[:97].rstrip() + "..."
 
-    corpo = texto[:800]
-    if len(texto) > 800:
+    corpo = texto[:1000]
+    if len(texto) > 1000:
         corpo += "..."
 
     tag_categoria = re.sub(r"[^a-zA-Z0-9]", "", categoria_config["nome"])
@@ -681,7 +702,7 @@ def publicar_post_viral(conteudo, categoria_id, categoria_config, imagem_rel=Non
         "---\n"
         f'title: "{conteudo["titulo"].replace(chr(34), chr(39))}"\n'
         f'date: {agora.strftime("%Y-%m-%d %H:%M:%S -0300")}\n'
-        f'image: /assets/images/default.jpg\n'
+        f'image: {imagem_rel or "/assets/images/default.jpg"}\n'
         f'tema: Historia Regional\n'
         f'fonte: "Portal Ao Vivo - Pesquisa Viral"\n'
         f'fonte_link: ""\n'
@@ -793,9 +814,30 @@ def executar_pesquisa_viral(max_posts=2, categorias_especificas=None, um_por_dia
             print(f"  Titulo ja utilizado, tentando proximo...")
             continue
 
+        # ----- Gerar imagem (como as materias normais do pipeline) -----
+        imagem_rel = None
+        try:
+            import image as img_mod
+            slug_base = slugify(conteudo["titulo"])[:40] or "viral"
+            destino = os.path.join(
+                BASE_DIR, "assets", "images",
+                f"viral-{datetime.now(BRT).strftime('%Y%m%d%H%M%S')}-{slug_base}.jpg",
+            )
+            prompt = img_mod.gerar_prompt_imagem(
+                conteudo["corpo"], conteudo["titulo"], config["nome"]
+            )
+            print("  [IMAGEM] Gerando imagem para o post viral...")
+            if img_mod.baixar_imagem(prompt, destino, api_key=api_key):
+                imagem_rel = f"/assets/images/{os.path.basename(destino)}"
+                print(f"  [IMAGEM] OK: {os.path.basename(destino)}")
+            else:
+                print("  [IMAGEM] Todos os geradores falharam, usando default.jpg")
+        except Exception as e:
+            print(f"  [IMAGEM] Falha ao gerar imagem: {e}")
+
         # Publicar
         try:
-            arquivo = publicar_post_viral(conteudo, cat_id, config)
+            arquivo = publicar_post_viral(conteudo, cat_id, config, imagem_rel=imagem_rel)
             registrar_utilizado(topicos, conteudo["titulo"], cat_id)
             publicados.append({
                 "arquivo": arquivo,
