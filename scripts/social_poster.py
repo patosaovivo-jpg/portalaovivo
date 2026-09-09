@@ -7,6 +7,8 @@ import requests
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOCIAL_LOG = os.path.join(BASE_DIR, "data", "social_log.json")
+SOCIAL_RULES_FILE = os.path.join(BASE_DIR, "config", "social_rules.json")
+THEMES_FILE = os.path.join(BASE_DIR, "themes.json")
 
 BUFFER_API_URL = "https://api.buffer.com"
 LIMITE_INSTAGRAM_DIA = 8
@@ -16,6 +18,24 @@ SITE_URL = "https://portalaovivo.com.br"
 TEMAS_SOCIAIS = ["Local e Cidades", "Politica", "Esportes", "Geral", "Historia Regional"]
 
 TIMEOUT = 30
+
+
+def _load_json(path, default=None):
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"[SOCIAL] Config invalida em {path}: {e}")
+    return default if default is not None else {}
+
+
+def load_social_rules():
+    return _load_json(SOCIAL_RULES_FILE, {})
+
+
+def load_themes():
+    return _load_json(THEMES_FILE, {})
 
 
 # ============================================================
@@ -128,11 +148,11 @@ def buscar_mais_vistas_3h():
         return []
 
 
-def selecionar_materias_por_popularidade(materias_pendentes):
-    """Ordena materias por popularidade (GA4) e retorna lista ordenada."""
+def _atribuir_views(materias_pendentes):
+    """Atribui visualizacoes (GA4/views) a cada materia quando disponiveis."""
     populares = buscar_mais_vistas_3h()
     if not populares:
-        print("[SOCIAL] Sem dados de analytics, mantendo ordem original")
+        print("[SOCIAL] Sem dados de analytics, materias sem views")
         return materias_pendentes
 
     for pop in populares:
@@ -140,11 +160,72 @@ def selecionar_materias_por_popularidade(materias_pendentes):
         for mat in materias_pendentes:
             link_mat = mat.get("link", "")
             if path_popular in link_mat or link_mat.endswith(path_popular):
-                mat["_views"] = pop["visualizacoes"]
+                mat["_views"] = max(mat.get("_views", 0), pop["visualizacoes"])
                 print(f"[SOCIAL] Match: {pop['titulo'][:50]} ({pop['visualizacoes']} views)")
+    return materias_pendentes
 
-    ordenadas = sorted(materias_pendentes, key=lambda m: m.get("_views", 0), reverse=True)
-    return ordenadas
+
+def selecionar_materias_por_popularidade(materias_pendentes):
+    """Ordena materias por popularidade (GA4) e retorna lista ordenada.
+
+    Mantido para compatibilidade com o fluxo antigo.
+    """
+    materias_pendentes = _atribuir_views(materias_pendentes)
+    return sorted(materias_pendentes, key=lambda m: m.get("_views", 0), reverse=True)
+
+
+def calcular_priority_score(mat, regras=None):
+    """Score de prioridade social configurável.
+
+    priority_score =
+        views_score        * peso.views
+        + instagram_score  * peso.instagram_score
+        + commercial_score * peso.commercial_score
+        + regional         * peso.regional
+        + event_related    * peso.event
+
+    views/regional/event normalizados em 0-10.
+    Pesos em config/social_rules.json.
+    """
+    regras = regras or load_social_rules()
+    pesos = (regras.get("priorizacao") or {}).get("weights", {})
+    ceiling = float((regras.get("priorizacao") or {}).get("views_ceiling", 500))
+    regional_value = float((regras.get("priorizacao") or {}).get("regional_value", 10))
+    event_value = float((regras.get("priorizacao") or {}).get("event_value", 10))
+
+    views = float(mat.get("_views", 0) or 0)
+    views_score = min(10.0, (views / ceiling) * 10.0) if ceiling else 0.0
+
+    insta = _clamp_score(mat.get("instagram_score", 5))
+    comerc = _clamp_score(mat.get("commercial_score", 0))
+    regional = regional_value if mat.get("regional") else 0.0
+    evento = event_value if mat.get("event_related") else 0.0
+
+    total = (
+        views_score * float(pesos.get("views", 1.0))
+        + insta * float(pesos.get("instagram_score", 2.0))
+        + comerc * float(pesos.get("commercial_score", 2.0))
+        + regional * float(pesos.get("regional", 1.5))
+        + evento * float(pesos.get("event", 1.5))
+    )
+    return round(total, 2)
+
+
+def _clamp_score(valor):
+    try:
+        return max(0.0, min(10.0, float(valor)))
+    except (TypeError, ValueError):
+        return 0.0
+
+
+def ordenar_por_prioridade(materias_pendentes, regras=None):
+    """Ordena matérias pela prioridade social (GA4 + scores + relevância regional/evento)."""
+    materias_pendentes = _atribuir_views(materias_pendentes)
+    regras = regras or load_social_rules()
+    for mat in materias_pendentes:
+        mat["_priority_score"] = calcular_priority_score(mat, regras)
+    return sorted(materias_pendentes,
+                  key=lambda m: m.get("_priority_score", 0), reverse=True)
 
 
 # ============================================================
@@ -224,20 +305,43 @@ def obter_channel_id_instagram():
     return None
 
 
+def _default_hashtags():
+    regras = load_social_rules()
+    return regras.get("default_hashtags",
+                      "#PortalAoVivo #Noticias #PatosDeMinas "
+                      "#AltoParanai #TrianguloMineiro #MinasGerais "
+                      "#NoticiasRegionais #UltimaHora")
+
+
 def gerar_legenda(item, resumo):
+    """Gera legenda usando conteúdo social estruturado quando disponível."""
     titulo = item.get("titulo", "")
     link = item.get("link", "")
+    conteudo_social = item.get("conteudo_social") if isinstance(item.get("conteudo_social"), dict) else None
+
+    # Conteúdo especial (Reel/Carousel) gerado pela inteligência
+    if conteudo_social:
+        reel = conteudo_social.get("reel") or {}
+        caption = reel.get("caption") or reel.get("script") or ""
+        if caption:
+            corpo = caption[:2000]
+            return f"{titulo}\n\n{corpo}\n\n{SITE_URL}{link.replace('.html', '').rstrip('/')}"
+
+        hook = reel.get("hook", "")
+        script = reel.get("script", "")
+        cta = reel.get("cta", "")
+        corpo = " ".join(x for x in (hook, script, cta) if x)
+        if corpo:
+            corpo = corpo[:2000]
+            return f"{titulo}\n\n{corpo}\n\n{SITE_URL}{link.replace('.html', '').rstrip('/')}"
+
     primeiro_par = resumo.strip().split("\n")[0].strip()
 
     texto = primeiro_par[:400]
     if len(primeiro_par) > 400:
         texto += "..."
 
-    hashtags = (
-        "#PortalAoVivo #Noticias #PatosDeMinas "
-        "#AltoParanai #TrianguloMineiro #MinasGerais "
-        "#NoticiasRegionais #UltimaHora"
-    )
+    hashtags = _default_hashtags()
 
     legenda = f"{titulo}\n\n{texto}\n\n{SITE_URL}{link.replace('.html', '').rstrip('/')}\n\n{hashtags}"
     return legenda
@@ -368,7 +472,7 @@ def postar_materias(materias):
         print("[SOCIAL] Nenhuma materia nova para postar")
         return 0
 
-    materias_ordenadas = selecionar_materias_por_popularidade(materias_filtradas)
+    materias_ordenadas = ordenar_por_prioridade(materias_filtradas)
     escolhidas = materias_ordenadas[:max_por_rodada]
 
     postadas = 0

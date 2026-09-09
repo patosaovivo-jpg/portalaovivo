@@ -1,3 +1,4 @@
+import json
 import os
 
 # Modelos em ordem de preferencia. Alguns sao descontinuados/indisponiveis
@@ -123,6 +124,114 @@ def gerar_titulo_edital(texto, api_key):
     )
     titulo = _gerar(prompt, api_key, temperature=0.5, max_tokens=60)
     return titulo.strip().strip('"').strip()
+
+
+# ============================================================
+# CAMADA COMERCIAL: MATERIA + BLOCO EDITORIAL/COMERCIAL NATURAL
+# ============================================================
+
+CONTEXTO_COMERCIAL_INSTRUCAO = {
+    "5_6": (
+        "Inclua no final UM parágrafo curto e natural com contexto editorial "
+        "sobre a relevância/força desse tipo de evento para a região. "
+        "Não mencione o portal nem serviços. Apenas conexão editorial."
+    ),
+    "7_8": (
+        "Inclua no final UM parágrafo curto e natural comentando a relevância "
+        "do evento e MENCIONANDO de forma discreta que a transmissão ao vivo "
+        "/ cobertura audiovisual pode ampliar o alcance de quem não pode estar "
+        "presente. Sem tom de anúncio, sem CTA direto."
+    ),
+    "9_10": (
+        "Inclua no final UM parágrafo curto e natural sobre o potencial do "
+        "evento de alcançar um público além do presencial, citando de forma"
+        " editorial a transmissão ao vivo / cobertura audiovisual como "
+        "instrumento de ampliar esse alcance. Pode haver um leve convite "
+        "discreto, mas a matéria continua sendo NOTÍCIA, não anúncio."
+    ),
+}
+
+
+def _carregar_commercial_rules():
+    path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                        "config", "commercial_rules.json")
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+
+def nivel_comercial(score):
+    """0-4: nada | 5-6: conexão editorial | 7-8: menção discreta | 9-10: CTA sutil."""
+    if score <= 4:
+        return None
+    if score <= 6:
+        return "5_6"
+    if score <= 8:
+        return "7_8"
+    return "9_10"
+
+
+def resumir_texto_com_analise(texto, analise, api_key, eh_edital=False):
+    """Gera a matéria considerando a análise comercial.
+
+    Mantém o comportamento atual para scores baixos e adiciona bloco
+    comercial natural apenas quando o nível permitir. Nunca quebra:
+    se a IA falhar, usa fallback local (com bloco comercial simples).
+    """
+    analise = analise or {}
+    if eh_edital:
+        if api_key:
+            return resumir_edital(texto, api_key)
+        return resumir_fallback(texto)
+
+    score = int(analise.get("commercial_score") or 0)
+    nivel = nivel_comercial(score)
+    angle = (analise.get("commercial_angle") or "").strip()
+
+    if not nivel:
+        # Sem camada comercial: comportamento 100% atual
+        if api_key:
+            return resumir_texto(texto, api_key)
+        return resumir_fallback(texto)
+
+    if api_key:
+        try:
+            return _resumir_com_comercial(texto, api_key, angle, nivel)
+        except Exception as e:
+            print(f"[IA] Falha no resumo com contexto comercial, fallback: {e}")
+
+    return _resumir_fallback_comercial(texto, angle, nivel)
+
+
+def _resumir_com_comercial(texto, api_key, angle, nivel):
+    instrucao = CONTEXTO_COMERCIAL_INSTRUCAO.get(nivel, "")
+    prompt = (
+        PROMPT + "\n\nINSTRUÇÃO ADICIONAL:\n" + instrucao +
+        (f"\nÂngulo comercial da notícia: {angle}" if angle else "")
+    )
+    return _gerar(prompt.format(texto=texto[:15000]), api_key,
+                  temperature=0.4, max_tokens=900)
+
+
+def _resumir_fallback_comercial(texto, angle, nivel):
+    base = resumir_fallback(texto)
+    if not base:
+        return None
+    regras = _carregar_commercial_rules()
+    paragrafos = ((regras.get("commercial_paragraphs") or {})
+                  .get(angle, {}))
+    frase = (paragrafos.get(nivel) or
+             paragrafos.get("9_10") or
+             (("O crescimento desse tipo de evento mostra a força das "
+               "programações regionais e o interesse do público em acompanhar "
+               "a agenda cultural de perto.") if angle else ""))
+    if frase:
+        base = base.rstrip() + "\n\n" + frase
+    return base
 
 
 if __name__ == "__main__":

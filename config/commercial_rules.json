@@ -1,0 +1,481 @@
+{
+  "fallback_scores": {
+    "editorial_score": 5,
+    "commercial_score": 0,
+    "instagram_score": 5
+  },
+
+  "regional": {
+    "_comment": "Cidades prioritarias do Portal Ao Vivo. Noticias com eventos nessas cidades recebem peso comercial maior.",
+    "cities": [
+      "Patos de Minas",
+      "Patrocinio",
+      "Patrocínio",
+      "Coromandel",
+      "Serra do Salitre",
+      "Ibia",
+      "Ibiá",
+      "Vazante",
+      "Lagoa Formosa",
+      "Presidente Olegario",
+      "Presidente Olegário",
+      "Carmo do Paranaiba",
+      "Carmo do Paranaíba",
+      "Sao Gotardo",
+      "São Gotardo",
+      "Rio Paranaiba",
+      "Rio Paranaíba",
+      "Arapua",
+      "Arapuá",
+      "Sao Goncalo do Abaete",
+      "São Gonçalo do Abaeté",
+      "Varjao de Minas",
+      "Varjão de Minas",
+      "Cruzeiro da Fortaleza",
+      "Monte Carmelo",
+      "Sacramento",
+      "Araxa",
+      "Araxá",
+      "Guimarania",
+      "Guimarânia",
+      "Lagamar",
+      "Campos Altos",
+      "Pratinha",
+      "Matutina",
+      "Tiros",
+      "Lagoa Grande"
+    ],
+    "commercial_boost": 2,
+    "instagram_boost": 1,
+    "editorial_boost": 1
+  },
+
+  "event_types": [
+    "festival",
+    "festa",
+    "show",
+    "feira",
+    "congresso",
+    "campeonato",
+    "torneio",
+    "exposicao",
+    "romaria",
+    "evento empresarial",
+    "corrida",
+    "rodeio",
+    "encontro cultural",
+    "agropecuaria",
+    "formatura",
+    "festa religiosa",
+    "conferencia",
+    "inauguracao"
+  ],
+
+  "organizadores": [
+    "prefeitura",
+    "camara municipal",
+    "liga",
+    "clube",
+    "associacao",
+    "sindicato",
+    "empresa",
+    "secretaria de cultura",
+    "secretaria de esportes",
+    "organizacao"
+  ],
+
+  "triggers": [
+    {
+      "name": "recorde_publico",
+      "keywords": [
+        "recorde de publico",
+        "maior publico",
+        "publico recorde",
+        "mil pessoas",
+        "mil visitantes",
+        "mil espectadores",
+        "muitas pessoas",
+        "multidao"
+      ],
+      "commercial_score": 8,
+      "angle": "alcance",
+      "services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ]
+    },
+    {
+      "name": "recorde_audiencia",
+      "keywords": [
+        "recorde de audiencia",
+        "milhoes de espectadores",
+        "milhoes assistiram",
+        "maior audiencia"
+      ],
+      "commercial_score": 10,
+      "angle": "audiencia",
+      "services": [
+        "transmissao ao vivo",
+        "streaming"
+      ]
+    },
+    {
+      "name": "grande_evento",
+      "keywords": [
+        "festival",
+        "festa",
+        "evento",
+        "show",
+        "feira",
+        "congresso",
+        "exposicao",
+        "rodeio",
+        "encontro",
+        "semana cultural",
+        "weekend",
+        "edicao"
+      ],
+      "commercial_score": 8,
+      "angle": "alcance",
+      "services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ]
+    },
+    {
+      "name": "campeonato",
+      "keywords": [
+        "campeonato",
+        "torneio",
+        "final",
+        "semifinal",
+        "semifinais",
+        "futebol",
+        "esportes",
+        "partida",
+        "jogo",
+        "disputa"
+      ],
+      "commercial_score": 10,
+      "angle": "esporte",
+      "services": [
+        "transmissao esportiva",
+        "producao multicamera"
+      ]
+    },
+    {
+      "name": "patrocinio",
+      "keywords": [
+        "patrocinador",
+        "patrocinio",
+        "marca",
+        "ativacao de marca",
+        "patrocinadores"
+      ],
+      "commercial_score": 8,
+      "angle": "visibilidade",
+      "services": [
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ]
+    },
+    {
+      "name": "streaming",
+      "keywords": [
+        "streaming",
+        "transmissao online",
+        "ao vivo",
+        "live",
+        "youtube"
+      ],
+      "commercial_score": 10,
+      "angle": "audiencia",
+      "services": [
+        "transmissao ao vivo"
+      ]
+    },
+    {
+      "name": "evento_municipal",
+      "keywords": [
+        "festa municipal",
+        "festa da cidade",
+        "aniversario da cidade",
+        "festa do municipio",
+        "programacao",
+        "agenda cultural"
+      ],
+      "commercial_score": 8,
+      "angle": "alcance",
+      "services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ]
+    },
+    {
+      "name": "evento_empresarial",
+      "keywords": [
+        "congresso",
+        "convencao",
+        "workshop",
+        "seminario",
+        "palestra",
+        "forum",
+        "encontro de parceiros"
+      ],
+      "commercial_score": 7,
+      "angle": "empresarial",
+      "services": [
+        "cobertura audiovisual",
+        "transmissao hibrida",
+        "conteudo para redes sociais"
+      ]
+    },
+    {
+      "name": "corrida",
+      "keywords": [
+        "corrida",
+        "corrida de rua",
+        "maratona",
+        "meia maratona",
+        "triatlo",
+        "triathlon",
+        "ciclismo",
+        "motocross",
+        "rally",
+        "enduro"
+      ],
+      "commercial_score": 8,
+      "angle": "esporte",
+      "services": [
+        "transmissao esportiva",
+        "producao multicamera"
+      ]
+    },
+    {
+      "name": "evento_agropecuario",
+      "keywords": [
+        "agropecuaria",
+        "agropecuária",
+        "exposicao agropecuaria",
+        "exposição agropecuária",
+        "agro",
+        "leilao",
+        "leilão",
+        "festa do boi",
+        "produtor rural",
+        "agronegocio",
+        "agronegócio"
+      ],
+      "commercial_score": 8,
+      "angle": "alcance",
+      "services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores"
+      ]
+    },
+    {
+      "name": "formatura",
+      "keywords": [
+        "formatura",
+        "colacao de grau",
+        "colação de grau",
+        "cerimonia de formatura",
+        "cerimônia de formatura"
+      ],
+      "commercial_score": 7,
+      "angle": "alcance",
+      "services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ]
+    },
+    {
+      "name": "evento_religioso",
+      "keywords": [
+        "quermesse",
+        "festa do padroeiro",
+        "jubileu",
+        "trezena",
+        "novena",
+        "festa religiosa",
+        "congresso religioso",
+        "retiro espiritual",
+        "missa campal",
+        "festa do rosario",
+        "festa do divino"
+      ],
+      "commercial_score": 7,
+      "angle": "alcance",
+      "services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ]
+    },
+    {
+      "name": "conferencia",
+      "keywords": [
+        "conferencia",
+        "conferência",
+        "simposio",
+        "simpósio",
+        "mesa redonda",
+        "summit",
+        "congresso internacional"
+      ],
+      "commercial_score": 7,
+      "angle": "empresarial",
+      "services": [
+        "cobertura audiovisual",
+        "transmissao hibrida",
+        "conteudo para redes sociais"
+      ]
+    },
+    {
+      "name": "inauguracao",
+      "keywords": [
+        "inauguracao",
+        "inauguração",
+        "entrega de obra",
+        "abertura oficial",
+        "solenidade de entrega",
+        "cerimonia de inauguracao"
+      ],
+      "commercial_score": 6,
+      "angle": "alcance",
+      "services": [
+        "cobertura audiovisual"
+      ]
+    }
+  ],
+
+  "target_mapping": [
+    {
+      "keywords": [
+        "prefeitura",
+        "prefeito",
+        "prefeita",
+        "secretaria"
+      ],
+      "target": "prefeitura"
+    },
+    {
+      "keywords": [
+        "camara",
+        "camara municipal",
+        "vereadores",
+        "vereador"
+      ],
+      "target": "camara municipal"
+    },
+    {
+      "keywords": [
+        "liga",
+        "clube",
+        "federacao",
+        "federação"
+      ],
+      "target": "ligas e clubes esportivos"
+    },
+    {
+      "keywords": [
+        "empresa",
+        "congresso",
+        "convencao",
+        "workshop",
+        "seminario"
+      ],
+      "target": "organizadores de eventos empresariais"
+    },
+    {
+      "keywords": [
+        "patrocinador",
+        "patrocinio",
+        "marca"
+      ],
+      "target": "patrocinadores e marcas"
+    },
+    {
+      "keywords": [
+        "associacao",
+        "sindicato",
+        "clube"
+      ],
+      "target": "associacoes e sindicatos"
+    }
+  ],
+
+  "commercial_paragraphs": {
+    "alcance": {
+      "5_6": "O crescimento de eventos regionais como esse demonstra a forca das programacoes locais e o interesse do publico em acompanhar de perto a agenda cultural da regiao.",
+      "7_8": "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+      "9_10": "Eventos como esse mostram o potencial de levar a experiencia para alem do publico presente: com transmissao ao vivo e cobertura audiovisual, quem esta em outra cidade ou trabalhando tambem acompanha cada momento."
+    },
+    "audiencia": {
+      "5_6": "O interesse do publico por esse tipo de conteudo reforca como a programacao regional conquista cada vez mais espectadores.",
+      "7_8": "A transmissao ao vivo permite levar essa programacao para uma audiencia ainda maior, fora dos limites do espaco fisico.",
+      "9_10": "Audiências que acompanham esse tipo de conteudo crescem quando existe transmissao profissional: alem do publico presente, ha milhares de pessoas esperando acompanhar online."
+    },
+    "esporte": {
+      "5_6": "O esporte regional movimenta torcidas em toda a regiao e reforca o interesse pela competicao local.",
+      "7_8": "A cobertura esportiva com transmissao ao vivo e producao multicamera permite que a torcida acompanhe cada lance de onde estiver.",
+      "9_10": "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao."
+    },
+    "visibilidade": {
+      "5_6": "Eventos movimentam marcas e patrocinadores, que buscam cada vez mais visibilidade junto ao publico regional.",
+      "7_8": "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
+      "9_10": "Com transmissao ao vivo e conteudo para redes sociais, marcas e patrocinadores expandem a visibilidade muito alem do publico presencial, tornando cada investimento mais eficiente."
+    },
+    "empresarial": {
+      "5_6": "Eventos empresariais e tecnicos movimentam profissionais e empresas interessadas em conteudo e conexao.",
+      "7_8": "Uma cobertura audiovisual e uma transmissao hibrida permitem que a programacao alcance participantes que nao puderam estar presentes.",
+      "9_10": "Para eventos empresariais, a transmissao hibrida e a producao de conteudo estendem o alcance: o publico que nao participa presencialmente ainda acompanha e consume o conteudo depois."
+    }
+  },
+
+  "reasons": {
+    "alcance": "Evento possui grande potencial de publico e pode alcançar pessoas que nao estarao presencialmente.",
+    "audiencia": "Existe uma audiencia significativa esperando acompanhar esse tipo de conteudo online.",
+    "esporte": "Competicao regional desperta interesse da torcida e gera demanda por transmissao esportiva.",
+    "visibilidade": "Evento com marcas e patrocinadores tem potencial para exposicao ampliada via transmissao.",
+    "empresarial": "Evento empresarial pode exigir cobertura audiovisual e transmissao hibrida."
+  },
+
+  "tech_keywords": [
+    "camera",
+    "câmera",
+    "equipamento",
+    "tecnologia",
+    "inteligencia artificial",
+    "software",
+    "aplicativo",
+    "app",
+    "drone",
+    "lancamento de produto",
+    "startup"
+  ],
+
+  "streaming_keywords": [
+    "streaming",
+    "transmissao online",
+    "transmissao ao vivo",
+    "ao vivo",
+    "live",
+    "youtube"
+  ],
+
+  "lead": {
+    "min_score": 5,
+    "priority_labels": {
+      "10": "MUITO FORTE",
+      "9": "FORTE",
+      "8": "FORTE",
+      "7": "MEDIA",
+      "6": "MEDIA",
+      "5": "BAIXA",
+      "4": "BAIXA"
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "windows": {
+    "default": {
+      "monitoring_days": 90,
+      "prospecting_start": 60,
+      "priority_days": 30,
+      "urgent_high_days": 20,
+      "urgent_days": 7,
+      "too_late_days": 2
+    },
+    "sports": {
+      "prospecting_start": 45,
+      "priority_days": 30
+    },
+    "festival": {
+      "prospecting_start": 90,
+      "priority_days": 45
+    },
+    "corporate": {
+      "prospecting_start": 60,
+      "priority_days": 40
+    },
+    "education": {
+      "prospecting_start": 50,
+      "priority_days": 25
+    },
+    "religious": {
+      "prospecting_start": 75,
+      "priority_days": 40
+    }
+  },
+
+  "type_groups": {
+    "campeonato": "sports",
+    "torneio": "sports",
+    "corrida": "sports",
+    "show": "festival",
+    "festival": "festival",
+    "festa": "festival",
+    "feira": "festival",
+    "rodeio": "festival",
+    "romaria": "festival",
+    "exposicao": "festival",
+    "encontro cultural": "festival",
+    "agropecuaria": "festival",
+    "congresso": "corporate",
+    "evento empresarial": "corporate",
+    "conferencia": "corporate",
+    "inauguracao": "corporate",
+    "formatura": "education",
+    "festa religiosa": "religious"
+  },
+
+  "client_types": {
+    "campeonato": ["liga esportiva", "clube esportivo", "organizador de competicao"],
+    "torneio": ["liga esportiva", "clube esportivo", "organizador de competicao"],
+    "corrida": ["liga esportiva", "produtor de eventos", "prefeitura"],
+    "show": ["produtor de eventos", "organizador de shows"],
+    "festival": ["produtor de eventos", "organizador de shows", "prefeitura"],
+    "festa": ["prefeitura", "associacao", "organizador de eventos"],
+    "feira": ["organizador de feiras", "associacao", "sindicato", "empresa"],
+    "rodeio": ["produtor de eventos", "organizador de eventos"],
+    "romaria": ["igreja/comunidade", "organizador de eventos"],
+    "exposicao": ["organizador de feiras", "associacao", "empresa"],
+    "encontro cultural": ["prefeitura", "secretaria municipal", "produtor de eventos"],
+    "agropecuaria": ["organizador de feiras", "sindicato rural", "associacao", "empresa"],
+    "congresso": ["entidade empresarial", "empresa", "organizador de eventos"],
+    "evento empresarial": ["empresa", "entidade empresarial", "organizador de eventos"],
+    "conferencia": ["entidade empresarial", "empresa", "instituicao de ensino"],
+    "inauguracao": ["prefeitura", "empresa"],
+    "formatura": ["instituicao de ensino", "comissao de formatura"],
+    "festa religiosa": ["igreja/comunidade", "paroquia"]
+  },
+
+  "services": {
+    "campeonato": ["transmissao esportiva", "producao multicamera", "replay e placar", "conteudo para redes sociais", "streaming pay-per-view"],
+    "torneio": ["transmissao esportiva", "producao multicamera", "replay e placar", "conteudo para redes sociais"],
+    "corrida": ["transmissao esportiva", "producao multicamera", "cronometragem", "conteudo para redes sociais"],
+    "show": ["transmissao ao vivo", "producao multicamera", "cortes para redes sociais", "cobertura audiovisual"],
+    "festival": ["transmissao ao vivo", "cobertura audiovisual", "cortes para redes sociais", "entrevistas", "exposicao de patrocinadores"],
+    "festa": ["transmissao ao vivo", "cobertura audiovisual", "conteudo para redes sociais"],
+    "feira": ["transmissao ao vivo", "cobertura audiovisual", "entrevistas", "exposicao de patrocinadores"],
+    "rodeio": ["transmissao ao vivo", "producao multicamera", "conteudo para redes sociais"],
+    "romaria": ["transmissao ao vivo", "cobertura audiovisual", "conteudo para redes sociais"],
+    "exposicao": ["transmissao ao vivo", "cobertura audiovisual", "exposicao de patrocinadores"],
+    "encontro cultural": ["transmissao ao vivo", "cobertura audiovisual", "conteudo para redes sociais"],
+    "agropecuaria": ["transmissao ao vivo", "cobertura audiovisual", "entrevistas", "exposicao de patrocinadores", "transmissao de leilao"],
+    "congresso": ["transmissao hibrida", "cobertura audiovisual", "conteudo para redes sociais", "gravacao"],
+    "evento empresarial": ["transmissao hibrida", "cobertura audiovisual", "conteudo para redes sociais", "gravacao"],
+    "conferencia": ["transmissao hibrida", "cobertura audiovisual", "conteudo para redes sociais"],
+    "inauguracao": ["cobertura audiovisual", "gravacao", "conteudo para redes sociais"],
+    "formatura": ["transmissao ao vivo", "producao multicamera", "gravacao"],
+    "festa religiosa": ["transmissao ao vivo", "cobertura audiovisual", "conteudo para redes sociais"]
+  },
+
+  "needs": {
+    "campeonato": "Levar a competicao para torcedores de outras cidades e ampliar o alcance da torcida.",
+    "torneio": "Levar a competicao para torcedores de outras cidades e ampliar o alcance da torcida.",
+    "corrida": "Cobrir a prova em varios pontos do percurso e crescer a audiencia online.",
+    "show": "Alcancar quem nao pode estar presencialmente e gerar conteudo para depois do evento.",
+    "festival": "Alcancar quem nao pode estar presencialmente e dar visibilidade a patrocinadores.",
+    "festa": "Ampliar o alcance da festa para quem nao vai ao local e registrar a programacao.",
+    "feira": "Mostrar os expositores para um publico maior que o da visita presencial.",
+    "rodeio": "Ampliar a audiencia da arena para quem esta em casa e crescer o evento online.",
+    "romaria": "Permitir que devotos de outras cidades acompanhem a festa religiosa.",
+    "exposicao": "Ampliar o alcance dos expositores e registrar a feira para consulta futura.",
+    "encontro cultural": "Registrar e divulgar a programacao cultural para a regiao.",
+    "agropecuaria": "Dar visibilidade a pecuaria regional e ampliar o alcance do evento e dos patrocinadores.",
+    "congresso": "Permitir participacao remota de convidados e registrar as palestras para replay.",
+    "evento empresarial": "Permitir participacao remota de convidados e registrar o conteudo institucional.",
+    "conferencia": "Permitir participacao remota de palestrantes e ampliar o alcance do conhecimento apresentado.",
+    "inauguracao": "Registrar e divulgar a entrega da obra/iniciativa para a populacao.",
+    "formatura": "Registrar um dos dias mais importantes da vida dos formandos, com qualidade.",
+    "festa religiosa": "Permitir que devotos ausentes acompanhem a celebraco e ampliar a comunidade.",
+    "default": "Ampliar o alcance do evento alem do publico presente."
+  },
+
+  "outreach_templates": {
+    "prefeitura": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?",
+    "secretaria municipal": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, ampliando o alcance da programacao municipal. Podemos conversar sobre uma transmissao para esse evento?",
+    "camara municipal": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo pode transmitir e registrar a cerimonia com qualidade profissional. Podemos conversar?",
+    "empresa": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo oferece transmissao ao vivo, evento hibrido e gravacao profissional, permitindo participacao remota e conteudo para divulgar depois. Podemos conversar?",
+    "entidade empresarial": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo oferece transmissao hibrida, cobertura audiovisual e conteudo para redes sociais em eventos empresariais. Podemos conversar?",
+    "liga esportiva": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo faz transmissao esportiva com producao multicamera, replay e cortes para redes sociais - assim a torcida de todas as cidades acompanha cada lance. Podemos conversar?",
+    "clube esportivo": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo faz transmissao esportiva multicamera, levando o jogo para a torcida que nao pode ir ao estadio. Podemos conversar?",
+    "organizador de competicao": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite competicoes com producao multicamera e replay, ampliando a audiencia da prova. Podemos conversar?",
+    "produtor de eventos": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo oferece transmissao ao vivo, cobertura audiovisual e cortes para redes sociais, ampliando o alcance da sua producao. Podemos conversar?",
+    "organizador de shows": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite shows ao vivo e produz cortes para redes sociais. Podemos conversar?",
+    "organizador de eventos": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo oferece transmissao ao vivo e cobertura audiovisual para qualquer porte de evento. Podemos conversar?",
+    "organizador de feiras": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo cobre feiras com transmissao ao vivo, entrevistas e exposicao ampliada dos expositores. Podemos conversar?",
+    "associacao": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite e produz a cobertura do evento, ampliando o alcance e a visibilidade da associacao. Podemos conversar?",
+    "sindicato": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo oferece cobertura audiovisual e transmissao ao vivo para o seu evento. Podemos conversar?",
+    "sindicato rural": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite eventos agropecuarios, incluindo leiloes ao vivo, ampliando o alcance para compradores de toda a regiao. Podemos conversar?",
+    "igreja/comunidade": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite eventos religiosos ao vivo, permitindo que devotos de outras cidades acompanhem a celebracao. Podemos conversar?",
+    "paroquia": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite celebracoes religiosas ao vivo, aproximando quem nao pode estar presente. Podemos conversar?",
+    "instituicao de ensino": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite formaturas ao vivo com producao multicamera e gravacao, registrando esse momento com qualidade. Podemos conversar?",
+    "comissao de formatura": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite a formatura ao vivo e grava o momento em alta qualidade para guardar para sempre. Podemos conversar?",
+    "organizador de eventos empresariais": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo oferece cobertura audiovisual e transmissao hibrida para eventos empresariais. Podemos conversar?",
+    "default": "Ola! Vimos a noticia sobre {evento} em {cidade}. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, ampliando o alcance para quem nao esta no local. Podemos conversar?"
+  },
+
+  "prospecting_weights": {
+    "lead_score": 0.30,
+    "proximidade": 0.22,
+    "organizer": 0.10,
+    "client_type": 0.10,
+    "porte": 0.08,
+    "recorrencia": 0.06,
+    "sponsors": 0.06,
+    "cidade": 0.05,
+    "services": 0.03
+  }
+}

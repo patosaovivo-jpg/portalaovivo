@@ -11,6 +11,8 @@ import image
 import publish
 import social_poster
 import summarize
+import analyze_article
+import event_detector
 
 
 def slugify(texto):
@@ -28,9 +30,10 @@ def main():
         print("[AVISO] GEMINI_API_KEY nao definida. Geradores gratuitos continuam funcionando.")
 
     themes = collect.load_json(os.path.join(BASE_DIR, "themes.json"))
+    rules = analyze_article.load_commercial_rules()
 
     print("=" * 60)
-    print("ETAPA 1/6 - Coleta de noticias")
+    print("ETAPA 1/8 - Coleta de noticias")
     print("=" * 60)
     candidatas, _ = collect.coleta_completa()
     if not candidatas:
@@ -38,7 +41,7 @@ def main():
         return
 
     print("\n" + "=" * 60)
-    print("ETAPA 2/6 - Extracao de texto e classificacao")
+    print("ETAPA 2/8 - Extracao de texto, deduplicacao e filtro editorial")
     print("=" * 60)
     selecionadas = collect.processar_candidatas(candidatas, themes, max_itens=6)
     if not selecionadas:
@@ -46,7 +49,18 @@ def main():
         return
 
     print("\n" + "=" * 60)
-    print("ETAPA 3/6 - Resumo com IA + imagem")
+    print("ETAPA 3/8 - Analise Editorial + Comercial (scores, evento, lead)")
+    print("=" * 60)
+    print("----- Analise inteligente -----")
+    for item in selecionadas:
+        try:
+            item["analise"] = analyze_article.analisar_noticia(
+                item, api_key, themes=themes, rules=rules)
+        except Exception as e:
+            print(f"[ANALYZER] Falha ao analisar {item.get('titulo','?')}: {e}")
+
+    print("\n" + "=" * 60)
+    print("ETAPA 4/8 - Resumo com IA + imagem + publicacao")
     print("=" * 60)
     publicadas = 0
     materias_para_social = []
@@ -54,6 +68,7 @@ def main():
         try:
             titulo = item["titulo"]
             texto = item["texto"]
+            analise = item.get("analise") or {}
 
             # Resumo: tentar IA, fallback para texto original
             resumo = None
@@ -61,16 +76,15 @@ def main():
             if api_key:
                 try:
                     print(f"[IA] {'Resumindo edital' if eh_edital else 'Resumindo'}: {titulo[:60]}")
-                    if eh_edital:
-                        resumo = summarize.resumir_edital(texto, api_key)
-                    else:
-                        resumo = summarize.resumir_texto(texto, api_key)
+                    resumo = summarize.resumir_texto_com_analise(
+                        texto, analise, api_key, eh_edital=eh_edital)
                 except Exception as e:
                     print(f"[IA] Fallback resumo: {e}")
                     resumo = summarize.resumir_fallback(texto)
             else:
                 print(f"[FALLBACK] Sem API_KEY, resumindo localmente: {titulo[:60]}")
-                resumo = summarize.resumir_fallback(texto)
+                resumo = summarize.resumir_texto_com_analise(
+                    texto, analise, api_key, eh_edital=eh_edital)
 
             # Titulo: tentar IA, fallback para titulo original
             if api_key:
@@ -93,6 +107,35 @@ def main():
             if not resumo or len(resumo.strip()) < 100:
                 print(f"[SKIP] Resumo muito curto ou vazio, pulando: {titulo[:60]}")
                 continue
+
+            # Deteccao de evento + registro de lead comercial
+            evento = event_detector.detectar_evento(item, analise, themes, rules)
+            item["evento"] = evento
+            for campo in ("event_name", "event_city", "event_date", "organizer"):
+                if evento.get(campo):
+                    item[campo] = evento[campo]
+            if evento.get("event_detected"):
+                resultado_lead = event_detector.registrar_lead(item, analise, evento, rules, themes)
+                timing = evento.get("event_timing") or "sem_data"
+                dias = evento.get("days_until")
+                quando = f"em {dias}d" if dias is not None else timing
+                print(f"[ANALYZER] Evento detectado: {evento.get('event_name')} ({quando})")
+                if resultado_lead.get("status") in ("novo", "atualizado"):
+                    lead = resultado_lead["lead"]
+                    print(f"[ANALYZER] Oportunidade comercial: {lead.get('priority') or '-'} | "
+                          f"lead_score={lead.get('lead_score')}")
+                    print(f"[ANALYZER] Serviço sugerido: {', '.join(analise.get('suggested_service') or [])}")
+                    print(f"[ANALYZER] Lead registrado ({resultado_lead['status']})")
+            else:
+                analise["event_name"] = None
+
+            # Conteudo social especial (Reel/Stories/Carousel)
+            conteudo_social = None
+            if analise.get("generate_reel") or analise.get("generate_cta") or analise.get("commercial_score", 0) >= 8:
+                conteudo_social = analyze_article.gerar_conteudo_social(
+                    item, analise, resumo, api_key)
+                item["conteudo_social"] = conteudo_social
+                print("[ANALYZER] Conteúdo social especial gerado (reel/stories/carousel)")
 
             print("[IMAGEM] Verificando imagem original...")
             imagem_orig = item.get("imagem_original") or item.get("imagem") or None
@@ -135,7 +178,8 @@ def main():
 
             print("[PUBLICACAO] Salvando materia...")
             sem_fonte = item.get("sem_fonte", False)
-            publish.publicar_materia(item, resumo, imagem_rel, sem_fonte)
+            publish.publicar_materia(item, resumo, imagem_rel, sem_fonte,
+                                     analise=analise)
             publicadas += 1
 
             # Gera versao social 1:1 grafite (para Instagram)
@@ -158,6 +202,23 @@ def main():
                 "tema": item.get("tema", "Geral"),
                 "resumo": resumo,
                 "imagem": imagem_social,
+                # ----- campos da camada editorial/comercial -----
+                "category": analise.get("category", "geral"),
+                "editorial_score": analise.get("editorial_score", 5),
+                "commercial_score": analise.get("commercial_score", 0),
+                "instagram_score": analise.get("instagram_score", 5),
+                "event_related": analise.get("event_related", False),
+                "sports_related": analise.get("sports_related", False),
+                "regional": analise.get("regional", False),
+                "commercial_angle": analise.get("commercial_angle", ""),
+                "target_customer": analise.get("target_customer", []),
+                "suggested_service": analise.get("suggested_service", []),
+                "generate_reel": analise.get("generate_reel", False),
+                "generate_cta": analise.get("generate_cta", False),
+                "event_name": (evento or {}).get("event_name") or "",
+                "event_city": (evento or {}).get("event_city") or "",
+                "event_date": (evento or {}).get("event_date") or "",
+                "conteudo_social": conteudo_social,
             })
         except Exception as e:
             print(f"[ERRO] falha ao processar {item.get('titulo', '?')}: {e}")
@@ -165,6 +226,9 @@ def main():
     print(f"\n[FIM] {publicadas} materia(s) publicadas nesta rodada.")
 
     if materias_para_social:
+        print("\n" + "=" * 60)
+        print("ETAPA 5/8 - Fila para redes sociais (Instagram priorizada)")
+        print("=" * 60)
         pending_file = os.path.join(BASE_DIR, "data", "pending_social.json")
         os.makedirs(os.path.dirname(pending_file), exist_ok=True)
 
@@ -182,7 +246,12 @@ def main():
         print(f"[SOCIAL] {len(novas)} nova(s) + {len(existentes)} existente(s) = {len(combinadas)} materia(s) na fila")
 
     print("\n" + "=" * 60)
-    print("ETAPA 6/6 - Pesquisa viral (historias e curiosidades regionais)")
+    print("ETAPA 6/8 - Postagem nas redes sociais (executada na etapa do workflow)")
+    print("=" * 60)
+    print("[SOCIAL] Postagem feita por scripts/social_poster.py na etapa seguinte do CI.")
+
+    print("\n" + "=" * 60)
+    print("ETAPA 7/8 - Pesquisa viral (historias e curiosidades regionais)")
     print("=" * 60)
     try:
         import research_viral
@@ -193,7 +262,7 @@ def main():
         print(f"[VIRAL] Passo de pesquisa viral falhou: {e}")
 
     print("\n" + "=" * 60)
-    print("ETAPA 7/7 - Atualizar analytics + slider automatico")
+    print("ETAPA 8/8 - Atualizar analytics + slider automatico")
     print("=" * 60)
     try:
         import analytics
@@ -205,6 +274,23 @@ def main():
         slider.salvar_slider(limite_minimo=3)
     except Exception as e:
         print(f"[SLIDER] Pulou: {e}")
+
+    try:
+        import commercial_radar
+        commercial_radar.print_top_leads(limite=10)
+    except Exception as e:
+        print(f"[RADAR] Pulou: {e}")
+
+    print("\n" + "=" * 60)
+    print("PROSPECÇÃO INTELIGENTE - Painel do diretor comercial")
+    print("=" * 60)
+    try:
+        import commercial_prospecting
+        n = commercial_prospecting.enriquecer_leads()
+        print(f"[PROSPECCAO] {n} lead(s) enriquecidos.")
+        commercial_prospecting.print_painel_prospeccao(limite=10)
+    except Exception as e:
+        print(f"[PROSPECCAO] Pulou: {e}")
 
 
 if __name__ == "__main__":

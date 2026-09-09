@@ -55,6 +55,14 @@ jobs:
             git push
           fi
 
+      - name: RADAR - TOP 10 oportunidades comerciais
+        run: |
+          python scripts/commercial_radar.py || echo "::warning::Radar comercial sem leads ainda"
+
+      - name: PROSPECCAO - Painel de prospeccao inteligente
+        run: |
+          python scripts/commercial_prospecting.py || echo "::warning::Painel de prospeccao sem leads ainda"
+
       - name: Postar nas redes sociais
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
@@ -68,7 +76,7 @@ jobs:
         run: |
           git config user.name "Portal Ao Vivo Bot"
           git config user.email "bot@portalaovivo.com.br"
-          git add data/social_log.json data/pending_social.json
+          git add data/social_log.json data/pending_social.json data/commercial_leads.json
           if git diff --cached --quiet; then
             echo "Nenhuma alteracao no estado das redes sociais"
           else

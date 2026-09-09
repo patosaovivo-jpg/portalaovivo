@@ -6,7 +6,15 @@
       "link_pattern": "noticia/",
       "nome": "Patos 1",
       "tipo": "scrape",
-      "url": "https://www.patos1.com.br/"
+      "url": "https://www.patos1.com.br/",
+      "source_type": "noticias_regionais",
+      "commercial_relevance": 10,
+      "topics": [
+        "noticias_regional",
+        "eventos",
+        "esportes",
+        "patrocinio"
+      ]
     },
     {
       "frequencia_horas": 6,
@@ -14,7 +22,14 @@
       "link_pattern": "noticia|post",
       "nome": "Patrocinio Online",
       "tipo": "scrape",
-      "url": "https://www.patrocinioonline.com.br/"
+      "url": "https://www.patrocinioonline.com.br/",
+      "source_type": "noticias_regionais",
+      "commercial_relevance": 9,
+      "topics": [
+        "noticias_regional",
+        "eventos",
+        "esportes"
+      ]
     },
     {
       "frequencia_horas": 6,
@@ -22,7 +37,14 @@
       "link_pattern": "noticia|post",
       "nome": "Portal Serralitrense",
       "tipo": "scrape",
-      "url": "https://portalserralitrense.com.br/"
+      "url": "https://portalserralitrense.com.br/",
+      "source_type": "noticias_regionais",
+      "commercial_relevance": 9,
+      "topics": [
+        "noticias_regional",
+        "eventos",
+        "turismo"
+      ]
     },
     {
       "frequencia_horas": 12,
@@ -30,7 +52,15 @@
       "link_pattern": "noticia|imprensa|publicacao",
       "nome": "Prefeitura de Patos de Minas",
       "tipo": "scrape",
-      "url": "https://www.patosdeminas.mg.gov.br/"
+      "url": "https://www.patosdeminas.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional",
+        "patrocinio",
+        "economia"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -38,7 +68,14 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Patrocinio",
       "tipo": "scrape",
-      "url": "https://pmp.patrocinio.mg.gov.br/"
+      "url": "https://pmp.patrocinio.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional",
+        "patrocinio"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -46,7 +83,14 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Lagoa Formosa",
       "tipo": "scrape",
-      "url": "https://lagoaformosa.mg.gov.br/"
+      "url": "https://lagoaformosa.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional",
+        "patrocinio"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -54,7 +98,14 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Carmo do Paranaiba",
       "tipo": "scrape",
-      "url": "https://carmodoparanaiba.mg.gov.br/"
+      "url": "https://carmodoparanaiba.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional",
+        "patrocinio"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -62,7 +113,14 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Sao Gotardo",
       "tipo": "scrape",
-      "url": "https://www.saogotardo.mg.gov.br/"
+      "url": "https://www.saogotardo.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional",
+        "agronegocio"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -70,7 +128,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Rio Paranaiba",
       "tipo": "scrape",
-      "url": "https://rioparanaiba.mg.gov.br/"
+      "url": "https://rioparanaiba.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -78,7 +142,14 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Presidente Olegario",
       "tipo": "scrape",
-      "url": "https://presidenteolegario.mg.gov.br/"
+      "url": "https://presidenteolegario.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional",
+        "turismo"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -86,7 +157,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Coromandel",
       "tipo": "scrape",
-      "url": "https://coromandel.mg.gov.br/"
+      "url": "https://coromandel.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -94,7 +171,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Guimarania",
       "tipo": "scrape",
-      "url": "https://guimarania.mg.gov.br/"
+      "url": "https://guimarania.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -102,7 +185,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Ibia",
       "tipo": "scrape",
-      "url": "https://www.ibia.mg.gov.br/"
+      "url": "https://www.ibia.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -110,7 +199,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Varjao de Minas",
       "tipo": "scrape",
-      "url": "https://varjaodeminas.mg.gov.br/"
+      "url": "https://varjaodeminas.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -118,7 +213,14 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Serra do Salitre",
       "tipo": "scrape",
-      "url": "https://serradosalitre.mg.gov.br/"
+      "url": "https://serradosalitre.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional",
+        "turismo"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -126,7 +228,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Tiros",
       "tipo": "scrape",
-      "url": "https://tiros.mg.gov.br/"
+      "url": "https://tiros.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -134,7 +242,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Arapua",
       "tipo": "scrape",
-      "url": "https://arapua.mg.gov.br/"
+      "url": "https://arapua.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -142,7 +256,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Matutina",
       "tipo": "scrape",
-      "url": "https://matutina.mg.gov.br/"
+      "url": "https://matutina.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -150,7 +270,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Sao Goncalo do Abaete",
       "tipo": "scrape",
-      "url": "https://saogoncalodoabaete.mg.gov.br/"
+      "url": "https://saogoncalodoabaete.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -158,7 +284,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Pratinha",
       "tipo": "scrape",
-      "url": "https://pratinha.mg.gov.br/"
+      "url": "https://pratinha.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -166,7 +298,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Campos Altos",
       "tipo": "scrape",
-      "url": "https://camposaltos.mg.gov.br/"
+      "url": "https://camposaltos.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -174,7 +312,13 @@
       "link_pattern": "noticia|imprensa",
       "nome": "Prefeitura de Lagamar",
       "tipo": "scrape",
-      "url": "https://lagamar.mg.gov.br/"
+      "url": "https://lagamar.mg.gov.br/",
+      "source_type": "eventos",
+      "commercial_relevance": 10,
+      "topics": [
+        "eventos",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 12,
@@ -182,7 +326,13 @@
       "link_pattern": "noticia|destaque",
       "nome": "Policia Militar de MG",
       "tipo": "scrape",
-      "url": "https://www.policiamilitar.mg.gov.br/"
+      "url": "https://www.policiamilitar.mg.gov.br/",
+      "source_type": "noticias_regionais",
+      "commercial_relevance": 2,
+      "topics": [
+        "seguranca",
+        "noticias_regional"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -190,7 +340,14 @@
       "nome": "Patos Esportes",
       "tipo": "scrape",
       "url": "https://patosesportes.com.br",
-      "link_pattern": "noticia"
+      "link_pattern": "noticia",
+      "source_type": "esportes",
+      "commercial_relevance": 9,
+      "topics": [
+        "esportes",
+        "campeonatos",
+        "eventos"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -198,7 +355,13 @@
       "nome": "AG Esportes",
       "tipo": "scrape",
       "url": "https://www.agesporte.com.br/",
-      "link_pattern": "noticia"
+      "link_pattern": "noticia",
+      "source_type": "esportes",
+      "commercial_relevance": 8,
+      "topics": [
+        "esportes",
+        "campeonatos"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -206,7 +369,15 @@
       "nome": "FIEMG Alto Paranaiba",
       "tipo": "scrape",
       "url": "https://www.fiemg.com.br/regional-alto-paranaiba/noticias/",
-      "link_pattern": "noticia|noticias"
+      "link_pattern": "noticia|noticias",
+      "source_type": "economia",
+      "commercial_relevance": 8,
+      "topics": [
+        "economia",
+        "eventos empresariais",
+        "patrocinio",
+        "industria"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -214,7 +385,14 @@
       "nome": "Noticias do Triangulo",
       "tipo": "scrape",
       "url": "https://noticiasdotriangulo.com.br/",
-      "link_pattern": "noticia"
+      "link_pattern": "noticia",
+      "source_type": "noticias_regionais",
+      "commercial_relevance": 7,
+      "topics": [
+        "noticias_regional",
+        "eventos",
+        "esportes"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -222,7 +400,13 @@
       "nome": "Portal Paranaiba",
       "tipo": "scrape",
       "url": "https://www.portalparanaiba.com.br/",
-      "link_pattern": "noticia"
+      "link_pattern": "noticia",
+      "source_type": "noticias_regionais",
+      "commercial_relevance": 8,
+      "topics": [
+        "noticias_regional",
+        "eventos"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -232,7 +416,13 @@
       "url": "https://hypescience.com/",
       "link_pattern": "noticia|post",
       "imagem_ia": true,
-      "sem_fonte": true
+      "sem_fonte": true,
+      "source_type": "tecnologia",
+      "commercial_relevance": 3,
+      "topics": [
+        "tecnologia",
+        "ciencia"
+      ]
     },
     {
       "frequencia_horas": 24,
@@ -242,7 +432,13 @@
       "url": "https://ovicio.com.br/",
       "link_pattern": "post|noticia",
       "imagem_ia": true,
-      "sem_fonte": true
+      "sem_fonte": true,
+      "source_type": "tecnologia",
+      "commercial_relevance": 3,
+      "topics": [
+        "tecnologia",
+        "entretenimento"
+      ]
     }
   ]
 }

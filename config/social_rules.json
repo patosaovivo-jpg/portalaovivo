@@ -1,0 +1,62 @@
+{
+  "priorizacao": {
+    "_comment": "priority_score = views_score*weights.views + instagram_score*weights.instagram_score + commercial_score*weights.commercial_score + regional*weights.regional + event*weights.event. Todos normalizados em faixa 0-10.",
+    "weights": {
+      "views": 1.0,
+      "instagram_score": 2.0,
+      "commercial_score": 2.0,
+      "regional": 1.5,
+      "event": 1.5
+    },
+    "views_ceiling": 500,
+    "regional_value": 10,
+    "event_value": 10
+  },
+
+  "social_special_threshold": {
+    "_comment": "Acima desses limites gera conteudo social especial (reel/stories/carousel) em vez do fluxo comum.",
+    "instagram_score": 8,
+    "commercial_score": 8
+  },
+
+  "ctas": {
+    "_comment": "O sistema escolhe o CTA de acordo com o commercial_angle e o tipo de evento.",
+    "default": [
+      "Seu evento pode chegar muito alem do publico presente.",
+      "Leve seu evento para quem nao conseguiu estar la.",
+      "Transforme o evento presencial em conteudo que continua circulando.",
+      "Alem do publico presente, existe uma audiencia esperando online."
+    ],
+    "esporte": [
+      "Seu campeonato tambem pode ser acompanhado de qualquer lugar.",
+      "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
+    ],
+    "audiencia": [
+      "Alem do publico presente, existe uma audiencia esperando online.",
+      "Sua transmissao pode reunir espectadores em qualquer lugar do Brasil."
+    ],
+    "visibilidade": [
+      "Sua marca pode ser vista por muito mais pessoas.",
+      "Exposicao de marca que ultrapassa o espaco fisico do evento."
+    ],
+    "empresarial": [
+      "Seu evento empresarial pode ser acompanhado por quem nao participou presencialmente.",
+      "Transmissao hibrida e conteudo que estendem o alcance do seu evento."
+    ],
+    "alcance": [
+      "Seu evento pode chegar muito alem do publico presente."
+    ]
+  },
+
+  "reel_structure": {
+    "hook_inicio": "E voce, sabia disso?",
+    "estimativas_palavras": {
+      "hook": 15,
+      "script": 90,
+      "caption": 120,
+      "cta": 20
+    }
+  },
+
+  "default_hashtags": "#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora"
+}
