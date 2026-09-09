@@ -186,5 +186,58 @@
         ]
       }
     }
+  },
+  {
+    "titulo": "ENTREVISTAS: Grupo Bom Negócio entrega Saveiro 0 km e anuncia planejamento para celebrar 30 anos em 2027 Ganhador contou ao Patrocínio Online que não esperava ser contemplado e comemorou o prêmio.",
+    "link": "https://www.patrocinioonline.com.br/noticia/entrevistas-grupo-bom-negocio-entrega-saveiro-0-km-e-anuncia-planejamento-para-celebrar-30-anos-em-2027-87851.html",
+    "fonte": "Patrocinio Online",
+    "tema": "Local e Cidades",
+    "resumo": "PATROCÍNIO (MG) – Na tarde desta quarta-feira, 9/9, o Grupo Bom Negócio realizou a entrega de uma Saveiro zero quilômetro ao ganhador do sorteio da 10ª Fenabon (Feira de Negócios do Bom Negócio), Júlio Célio, da Fazenda Campo do Meio, em Carmo do Paranaíba.\n\nA 10ª Fenabon foi realizada nos dias 21 e 22 de agosto e reuniu produtores, clientes e parceiros do Grupo Bom Negócio. O veículo foi sorteado durante o evento, e a venda que garantiu a participação de Júlio Célio no sorteio foi realizada pela consultora técnica de vendas Jordana Sebaio, que atende a região do produtor.\n\nA entrega foi marcada pela surpresa e emoção do ganhador, que contou ao Patrocínio Online que não imaginava que seria contemplado. Cliente do Grupo Bom Negócio há muitos anos, Júlio também destacou a satisfação com a empresa e a parceria construída ao longo do tempo.\n\nDurante entrevista ao Patrocínio Online, o diretor e proprietário do Grupo Bom Negócio, Geraldo, fez um balanço da 10ª Fenabon, agradeceu a Deus, a...\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+    "imagem": "/assets/images/default.jpg",
+    "category": "eventos",
+    "editorial_score": 7,
+    "commercial_score": 8,
+    "instagram_score": 7,
+    "event_related": true,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "alcance",
+    "target_customer": [
+      "organizadores de eventos empresariais",
+      "patrocinadores e marcas",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual",
+      "transmissao com exposicao de patrocinadores",
+      "conteudo para redes sociais"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Feira, 9/9, o Grupo Bom Negócio realizou a",
+    "event_city": "Carmo do Paranaíba",
+    "event_date": "2027-08-22",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "ENTREVISTAS: Grupo Bom Negócio entrega Saveiro 0 km e anuncia planejamento para \n\nPATROCÍNIO (MG) – Na tarde desta quarta-feira, 9/9, o Grupo Bom Negócio realizou a entrega de uma Saveiro zero quilômetro ao ganhador do sorteio da 10ª Fenabon (Feira de Negócios do Bom Negócio), Júlio Célio, da Fazenda Campo do Meio, em Carmo do Paranaíba.\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu evento pode chegar muito alem do publico presente."
+      },
+      "stories": [
+        "ENTREVISTAS: Grupo Bom Negócio entrega Saveiro 0 km e anuncia planejamento para ",
+        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+        "Seu evento pode chegar muito alem do publico presente."
+      ],
+      "carousel": {
+        "title": "ENTREVISTAS: Grupo Bom Negócio entrega Saveiro 0 km e anuncia planejamento para ",
+        "slides": [
+          "PATROCÍNIO (MG) – Na tarde desta quarta-feira, 9/9, o Grupo Bom Negócio realizou a entrega de uma Saveiro zero quilômetro ao ganhador do sorteio da 10ª Fenabon (Feira de Negócios do Bom Negócio), Júlio Célio, da Fazenda Campo do Meio, em Carmo do Paranaíba.",
+          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+          "Seu evento pode chegar muito alem do publico presente."
+        ]
+      }
+    }
   }
 ]

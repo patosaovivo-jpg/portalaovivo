@@ -460,7 +460,77 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 8.0
+    },
+    "Feira, 9/9, o Grupo Bom Negócio realizou a|Carmo do Paranaíba|2027-08-22": {
+      "lead_score": 6.4,
+      "priority": "MEDIA",
+      "event_name": "Feira, 9/9, o Grupo Bom Negócio realizou a",
+      "event_type": "feira",
+      "city": "Carmo do Paranaíba",
+      "event_date": "2027-08-22",
+      "days_until_event": 347,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticia/entrevistas-grupo-bom-negocio-entrega-saveiro-0-km-e-anuncia-planejamento-para-celebrar-30-anos-em-2027-87851.html",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "organizadores de eventos empresariais",
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-09T19:59:00.292042-03:00",
+      "detected_at": "2026-09-09T19:59:00.292042-03:00",
+      "lead_id": "lev-8f5f7ce512",
+      "event_id": "evt-f70cf43487",
+      "recurring_event": true,
+      "recurrence_pattern": "recorrente",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'feira', em carmo do paranaíba, faltam 347 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.8
     }
   },
-  "atualizado": "2026-09-09T15:23:47.257396-03:00"
+  "atualizado": "2026-09-09T19:59:01.574747-03:00"
 }
