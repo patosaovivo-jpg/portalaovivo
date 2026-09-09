@@ -1,3 +1,135 @@
 {
-  "leads": {}
+  "leads": {
+    "Sicredi intensifica ações||2027-08-29": {
+      "lead_score": 5.6,
+      "priority": "BAIXA",
+      "event_name": "Sicredi intensifica ações",
+      "event_type": "",
+      "city": "",
+      "event_date": "2027-08-29",
+      "days_until_event": 355,
+      "event_timing": "futuro",
+      "organizer": "Prefeitura Municipal",
+      "estimated_audience": 3000,
+      "porte": "medio",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/sicredi-intensifica-acoes-no-dia-de-cooperar",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais",
+        "transmissao hibrida"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-08T23:59:43.938912-03:00",
+      "detected_at": "2026-09-08T23:59:43.938912-03:00",
+      "lead_id": "lev-5835a21c8f",
+      "event_id": "evt-4521c2d38b",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "prefeitura",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "commercial_need": "Ampliar o alcance do evento alem do publico presente.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Público estimado de 3000 pessoas, faltam 355 dias, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.7
+    },
+    "Feira 8H ATRÁS||2026-09-09": {
+      "lead_score": 8.3,
+      "priority": "FORTE",
+      "event_name": "Feira 8H ATRÁS",
+      "event_type": "festival",
+      "city": "",
+      "event_date": "2026-09-09",
+      "days_until_event": 1,
+      "event_timing": "em_breve",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": 3,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Noticias do Triangulo",
+      "source_url": "https://noticiasdotriangulo.com.br/noticia/leona-cavalli-estrela-elogio-loucura-uberaba-nesta-quarta-feira",
+      "commercial_angle": "audiencia",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 7,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-09-08T23:59:49.599823-03:00",
+      "detected_at": "2026-09-08T23:59:49.599823-03:00",
+      "lead_id": "lev-5c841b849d",
+      "event_id": "evt-d1a40d8356",
+      "recurring_event": true,
+      "recurrence_pattern": "edição 3",
+      "previous_event_detected": true,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "produtor de eventos",
+        "organizador de shows",
+        "prefeitura"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "cortes para redes sociais",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Alcancar quem nao pode estar presencialmente e dar visibilidade a patrocinadores.",
+      "contact_window": "muito_tarde",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Muito tarde — apenas ação de emergência",
+      "contact_reason": "Evento 'festival', faltam 1 dias.",
+      "suggested_outreach": "Ola! Vimos a noticia sobre Feira 8H ATRÁS em nossa região. O Portal Ao Vivo oferece transmissao ao vivo, cobertura audiovisual e cortes para redes sociais, ampliando o alcance da sua producao. Podemos conversar?",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 7.7
+    }
+  },
+  "atualizado": "2026-09-08T23:59:59.361416-03:00"
 }
