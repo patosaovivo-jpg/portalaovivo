@@ -1,9 +1,11 @@
 {
   "utilizados": [
-    "💰 Elon Musk e a fortuna de um homem só"
+    "💰 Elon Musk e a fortuna de um homem só",
+    "🗺️ Não binários enfrentam dificuldades para retificar nome e gêne..."
   ],
-  "ultima_execucao": "2026-09-08T23:59:56.921891-03:00",
+  "ultima_execucao": "2026-09-09T05:01:07.576208-03:00",
   "stats": {
-    "grandes_fortunas": 1
+    "grandes_fortunas": 1,
+    "mudanca_nome": 1
   }
 }

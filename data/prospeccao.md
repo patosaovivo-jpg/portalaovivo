@@ -2,20 +2,22 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 2  
+**Leads ativos:** 3  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
-| urgente | 1 |
+| urgente | 2 |
 | monitorar | 1 |
-| **Total** | **2** |
+| **Total** | **3** |
 
 ## Prioridade de hoje
 
 1. **Feira 8H ATRÁS** [-] — janela `muito_tarde`, prioridade `urgente`, faltam 1 dias, score 7.7.
    - Motivo: Evento 'festival', faltam 1 dias.
+2. **Feira (7), depois** [Patos de Minas] — janela `urgente`, prioridade `urgente`, faltam 5 dias, score 7.3.
+   - Motivo: Evento 'feira', em patos de minas, faltam 5 dias.
 
 ## Perdendo o timing
 
