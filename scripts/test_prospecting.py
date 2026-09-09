@@ -471,6 +471,93 @@ def main():
         resultados["falhas"] += 1
         print(f"    [FALHA] painel quebrou: {e}")
 
+    # ---- OUTBOX: fila semi-manual (ETAPA 5) ----
+    print("\n" + "=" * 70)
+    print("OUTBOX — FILA DE APROVAÇÃO (envio SEMPRE manual)")
+    print("=" * 70)
+    try:
+        import json
+        from copy import deepcopy
+        backup_outbox = None
+        if os.path.exists(cp.OUTBOX_FILE):
+            backup_outbox = open(cp.OUTBOX_FILE, "r", encoding="utf-8").read()
+        leads_fake = {
+            "outbox-lead-1": {"lead_id": "outbox-lead-1", "event_id": "ev-1",
+             "event_name": "Show Teste Outbox", "city": "Patos de Minas",
+             "event_timing": "futuro", "days_until_event": 5,
+             "prospecting_priority": "urgente", "prospecting_score": 9.1,
+             "lead_score": 9.5, "organizer": "Produtora Local",
+             "sponsors_count": 2, "estimated_audience": 60000,
+             "recurring_event": True,
+             "suggested_outreach": "rascunho original",
+             "contact_window": "5 dias antes", "potential_client_type": ["produtor"],
+             "recommended_services": ["cobertura"], "status": "novo"},
+            "outbox-lead-2": {"lead_id": "outbox-lead-2", "event_id": "ev-2",
+             "event_name": "Evento Fraco", "city": "Patos de Minas",
+             "event_timing": "futuro", "days_until_event": 30,
+             "prospecting_priority": "baixo", "prospecting_score": 5.0,
+             "lead_score": 5.0, "suggested_outreach": "Rascunho fraco",
+             "contact_window": "30 dias antes", "potential_client_type": ["produtor"],
+             "recommended_services": ["cobertura"], "status": "novo"},
+        }
+        import event_detector as _ed
+        _backup_leads = {}
+        if os.path.exists(_ed.LEADS_FILE):
+            _backup_leads = deepcopy(_ed.load_leads())
+        _ed.save_leads(leads_fake)
+        gerar_outbox = getattr(cp, "gerar_outbox", None)
+        if gerar_outbox is None:
+            raise RuntimeError("gerar_outbox ainda não existe")
+        itens = gerar_outbox()
+        pendentes = [i for i in itens if i.get("status") == "pendente"]
+        apenas_leads_fortes = all(
+            i.get("lead_id") == "outbox-lead-1" for i in pendentes)
+        tem_rascunho = any(bool(i.get("rascunho")) for i in itens)
+        if pendentes and apenas_leads_fortes and tem_rascunho:
+            resultados["ok"] += 1
+            print(f"    [OK] {len(pendentes)} rascunho(s) na fila "
+                  f"(apenas leads fortes, nunca enviados)")
+        else:
+            resultados["falhas"] += 1
+            print(f"    [FALHA] outbox: {len(pendentes)} pendente(s), "
+                  f"fortes={apenas_leads_fortes}, rascunho={tem_rascunho}")
+
+        # decisão manual preservada
+        alvo, err = cp.atualizar_status_outbox("outbox-lead-1", "enviado",
+                                                observacao="enviado pelo diretor")
+        if alvo and alvo.get("status") == "enviado" and alvo.get("enviado_em"):
+            gerar_outbox(regerar=False)
+            itens2 = cp.load_outbox()
+            item_re= [i for i in itens2 if i.get("lead_id") == "outbox-lead-1"]
+            if item_re and item_re[0].get("status") == "enviado":
+                resultados["ok"] += 1
+                print("    [OK] decisão manual 'enviado' preservada "
+                      "(não sobrescrita)")
+            else:
+                resultados["falhas"] += 1
+                print("    [FALHA] decisão manual perdida")
+        else:
+            resultados["falhas"] += 1
+            print(f"    [FALHA] atualizar_status_outbox: {err}")
+
+        # regerar() novo lead pós-envio volta a pendente
+        if _backup_leads:
+            _ed.save_leads(_backup_leads)
+        else:
+            open(_ed.LEADS_FILE, "w", encoding="utf-8").write(
+                json.dumps({"leads": {}}, ensure_ascii=False))
+        # OUTBOX: restaura backup
+        if backup_outbox is not None:
+            with open(cp.OUTBOX_FILE, "w", encoding="utf-8") as f:
+                f.write(backup_outbox)
+        else:
+            # limpa arquivo pós-teste (não existia antes)
+            open(cp.OUTBOX_FILE, "w", encoding="utf-8").write(
+                json.dumps({"itens": []}, ensure_ascii=False))
+    except Exception as e:
+        resultados["falhas"] += 1
+        print(f"    [FALHA] teste de outbox quebrou: {e}")
+
     # ---- NUNCA ENVIA NADA ----
     print("\n" + "=" * 70)
     print("SAÍDA NUNCA ENVIA MENSAGEM (rascunho apenas)")

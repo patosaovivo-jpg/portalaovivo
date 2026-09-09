@@ -60,12 +60,17 @@ sys.path.insert(0, os.path.join(BASE_DIR, "scripts"))
 
 PROSPECTING_RULES_FILE = os.path.join(BASE_DIR, "config", "prospecting_rules.json")
 PROSPECTING_REPORT_FILE = os.path.join(BASE_DIR, "data", "prospeccao.md")
+OUTBOX_FILE = os.path.join(BASE_DIR, "data", "outbox.json")
 
 # Funil comercial: situação de acompanhamento manual (diretor comercial).
 # NUNCA é preenchida/enviada automaticamente — apenas preservada.
 CONTATO_STATUS_OPCOES = ("", "novo_lead", "primeiro_contato", "pos_venda",
                           "aguardando_resposta", "proposta_enviada",
                           "fechado", "perdido", "dispensado")
+
+# Fila semi-manual de envio: o sistema GERA rascunhos, mas a decisão de
+# enviar (aprovar/marcar enviado) é SEMPRE do diretor comercial.
+OUTBOX_STATUS = ("pendente", "aprovado", "enviado", "descartado", "adiado")
 
 import event_detector as ed  # noqa: E402
 
@@ -774,12 +779,217 @@ def gerar_relatorio_diario(arquivo=None):
             linhas.append(f"  > {l.get('suggested_outreach')}")
         linhas.append("")
 
+    outbox = load_outbox()
+    fila = [i for i in outbox if i.get("status") == "pendente"]
+    aprovados = [i for i in outbox if i.get("status") == "aprovado"]
+    if fila:
+        linhas.append("## Fila de aprovação (outbox)")
+        linhas.append("")
+        linhas.append("> Envio é **sempre manual** — aprovar/marcar enviado no "
+                      "dashboard `local-admin` (aba Prospecção).")
+        linhas.append("")
+        for i in fila[:8]:
+            linhas.append(f"- **{i.get('event_name')}** "
+                          f"[{i.get('city') or '-'}] — "
+                          f"`{i.get('prospecting_priority')}`, "
+                          f"score {float(i.get('prospecting_score') or 0):.1f}:")
+            linhas.append(f"  > {i.get('rascunho')}")
+        linhas.append("")
+    if aprovados:
+        linhas.append("**Aprovados aguardando envio:** "
+                      f"{len(aprovados)} item(ns).")
+        linhas.append("")
+
     linhas.append("---")
     linhas.append("_Fim do relatório._")
 
     with open(arquivo, "w", encoding="utf-8") as f:
         f.write("\n".join(linhas))
     return arquivo
+
+
+# ============================================================
+# OUTBOX — fila semi-manual de envio (ETAPA 5)
+# ============================================================
+
+def load_outbox():
+    """Carrega data/outbox.json (lista de rascunhos aguardando o diretor)."""
+    try:
+        with open(OUTBOX_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data.get("itens") or [] if isinstance(data, dict) else (data or [])
+    except Exception:
+        return []
+
+
+def save_outbox(itens):
+    os.makedirs(os.path.dirname(OUTBOX_FILE), exist_ok=True)
+    with open(OUTBOX_FILE, "w", encoding="utf-8") as f:
+        json.dump({"itens": itens}, f, ensure_ascii=False, indent=2)
+    return len(itens)
+
+
+def _normalizar_status_outbox(status, permitidos=None):
+    return status if status in (permitidos or OUTBOX_STATUS) else "pendente"
+
+
+def gerar_outbox(regerar=False):
+    """Reconcilia a outbox com os leads ativos.
+
+    - Adiciona/atualiza rascunhos de leads que merecem contato
+      (prioridade urgente/muito_urgente E lead_score >= 8 E evento futuro).
+    - NUNCA envia nada: apenas gera/atualiza a fila para aprovação manual.
+    - Preserva decisões manuais (aprovado/enviado/descartado/adiado).
+    - Itens cujo lead deixou de ser ativo viram 'descartado' automaticamente.
+    """
+    leads = {l.get("lead_id"): l for l in _leads_ativos()}
+    atuais = {i.get("lead_id"): i for i in load_outbox()}
+    novos_itens = []
+
+    for lid, l in leads.items():
+        prio = l.get("prospecting_priority") or ""
+        score = float(l.get("prospecting_score") or 0)
+        rascunho = (l.get("suggested_outreach") or "").strip()
+        futuro = l.get("event_timing") not in ("passado",)
+        merece = prio in ("urgente", "muito_urgente") and score >= 8 \
+            and rascunho and futuro
+        if not merece:
+            continue
+
+        item = atuais.get(lid)
+        status_atual = (item or {}).get("status") or "pendente"
+        displayed = (item or {}).get("_displayed", False)
+        enviado_em = (item or {}).get("enviado_em") or ""
+        if status_atual == "enviado" and enviado_em and not regerar:
+            continue
+
+        # Se o rascunho mudou e ainda não foi aprovado, volta a pendente.
+        if status_atual == "pendente" and (item or {}).get("rascunho") != rascunho:
+            status_atual = "pendente"
+
+        novos_itens.append({
+            "lead_id": lid,
+            "event_id": (l.get("event_id") or ""),
+            "event_name": l.get("event_name"),
+            "city": l.get("city") or "",
+            "days_until_event": l.get("days_until_event"),
+            "event_timing": l.get("event_timing"),
+            "prospecting_priority": prio,
+            "contact_window": l.get("contact_window"),
+            "potential_client_type": (l.get("potential_client_type") or [])[:1],
+            "recommended_services": l.get("recommended_services"),
+            "lead_score": l.get("lead_score"),
+            "prospecting_score": score,
+            "rascunho": rascunho,
+            "status": status_atual,
+            "enviado_em": enviado_em,
+            "aprovado_em": (item or {}).get("aprovado_em") or "",
+            "observacao": (item or {}).get("observacao") or "",
+            "_displayed": displayed,
+        })
+
+    # Itens órfãos (lead não é mais ativo ou perdeu a condição) -> descartado,
+    # a menos que o diretor já tenha aprovado/envidado.
+    vivos = {i.get("lead_id") for i in novos_itens}
+    for lid, item in atuais.items():
+        if lid in vivos:
+            continue
+        if item.get("status") in ("aprovado", "enviado"):
+            novos_itens.append(item)
+        elif item.get("status") not in ("descartado",):
+            novo = dict(item)
+            novo["status"] = "descartado"
+            novos_itens.append(novo)
+
+    save_outbox(novos_itens)
+    return novos_itens
+
+
+def listar_outbox(status=None):
+    """Lista a outbox, opcionalmente filtrando por status."""
+    gerar_outbox()
+    itens = load_outbox()
+    if status:
+        itens = [i for i in itens if i.get("status") == status]
+    ordem = {"pendente": 0, "aprovado": 1, "adiado": 2, "enviado": 3,
+             "descartado": 4}
+    return sorted(itens, key=lambda i: (ordem.get(i.get("status"), 5),
+                                        -(float(i.get("prospecting_score") or 0))))
+
+
+def atualizar_status_outbox(lead_id, status, observacao=None, regerar=True):
+    """Atualiza DECISÃO MANUAL de um item da outbox (nunca envia nada).
+
+    Retorna (item, erro). status deve estar em OUTBOX_STATUS."""
+    status = _normalizar_status_outbox(status)
+    itens = load_outbox()
+    alvo = None
+    for i in itens:
+        if i.get("lead_id") == lead_id:
+            alvo = i
+            break
+    if alvo is None:
+        return None, f"Item nao encontrado: {lead_id}"
+    if status in ("enviado", "aprovado"):
+        import datetime
+        from datetime import timezone as _tz
+        agora = datetime.datetime.now(_tz.utc).isoformat(timespec="seconds")
+        alvo[("enviado_em" if status == "enviado" else "aprovado_em")] = agora
+    alvo["status"] = status
+    if observacao:
+        alvo["observacao"] = observacao
+    save_outbox(itens)
+    if regerar:
+        gerar_outbox(regerar=False)
+    return alvo, None
+
+
+def print_outbox(limite=30):
+    """Painel da fila semi-manual (o sistema NUNCA envia)."""
+    itens = listar_outbox()
+    print("\n" + "=" * 60)
+    print("OUTBOX — FILA DE APROVAÇÃO (envio manual)")
+    print("=" * 60)
+    if not itens:
+        print("Nenhum rascunho na fila.")
+        return itens
+    contagem = {}
+    for i in itens:
+        contagem[i.get("status")] = contagem.get(i.get("status"), 0) + 1
+    print("Status: " + ", ".join(f"{k}={v}" for k, v in
+                                 sorted(contagem.items())))
+    print("-" * 60)
+    pendentes = [i for i in itens if i.get("status") == "pendente"]
+    for i, item in enumerate(pendentes[:limite], 1):
+        print(f"{i:>2}. [{item.get('status')}] {item.get('event_name')} "
+              f"[{item.get('city') or '-'}] | prioridade "
+              f"{(item.get('prospecting_priority') or '').upper()} | score "
+              f"{float(item.get('prospecting_score') or 0):.1f}")
+        print(f"    Rascunho: {item.get('rascunho') or '-'}")
+    print("-" * 60)
+    print(f"Pendentes na fila: {len(pendentes)} (aprovar/envidar é manual).")
+    return itens
+
+
+def resumo_outbox_json(limite=50):
+    gerar_outbox()
+    return [
+        {
+            "lead_id": i.get("lead_id"),
+            "event_name": i.get("event_name"),
+            "city": i.get("city"),
+            "days_until_event": i.get("days_until_event"),
+            "prospecting_priority": i.get("prospecting_priority"),
+            "contact_window": i.get("contact_window"),
+            "potential_client_type": i.get("potential_client_type"),
+            "prospecting_score": i.get("prospecting_score"),
+            "rascunho": i.get("rascunho"),
+            "status": i.get("status"),
+            "enviado_em": i.get("enviado_em"),
+            "observacao": i.get("observacao"),
+        }
+        for i in listar_outbox()[:limite]
+    ]
 
 
 if __name__ == "__main__":
@@ -789,6 +999,11 @@ if __name__ == "__main__":
     print_resumo_funil()
     rel = gerar_relatorio_diario()
     print(f"\n[PROSPECCAO] Relatório diário gerado: {os.path.relpath(rel, BASE_DIR)}")
+    outbox = gerar_outbox()
+    print_outbox(limite=15)
+    if outbox and os.path.exists(OUTBOX_FILE):
+        print(f"[OUTBOX] Fila de aprovação: {os.path.relpath(OUTBOX_FILE, BASE_DIR)} "
+              f"({len(outbox)} item(ns)) — envio é SEMPRE manual.")
     resumo = resumo_prospeccao_json(10)
     if resumo:
         print("\n[PROSPECCAO-COMPACT] " + json.dumps(resumo, ensure_ascii=False))

@@ -292,6 +292,10 @@ def main():
         commercial_prospecting.print_resumo_funil()
         rel = commercial_prospecting.gerar_relatorio_diario()
         print(f"[PROSPECCAO] Relatório diário: {os.path.relpath(rel, BASE_DIR)}")
+        n_out = commercial_prospecting.gerar_outbox()
+        print(f"[OUTBOX] Fila de aprovação gerada: {n_out} item(ns) "
+              f"(envio SEMPRE manual).")
+        commercial_prospecting.print_outbox(limite=10)
     except Exception as e:
         print(f"[PROSPECCAO] Pulou: {e}")
 

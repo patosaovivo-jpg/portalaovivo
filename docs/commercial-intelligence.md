@@ -164,10 +164,41 @@ apenas os preserva no enriquecimento, nunca os preenche nem envia nada.
 
 `commercial_prospecting.gerar_relatorio_diario()` grava `data/prospeccao.md`
 ao final do pipeline com: agenda de contato por prioridade, prioridade de hoje,
-leads perdendo o timing, eventos passados e rascunhos de abordagem
-(`suggested_outreach` — **não enviados**). O GitHub Actions faz **upload do
-arquivo como artefato** (`prospeccao-diaria`) e o commit do estado inclui o
-relatório em `data/`.
+leads perdendo o timing, eventos passados, rascunhos de abordagem
+(`suggested_outreach` — **não enviados**) e a fila de aprovação
+(`outbox`). O GitHub Actions faz **upload do arquivo como artefato**
+(`prospeccao-diaria`) e o commit do estado inclui o relatório em `data/`.
+
+## Outbox — fila de aprovação semi-manual (ETAPA 5)
+
+O pipeline gera `data/outbox.json` — uma **fila de rascunhos** prontos para o
+diretor comercial decidir. O sistema **nunca envia nada**; apenas GERA a fila.
+Funções em `commercial_prospecting`:
+
+- `gerar_outbox()`: reconcilia a outbox com os leads ativos. Entram na fila
+  leads com `prospecting_priority` urgente/muito_urgente, `prospecting_score`
+  >= 8, rascunho preenchido e evento futuro. Itens órfãos viram
+  `descartado`; decisões manuais (`aprovado`/`enviado`) são preservadas.
+- `listar_outbox(status=None)`: lista ordenada (pendente -> aprovado -> adiado
+  -> enviado -> descartado).
+- `atualizar_status_outbox(lead_id, status, observacao=None)`: grava a
+  **decisão manual** (aprovado/enviado/adiado/descartado) e preenche
+  `aprovado_em`/`enviado_em` — nunca dispara envio.
+- `print_outbox()` / `resumo_outbox_json()`: painel no terminal e payload JSON.
+
+Status possíveis: `pendente`, `aprovado`, `enviado`, `descartado`, `adiado`.
+
+O relatório diário, o `pipeline.py` e o workflow (`pipeline.yml`) incluem a
+outbox: o workflow commita `data/outbox.json` junto com o estado.
+
+## Dashboard web (local-admin, aba Prospecção)
+
+O painel de controle real é o `local-admin/app.py` (Flask local, gitignored).
+Ao adicionar a aba **Prospecção** ele carrega `data/outbox.json` do repositório
+(GitHub API) e permite, 100% manual: **Marcar enviado**, **Aprovar**, **Adiar**
+ou **Descartar** cada item — que é salvo de volta em `data/outbox.json` com
+commit to repositório. Nenhuma confirmação envia mensagem; o dashboard só
+registra a decisão do diretor.
 
 ## Scoring pondera porte e público estimado
 
@@ -348,7 +379,7 @@ Edite apenas os JSONs de `config/`; não precisa mexer no código:
 
 ```bash
 python scripts/test_commercial_intelligence.py    # sem API: usa regras locais
-python scripts/test_prospecting.py                # ETAPA 3: prospecção (10 cenários)
+python scripts/test_prospecting.py                # ETAPA 3: prospecção (10 cenários + ETAPAS 4 e 5)
 ```
 
 Cobre: festival municipal futuro, final de campeonato regional, lançamento de
@@ -363,5 +394,10 @@ campeonato em 30, congresso em 90, evento passado, sem data, evento recorrente,
 com/sem patrocinadores, empresarial e esportivo) e valida: **nunca envia**
 mensagem (só rascunho `suggested_outreach`), **nunca inventa** contato
 (organizador vem da notícia, `organizer_url` vazio), a prioridade de prospecção
-**não substitui** o status, o TOP PROSPECÇÃO é ordenado por `prospecting_score`
-e o painel imprime sem quebrar.
+**não substitui** o status, o TOP PROSPECÇÃO é ordenado por `prospecting_score`,
+o painel imprime sem quebrar, o funil/relatório markdown são gerados, o scoring
+pondera porte/público e a **outbox** entra na fila apenas com leads fortes,
+preservando a decisão manual de envio (ETAPA 5).
+
+Resultado esperado: `21 OK / 0 FALHAS` em `test_prospecting.py` e
+`10 OK / 0 FALHAS` em `test_commercial_intelligence.py`.

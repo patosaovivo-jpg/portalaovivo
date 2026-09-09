@@ -76,7 +76,7 @@ jobs:
         run: |
           git config user.name "Portal Ao Vivo Bot"
           git config user.email "bot@portalaovivo.com.br"
-          git add data/social_log.json data/pending_social.json data/commercial_leads.json data/prospeccao.md
+          git add data/social_log.json data/pending_social.json data/commercial_leads.json data/prospeccao.md data/outbox.json
           if git diff --cached --quiet; then
             echo "Nenhuma alteracao no estado das redes sociais"
           else
