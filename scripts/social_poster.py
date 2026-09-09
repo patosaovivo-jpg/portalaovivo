@@ -28,22 +28,27 @@ def interesse_comercial(materia):
     import re as _re
     import unicodedata as _uni
     titulo = (materia.get("titulo") or "").lower()
-    titulo = "".join(
-        c for c in _uni.normalize("NFD", titulo)
+    resumo = (materia.get("resumo") or "").lower()
+    texto = titulo + " " + resumo
+    texto = "".join(
+        c for c in _uni.normalize("NFD", texto)
         if not _uni.combining(c)
     )
     palavras_negativas = _re.compile(
-        r"(faleciment|falec|morre|morrer|morte|pres[ao]|detid|agred|"
-        r"acidente|incendio|assassin|homicidio|drog|maconha|traf|roubo|"
-        r"furto|golp|voce viu|previsao|chuv|tempo|convocac|servent|"
-        r"professor|monitor de|diario oficial|nota de|aviso|candidat|"
-        r"votacao|sessao legislativa|vereador|deputad|governo|"
-        r"secretari|prefeitura nome|servico pub|feriado|"
-        r"desaparec|corpo|ferragens|carreta|selv|policia|prf|samu|"
-        r"saude|hospital|cirurg|receptac|crime|bairro|mutirao|"
-        r"limpeza|manutenc|concurso|medalha|estrela|loucura|"
-        r"cooperar|cavalli|uberaba)", _re.IGNORECASE)
-    if palavras_negativas.search(titulo):
+        r"(\bfaleciment|\bfalec|\bmorre|\bmorrer|\bmorte|\bpreso|\bpresa|"
+        r"\bdetid|\bagred|"
+        r"\bacidente|\bincendio|\bassassin|\bhomicidio|\bdrog|\bmaconha|"
+        r"\btraf|\broubo|\bfurto|\bgolp|\bvoce viu|\bprevisao|\bchuv|"
+        r"\bconvocac|\bservent|\bprofessor|\bmonitor de|\bdiario oficial|"
+        r"\bnota de|\baviso|\bcandidat|\bvotacao|\bsessao legislativa|"
+        r"\bvereador|\bdeputad|\bgoverno|\bsecretari|\bprefeitura nome|"
+        r"\bservico pub|\bferiado|\bdesaparec|\bcorpo|\bferragens|"
+        r"\bcarreta|\bselv|\bpolicia|\bprf|\bsamu|\bsaude|\bhospital|"
+        r"\bcirurg|\breceptac|\bcrime|\bmutirao|\blimpeza|\bmanutenc|"
+        r"\bconcurso|\bmedalha|\bestrela|\bloucura|\bcooperar|"
+        r"\bcavalli|\buberaba|\btransferencia|\burgente|\bsem vaga|"
+        r"\btratamento|\bunidade especializada|\bjudi)", _re.IGNORECASE)
+    if palavras_negativas.search(texto):
         return False
     if materia.get("event_related"):
         return True
@@ -65,10 +70,11 @@ def interesse_comercial(materia):
             "commercial_angle", "event_name")):
         return False
     palavras_evento = _re.compile(
-        r"(festa|show|feira|rodeio|corrida|maratona|campeonato|torneio|"
-        r"congresso|conferencia|encontro|formatura|inaugurac|"
-        r"aniversario|festival|cavalgada|romaria|exposicao|"
-        r"leilao|mega|edital|licitac|preme|feira)", _re.IGNORECASE)
+        r"(\bfesta|\bshow|\bfeira|\brodeio|\bcorrida|\bmaratona|"
+        r"\bcampeonato|\btorneio|\bcongresso|\bconferencia|\bencontro|"
+        r"\bformatura|\binaugurac|\baniversario|\bfestival|\bcavalgada|"
+        r"\bromaria|\bexposicao|\bleilao|\bmega|\bedital|\blicitac|"
+        r"\bpreme|\bfeira)", _re.IGNORECASE)
     return bool(palavras_evento.search(titulo))
 
 
