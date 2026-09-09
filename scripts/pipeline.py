@@ -24,6 +24,27 @@ def slugify(texto):
     return texto[:60].strip("-")
 
 
+def interesse_comercial(analise):
+    """Novo foco: publicar APENAS conteúdo que gere clientes.
+
+    Mantém a matéria se ela envolver evento (festa, show, feira, corrida,
+    campeonato...) ou tiver potencial comercial alto (commercial_score >= 7,
+    ex.: esporte com transmissão, inauguração, evento municipal). Demais
+    notícias (política, polícia, curiosidades, ciência etc.) são descartadas.
+    """
+    if not analise:
+        return False
+    if analise.get("event_related"):
+        return True
+    if analise.get("event_type"):
+        return True
+    if analise.get("commercial_angle"):
+        return True
+    if (analise.get("commercial_score") or 0) >= 7:
+        return True
+    return False
+
+
 def main():
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not api_key:
@@ -58,6 +79,26 @@ def main():
                 item, api_key, themes=themes, rules=rules)
         except Exception as e:
             print(f"[ANALYZER] Falha ao analisar {item.get('titulo','?')}: {e}")
+
+    print("\n" + "=" * 60)
+    print("FILTRO DE FOCO - APENAS CONTEUDO QUE GERA CLIENTES")
+    print("=" * 60)
+    antes = len(selecionadas)
+    mantidas = []
+    for item in selecionadas:
+        analise = item.get("analise") or {}
+        if interesse_comercial(analise):
+            mantidas.append(item)
+        else:
+            motivo = (analise.get("category") or "geral").upper()
+            print(f"[FOCO] Descartada ({motivo}): {item.get('titulo','?')[:70]}")
+    selecionadas = mantidas
+    print(f"[FOCO] {len(mantidas)}/{antes} materias mantidas "
+          f"(evento ou potencial comercial).")
+    if not selecionadas:
+        print("Nenhuma materia dentro do foco comercial. Encerrando.")
+        return
+    print()
 
     print("\n" + "=" * 60)
     print("ETAPA 4/8 - Resumo com IA + imagem + publicacao")
@@ -253,13 +294,9 @@ def main():
     print("\n" + "=" * 60)
     print("ETAPA 7/8 - Pesquisa viral (historias e curiosidades regionais)")
     print("=" * 60)
-    try:
-        import research_viral
-        viral = research_viral.executar_pesquisa_viral(max_posts=1, um_por_dia=True)
-        for v in viral:
-            print(f"[VIRAL] Publicado: {v['titulo']}")
-    except Exception as e:
-        print(f"[VIRAL] Passo de pesquisa viral falhou: {e}")
+    # DESATIVADO: novo foco é apenas conteúdo que gera clientes (eventos e
+    # oportunidades comerciais). Curiosidades/histórias fogem desse propósito.
+    print("[VIRAL] Desativado: foco apenas em eventos + prospeccao comercial.")
 
     print("\n" + "=" * 60)
     print("ETAPA 8/8 - Atualizar analytics + slider automatico")

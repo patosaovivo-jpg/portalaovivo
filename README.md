@@ -37,6 +37,7 @@ Grafite (img2img com foto original do Instagram) usa Pollinations com modelo `kl
 - `painel/` — **painel de controle** completo: fontes, banners, hashtags, temas
 - `local-admin/` — gerenciador local Flask (gitignored): edita/configura tudo via GitHub API; inclui a aba **Prospecção** (`data/outbox.json`) para aprovar/marcar rascunhos de vendas — envio é sempre manual
 - `data/outbox.json` — fila de aprovação de prospecção (rascunhos gerados pelo pipeline, decisão manual)
+- **Foco editorial**: o portal publica apenas conteúdo que gera clientes (eventos e potencial comercial). Política, polícia, crime, curiosidades e viral são descartados no pipeline (`scripts/pipeline.py`) e na fila social (`scripts/social_poster.py`).
 - `_layouts/` — layout do portal: home 2 colunas; materias 75% conteudo + 25% lateral
 - `parts/` — fragmentos unicos do layout (header, banner-topo, footer, barra-lateral)
 - `assets/js/layout.js` — carrega fragmentos em todas as paginas (semi-dinamico)

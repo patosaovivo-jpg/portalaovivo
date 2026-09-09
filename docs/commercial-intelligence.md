@@ -12,6 +12,15 @@ substituí-lo: se o Gemini não estiver disponível, tudo funciona via regras lo
 - Priorização das matérias para o Instagram.
 - Frontmatter expandido nas matérias publicadas.
 
+## Novo foco
+
+**Novo foco (2026):** o portal agora publica APENAS conteúdo que gere clientes
+— matérias sobre **eventos** ou com **potencial comercial** (patrocínio,
+transmissão, esporte com apelo). Política, polícia, crime, acidentes,
+falecimentos, concurso público e curiosidades são **descartados** pelo pipeline.
+A prospecção (`commercial_prospecting.py`) gera uma fila de aprovação
+(`data/outbox.json`) para o diretor comercial decidir manualmente.
+
 ## Arquitetura
 
 ```
@@ -25,11 +34,34 @@ scripts/commercial_prospecting.py-> prospecção inteligente (janela/prioridade/
 scripts/summarize.py             -> resumo com parágrafo comercial opcional
 scripts/publish.py               -> frontmatter expandido (compatível Jekyll)
 scripts/social_poster.py         -> ordenação por prioridade + legendas estruturadas
-scripts/pipeline.py              -> integração das etapas 1/8 a 8/8
+scripts/social_poster.py         -> interesse_comercial(): filtra SOCIAL por evento/foco
+scripts/pipeline.py              -> integração das etapas 1/8 a 8/8 (filtro de foco ETAPA 3)
 data/commercial_leads.json       -> oportunidades comerciais consolidadas
+data/outbox.json                 -> fila de aprovação (envio sempre manual)
+data/pending_social.json         -> fila social (purge por interesse_comercial)
 scripts/test_commercial_intelligence.py -> testes obrigatórios (7 casos)
 scripts/test_prospecting.py      -> testes obrigatórios de prospecção (10 cenários)
 ```
+
+## Filtro de foco (publica só o que gera clientes)
+
+Em `scripts/pipeline.py`, logo após a análise (ETAPA 3), cada matéria passa por
+`interesse_comercial(analise)`:
+
+- **Mantém**: `event_related=True`, `event_type` preenchido, `commercial_angle`
+  presente ou `commercial_score >= 7`.
+- **Descarta**: demais (política, polícia, crime, saúde, concursos, etc.) e
+  encerra a rodada se nada passar.
+
+O `social_poster.py` aplica o mesmo conceito (`interesse_comercial`) na fila
+social: itens antigos sem análise só são publicados se o título indicar
+evento/patrocínio, e conteúdo negativo (crime/falecimento/previsão do tempo/
+concurso/política) é sempre bloqueado, mesmo que uma análise antiga tenha
+atribuído score comercial alto. Editais de convocação de servidores são
+descartados; licitações/festivais de pratos típicos passam.
+
+A pesquisa viral de curiosidades (`research_viral`) está **desativada** no
+pipeline por fugir do foco comercial.
 
 ## Scores (0 a 10)
 

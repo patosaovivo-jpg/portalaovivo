@@ -20,6 +20,58 @@ TEMAS_SOCIAIS = ["Local e Cidades", "Politica", "Esportes", "Geral", "Historia R
 TIMEOUT = 30
 
 
+def interesse_comercial(materia):
+    """Novo foco: só publicar conteúdo que gere clientes (evento ou potencial
+    comercial). Conteúdo negativo (crime, política, falecimento, acidente,
+    saúde, concurso etc.) é sempre bloqueado, mesmo que uma análise antiga
+    tenha atribuído score comercial alto."""
+    import re as _re
+    import unicodedata as _uni
+    titulo = (materia.get("titulo") or "").lower()
+    titulo = "".join(
+        c for c in _uni.normalize("NFD", titulo)
+        if not _uni.combining(c)
+    )
+    palavras_negativas = _re.compile(
+        r"(faleciment|falec|morre|morrer|morte|pres[ao]|detid|agred|"
+        r"acidente|incendio|assassin|homicidio|drog|maconha|traf|roubo|"
+        r"furto|golp|voce viu|previsao|chuv|tempo|convocac|servent|"
+        r"professor|monitor de|diario oficial|nota de|aviso|candidat|"
+        r"votacao|sessao legislativa|vereador|deputad|governo|"
+        r"secretari|prefeitura nome|servico pub|feriado|"
+        r"desaparec|corpo|ferragens|carreta|selv|policia|prf|samu|"
+        r"saude|hospital|cirurg|receptac|crime|bairro|mutirao|"
+        r"limpeza|manutenc|concurso|medalha|estrela|loucura|"
+        r"cooperar|cavalli|uberaba)", _re.IGNORECASE)
+    if palavras_negativas.search(titulo):
+        return False
+    if materia.get("event_related"):
+        return True
+    if materia.get("event_type"):
+        return True
+    if materia.get("event_name"):
+        return True
+    if materia.get("commercial_angle"):
+        return True
+    try:
+        if float(materia.get("commercial_score") or 0) >= 7:
+            return True
+    except (TypeError, ValueError):
+        pass
+    # Itens antigos (sem camada de análise): só deixar passar se o título
+    # indicar evento ou algo que atraia clientes.
+    if any(k in materia for k in
+           ("commercial_score", "event_related", "event_type",
+            "commercial_angle", "event_name")):
+        return False
+    palavras_evento = _re.compile(
+        r"(festa|show|feira|rodeio|corrida|maratona|campeonato|torneio|"
+        r"congresso|conferencia|encontro|formatura|inaugurac|"
+        r"aniversario|festival|cavalgada|romaria|exposicao|"
+        r"leilao|mega|edital|licitac|preme|feira)", _re.IGNORECASE)
+    return bool(palavras_evento.search(titulo))
+
+
 def _load_json(path, default=None):
     if os.path.exists(path):
         try:
@@ -465,7 +517,9 @@ def postar_materias(materias):
 
     materias_filtradas = [
         m for m in materias
-        if m.get("tema", "") in TEMAS_SOCIAIS and not ja_postou(log, m["link"])
+        if m.get("tema", "") in TEMAS_SOCIAIS
+        and not ja_postou(log, m["link"])
+        and interesse_comercial(m)
     ]
 
     if not materias_filtradas:
@@ -516,6 +570,18 @@ def processar_pendentes():
         materias = json.load(f)
     if not materias:
         print("[SOCIAL] Lista vazia")
+        return 0
+
+    # Novo foco: remover da fila o que não gera clientes (evento/oportunidade).
+    antes = len(materias)
+    materias = [m for m in materias if interesse_comercial(m)]
+    removidas = antes - len(materias)
+    if removidas:
+        print(f"[SOCIAL] {removidas} materia(s) fora do foco removidas da fila")
+    if not materias:
+        if os.path.exists(pending_file):
+            os.remove(pending_file)
+        print("[SOCIAL] Fila agora vazia (tudo fora do foco)")
         return 0
 
     total = postar_materias(materias)
