@@ -76,6 +76,7 @@ TIPO_PESO = {
     "evento empresarial": 0.8, "conferencia": 0.8, "agropecuaria": 0.8,
     "rodeio": 0.7, "festa": 0.7, "formatura": 0.7, "romaria": 0.6,
     "festa religiosa": 0.6, "encontro cultural": 0.6, "inauguracao": 0.5,
+    "cavalgada": 0.7,
 }
 
 RECORRENCIA_KEYWORDS = [

@@ -145,6 +145,47 @@ Prioridade: ALTO   | Score: 7.6 | Campeonato Regional [Patos de Minas] - em 30 d
 -> proposta_enviada -> fechado | perdido). Re-registrar a mesma notícia preserva
 status/observações/histórico e atualiza prioridade, janela e rascunho.
 
+## Funil de acompanhamento (manual)
+
+`commercial_prospecting.resumo_funil()` agrupa os leads ativos pelo momento de
+prospecção, para o diretor comercial:
+
+- `por_prioridade` / `por_janela`: contagens por prioridade e janela;
+- `urgentes`: leads com prioridade urgente/muito_urgente;
+- `a_fazer`: urgentes sem avanço de contato (`contato_status` vazio,
+  `novo_lead` ou `aguardando_resposta`) — sugestão de próximo passo;
+- `monitoring`, `muito_tarde`, `passados`: agrupamentos para triagem.
+
+Os campos `contato_status` e `ultima_contato` são de acompanhamento **manual**
+(ex.: `primeiro_contato`, `proposta_enviada`, `fechado`, `perdido`). O sistema
+apenas os preserva no enriquecimento, nunca os preenche nem envia nada.
+
+## Relatório diário (artefato markdown)
+
+`commercial_prospecting.gerar_relatorio_diario()` grava `data/prospeccao.md`
+ao final do pipeline com: agenda de contato por prioridade, prioridade de hoje,
+leads perdendo o timing, eventos passados e rascunhos de abordagem
+(`suggested_outreach` — **não enviados**). O GitHub Actions faz **upload do
+arquivo como artefato** (`prospeccao-diaria`) e o commit do estado inclui o
+relatório em `data/`.
+
+## Scoring pondera porte e público estimado
+
+`prospecting_score` usa o fator `porte`/`público estimado`
+(`_porte_score` de `event_detector`): eventos grandes (ex.: 60 mil pessoas)
+pontuam acima de eventos pequenos com proximidade e scores semelhantes.
+Validado por cenário de teste (C12).
+
+## Tipos de evento (galeria)
+
+Tipos cobertos pelo detector (`_detectar_tipos`) e pelas regras de prospecção:
+festival, festa, feira, show, rodeio, **cavalgada**, romaria, corrida, maratona,
+campeonato, torneio, exposição, agropecuária/leilão, congresso, conferência,
+encontro cultural, formatura, festa religiosa, inauguração, evento empresarial.
+Cada tipo tem cliente provável, serviços, dor, janela e rascunho próprios em
+`config/prospecting_rules.json`.
+status/observações/histórico e atualiza prioridade, janela e rascunho.
+
 ## Ciclo de vida do lead (simples, sem CRM)
 
 Arquivo `data/commercial_leads.json` com o schema:

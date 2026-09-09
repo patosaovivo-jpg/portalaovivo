@@ -330,6 +330,7 @@ def _detectar_tipos(tn):
         "corrida": "corrida", "maratona": "corrida",
         "congresso": "congresso", "campeonato": "campeonato",
         "torneio": "torneio", "exposicao": "exposicao",
+        "cavalgada": "cavalgada",
         "agropecuaria": "agropecuaria", "agropecuária": "agropecuaria",
         "leilao": "agropecuaria", "leilão": "agropecuaria",
         "formatura": "formatura",

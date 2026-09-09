@@ -76,13 +76,22 @@ jobs:
         run: |
           git config user.name "Portal Ao Vivo Bot"
           git config user.email "bot@portalaovivo.com.br"
-          git add data/social_log.json data/pending_social.json data/commercial_leads.json
+          git add data/social_log.json data/pending_social.json data/commercial_leads.json data/prospeccao.md
           if git diff --cached --quiet; then
             echo "Nenhuma alteracao no estado das redes sociais"
           else
             git commit -m "Bot: estado das redes sociais $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
           fi
+
+      - name: Upload relatorio de prospeccao
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: prospeccao-diaria
+          path: data/prospeccao.md
+          retention-days: 14
 
   build:
     name: Build do site

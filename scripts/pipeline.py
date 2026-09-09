@@ -289,6 +289,9 @@ def main():
         n = commercial_prospecting.enriquecer_leads()
         print(f"[PROSPECCAO] {n} lead(s) enriquecidos.")
         commercial_prospecting.print_painel_prospeccao(limite=10)
+        commercial_prospecting.print_resumo_funil()
+        rel = commercial_prospecting.gerar_relatorio_diario()
+        print(f"[PROSPECCAO] Relatório diário: {os.path.relpath(rel, BASE_DIR)}")
     except Exception as e:
         print(f"[PROSPECCAO] Pulou: {e}")
 

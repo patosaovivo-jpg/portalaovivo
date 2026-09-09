@@ -59,6 +59,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(BASE_DIR, "scripts"))
 
 PROSPECTING_RULES_FILE = os.path.join(BASE_DIR, "config", "prospecting_rules.json")
+PROSPECTING_REPORT_FILE = os.path.join(BASE_DIR, "data", "prospeccao.md")
+
+# Funil comercial: situação de acompanhamento manual (diretor comercial).
+# NUNCA é preenchida/enviada automaticamente — apenas preservada.
+CONTATO_STATUS_OPCOES = ("", "novo_lead", "primeiro_contato", "pos_venda",
+                          "aguardando_resposta", "proposta_enviada",
+                          "fechado", "perdido", "dispensado")
 
 import event_detector as ed  # noqa: E402
 
@@ -410,6 +417,9 @@ def enriquecer_lead(lead, leads=None, rules=None):
     # ---- CRM futuro ----
     lead.setdefault("contact_history", [])
     lead.setdefault("notes", "")
+    # Funil de acompanhamento MANUAL do diretor: nunca preenchido sozinho.
+    lead.setdefault("contato_status", "")
+    lead.setdefault("ultima_contato", "")
 
     lead["prospecting_score"] = prospecting_score(lead, rules)
     return lead
@@ -610,10 +620,175 @@ def resumo_prospeccao_json(limite=10):
     ][:limite]
 
 
+# ============================================================
+# FUNIL DE ACOMPANHAMENTO (ETAPA 4)
+# ============================================================
+
+def _leads_ativos():
+    enriquecer_leads()
+    return [l for l in ed.load_leads().values()
+            if l.get("status") in ed.STATUS_ATIVO]
+
+
+def resumo_funil():
+    """Contagens por prioridade/janela para o diretor comercial.
+
+    Retorna dict com: total, por_prioridade, por_janela, urgentes,
+    monitoring, muito_tarde, passados, a_fazer."""
+    leads = _leads_ativos()
+    por_prio = {}
+    por_janela = {}
+    for l in leads:
+        prio = l.get("prospecting_priority") or ""
+        if prio:
+            por_prio[prio] = por_prio.get(prio, 0) + 1
+        jan = l.get("contact_window") or ""
+        if jan:
+            por_janela[jan] = por_janela.get(jan, 0) + 1
+
+    urgentes = [l for l in leads
+                if l.get("prospecting_priority") in ("urgente", "muito_urgente")]
+    monitoring = [l for l in leads
+                  if l.get("prospecting_priority") in ("monitorar", "baixo")]
+    muito_tarde = [l for l in leads
+                   if l.get("contact_window") == "muito_tarde"]
+    passados = [l for l in leads if l.get("event_timing") == "passado"]
+
+    a_fazer = [l for l in urgentes
+               if not (l.get("contato_status") or "")
+               or l.get("contato_status") in ("novo_lead", "aguardando_resposta")]
+
+    return {
+        "total": len(leads),
+        "por_prioridade": por_prio,
+        "por_janela": por_janela,
+        "urgentes": urgentes,
+        "monitoring": monitoring,
+        "muito_tarde": muito_tarde,
+        "passados": passados,
+        "a_fazer": a_fazer,
+    }
+
+
+def print_resumo_funil():
+    r = resumo_funil()
+    print("\n" + "=" * 60)
+    print("FUNIL DE PROSPECÇÃO (acompanhamento manual)")
+    print("=" * 60)
+    print(f"Total de leads ativos: {r['total']}")
+    if not r["total"]:
+        print("Nenhum lead ativo ainda.")
+        return r
+    if r["por_prioridade"]:
+        print("\nPor prioridade:")
+        for p in reversed(LADDER):
+            if p in r["por_prioridade"]:
+                print(f"  {p:<14} {r['por_prioridade'][p]}")
+    if r["por_janela"]:
+        print("\nPor janela de contato:")
+        for j, n in sorted(r["por_janela"].items()):
+            print(f"  {j:<22} {n}")
+    if r["a_fazer"]:
+        print(f"\nPROXIMO PASSO (urgentes sem avanço): {len(r['a_fazer'])}")
+        for i, l in enumerate(r["a_fazer"][:8], 1):
+            print(f"  {i}. {l.get('event_name')} [{l.get('city') or '-'}] | "
+                  f"faltam {l.get('days_until_event')} dias | "
+                  f"contato: {l.get('contato_status') or 'sem_contato'}")
+    return r
+
+
+# ============================================================
+# RELATÓRIO DIÁRIO DE PROSPECÇÃO (markdown)
+# ============================================================
+
+def gerar_relatorio_diario(arquivo=None):
+    """Gera data/prospeccao.md com o resumo diário de prospecção.
+
+    O relatório é um artefato (.md commitado no workflow) para o diretor
+    comercial — NUNCA envia nada por e-mail/WhatsApp."""
+    arquivo = arquivo or PROSPECTING_REPORT_FILE
+    r = resumo_funil()
+    os.makedirs(os.path.dirname(arquivo), exist_ok=True)
+
+    linhas = []
+    linhas.append("# Relatório de Prospecção — Portal Ao Vivo")
+    linhas.append("")
+    linhas.append("> Gerado automaticamente pelo pipeline. `suggested_outreach` "
+                  "é **rascunho** — nada é enviado automaticamente.")
+    linhas.append("")
+    linhas.append(f"**Leads ativos:** {r['total']}  ")
+    linhas.append("")
+    linhas.append("## Agenda de contato")
+    linhas.append("")
+    linhas.append("| Prioridade | Quantidade |")
+    linhas.append("|---|---|")
+    for p in reversed(LADDER):
+        n = r["por_prioridade"].get(p, 0)
+        if n:
+            linhas.append(f"| {p} | {n} |")
+    linhas.append("| **Total** | **{0}** |".format(r["total"]))
+    linhas.append("")
+
+    top = r["urgentes"] or [l for l in r["monitoring"]]
+    if top:
+        linhas.append("## Prioridade de hoje")
+        linhas.append("")
+        for i, l in enumerate(top[:10], 1):
+            linhas.append(f"{i}. **{l.get('event_name')}** "
+                          f"[{l.get('city') or '-'}] — "
+                          f"janela `{l.get('contact_window')}`, prioridade "
+                          f"`{l.get('prospecting_priority')}`, faltam "
+                          f"{l.get('days_until_event')} dias, "
+                          f"score {float(l.get('prospecting_score') or 0):.1f}.")
+            motivo = l.get("contact_reason") or ""
+            if motivo:
+                linhas.append(f"   - Motivo: {motivo}")
+    else:
+        linhas.append("## Prioridade de hoje")
+        linhas.append("")
+        linhas.append("Nenhum lead urgente — eventos monitorados ou distantes.")
+    linhas.append("")
+
+    if r["muito_tarde"]:
+        linhas.append("## Perdendo o timing")
+        linhas.append("")
+        for l in r["muito_tarde"][:10]:
+            linhas.append(f"- {l.get('event_name')} [{l.get('city') or '-'}] — "
+                          f"muito perto do evento ({_fmt_dias(l)}).")
+        linhas.append("")
+
+    if r["passados"]:
+        linhas.append("## Passados (não prospectar para transmissão)")
+        linhas.append("")
+        for l in r["passados"][:5]:
+            linhas.append(f"- {l.get('event_name')} [{l.get('city') or '-'}] "
+                          f"({_fmt_data(l.get('event_date'))}).")
+        linhas.append("")
+
+    presentes = [l for l in r["urgentes"] if l.get("suggested_outreach")]
+    if presentes:
+        linhas.append("## Rascunhos de abordagem (não enviados)")
+        linhas.append("")
+        for l in presentes[:5]:
+            linhas.append(f"- **{l.get('event_name')}** [{l.get('city') or '-'}]:")
+            linhas.append(f"  > {l.get('suggested_outreach')}")
+        linhas.append("")
+
+    linhas.append("---")
+    linhas.append("_Fim do relatório._")
+
+    with open(arquivo, "w", encoding="utf-8") as f:
+        f.write("\n".join(linhas))
+    return arquivo
+
+
 if __name__ == "__main__":
     n = enriquecer_leads()
     print(f"[PROSPECCAO] {n} lead(s) enriquecidos com inteligência de prospecção.")
     print_painel_prospeccao(limite=10)
+    print_resumo_funil()
+    rel = gerar_relatorio_diario()
+    print(f"\n[PROSPECCAO] Relatório diário gerado: {os.path.relpath(rel, BASE_DIR)}")
     resumo = resumo_prospeccao_json(10)
     if resumo:
         print("\n[PROSPECCAO-COMPACT] " + json.dumps(resumo, ensure_ascii=False))

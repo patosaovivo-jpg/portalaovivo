@@ -158,6 +158,25 @@ CENARIOS = [
             "organizam a prova."),
         "esperado": {"timing": "em_breve", "dias": 12, "tipo": "corrida"},
     },
+    {
+        "id": "C11 - Cavalgada (novo tipo)",
+        "titulo": "Cavalgada em Rio Paranaiba acontece daqui a 22 dias",
+        "texto": (
+            "A Cavalgada em Rio Paranaiba acontece daqui a 22 dias, reunindo "
+            "criadores e cavaleiros da regiao. O sindicato rural organiza com "
+            "a prefeitura."),
+        "esperado": {"timing": "futuro", "dias": 22, "tipo": "cavalgada"},
+    },
+    {
+        "id": "C12 - Porte alto pontua mais",
+        "titulo": "Show em Patos de Minas sera realizado daqui a 40 dias",
+        "texto": (
+            "O show de sertanejo em Patos de Minas sera realizado daqui a 40 "
+            "dias, com expectativa de 60 mil pessoas no estadio. Uma produtora "
+            "de eventos organiza o show."),
+        "esperado": {"timing": "futuro", "dias": 40, "tipo": "show",
+                     "porte_alto": True},
+    },
 ]
 
 
@@ -276,6 +295,12 @@ def main():
                       lead.get("recurrence_pattern"),
                       "recorrencia nao detectada ou sem padrao")
 
+        # Porte elevado não deixa o score de prospecção baixo
+        if esp.get("porte_alto"):
+            assert_ok(float(lead.get("prospecting_score") or 0) >= 7.0,
+                      f"porte alto deveria pontuar bem: "
+                      f"{lead.get('prospecting_score')}")
+
         # Verificação de prioridade esperada (decorre das janelas)
         prio_esperada = {15: "urgente", 30: "alto", 90: "monitorar",
                          12: "urgente", 18: "urgente", 25: "alto",
@@ -344,7 +369,7 @@ def main():
     print("\n" + "=" * 70)
     print("RANKING TOP PROSPECÇÃO (ordena por prospecting_score)")
     print("=" * 70)
-    cp.enriquecer_leads(rules=rules)
+    cp.enriquecer_leads()
     topo = cp.top_prospeccao(limite=10)
     scores = [float(l.get("prospecting_score") or 0) for l in topo]
     if len(topo) >= 2 and scores == sorted(scores, reverse=True):
@@ -357,6 +382,82 @@ def main():
     else:
         resultados["falhas"] += 1
         print(f"    [FALHA] ranking invalido: {scores}")
+
+    # ---- FUNIL DE PROSPECÇÃO (ETAPA 4) ----
+    print("\n" + "=" * 70)
+    print("FUNIL DE PROSPECÇÃO (acompanhamento manual)")
+    print("=" * 70)
+    try:
+        r = cp.resumo_funil()
+        ok_f = (isinstance(r.get("total"), int)
+                and r.get("total") >= 0
+                and isinstance(r.get("por_prioridade"), dict)
+                and isinstance(r.get("a_fazer"), list))
+        if ok_f:
+            resultados["ok"] += 1
+            print(f"    [OK] funil: total={r['total']}, "
+                  f"urgentes={len(r['urgentes'])}, "
+                  f"monitorar={len(r['monitoring'])}, "
+                  f"a_fazer={len(r['a_fazer'])}")
+        else:
+            resultados["falhas"] += 1
+            print(f"    [FALHA] funil malformado: {r}")
+        cp.print_resumo_funil()
+    except Exception as e:
+        resultados["falhas"] += 1
+        print(f"    [FALHA] funil quebrou: {e}")
+
+    # ---- RELATÓRIO DIÁRIO (ETAPA 4) ----
+    print("\n" + "=" * 70)
+    print("RELATÓRIO DIÁRIO DE PROSPECÇÃO (markdown)")
+    print("=" * 70)
+    rel_temp = os.path.join(BASE_DIR, "data", "prospeccao_teste.md")
+    try:
+        gerou = cp.gerar_relatorio_diario(arquivo=rel_temp)
+        conteudo = open(gerou, "r", encoding="utf-8").read()
+        if (os.path.exists(gerou)
+                and conteudo.startswith("# Relatório de Prospecção")
+                and "suggested_outreach" in conteudo
+                and "não enviados" in conteudo):
+            resultados["ok"] += 1
+            print(f"    [OK] relatório markdown gerado ({len(conteudo)} chars)")
+        else:
+            resultados["falhas"] += 1
+            print("    [FALHA] relatório markdown malformado")
+        if os.path.exists(rel_temp):
+            os.remove(rel_temp)
+    except Exception as e:
+        resultados["falhas"] += 1
+        print(f"    [FALHA] relatório quebrou: {e}")
+
+    # ---- SCORING: porte/público peso no rank (ETAPA 4) ----
+    print("\n" + "=" * 70)
+    print("SCORING PONDERA PORTE/PÚBLICO ESTIMADO")
+    print("=" * 70)
+    try:
+        base = {
+            "event_name": "Evento Teste Score", "city": "Patos de Minas",
+            "event_type": "show", "event_timing": "futuro",
+            "days_until_event": 40, "lead_score": 8.0,
+            "organizer": "Produtora Local", "source": "Teste",
+            "estimated_audience": 100,
+        }
+        base2 = dict(base)
+        base2["estimated_audience"] = 60000
+        cp.enriquecer_lead(base, leads={}, rules=None)
+        cp.enriquecer_lead(base2, leads={}, rules=None)
+        s1 = float(base.get("prospecting_score") or 0)
+        s2 = float(base2.get("prospecting_score") or 0)
+        if s2 - s1 >= 0.3:
+            resultados["ok"] += 1
+            print(f"    [OK] público 60k ({s2:.1f}) pontua acima de público 100 "
+                  f"({s1:.1f})")
+        else:
+            resultados["falhas"] += 1
+            print(f"    [FALHA] porte nao pesou: pequeno={s1:.1f} grande={s2:.1f}")
+    except Exception as e:
+        resultados["falhas"] += 1
+        print(f"    [FALHA] teste de scoring quebrou: {e}")
 
     # ---- PAINEL imprime sem quebrar ----
     print("\n" + "=" * 70)
