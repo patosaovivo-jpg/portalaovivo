@@ -2,7 +2,7 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 14  
+**Leads ativos:** 16  
 
 ## Agenda de contato
 
@@ -11,8 +11,8 @@
 | muito_urgente | 1 |
 | urgente | 4 |
 | médio | 1 |
-| monitorar | 8 |
-| **Total** | **14** |
+| monitorar | 10 |
+| **Total** | **16** |
 
 ## Prioridade de hoje
 
@@ -31,6 +31,10 @@
 
 - Feira 8H ATRÁS [-] — muito perto do evento (faltam 1 dias).
 - Notícias Fique por dentro das novidades Ver mais [São Gonçalo do Abaeté] — muito perto do evento (faltam 2 dias).
+
+## Passados (não prospectar para transmissão)
+
+- Patos de Minas - Santa Casa registra mais de 7 mil internaçõ [Presidente Olegário] (-).
 
 ## Rascunhos de abordagem (não enviados)
 
