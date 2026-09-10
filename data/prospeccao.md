@@ -2,15 +2,16 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 8  
+**Leads ativos:** 11  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
-| urgente | 3 |
-| monitorar | 5 |
-| **Total** | **8** |
+| urgente | 4 |
+| médio | 1 |
+| monitorar | 6 |
+| **Total** | **11** |
 
 ## Prioridade de hoje
 
@@ -20,6 +21,8 @@
    - Motivo: Evento 'feira', em patos de minas, faltam 5 dias.
 3. **Notícias Fique por dentro das novidades Ver mais** [São Gonçalo do Abaeté] — janela `muito_tarde`, prioridade `urgente`, faltam 2 dias, score 8.0.
    - Motivo: Em são gonçalo do abaeté, faltam 2 dias, organizador em evidência.
+4. **Feira (9)** [Alto Paranaíba] — janela `urgente`, prioridade `urgente`, faltam 7 dias, score 7.3.
+   - Motivo: Evento 'feira', em alto paranaíba, faltam 7 dias.
 
 ## Perdendo o timing
 
