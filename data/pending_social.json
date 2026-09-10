@@ -283,5 +283,56 @@
         ]
       }
     }
+  },
+  {
+    "titulo": "Secretária de Cultura e Coordenadora falam sobre a realização do 1º Festival Gastronômico em Lagoa Formosa",
+    "link": "https://www.patos1.com.br/noticia/secretaria-de-cultura-e-coordenadora-falam-sobre-a-realizacao-do-1o-festival-gastronomico-em-lagoa-formosa",
+    "fonte": "Patos 1",
+    "tema": "Política",
+    "resumo": "Secretária de Cultura e Coordenadora falam sobre a realização do 1º Festival Gastronômico em Lagoa Formosa\n\nEvento será realizado pela Secretaria de Cultura, Esporte, Lazer e Turismo e vai reunir gastronomia, música e cultura local\n\npor meio da Secretaria Municipal de Cultura, Esporte, Lazer e Turismo, prepara\n\numa novidade para o município: o 1º Festival Gastronômico de Lagoa Formosa, que",
+    "imagem": "/assets/images/social-secretria-de-cultura-e-coordenadora-falam-sobre-a-realizao-d.jpg",
+    "category": "eventos",
+    "editorial_score": 8,
+    "commercial_score": 8,
+    "instagram_score": 7,
+    "event_related": true,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "alcance",
+    "target_customer": [
+      "prefeitura",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual",
+      "conteudo para redes sociais"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Festival Gastronômico",
+    "event_city": "Lagoa Formosa",
+    "event_date": "2026-09-10",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Secretária de Cultura e Coordenadora falam sobre a realização do 1º Festival Gas\n\nSecretária de Cultura e Coordenadora falam sobre a realização do 1º Festival Gastronômico em Lagoa Formosa\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu evento pode chegar muito alem do publico presente."
+      },
+      "stories": [
+        "Secretária de Cultura e Coordenadora falam sobre a realização do 1º Festival Gas",
+        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+        "Seu evento pode chegar muito alem do publico presente."
+      ],
+      "carousel": {
+        "title": "Secretária de Cultura e Coordenadora falam sobre a realização do 1º Festival Gas",
+        "slides": [
+          "Secretária de Cultura e Coordenadora falam sobre a realização do 1º Festival Gastronômico em Lagoa Formosa",
+          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+          "Seu evento pode chegar muito alem do publico presente."
+        ]
+      }
+    }
   }
 ]
