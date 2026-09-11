@@ -2,17 +2,17 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 21  
+**Leads ativos:** 23  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
 | muito_urgente | 1 |
-| urgente | 6 |
+| urgente | 7 |
 | médio | 1 |
-| monitorar | 13 |
-| **Total** | **21** |
+| monitorar | 14 |
+| **Total** | **23** |
 
 ## Prioridade de hoje
 
@@ -30,6 +30,8 @@
    - Motivo: Evento 'encontro cultural', em patos de minas, faltam 6 dias.
 7. **Prefeitura realiza 2º Feirão de Empregos com mais de mil vag** [Patos de Minas] — janela `urgente`, prioridade `urgente`, faltam 3 dias, score 8.1.
    - Motivo: Evento 'feira', em patos de minas, faltam 3 dias, organizador em evidência.
+8. **Inscrições para jurados voluntários do Tribunal do Júri em P** [Patos de Minas] — janela `urgente`, prioridade `urgente`, faltam 3 dias, score 7.4.
+   - Motivo: Em patos de minas, faltam 3 dias.
 
 ## Perdendo o timing
 
