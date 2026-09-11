@@ -2,17 +2,17 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 27  
+**Leads ativos:** 29  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
-| muito_urgente | 1 |
+| muito_urgente | 2 |
 | urgente | 8 |
 | médio | 1 |
-| monitorar | 17 |
-| **Total** | **27** |
+| monitorar | 18 |
+| **Total** | **29** |
 
 ## Prioridade de hoje
 
@@ -34,6 +34,8 @@
    - Motivo: Em patos de minas, faltam 3 dias.
 9. **Feira (09)** [Varjão de Minas] — janela `urgente`, prioridade `urgente`, faltam 5 dias, score 8.1.
    - Motivo: Evento 'feira', em varjão de minas, faltam 5 dias, organizador em evidência.
+10. **Feira, 11/09/2026, por volta das 09h10min** [Patrocínio] — janela `urgente`, prioridade `muito_urgente`, faltam 0 dias, score 6.0.
+   - Motivo: Evento 'feira', em patrocínio, faltam 0 dias.
 
 ## Perdendo o timing
 
