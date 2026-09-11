@@ -2,17 +2,17 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 18  
+**Leads ativos:** 21  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
 | muito_urgente | 1 |
-| urgente | 4 |
+| urgente | 6 |
 | médio | 1 |
-| monitorar | 12 |
-| **Total** | **18** |
+| monitorar | 13 |
+| **Total** | **21** |
 
 ## Prioridade de hoje
 
@@ -26,6 +26,10 @@
    - Motivo: Evento 'feira', em alto paranaíba, faltam 7 dias.
 5. **Festival Gastronômico** [Lagoa Formosa] — janela `urgente`, prioridade `muito_urgente`, faltam 0 dias, score 7.0.
    - Motivo: Evento 'festival', em lagoa formosa, faltam 0 dias, organizador em evidência.
+6. **Encontro Técnico de Silagem** [Patos de Minas] — janela `urgente`, prioridade `urgente`, faltam 6 dias, score 7.3.
+   - Motivo: Evento 'encontro cultural', em patos de minas, faltam 6 dias.
+7. **Prefeitura realiza 2º Feirão de Empregos com mais de mil vag** [Patos de Minas] — janela `urgente`, prioridade `urgente`, faltam 3 dias, score 8.1.
+   - Motivo: Evento 'feira', em patos de minas, faltam 3 dias, organizador em evidência.
 
 ## Perdendo o timing
 
