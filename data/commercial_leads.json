@@ -2438,7 +2438,75 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 8.6
+    },
+    "Feira (11)|Patos de Minas|": {
+      "lead_score": 6.1,
+      "priority": "MEDIA",
+      "event_name": "Feira (11)",
+      "event_type": "feira",
+      "city": "Patos de Minas",
+      "event_date": "",
+      "days_until_event": null,
+      "event_timing": "sem_data",
+      "organizer": "Secretaria Municipal\nde Trânsito",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/condutoras-ficam-feridas-apos-batida-entre-carros-na-avenida-joaquim-fuba-em-patos-de-minas",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-12T17:11:36.056133-03:00",
+      "detected_at": "2026-09-12T17:11:36.056133-03:00",
+      "lead_id": "lev-39d11974b1",
+      "event_id": "evt-480c59ddbb",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "secretaria municipal",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "secretaria municipal",
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'feira', em patos de minas, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 6.1
     }
   },
-  "atualizado": "2026-09-12T14:43:14.824251-03:00"
+  "atualizado": "2026-09-12T17:11:40.460458-03:00"
 }
