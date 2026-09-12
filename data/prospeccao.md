@@ -55,5 +55,12 @@
 - **Simpósio e Tecnologias Biológicas** [Patrocínio]:
   > Ola! Vimos a noticia sobre Simpósio e Tecnologias Biológicas em Patrocínio. O Portal Ao Vivo oferece cobertura audiovisual e transmissao ao vivo para o seu evento. Podemos conversar?
 
+## Fila de aprovação (outbox)
+
+> Envio é **sempre manual** — aprovar/marcar enviado no dashboard `local-admin` (aba Prospecção).
+
+- **Simpósio e Tecnologias Biológicas** [Patrocínio] — `urgente`, score 8.6:
+  > Ola! Vimos a noticia sobre Simpósio e Tecnologias Biológicas em Patrocínio. O Portal Ao Vivo oferece cobertura audiovisual e transmissao ao vivo para o seu evento. Podemos conversar?
+
 ---
 _Fim do relatório._
