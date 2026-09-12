@@ -439,56 +439,5 @@
         ]
       }
     }
-  },
-  {
-    "titulo": "Patos de Minas - Filho de vítima de roubo é liberado após ser apontado por suspeitos como participante do crime",
-    "link": "https://www.patos1.com.br/noticia/patos-de-minas-filho-de-vitima-de-roubo-e-liberado-apos-ser-apontado-por-suspeitos-como-participante-do-crime",
-    "fonte": "Patos 1",
-    "tema": "Local e Cidades",
-    "resumo": "Patos de Minas - Filho de vítima de roubo é liberado após ser apontado por suspeitos como participante do crime\n\nO caso foi comentado em entrevista à Rádio Clube pelos advogados Pedro Bona e pelo assistente jurídico Wilson Gonçalves, que atuaram na defesa do jovem\n\nO filho de uma das vítimas de um roubo registrado na última quarta-feira, no bairro Jardim Andradas, em Patos de Minas, foi liberado após prestar depoimento à Polícia Civil. Ele havia sido conduzido à delegacia depois de ser apontado por um dos suspeitos presos como possível participante do crime.\n\nO caso foi comentado em entrevista à Rádio Clube pelos advogados Pedro Bona e pelo assistente jurídico Wilson Gonçalves, que atuaram na defesa do jovem.\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-    "imagem": "/assets/images/social-patos-de-minas-filho-de-vtima-de-roubo-liberado-aps-ser-apon.jpg",
-    "category": "eventos",
-    "editorial_score": 7,
-    "commercial_score": 8,
-    "instagram_score": 7,
-    "event_related": true,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "alcance",
-    "target_customer": [
-      "ligas e clubes esportivos",
-      "associacoes e sindicatos",
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Feira",
-    "event_city": "Patos de Minas",
-    "event_date": "2026-09-16",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Patos de Minas - Filho de vítima de roubo é liberado após ser apontado por suspe\n\nPatos de Minas - Filho de vítima de roubo é liberado após ser apontado por suspeitos como participante do crime\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Seu evento pode chegar muito alem do publico presente."
-      },
-      "stories": [
-        "Patos de Minas - Filho de vítima de roubo é liberado após ser apontado por suspe",
-        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-        "Seu evento pode chegar muito alem do publico presente."
-      ],
-      "carousel": {
-        "title": "Patos de Minas - Filho de vítima de roubo é liberado após ser apontado por suspe",
-        "slides": [
-          "Patos de Minas - Filho de vítima de roubo é liberado após ser apontado por suspeitos como participante do crime",
-          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-          "Seu evento pode chegar muito alem do publico presente."
-        ]
-      }
-    }
   }
 ]
