@@ -2,17 +2,17 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 34  
+**Leads ativos:** 36  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
 | muito_urgente | 2 |
-| urgente | 9 |
+| urgente | 10 |
 | médio | 1 |
-| monitorar | 22 |
-| **Total** | **34** |
+| monitorar | 23 |
+| **Total** | **36** |
 
 ## Prioridade de hoje
 
@@ -52,6 +52,8 @@
 
 - **Feira 8H ATRÁS** [-]:
   > Ola! Vimos a noticia sobre Feira 8H ATRÁS em nossa região. O Portal Ao Vivo oferece transmissao ao vivo, cobertura audiovisual e cortes para redes sociais, ampliando o alcance da sua producao. Podemos conversar?
+- **Simpósio e Tecnologias Biológicas** [Patrocínio]:
+  > Ola! Vimos a noticia sobre Simpósio e Tecnologias Biológicas em Patrocínio. O Portal Ao Vivo oferece cobertura audiovisual e transmissao ao vivo para o seu evento. Podemos conversar?
 
 ---
 _Fim do relatório._
