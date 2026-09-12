@@ -2237,7 +2237,74 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.5
+    },
+    "Feira|Patos de Minas|2026-09-16": {
+      "lead_score": 7.5,
+      "priority": "FORTE",
+      "event_name": "Feira",
+      "event_type": "festa",
+      "city": "Patos de Minas",
+      "event_date": "2026-09-16",
+      "days_until_event": 4,
+      "event_timing": "em_breve",
+      "organizer": "Clube Notícia",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/patos-de-minas-filho-de-vitima-de-roubo-e-liberado-apos-ser-apontado-por-suspeitos-como-participante-do-crime",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "target_customer": [
+        "ligas e clubes esportivos",
+        "associacoes e sindicatos",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-12T11:58:21.819280-03:00",
+      "detected_at": "2026-09-12T11:58:21.819280-03:00",
+      "lead_id": "lev-333662c835",
+      "event_id": "evt-d1f8179f1d",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "clube esportivo",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "clube esportivo",
+        "prefeitura",
+        "associacao",
+        "organizador de eventos"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Ampliar o alcance da festa para quem nao vai ao local e registrar a programacao.",
+      "contact_window": "urgente",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Urgente — contactar imediatamente (a menos de 20 dias)",
+      "contact_reason": "Evento 'festa', em patos de minas, faltam 4 dias, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 8.0
     }
   },
-  "atualizado": "2026-09-12T07:07:23.574096-03:00"
+  "atualizado": "2026-09-12T11:58:26.736146-03:00"
 }
