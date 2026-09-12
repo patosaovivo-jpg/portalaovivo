@@ -2,7 +2,7 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 30  
+**Leads ativos:** 33  
 
 ## Agenda de contato
 
@@ -11,8 +11,8 @@
 | muito_urgente | 2 |
 | urgente | 8 |
 | médio | 1 |
-| monitorar | 19 |
-| **Total** | **30** |
+| monitorar | 22 |
+| **Total** | **33** |
 
 ## Prioridade de hoje
 
@@ -46,6 +46,7 @@
 
 - Patos de Minas - Santa Casa registra mais de 7 mil internaçõ [Presidente Olegário] (-).
 - Feira (9) [Patos de Minas] (25/01/2026).
+- Romaria e Douradoquara Convênio entre as cidades [Triângulo Mineiro] (-).
 
 ## Rascunhos de abordagem (não enviados)
 
