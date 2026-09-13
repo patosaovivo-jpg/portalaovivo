@@ -2575,7 +2575,71 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 6.0
+    },
+    "44 trabalhadores são resgatados de trabalho|Triângulo Mineiro|2027-09-10": {
+      "lead_score": 5.9,
+      "priority": "BAIXA",
+      "event_name": "44 trabalhadores são resgatados de trabalho",
+      "event_type": "encontro cultural",
+      "city": "Triângulo Mineiro",
+      "event_date": "2027-09-10",
+      "days_until_event": 362,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Noticias do Triangulo",
+      "source_url": "https://noticiasdotriangulo.com.br/noticia/44-trabalhadores-sao-resgatados-trabalho-analogo-escravidao-estrela-sul",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 8,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-13T08:04:46.847026-03:00",
+      "detected_at": "2026-09-13T08:04:46.847026-03:00",
+      "lead_id": "lev-9c15909316",
+      "event_id": "evt-dd0dfdac98",
+      "recurring_event": true,
+      "recurrence_pattern": "recorrente",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "secretaria municipal",
+        "produtor de eventos"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Registrar e divulgar a programacao cultural para a regiao.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'encontro cultural', em triângulo mineiro, faltam 362 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.7
     }
   },
-  "atualizado": "2026-09-13T00:02:49.179253-03:00"
+  "atualizado": "2026-09-13T08:04:49.404566-03:00"
 }
