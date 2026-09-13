@@ -2639,7 +2639,78 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.7
+    },
+    "URT apresenta novo treinador e lança Projeto|Patos de Minas|2027-08-29": {
+      "lead_score": 6.6,
+      "priority": "MEDIA",
+      "event_name": "URT apresenta novo treinador e lança Projeto",
+      "event_type": "campeonato",
+      "city": "Patos de Minas",
+      "event_date": "2027-08-29",
+      "days_until_event": 350,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/urt-apresenta-novo-treinador-e-lanca-projeto-socio-torcedor-2027",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera"
+      ],
+      "target_customer": [
+        "ligas e clubes esportivos",
+        "organizadores de eventos empresariais",
+        "associacoes e sindicatos",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 8,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-09-13T17:18:11.203240-03:00",
+      "detected_at": "2026-09-13T17:18:11.203240-03:00",
+      "lead_id": "lev-a5fe19dd65",
+      "event_id": "evt-2d92b15073",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "liga esportiva",
+        "clube esportivo",
+        "organizador de competicao"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "replay e placar",
+        "conteudo para redes sociais",
+        "streaming pay-per-view"
+      ],
+      "commercial_need": "Levar a competicao para torcedores de outras cidades e ampliar o alcance da torcida.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'campeonato', em patos de minas, faltam 350 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.5
     }
   },
-  "atualizado": "2026-09-13T12:35:46.475933-03:00"
+  "atualizado": "2026-09-13T17:18:18.050352-03:00"
 }
