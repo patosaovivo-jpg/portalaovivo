@@ -545,55 +545,7 @@
           "Sua marca pode ser vista por muito mais pessoas."
         ]
       }
-    }
-  },
-  {
-    "titulo": "44 trabalhadores são resgatados de trabalho análogo à escravidão em Estrela do Sul 10/09",
-    "link": "https://noticiasdotriangulo.com.br/noticia/44-trabalhadores-sao-resgatados-trabalho-analogo-escravidao-estrela-sul",
-    "fonte": "Noticias do Triangulo",
-    "tema": "Local e Cidades",
-    "resumo": "44 trabalhadores são resgatados de trabalho análogo à escravidão em Estrela do Sul\n\nFiscalização encontrou migrantes do Senegal e de Burkina Faso em condições degradantes durante a colheita de batatas; R$ 879 mil foram pagos em verbas e indenizações\n\nUma operação integrada pelo Ministério Público do Trabalho (MPT), Ministério do Trabalho e Emprego e Polícia Federal (PF) resgatou, em agosto, 44 trabalhadores submetidos a condições análogas à escravidão em uma fazenda na zona rural de Estrela do Sul, no Triângulo Mineiro.\n\nReceba as principais notícias diretamente no seu celular.\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-    "imagem": "/assets/images/social-44-trabalhadores-so-resgatados-de-trabalho-anlogo-escravido.jpg",
-    "category": "eventos",
-    "editorial_score": 7,
-    "commercial_score": 8,
-    "instagram_score": 8,
-    "event_related": true,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "alcance",
-    "target_customer": [
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "44 trabalhadores são resgatados de trabalho",
-    "event_city": "Triângulo Mineiro",
-    "event_date": "2027-09-10",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "44 trabalhadores são resgatados de trabalho análogo à escravidão em Estrela do S\n\n44 trabalhadores são resgatados de trabalho análogo à escravidão em Estrela do Sul\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Seu evento pode chegar muito alem do publico presente."
-      },
-      "stories": [
-        "44 trabalhadores são resgatados de trabalho análogo à escravidão em Estrela do S",
-        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-        "Seu evento pode chegar muito alem do publico presente."
-      ],
-      "carousel": {
-        "title": "44 trabalhadores são resgatados de trabalho análogo à escravidão em Estrela do S",
-        "slides": [
-          "44 trabalhadores são resgatados de trabalho análogo à escravidão em Estrela do Sul",
-          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-          "Seu evento pode chegar muito alem do publico presente."
-        ]
-      }
-    }
+    },
+    "_priority_score": 43.0
   }
 ]
