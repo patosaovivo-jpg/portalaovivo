@@ -2,17 +2,17 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 42  
+**Leads ativos:** 45  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
 | muito_urgente | 2 |
-| urgente | 11 |
+| urgente | 13 |
 | médio | 1 |
-| monitorar | 28 |
-| **Total** | **42** |
+| monitorar | 29 |
+| **Total** | **45** |
 
 ## Prioridade de hoje
 
@@ -41,6 +41,7 @@
 
 - Feira 8H ATRÁS [-] — muito perto do evento (faltam 1 dias).
 - Notícias Fique por dentro das novidades Ver mais [São Gonçalo do Abaeté] — muito perto do evento (faltam 2 dias).
+- Feira (9), a “quebra completa do sigilo das [-] — muito perto do evento (faltam 2 dias).
 
 ## Passados (não prospectar para transmissão)
 
@@ -54,6 +55,8 @@
   > Ola! Vimos a noticia sobre Feira 8H ATRÁS em nossa região. O Portal Ao Vivo oferece transmissao ao vivo, cobertura audiovisual e cortes para redes sociais, ampliando o alcance da sua producao. Podemos conversar?
 - **Simpósio e Tecnologias Biológicas** [Patrocínio]:
   > Ola! Vimos a noticia sobre Simpósio e Tecnologias Biológicas em Patrocínio. O Portal Ao Vivo oferece cobertura audiovisual e transmissao ao vivo para o seu evento. Podemos conversar?
+- **Feira (9), a “quebra completa do sigilo das** [-]:
+  > Ola! Vimos a noticia sobre Feira (9), a “quebra completa do sigilo das em nossa região. O Portal Ao Vivo cobre feiras com transmissao ao vivo, entrevistas e exposicao ampliada dos expositores. Podemos conversar?
 
 ## Fila de aprovação (outbox)
 
