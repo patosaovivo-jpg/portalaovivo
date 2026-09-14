@@ -551,58 +551,6 @@
     }
   },
   {
-    "titulo": "Operação contra o Comando Vermelho bloqueia R$ 28,1 milhões e cumpre mandados em Presidente Olegário",
-    "link": "https://www.patos1.com.br/noticia/operacao-contra-o-comando-vermelho-bloqueia-r-28-1-milhoes-e-cumpre-mandados-em-presidente-olegario",
-    "fonte": "Patos 1",
-    "tema": "Local e Cidades",
-    "resumo": "Operação contra o Comando Vermelho bloqueia R$ 28,1 milhões e cumpre mandados em Presidente Olegário\n\nEm Presidente Olegário, foram cumpridos um mandado de prisão e um mandado de busca e apreensão\n\nPúblico de Goiás (MP-GO) contra um braço financeiro do Comando Vermelho\n\nbloqueou R$ 28,1 milhões em valores e determinou a apreensão de veículos e\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-    "imagem": "/assets/images/social-operao-contra-o-comando-vermelho-bloqueia-r-281-milhes-e-cum.jpg",
-    "category": "eventos",
-    "editorial_score": 8,
-    "commercial_score": 8,
-    "instagram_score": 8,
-    "event_related": true,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "alcance",
-    "target_customer": [
-      "ligas e clubes esportivos",
-      "organizadores de eventos empresariais",
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Feira (10) e teve como alvo uma estrutura",
-    "event_city": "Presidente Olegário",
-    "event_date": "2026-09-21",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Operação contra o Comando Vermelho bloqueia R$ 28,1 milhões e cumpre mandados em\n\nOperação contra o Comando Vermelho bloqueia R$ 28,1 milhões e cumpre mandados em Presidente Olegário\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Seu evento pode chegar muito alem do publico presente."
-      },
-      "stories": [
-        "Operação contra o Comando Vermelho bloqueia R$ 28,1 milhões e cumpre mandados em",
-        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-        "Seu evento pode chegar muito alem do publico presente."
-      ],
-      "carousel": {
-        "title": "Operação contra o Comando Vermelho bloqueia R$ 28,1 milhões e cumpre mandados em",
-        "slides": [
-          "Operação contra o Comando Vermelho bloqueia R$ 28,1 milhões e cumpre mandados em Presidente Olegário",
-          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-          "Seu evento pode chegar muito alem do publico presente."
-        ]
-      }
-    },
-    "_priority_score": 62.0
-  },
-  {
     "titulo": "Bancários da Caixa Econômica Federal decidem continuar em greve em Patos de Minas",
     "link": "https://www.patos1.com.br/noticia/bancarios-da-caixa-economica-federal-decidem-continuar-em-greve-em-patos-de-minas",
     "fonte": "Patos 1",
@@ -651,7 +599,8 @@
           "Seu evento pode chegar muito alem do publico presente."
         ]
       }
-    }
+    },
+    "_priority_score": 60.0
   },
   {
     "titulo": "Cara-de-Barro: Novo pôster destaca capacidade de mutação do vilão do Batman; Veja",
@@ -698,6 +647,7 @@
           "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
         ]
       }
-    }
+    },
+    "_priority_score": 34.0
   }
 ]
