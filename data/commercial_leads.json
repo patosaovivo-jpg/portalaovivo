@@ -3117,7 +3117,73 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 8.1
+    },
+    "Feira, enquanto o domingo deve apresentar|Alto Paranaíba|": {
+      "lead_score": 5.9,
+      "priority": "BAIXA",
+      "event_name": "Feira, enquanto o domingo deve apresentar",
+      "event_type": "feira",
+      "city": "Alto Paranaíba",
+      "event_date": "",
+      "days_until_event": null,
+      "event_timing": "sem_data",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/previsao-do-tempo-semana-comeca-com-chuva-e-deve-ter-variacao-de-nebulosidade-em-lagoa-formosa",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-14T18:27:42.138343-03:00",
+      "detected_at": "2026-09-14T18:27:42.138343-03:00",
+      "lead_id": "lev-3fc94cda64",
+      "event_id": "evt-296866bdff",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'feira', em alto paranaíba.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.4
     }
   },
-  "atualizado": "2026-09-14T14:40:00.692227-03:00"
+  "atualizado": "2026-09-14T18:27:47.609341-03:00"
 }
