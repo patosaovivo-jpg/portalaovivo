@@ -551,64 +551,6 @@
     }
   },
   {
-    "titulo": "Patos de Minas conquista topo do pódio no Campeonato Mineiro de Peteca 15 Set 2026 Esportes,Lazer e... 8 visualizações CONTINUAR LENDO",
-    "link": "https://www.patosdeminas.mg.gov.br/portal/noticias/0/3/2546/patos-de-minas-conquista-topo-do-podio-no-campeonato-mineiro-de-peteca",
-    "fonte": "Prefeitura de Patos de Minas",
-    "tema": "Local e Cidades",
-    "resumo": "Patos de Minas foi um dos destaques do Campeonato Mineiro de Peteca 2026, disputado no Praia Clube, em Uberlândia, de 11 a 13 de setembro. Representando a cidade, o\n\nPatos Tênis Clube (PTC) sagrou-se campeão em duas das princiais categorias do torneio, reconhecido como o mais tradicinal da modalidade em todo o país.\n\nMaster I (40 a 49 anos), a equipe patense garantiu o ouro em uma final de tirar o fôlego contra o trio da casa, o Praia Clube. O título foi conquistado em quadra pelos atletas Izaac (Patos de Minas) e Bruno (Divinópolis). O atleta Marcelo (Spider), da cidade de Catalão (GO), também estava inscrito e compunha originalmente o trio, mas sofreu uma lesão e não pôde jogar. Apesar disso, ele também tem sua vaga garantida na Seleção Mineira.\n\nAdulto Feminino (20 a 29 anos), as atletas Luiza e Malu, ambas de Uberlândia e defendendo as cores do PTC, conquistaram o primeiro lugar após uma disputa acirrada contra a equipe do PTC de Patrocínio.\n\nCom transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
-    "imagem": "/assets/images/social-patos-de-minas-conquista-topo-do-pdio-no-campeonato-mineiro.jpg",
-    "category": "esportes",
-    "editorial_score": 8,
-    "commercial_score": 10,
-    "instagram_score": 8,
-    "event_related": true,
-    "sports_related": true,
-    "regional": true,
-    "commercial_angle": "esporte",
-    "target_customer": [
-      "prefeitura",
-      "ligas e clubes esportivos",
-      "patrocinadores e marcas",
-      "associacoes e sindicatos",
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual",
-      "transmissao esportiva",
-      "producao multicamera",
-      "transmissao com exposicao de patrocinadores",
-      "conteudo para redes sociais"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Campeonato Mineiro de Peteca 15 Set 2026",
-    "event_city": "Patos de Minas",
-    "event_date": "2027-09-13",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Patos de Minas conquista topo do pódio no Campeonato Mineiro de Peteca 15 Set 20\n\nPatos de Minas foi um dos destaques do Campeonato Mineiro de Peteca 2026, disputado no Praia Clube, em Uberlândia, de 11 a 13 de setembro. Representando a cidade, o\n\nA transmissao esportiva profissional leva cada lance para a torcida de toda a regiao.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
-      },
-      "stories": [
-        "Patos de Minas conquista topo do pódio no Campeonato Mineiro de Peteca 15 Set 20",
-        "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
-        "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
-      ],
-      "carousel": {
-        "title": "Patos de Minas conquista topo do pódio no Campeonato Mineiro de Peteca 15 Set 20",
-        "slides": [
-          "Patos de Minas foi um dos destaques do Campeonato Mineiro de Peteca 2026, disputado no Praia Clube, em Uberlândia, de 11 a 13 de setembro. Representando a cidade, o",
-          "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
-          "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
-        ]
-      }
-    },
-    "_priority_score": 66.0
-  },
-  {
     "titulo": "5ª Lagoa Cup reúne 265 atletas e movimenta o futebol de base em Lagoa Formosa",
     "link": "https://www.patos1.com.br/noticia/5a-lagoa-cup-reune-265-atletas-e-movimenta-o-futebol-de-base-em-lagoa-formosa",
     "fonte": "Patos 1",
@@ -662,6 +604,7 @@
           "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
         ]
       }
-    }
+    },
+    "_priority_score": 66.0
   }
 ]
