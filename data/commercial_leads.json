@@ -3334,7 +3334,79 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 6.3
+    },
+    "Torneio contou|Carmo do Paranaíba|2027-09-13": {
+      "lead_score": 7.1,
+      "priority": "MEDIA",
+      "event_name": "Torneio contou",
+      "event_type": "torneio",
+      "city": "Carmo do Paranaíba",
+      "event_date": "2027-09-13",
+      "days_until_event": 363,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": 5,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/5a-lagoa-cup-reune-265-atletas-e-movimenta-o-futebol-de-base-em-lagoa-formosa",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "ligas e clubes esportivos",
+        "patrocinadores e marcas",
+        "associacoes e sindicatos",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 8,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-09-15T13:12:34.257213-03:00",
+      "detected_at": "2026-09-15T13:12:34.257213-03:00",
+      "lead_id": "lev-c3cf0cd224",
+      "event_id": "evt-74a6906c32",
+      "recurring_event": true,
+      "recurrence_pattern": "edição 5",
+      "previous_event_detected": true,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "liga esportiva",
+        "clube esportivo",
+        "organizador de competicao"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "replay e placar",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Levar a competicao para torcedores de outras cidades e ampliar o alcance da torcida.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'torneio', em carmo do paranaíba, faltam 363 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 6.0
     }
   },
-  "atualizado": "2026-09-15T08:02:57.576152-03:00"
+  "atualizado": "2026-09-15T13:12:39.773540-03:00"
 }

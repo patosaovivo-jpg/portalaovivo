@@ -607,5 +607,61 @@
       }
     },
     "_priority_score": 66.0
+  },
+  {
+    "titulo": "5ª Lagoa Cup reúne 265 atletas e movimenta o futebol de base em Lagoa Formosa",
+    "link": "https://www.patos1.com.br/noticia/5a-lagoa-cup-reune-265-atletas-e-movimenta-o-futebol-de-base-em-lagoa-formosa",
+    "fonte": "Patos 1",
+    "tema": "Local e Cidades",
+    "resumo": "5ª Lagoa Cup reúne 265 atletas e movimenta o futebol de base em Lagoa Formosa\n\nTorneio contou com 53 jogos, 222 gols e participação de equipes de diferentes cidades do Alto Paranaíba e Triângulo Mineiro\n\nfinal de semana, nos dias 12 e 13 de setembro, da 5ª edição da Lagoa Cup,\n\ncompetição que reuniu jovens atletas de diversas cidades de Minas Gerais e\n\nCom transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
+    "imagem": "/assets/images/social-5-lagoa-cup-rene-265-atletas-e-movimenta-o-futebol-de-base-e.jpg",
+    "category": "esportes",
+    "editorial_score": 7,
+    "commercial_score": 10,
+    "instagram_score": 8,
+    "event_related": true,
+    "sports_related": true,
+    "regional": true,
+    "commercial_angle": "esporte",
+    "target_customer": [
+      "ligas e clubes esportivos",
+      "patrocinadores e marcas",
+      "associacoes e sindicatos",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual",
+      "transmissao esportiva",
+      "producao multicamera",
+      "transmissao com exposicao de patrocinadores",
+      "conteudo para redes sociais"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Torneio contou",
+    "event_city": "Carmo do Paranaíba",
+    "event_date": "2027-09-13",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "5ª Lagoa Cup reúne 265 atletas e movimenta o futebol de base em Lagoa Formosa\n\n5ª Lagoa Cup reúne 265 atletas e movimenta o futebol de base em Lagoa Formosa\n\nSeu campeonato tambem pode ser acompanhado de qualquer lugar.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
+      },
+      "stories": [
+        "5ª Lagoa Cup reúne 265 atletas e movimenta o futebol de base em Lagoa Formosa",
+        "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
+        "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
+      ],
+      "carousel": {
+        "title": "5ª Lagoa Cup reúne 265 atletas e movimenta o futebol de base em Lagoa Formosa",
+        "slides": [
+          "5ª Lagoa Cup reúne 265 atletas e movimenta o futebol de base em Lagoa Formosa",
+          "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
+          "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
+        ]
+      }
+    }
   }
 ]
