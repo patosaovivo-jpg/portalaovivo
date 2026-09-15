@@ -549,58 +549,5 @@
         ]
       }
     }
-  },
-  {
-    "titulo": "2º Feirão de Empregos reúne centenas de candidatos e 26 empresas em Patos de Minas 14 Set 2026 58 visualizações CONTINUAR LENDO",
-    "link": "https://www.patosdeminas.mg.gov.br/portal/noticias/0/3/2545/2-feirao-de-empregos-reune-centenas-de-candidatos-e-26-empresas-em-patos-de-minas",
-    "fonte": "Prefeitura de Patos de Minas",
-    "tema": "Política",
-    "resumo": "A segunda edição do Feirão de Empregos movimentou o Galpão do Produtor Rural nesse domingo (13/9). Promovido pela Prefeitura de Patos de Minas, por meio da Secretaria Municipal de Desenvolvimento Social e da Assessoria de Desenvolvimento Econômico, o evento reuniu centenas de candidatos em busca de oportunidades no mercado e resultou em contratações efetivadas ontem mesmo.\n\nAo longo da manhã, trabalhadores de diferentes perfis puderam apresentar seus currículos, conhecer os postos de trabalho disponíveis e conversar diretamente com representantes das 26 empresas presentes. A adesão de instituições parceiras e da comunidade foi um dos destaques do evento e deu ainda mais força à iniciativa.\n\nAlém de acesso a mais de mil oportunidades de emprego, os participantes contaram com orientações por parte de instituições de capacitação e entidades de classe. Durante o feirão, os candidatos também puderam tirar fotos profissionais com o objetivo de aprimorarem seus currículos.\n\n“Fico muito fel...\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-    "imagem": "/assets/images/social-2-feiro-de-empregos-rene-centenas-de-candidatos-e-26-empresa.jpg",
-    "category": "eventos",
-    "editorial_score": 8,
-    "commercial_score": 8,
-    "instagram_score": 8,
-    "event_related": true,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "alcance",
-    "target_customer": [
-      "prefeitura",
-      "ligas e clubes esportivos",
-      "organizadores de eventos empresariais",
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual",
-      "transmissao com exposicao de patrocinadores"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "",
-    "event_city": "Patos de Minas",
-    "event_date": "2027-09-13",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "2º Feirão de Empregos reúne centenas de candidatos e 26 empresas em Patos de Min\n\nA segunda edição do Feirão de Empregos movimentou o Galpão do Produtor Rural nesse domingo (13/9). Promovido pela Prefeitura de Patos de Minas, por meio da Secretaria Municipal de Desenvolvimento Social e da Assessoria de Desenvolvimento Econômico, o evento reuniu centenas de candidatos em busca de \n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Seu evento pode chegar muito alem do publico presente."
-      },
-      "stories": [
-        "2º Feirão de Empregos reúne centenas de candidatos e 26 empresas em Patos de Min",
-        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-        "Seu evento pode chegar muito alem do publico presente."
-      ],
-      "carousel": {
-        "title": "2º Feirão de Empregos reúne centenas de candidatos e 26 empresas em Patos de Min",
-        "slides": [
-          "A segunda edição do Feirão de Empregos movimentou o Galpão do Produtor Rural nesse domingo (13/9). Promovido pela Prefeitura de Patos de Minas, por meio da Secretaria Municipal de Desenvolvimento Social e da Assessoria de Desenvolvimento Econômico, o evento reuniu centenas de candidatos em busca de ",
-          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-          "Seu evento pode chegar muito alem do publico presente."
-        ]
-      }
-    }
   }
 ]
