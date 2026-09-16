@@ -66,6 +66,8 @@
 
 - **Simpósio e Tecnologias Biológicas** [Patrocínio] — `urgente`, score 8.6:
   > Ola! Vimos a noticia sobre Simpósio e Tecnologias Biológicas em Patrocínio. O Portal Ao Vivo oferece cobertura audiovisual e transmissao ao vivo para o seu evento. Podemos conversar?
+- **Festival de Pesca da Lagoa Grande** [Patos de Minas] — `urgente`, score 8.6:
+  > Ola! Vimos a noticia sobre Festival de Pesca da Lagoa Grande em Patos de Minas. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?
 
 ---
 _Fim do relatório._

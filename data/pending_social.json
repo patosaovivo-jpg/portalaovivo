@@ -655,57 +655,6 @@
     }
   },
   {
-    "titulo": "Patos de Minas - Carreta tomba após bater em barranco e interdita BR-365",
-    "link": "https://www.patos1.com.br/noticia/patos-de-minas-carreta-tomba-apos-bater-em-barranco-e-interdita-br-365",
-    "fonte": "Patos 1",
-    "tema": "Local e Cidades",
-    "resumo": "Patos de Minas - Carreta tomba após bater em barranco e interdita BR-365\n\nestacas tombou nesta terça-feira (15/9) após bater contra um barranco, e interditou uma das faixas da\n\nBR-365, próximo à entrada da BR-352, em Patos de Minas.\n\nderramamento de óleo sobre a pista. O Corpo de Bombeiros foi acionado e está no\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-    "imagem": "/assets/images/default.jpg",
-    "category": "eventos",
-    "editorial_score": 7,
-    "commercial_score": 8,
-    "instagram_score": 7,
-    "event_related": true,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "alcance",
-    "target_customer": [
-      "ligas e clubes esportivos",
-      "associacoes e sindicatos",
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Feira (15/9) após bater contra um barranco, e",
-    "event_city": "Patos de Minas",
-    "event_date": "2027-09-15",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Patos de Minas - Carreta tomba após bater em barranco e interdita BR-365\n\nPatos de Minas - Carreta tomba após bater em barranco e interdita BR-365\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Seu evento pode chegar muito alem do publico presente."
-      },
-      "stories": [
-        "Patos de Minas - Carreta tomba após bater em barranco e interdita BR-365",
-        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-        "Seu evento pode chegar muito alem do publico presente."
-      ],
-      "carousel": {
-        "title": "Patos de Minas - Carreta tomba após bater em barranco e interdita BR-365",
-        "slides": [
-          "Patos de Minas - Carreta tomba após bater em barranco e interdita BR-365",
-          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-          "Seu evento pode chegar muito alem do publico presente."
-        ]
-      }
-    }
-  },
-  {
     "titulo": "Festival de Pesca da Lagoa Grande terá sua segunda edição no dia 27 de setembro 16 Set 2026 Agricultura,... 328 visualizações CONTINUAR LENDO",
     "link": "https://www.patosdeminas.mg.gov.br/portal/noticias/0/3/2547/festival-de-pesca-da-lagoa-grande-tera-sua-segunda-edicao-no-dia-27-de-setembro",
     "fonte": "Prefeitura de Patos de Minas",
@@ -808,6 +757,7 @@
           "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
         ]
       }
-    }
+    },
+    "_priority_score": 49.0
   }
 ]
