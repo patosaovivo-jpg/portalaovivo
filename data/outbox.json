@@ -27,6 +27,34 @@
       "aprovado_em": "",
       "observacao": "",
       "_displayed": false
+    },
+    {
+      "lead_id": "lev-97864b3c8b",
+      "event_id": "evt-e96eafb2b4",
+      "event_name": "Festival de Pesca da Lagoa Grande",
+      "city": "Patos de Minas",
+      "days_until_event": 11,
+      "event_timing": "em_breve",
+      "prospecting_priority": "urgente",
+      "contact_window": "urgente",
+      "potential_client_type": [
+        "prefeitura"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "cortes para redes sociais",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "lead_score": 8.4,
+      "prospecting_score": 8.6,
+      "rascunho": "Ola! Vimos a noticia sobre Festival de Pesca da Lagoa Grande em Patos de Minas. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?",
+      "status": "pendente",
+      "enviado_em": "",
+      "aprovado_em": "",
+      "observacao": "",
+      "_displayed": false
     }
   ]
 }
