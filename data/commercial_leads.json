@@ -4524,7 +4524,78 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 6.0
+    },
+    "Feira (16) o julgamento de Leonardo Rodrigues de|Patos de Minas|2021-07-15": {
+      "lead_score": 5.4,
+      "priority": "BAIXA",
+      "event_name": "Feira (16) o julgamento de Leonardo Rodrigues de",
+      "event_type": "feira",
+      "city": "Patos de Minas",
+      "event_date": "2021-07-15",
+      "days_until_event": -1890,
+      "event_timing": "passado",
+      "organizer": "Clube Notícia",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/acusado-de-tentativa-de-homicidio-no-distrito-de-pilar-e-condenado-a-3-anos-de-prisao",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao hibrida",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "ligas e clubes esportivos",
+        "associacoes e sindicatos",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-17T13:12:58.128181-03:00",
+      "detected_at": "2026-09-17T13:12:58.128181-03:00",
+      "lead_id": "lev-ca102c6a8d",
+      "event_id": "evt-3f858362a7",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "clube esportivo",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "clube esportivo",
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "nao_prospectar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Não prospectar para transmissão (evento já aconteceu)",
+      "contact_reason": "Evento 'feira', em patos de minas, evento já realizado, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.4
     }
   },
-  "atualizado": "2026-09-17T07:57:44.804060-03:00"
+  "atualizado": "2026-09-17T13:13:02.248704-03:00"
 }

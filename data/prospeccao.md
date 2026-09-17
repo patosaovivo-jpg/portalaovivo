@@ -2,7 +2,7 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 66  
+**Leads ativos:** 67  
 
 ## Agenda de contato
 
@@ -12,8 +12,8 @@
 | urgente | 17 |
 | alto | 2 |
 | médio | 1 |
-| monitorar | 42 |
-| **Total** | **66** |
+| monitorar | 43 |
+| **Total** | **67** |
 
 ## Prioridade de hoje
 
@@ -50,6 +50,7 @@
 - Feira (9) [Patos de Minas] (25/01/2026).
 - Romaria e Douradoquara Convênio entre as cidades [Triângulo Mineiro] (-).
 - Feira (15) [Patos de Minas] (12/08/2025).
+- Feira (16) o julgamento de Leonardo Rodrigues de [Patos de Minas] (15/07/2021).
 
 ## Rascunhos de abordagem (não enviados)
 
