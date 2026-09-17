@@ -4799,7 +4799,78 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 7.3
+    },
+    "Feira (15/9), do 12º Fórum Mineiro de Educação|Patos de Minas|2027-09-15": {
+      "lead_score": 6.6,
+      "priority": "MEDIA",
+      "event_name": "Feira (15/9), do 12º Fórum Mineiro de Educação",
+      "event_type": "feira",
+      "city": "Patos de Minas",
+      "event_date": "2027-09-15",
+      "days_until_event": 363,
+      "event_timing": "futuro",
+      "organizer": "Associação/Sindicato local",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Prefeitura de Patos de Minas",
+      "source_url": "https://www.patosdeminas.mg.gov.br/portal/noticias/0/3/2548/patos-de-minas-apresenta-plano-municipal-pela-primeira-infancia-em-forum-estadual-de-educacao",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera",
+        "conteudo para redes sociais",
+        "transmissao hibrida"
+      ],
+      "target_customer": [
+        "associacoes e sindicatos",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 8,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-09-17T20:23:47.986049-03:00",
+      "detected_at": "2026-09-17T20:23:47.986049-03:00",
+      "lead_id": "lev-c962a338c6",
+      "event_id": "evt-8f862f84dd",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "sindicato",
+      "organizer_source": "Citado na notícia de Prefeitura de Patos de Minas",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "sindicato",
+        "organizador de feiras",
+        "associacao",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'feira', em patos de minas, faltam 363 dias, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 6.2
     }
   },
-  "atualizado": "2026-09-17T17:57:37.216200-03:00"
+  "atualizado": "2026-09-17T20:23:50.613610-03:00"
 }
