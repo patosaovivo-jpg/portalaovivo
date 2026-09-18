@@ -871,57 +871,6 @@
     }
   },
   {
-    "titulo": "Menina de 5 anos chega à escola com o rosto marcado por agressões praticadas pela própria mãe, em Patos de Minas",
-    "link": "https://www.patos1.com.br/noticia/menina-de-5-anos-chega-a-escola-com-o-rosto-marcado-por-agressoes-praticadas-pela-propria-mae-em-patos-de-minas",
-    "fonte": "Patos 1",
-    "tema": "Local e Cidades",
-    "resumo": "Menina de 5 anos chega à escola com o rosto marcado por agressões praticadas pela própria mãe, em Patos de Minas\n\nConforme informado pelas conselheiras, ela seria acolhida provisoriamente na instituição Casa das Meninas, até uma decisão do Poder Judiciário\n\nUma mulher de 22 anos foi presa\n\npela Polícia Militar após ser acusada de agredir a própria filha, uma criança\n\nA exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
-    "imagem": "/assets/images/social-menina-de-5-anos-chega-escola-com-o-rosto-marcado-por-agress.jpg",
-    "category": "marketing",
-    "editorial_score": 6,
-    "commercial_score": 8,
-    "instagram_score": 6,
-    "event_related": false,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "visibilidade",
-    "target_customer": [
-      "ligas e clubes esportivos",
-      "patrocinadores e marcas",
-      "associacoes e sindicatos"
-    ],
-    "suggested_service": [
-      "transmissao com exposicao de patrocinadores",
-      "conteudo para redes sociais"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "",
-    "event_city": "",
-    "event_date": "",
-    "conteudo_social": {
-      "reel": {
-        "hook": "Todo mundo está comentando. E quem ainda não viu?",
-        "script": "Todo mundo está comentando. E quem ainda não viu? A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Menina de 5 anos chega à escola com o rosto marcado por agressões praticadas pel\n\nMenina de 5 anos chega à escola com o rosto marcado por agressões praticadas pela própria mãe, em Patos de Minas\n\nExposicao de marca que ultrapassa o espaco fisico do evento.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Exposicao de marca que ultrapassa o espaco fisico do evento."
-      },
-      "stories": [
-        "Menina de 5 anos chega à escola com o rosto marcado por agressões praticadas pel",
-        "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
-        "Exposicao de marca que ultrapassa o espaco fisico do evento."
-      ],
-      "carousel": {
-        "title": "Menina de 5 anos chega à escola com o rosto marcado por agressões praticadas pel",
-        "slides": [
-          "Menina de 5 anos chega à escola com o rosto marcado por agressões praticadas pela própria mãe, em Patos de Minas",
-          "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
-          "Exposicao de marca que ultrapassa o espaco fisico do evento."
-        ]
-      }
-    }
-  },
-  {
     "titulo": "#TBT - O VOLEI ARAPUÁ MASCULINO PARTICIPOU DA COPA PATOS DE VOLEIBOL",
     "link": "https://arapua.mg.gov.br/noticias/tbt-o-volei-arapua-masculino-participou-da-copa-patos-de-voleibol",
     "fonte": "Prefeitura de Arapua",
@@ -970,7 +919,8 @@
           "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
         ]
       }
-    }
+    },
+    "_priority_score": 51.0
   },
   {
     "titulo": "Capítulo 7 de Capítulo 7 de Star Blazers: Space Battleship Yamato 3199",
@@ -1021,6 +971,7 @@
           "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
         ]
       }
-    }
+    },
+    "_priority_score": 34.0
   }
 ]
