@@ -4870,7 +4870,71 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 6.2
+    },
+    "VÍDEO: Homem enforca esposa durante trajeto, tenta atacá-la |Patrocínio|2027-09-14": {
+      "lead_score": 5.8,
+      "priority": "BAIXA",
+      "event_name": "VÍDEO: Homem enforca esposa durante trajeto, tenta atacá-la ",
+      "event_type": "",
+      "city": "Patrocínio",
+      "event_date": "2027-09-14",
+      "days_until_event": 361,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticia/video-homem-enforca-esposa-durante-trajeto-tenta-ataca-la-com-canivete-e-depois-tenta-atropela-la-88001.html",
+      "commercial_angle": "visibilidade",
+      "suggested_services": [
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais",
+        "cobertura audiovisual",
+        "transmissao hibrida"
+      ],
+      "target_customer": [
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-18T00:06:21.189820-03:00",
+      "detected_at": "2026-09-18T00:06:21.189820-03:00",
+      "lead_id": "lev-45ae9c88c8",
+      "event_id": "evt-19b749e6ee",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de eventos"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "commercial_need": "Ampliar o alcance do evento alem do publico presente.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Em patrocínio, faltam 361 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.3
     }
   },
-  "atualizado": "2026-09-17T20:23:52.623474-03:00"
+  "atualizado": "2026-09-18T00:06:22.828502-03:00"
 }

@@ -812,5 +812,57 @@
         ]
       }
     }
+  },
+  {
+    "titulo": "VÍDEO: Homem enforca esposa durante trajeto, tenta atacá-la com canivete e depois tenta atropelá-la Vítima apresentava escoriações e hematomas pelo corpo.",
+    "link": "https://www.patrocinioonline.com.br/noticia/video-homem-enforca-esposa-durante-trajeto-tenta-ataca-la-com-canivete-e-depois-tenta-atropela-la-88001.html",
+    "fonte": "Patrocinio Online",
+    "tema": "Local e Cidades",
+    "resumo": "Com informações da Polícia Militar vídeo: Rede Sociais/Instagram\n\nO 46º BPM divulgou oficialmente o caso de tentativa de homicídio e violência contra a mulher ocorrido no dia 14/9, por volta das 15h28min.\n\nSegundo a PM, a vítima, do sexo feminino, acionou a Polícia Militar no mesmo dia, por volta das 16h00min, relatando que seu marido, após comparecer ao seu local de trabalho e ter negada a tentativa de reatar o relacionamento, solicitou carona sob o pretexto de se dirigir ao Fórum.\n\nDurante o trajeto de retorno, o suspeito passou a enforcá-la enquanto ela conduzia o veículo, direcionando posteriormente o automóvel para uma região de mato.\n\nA exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
+    "imagem": "/assets/images/default.jpg",
+    "category": "eventos",
+    "editorial_score": 7,
+    "commercial_score": 8,
+    "instagram_score": 7,
+    "event_related": true,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "visibilidade",
+    "target_customer": [
+      "patrocinadores e marcas",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao com exposicao de patrocinadores",
+      "conteudo para redes sociais",
+      "cobertura audiovisual",
+      "transmissao hibrida"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "",
+    "event_city": "Patrocínio",
+    "event_date": "2027-09-14",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "VÍDEO: Homem enforca esposa durante trajeto, tenta atacá-la com canivete e depoi\n\nCom informações da Polícia Militar vídeo: Rede Sociais/Instagram\n\nSua marca pode ser vista por muito mais pessoas.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Sua marca pode ser vista por muito mais pessoas."
+      },
+      "stories": [
+        "VÍDEO: Homem enforca esposa durante trajeto, tenta atacá-la com canivete e depoi",
+        "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
+        "Sua marca pode ser vista por muito mais pessoas."
+      ],
+      "carousel": {
+        "title": "VÍDEO: Homem enforca esposa durante trajeto, tenta atacá-la com canivete e depoi",
+        "slides": [
+          "Com informações da Polícia Militar vídeo: Rede Sociais/Instagram",
+          "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
+          "Sua marca pode ser vista por muito mais pessoas."
+        ]
+      }
+    }
   }
 ]
