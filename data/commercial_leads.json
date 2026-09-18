@@ -4934,7 +4934,81 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.3
+    },
+    "Congresso de Direito do Agronegócio do Cerrado|Patrocínio|2026-09-24": {
+      "lead_score": 8.5,
+      "priority": "FORTE",
+      "event_name": "Congresso de Direito do Agronegócio do Cerrado",
+      "event_type": "feira",
+      "city": "Patrocínio",
+      "event_date": "2026-09-24",
+      "days_until_event": 6,
+      "event_timing": "em_breve",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticia/ii-congresso-de-direito-do-agronegocio-do-cerrado-mineiro-reune-grande-publico-em-patrocinio-e-diretoria-da-oab-anuncia-sede-propria-e-medidas-de-apoio-a-classe-87998.html",
+      "commercial_angle": "audiencia",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais",
+        "transmissao hibrida"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "ligas e clubes esportivos",
+        "organizadores de eventos empresariais",
+        "patrocinadores e marcas",
+        "associacoes e sindicatos",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 9,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-09-18T07:33:07.665661-03:00",
+      "detected_at": "2026-09-18T07:33:07.665661-03:00",
+      "lead_id": "lev-764602f840",
+      "event_id": "evt-2829c1166f",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "urgente",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Urgente — contactar imediatamente (a menos de 20 dias)",
+      "contact_reason": "Evento 'feira', em patrocínio, faltam 6 dias.",
+      "suggested_outreach": "Ola! Vimos a noticia sobre Congresso de Direito do Agronegócio do Cerrado em Patrocínio. O Portal Ao Vivo cobre feiras com transmissao ao vivo, entrevistas e exposicao ampliada dos expositores. Podemos conversar?",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 7.6
     }
   },
-  "atualizado": "2026-09-18T00:06:24.764983-03:00"
+  "atualizado": "2026-09-18T07:33:13.092977-03:00"
 }

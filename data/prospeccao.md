@@ -2,18 +2,18 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 72  
+**Leads ativos:** 73  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
 | muito_urgente | 5 |
-| urgente | 18 |
+| urgente | 19 |
 | alto | 2 |
 | médio | 1 |
 | monitorar | 46 |
-| **Total** | **72** |
+| **Total** | **73** |
 
 ## Prioridade de hoje
 
@@ -62,6 +62,8 @@
   > Ola! Vimos a noticia sobre Feira (9), a “quebra completa do sigilo das em nossa região. O Portal Ao Vivo cobre feiras com transmissao ao vivo, entrevistas e exposicao ampliada dos expositores. Podemos conversar?
 - **Festival de Pesca da Lagoa Grande** [Patos de Minas]:
   > Ola! Vimos a noticia sobre Festival de Pesca da Lagoa Grande em Patos de Minas. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?
+- **Congresso de Direito do Agronegócio do Cerrado** [Patrocínio]:
+  > Ola! Vimos a noticia sobre Congresso de Direito do Agronegócio do Cerrado em Patrocínio. O Portal Ao Vivo cobre feiras com transmissao ao vivo, entrevistas e exposicao ampliada dos expositores. Podemos conversar?
 
 ## Fila de aprovação (outbox)
 
