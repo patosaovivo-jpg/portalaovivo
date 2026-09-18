@@ -921,5 +921,58 @@
       }
     },
     "_priority_score": 34.0
+  },
+  {
+    "titulo": "Em Destaque Presidente da Câmara, vereadora Maria Izabel assume a Prefeitura de Grupiara após cassação de Rogério e Mazinho Posse foi realizada após a Justiça determinar a cassação da chapa vencedora ",
+    "link": "https://noticiasdotriangulo.com.br/noticia/presidente-camara-vereadora-maria-izabel-assume-prefeitura-grupiara-apos-cassacao-rogerio-mazinho",
+    "fonte": "Noticias do Triangulo",
+    "tema": "Política",
+    "resumo": "Presidente da Câmara, vereadora Maria Izabel assume a Prefeitura de Grupiara após cassação de Rogério e Mazinho\n\nPosse foi realizada após a Justiça determinar a cassação da chapa vencedora nas Eleições de 2024 por abuso de poder político; TRE-MG deverá determinar novas eleições\n\nA Câmara Municipal de Grupiara deu posse à vereadora Maria Izabel Bernardes (MDB) como prefeita interina do município, na tarde desta sexta-feira (18). Presidente da Casa de Leis, ela vai assumir a administração no lugar de Rogério Honorato Machado (MDB), cassado pela Justiça Eleitoral.\n\nReceba as principais notícias diretamente no seu celular.\n\nCom transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
+    "imagem": "/assets/images/social-em-destaque-presidente-da-cmara-vereadora-maria-izabel-assum.jpg",
+    "category": "esportes",
+    "editorial_score": 7,
+    "commercial_score": 10,
+    "instagram_score": 8,
+    "event_related": true,
+    "sports_related": true,
+    "regional": false,
+    "commercial_angle": "esporte",
+    "target_customer": [
+      "prefeitura",
+      "camara municipal",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual",
+      "transmissao esportiva",
+      "producao multicamera"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Feira (18)",
+    "event_city": "",
+    "event_date": "2027-07-07",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Em Destaque Presidente da Câmara, vereadora Maria Izabel assume a Prefeitura de \n\nPresidente da Câmara, vereadora Maria Izabel assume a Prefeitura de Grupiara após cassação de Rogério e Mazinho\n\nA transmissao esportiva profissional leva cada lance para a torcida de toda a regiao.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
+      },
+      "stories": [
+        "Em Destaque Presidente da Câmara, vereadora Maria Izabel assume a Prefeitura de ",
+        "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
+        "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
+      ],
+      "carousel": {
+        "title": "Em Destaque Presidente da Câmara, vereadora Maria Izabel assume a Prefeitura de ",
+        "slides": [
+          "Presidente da Câmara, vereadora Maria Izabel assume a Prefeitura de Grupiara após cassação de Rogério e Mazinho",
+          "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
+          "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
+        ]
+      }
+    }
   }
 ]

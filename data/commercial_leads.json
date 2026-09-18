@@ -5087,7 +5087,75 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.8
+    },
+    "Feira (18)||2027-07-07": {
+      "lead_score": 6.2,
+      "priority": "MEDIA",
+      "event_name": "Feira (18)",
+      "event_type": "festa",
+      "city": "",
+      "event_date": "2027-07-07",
+      "days_until_event": 292,
+      "event_timing": "futuro",
+      "organizer": "Prefeitura Municipal",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Noticias do Triangulo",
+      "source_url": "https://noticiasdotriangulo.com.br/noticia/presidente-camara-vereadora-maria-izabel-assume-prefeitura-grupiara-apos-cassacao-rogerio-mazinho",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "camara municipal",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 8,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-09-18T20:01:24.247330-03:00",
+      "detected_at": "2026-09-18T20:01:24.247330-03:00",
+      "lead_id": "lev-b4f242d6d8",
+      "event_id": "evt-b12cbb9e5e",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "prefeitura",
+      "organizer_source": "Citado na notícia de Noticias do Triangulo",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "associacao",
+        "organizador de eventos"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Ampliar o alcance da festa para quem nao vai ao local e registrar a programacao.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'festa', faltam 292 dias, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.8
     }
   },
-  "atualizado": "2026-09-18T17:25:22.051505-03:00"
+  "atualizado": "2026-09-18T20:01:26.414715-03:00"
 }
