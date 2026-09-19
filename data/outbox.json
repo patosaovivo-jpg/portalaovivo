@@ -55,6 +55,32 @@
       "aprovado_em": "",
       "observacao": "",
       "_displayed": false
+    },
+    {
+      "lead_id": "lev-fbf6fce93d",
+      "event_id": "evt-0294e85dfa",
+      "event_name": "Casamento Comunitário",
+      "city": "Patrocínio",
+      "days_until_event": 11,
+      "event_timing": "em_breve",
+      "prospecting_priority": "urgente",
+      "contact_window": "urgente",
+      "potential_client_type": [
+        "prefeitura"
+      ],
+      "recommended_services": [
+        "transmissao hibrida",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ],
+      "lead_score": 8.3,
+      "prospecting_score": 8.6,
+      "rascunho": "Ola! Vimos a noticia sobre Casamento Comunitário em Patrocínio. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?",
+      "status": "pendente",
+      "enviado_em": "",
+      "aprovado_em": "",
+      "observacao": "",
+      "_displayed": false
     }
   ]
 }
