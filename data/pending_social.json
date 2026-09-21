@@ -1030,5 +1030,54 @@
       }
     },
     "_priority_score": 60.0
+  },
+  {
+    "titulo": "Ladrão furta desodorantes de drogaria no Centro de Patrocínio e causa prejuízo de cerca de R$ 200 Homem entrou no estabelecimento se passando por cliente",
+    "link": "https://www.patrocinioonline.com.br/noticia/ladrao-furta-desodorantes-de-drogaria-no-centro-de-patrocinio-e-causa-prejuizo-de-cerca-de-r-200-88058.html",
+    "fonte": "Patrocinio Online",
+    "tema": "Local e Cidades",
+    "resumo": "Com informações da Polícia Militar\n\nPATROCÍNIO (MG) – A Polícia Militar foi acionada na tarde de domingo, 20/9, por volta das 14h15min, para uma ocorrência de furto em uma drogaria no Centro de Patrocínio.\n\nSegundo as informações da Polícia Militar, um ladrão entrou no estabelecimento se passando por cliente e teria furtado oito desodorantes. O suspeito furtou quatro desodorantes da marca Old Spice, avaliados em R$ 32,50 cada, e quatro da marca Dove Men Care, com valor unitário de R$ 26,89. O prejuízo estimado foi de aproximadamente R$ 237,00.\n\nO suspeito foi flagrado por uma funcionária e fugiu pela Rua Coronel Elmiro Alves do Nascimento, em direção à Avenida Rui Barbosa, mas depois não foi mais visto.\n\nA exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
+    "imagem": "/assets/images/default.jpg",
+    "category": "marketing",
+    "editorial_score": 6,
+    "commercial_score": 8,
+    "instagram_score": 6,
+    "event_related": false,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "visibilidade",
+    "target_customer": [
+      "patrocinadores e marcas"
+    ],
+    "suggested_service": [
+      "transmissao com exposicao de patrocinadores",
+      "conteudo para redes sociais"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "",
+    "event_city": "",
+    "event_date": "",
+    "conteudo_social": {
+      "reel": {
+        "hook": "Todo mundo está comentando. E quem ainda não viu?",
+        "script": "Todo mundo está comentando. E quem ainda não viu? A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Ladrão furta desodorantes de drogaria no Centro de Patrocínio e causa prejuízo d\n\nCom informações da Polícia Militar\n\nExposicao de marca que ultrapassa o espaco fisico do evento.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Exposicao de marca que ultrapassa o espaco fisico do evento."
+      },
+      "stories": [
+        "Ladrão furta desodorantes de drogaria no Centro de Patrocínio e causa prejuízo d",
+        "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
+        "Exposicao de marca que ultrapassa o espaco fisico do evento."
+      ],
+      "carousel": {
+        "title": "Ladrão furta desodorantes de drogaria no Centro de Patrocínio e causa prejuízo d",
+        "slides": [
+          "Com informações da Polícia Militar",
+          "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
+          "Exposicao de marca que ultrapassa o espaco fisico do evento."
+        ]
+      }
+    }
   }
 ]
