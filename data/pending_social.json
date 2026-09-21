@@ -1030,5 +1030,54 @@
       }
     },
     "_priority_score": 60.0
+  },
+  {
+    "titulo": "Nota de falecimento: Fabrício Fernandes Miranda aos 19 anos. Informou Funerária Santa Terezinha",
+    "link": "https://www.patrocinioonline.com.br/noticia/nota-de-falecimento-fabricio-fernandes-miranda-aos-19-anos-88048.html",
+    "fonte": "Patrocinio Online",
+    "tema": "Local e Cidades",
+    "resumo": "Faleceu neste sábado, 19/09/2026, em Patrocínio, Fabrício Fernandes Miranda aos 19 anos.\n\nDeixa os pais: Gilson Miranda e Ediluza Fernandes Borges.\n\nDeixa os irmãos: Joice, Lívia, Fabriane e Gabriel, demais parentes e amigos.\n\nA cerimônia de despedida está sendo realizada na Igreja Assembleia de Deus, no bairro Manuel Nunes.\n\nA exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
+    "imagem": "/assets/images/default.jpg",
+    "category": "marketing",
+    "editorial_score": 6,
+    "commercial_score": 8,
+    "instagram_score": 6,
+    "event_related": false,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "visibilidade",
+    "target_customer": [
+      "patrocinadores e marcas"
+    ],
+    "suggested_service": [
+      "transmissao com exposicao de patrocinadores",
+      "conteudo para redes sociais"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "",
+    "event_city": "",
+    "event_date": "",
+    "conteudo_social": {
+      "reel": {
+        "hook": "Todo mundo está comentando. E quem ainda não viu?",
+        "script": "Todo mundo está comentando. E quem ainda não viu? A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Nota de falecimento: Fabrício Fernandes Miranda aos 19 anos. Informou Funerária \n\nFaleceu neste sábado, 19/09/2026, em Patrocínio, Fabrício Fernandes Miranda aos 19 anos.\n\nSua marca pode ser vista por muito mais pessoas.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Sua marca pode ser vista por muito mais pessoas."
+      },
+      "stories": [
+        "Nota de falecimento: Fabrício Fernandes Miranda aos 19 anos. Informou Funerária ",
+        "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
+        "Sua marca pode ser vista por muito mais pessoas."
+      ],
+      "carousel": {
+        "title": "Nota de falecimento: Fabrício Fernandes Miranda aos 19 anos. Informou Funerária ",
+        "slides": [
+          "Faleceu neste sábado, 19/09/2026, em Patrocínio, Fabrício Fernandes Miranda aos 19 anos.",
+          "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
+          "Sua marca pode ser vista por muito mais pessoas."
+        ]
+      }
+    }
   }
 ]
