@@ -6192,7 +6192,74 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.2
+    },
+    "Fazenda Daterra está contratando Almoxarifado Envie seu curr|Patrocínio|": {
+      "lead_score": 6.1,
+      "priority": "MEDIA",
+      "event_name": "Fazenda Daterra está contratando Almoxarifado Envie seu curr",
+      "event_type": "festa",
+      "city": "Patrocínio",
+      "event_date": "",
+      "days_until_event": null,
+      "event_timing": "sem_data",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticia/fazenda-daterra-esta-contratando-almoxarifado-88056.html",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-22T07:58:44.916259-03:00",
+      "detected_at": "2026-09-22T07:58:44.916259-03:00",
+      "lead_id": "lev-c631b1f158",
+      "event_id": "evt-924a7f0165",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "associacao",
+        "organizador de eventos"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Ampliar o alcance da festa para quem nao vai ao local e registrar a programacao.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'festa', em patrocínio.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.5
     }
   },
-  "atualizado": "2026-09-22T00:15:02.861707-03:00"
+  "atualizado": "2026-09-22T07:58:50.416892-03:00"
 }
