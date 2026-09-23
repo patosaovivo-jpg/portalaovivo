@@ -1191,59 +1191,7 @@
           "Seu evento pode chegar muito alem do publico presente."
         ]
       }
-    }
-  },
-  {
-    "titulo": "Homem é preso após furto de fiações e materiais de instalação de internet no centro de Patrocínio Suspeito foi identificado por meio de imagens de câmeras de segurança e localizado durante diligências",
-    "link": "https://www.patrocinioonline.com.br/noticia/homem-e-preso-apos-furto-de-fiacoes-e-materiais-de-instalacao-de-internet-no-centro-de-patrocinio-88078.html",
-    "fonte": "Patrocinio Online",
-    "tema": "Local e Cidades",
-    "resumo": "Com informações da Agência Local de Comunicação Organizacional 46ºBPM\n\nPATROCÍNIO (MG) – A Polícia Militar foi acionada na madrugada de terça-feira, 22/9, por volta das 00h03min, para atender a uma ocorrência de furto no Centro de Patrocínio (MG).\n\nSegundo a PM, no local haviam sido furtados diversos tipos de fiação de uma construção, além de fiações e materiais de instalação de internet de uma empresa.\n\nDe posse de imagens de câmeras de segurança do local e de adjacências, os militares conseguiram identificar o suspeito, de 37 anos.\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-    "imagem": "/assets/images/default.jpg",
-    "category": "eventos",
-    "editorial_score": 7,
-    "commercial_score": 8,
-    "instagram_score": 8,
-    "event_related": true,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "alcance",
-    "target_customer": [
-      "organizadores de eventos empresariais",
-      "patrocinadores e marcas",
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual",
-      "transmissao com exposicao de patrocinadores",
-      "conteudo para redes sociais"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Feira, 22/9, por volta das 00h03min",
-    "event_city": "Patrocínio",
-    "event_date": "2027-09-22",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Homem é preso após furto de fiações e materiais de instalação de internet no cen\n\nCom informações da Agência Local de Comunicação Organizacional 46ºBPM\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Seu evento pode chegar muito alem do publico presente."
-      },
-      "stories": [
-        "Homem é preso após furto de fiações e materiais de instalação de internet no cen",
-        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-        "Seu evento pode chegar muito alem do publico presente."
-      ],
-      "carousel": {
-        "title": "Homem é preso após furto de fiações e materiais de instalação de internet no cen",
-        "slides": [
-          "Com informações da Agência Local de Comunicação Organizacional 46ºBPM",
-          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-          "Seu evento pode chegar muito alem do publico presente."
-        ]
-      }
-    }
+    },
+    "_priority_score": 43.0
   }
 ]
