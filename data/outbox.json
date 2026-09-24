@@ -81,6 +81,34 @@
       "aprovado_em": "",
       "observacao": "",
       "_displayed": false
+    },
+    {
+      "lead_id": "lev-efa68d777e",
+      "event_id": "evt-f7a99b7fc9",
+      "event_name": "Primeiro Pedal do Mel",
+      "city": "Arapuá",
+      "days_until_event": 17,
+      "event_timing": "futuro",
+      "prospecting_priority": "urgente",
+      "contact_window": "urgente",
+      "potential_client_type": [
+        "secretaria municipal"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "replay e placar",
+        "conteudo para redes sociais",
+        "streaming pay-per-view"
+      ],
+      "lead_score": 8.2,
+      "prospecting_score": 8.0,
+      "rascunho": "Ola! Vimos a noticia sobre Primeiro Pedal do Mel em Arapuá. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, ampliando o alcance da programacao municipal. Podemos conversar sobre uma transmissao para esse evento?",
+      "status": "pendente",
+      "enviado_em": "",
+      "aprovado_em": "",
+      "observacao": "",
+      "_displayed": false
     }
   ]
 }
