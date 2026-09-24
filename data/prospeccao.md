@@ -75,6 +75,8 @@
   > Ola! Vimos a noticia sobre Festival de Pesca da Lagoa Grande em Patos de Minas. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?
 - **Casamento Comunitário** [Patrocínio] — `urgente`, score 8.6:
   > Ola! Vimos a noticia sobre Casamento Comunitário em Patrocínio. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?
+- **Primeiro Pedal do Mel** [Arapuá] — `urgente`, score 8.0:
+  > Ola! Vimos a noticia sobre Primeiro Pedal do Mel em Arapuá. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, ampliando o alcance da programacao municipal. Podemos conversar sobre uma transmissao para esse evento?
 
 ---
 _Fim do relatório._
