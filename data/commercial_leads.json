@@ -7922,7 +7922,73 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 7.4
+    },
+    "Feira (25) A BR-354 foi totalmente liberada por|Carmo do Paranaíba|": {
+      "lead_score": 5.3,
+      "priority": "BAIXA",
+      "event_name": "Feira (25) A BR-354 foi totalmente liberada por",
+      "event_type": "feira",
+      "city": "Carmo do Paranaíba",
+      "event_date": "",
+      "days_until_event": null,
+      "event_timing": "passado",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/br-354-e-liberada-apos-colisao-entre-duas-carretas-no-km-301-em-rio-paranaiba",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-25T13:32:59.660318-03:00",
+      "detected_at": "2026-09-25T13:32:59.660318-03:00",
+      "lead_id": "lev-8916cebe0a",
+      "event_id": "evt-139298a6b3",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "nao_prospectar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Não prospectar para transmissão (evento já aconteceu)",
+      "contact_reason": "Evento 'feira', em carmo do paranaíba, evento já realizado.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 4.7
     }
   },
-  "atualizado": "2026-09-25T08:15:20.542338-03:00"
+  "atualizado": "2026-09-25T13:33:49.093864-03:00"
 }
