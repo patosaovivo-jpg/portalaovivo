@@ -2,18 +2,18 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 113  
+**Leads ativos:** 115  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
 | muito_urgente | 9 |
-| urgente | 33 |
+| urgente | 34 |
 | alto | 2 |
 | médio | 1 |
-| monitorar | 68 |
-| **Total** | **113** |
+| monitorar | 69 |
+| **Total** | **115** |
 
 ## Prioridade de hoje
 
