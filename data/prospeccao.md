@@ -80,6 +80,8 @@
   > Ola! Vimos a noticia sobre Primeiro Pedal do Mel em Arapuá. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, ampliando o alcance da programacao municipal. Podemos conversar sobre uma transmissao para esse evento?
 - **Feira, uma capacitação** [Patrocínio] — `urgente`, score 8.1:
   > Ola! Vimos a noticia sobre Feira, uma capacitação em Patrocínio. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?
+- **Feira, um novo veículo** [Patrocínio] — `urgente`, score 8.1:
+  > Ola! Vimos a noticia sobre Feira, um novo veículo em Patrocínio. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?
 
 ---
 _Fim do relatório._
