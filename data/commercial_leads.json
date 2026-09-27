@@ -8539,7 +8539,73 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 7.3
+    },
+    "Feira e a madrugada deste sábado Carmo do|Carmo do Paranaíba|": {
+      "lead_score": 6.3,
+      "priority": "MEDIA",
+      "event_name": "Feira e a madrugada deste sábado Carmo do",
+      "event_type": "feira",
+      "city": "Carmo do Paranaíba",
+      "event_date": "",
+      "days_until_event": null,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/dois-motociclistas-morrem-em-estradas-vicinais-de-carmo-do-paranaiba-em-menos-de-24-horas",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-27T00:34:27.443743-03:00",
+      "detected_at": "2026-09-27T00:34:27.443743-03:00",
+      "lead_id": "lev-b3d3483a0f",
+      "event_id": "evt-b4e0e7d9ea",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'feira', em carmo do paranaíba.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.9
     }
   },
-  "atualizado": "2026-09-26T20:23:10.523031-03:00"
+  "atualizado": "2026-09-27T00:34:36.328553-03:00"
 }
