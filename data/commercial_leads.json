@@ -8677,7 +8677,74 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 6.3
+    },
+    "Nota de falecimento.  Maria Conceição Peres dos Santos aos 8|Cruzeiro da Fortaleza|2027-09-26": {
+      "lead_score": 6.0,
+      "priority": "MEDIA",
+      "event_name": "Nota de falecimento.  Maria Conceição Peres dos Santos aos 8",
+      "event_type": "festa",
+      "city": "Cruzeiro da Fortaleza",
+      "event_date": "2027-09-26",
+      "days_until_event": 364,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticia/nota-de-falecimento-maria-conceicao-peres-dos-santos-aos-86-anos-88172.html",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-27T17:52:01.327277-03:00",
+      "detected_at": "2026-09-27T17:52:01.327277-03:00",
+      "lead_id": "lev-f9e7d61eab",
+      "event_id": "evt-90841ce06c",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "associacao",
+        "organizador de eventos"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Ampliar o alcance da festa para quem nao vai ao local e registrar a programacao.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'festa', em cruzeiro da fortaleza, faltam 364 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.4
     }
   },
-  "atualizado": "2026-09-27T13:22:18.698612-03:00"
+  "atualizado": "2026-09-27T17:52:02.904729-03:00"
 }
