@@ -1540,55 +1540,7 @@
           "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
         ]
       }
-    }
-  },
-  {
-    "titulo": "Nota de falecimento: Sra.Cosma Gualberto da Silva aos 87 anos. Informou Funerária Frederico Ozanam",
-    "link": "https://www.patrocinioonline.com.br/noticia/nota-de-falecimento-sracosma-gualberto-da-silva-aos-87-anos-88169.html",
-    "fonte": "Patrocinio Online",
-    "tema": "Local e Cidades",
-    "resumo": "Faleceu neste sábado, 26/09/2026, em Perdizes (MG), Sra.Cosma Gualberto da Silva aos 87 anos.\n\nViúva do Sr. Francisco Paula da Silva.\n\nDeixa os filhos: Juciê, Juciene, Valdir, Valmir, Maria e Sérgio, além de genros, noras, netos, bisnetos, tataranetos e demais parentes e amigos.\n\nA cerimônia de despedida será realizada neste sábado, 26/09, a partir das 12h30, na Sala 03 da Funerária Frederico Ozanam, em Patrocínio-MG.\n\nA exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
-    "imagem": "/assets/images/default.jpg",
-    "category": "marketing",
-    "editorial_score": 6,
-    "commercial_score": 8,
-    "instagram_score": 6,
-    "event_related": false,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "visibilidade",
-    "target_customer": [
-      "patrocinadores e marcas"
-    ],
-    "suggested_service": [
-      "transmissao com exposicao de patrocinadores",
-      "conteudo para redes sociais"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "",
-    "event_city": "",
-    "event_date": "",
-    "conteudo_social": {
-      "reel": {
-        "hook": "Todo mundo está comentando. E quem ainda não viu?",
-        "script": "Todo mundo está comentando. E quem ainda não viu? A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Nota de falecimento: Sra.Cosma Gualberto da Silva aos 87 anos. Informou Funerári\n\nFaleceu neste sábado, 26/09/2026, em Perdizes (MG), Sra.Cosma Gualberto da Silva aos 87 anos.\n\nExposicao de marca que ultrapassa o espaco fisico do evento.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Exposicao de marca que ultrapassa o espaco fisico do evento."
-      },
-      "stories": [
-        "Nota de falecimento: Sra.Cosma Gualberto da Silva aos 87 anos. Informou Funerári",
-        "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
-        "Exposicao de marca que ultrapassa o espaco fisico do evento."
-      ],
-      "carousel": {
-        "title": "Nota de falecimento: Sra.Cosma Gualberto da Silva aos 87 anos. Informou Funerári",
-        "slides": [
-          "Faleceu neste sábado, 26/09/2026, em Perdizes (MG), Sra.Cosma Gualberto da Silva aos 87 anos.",
-          "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
-          "Exposicao de marca que ultrapassa o espaco fisico do evento."
-        ]
-      }
-    }
+    },
+    "_priority_score": 70.0
   }
 ]
