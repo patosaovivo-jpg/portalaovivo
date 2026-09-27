@@ -8605,7 +8605,79 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.9
+    },
+    "Campeonato Regional da LPD|Carmo do Paranaíba|2027-09-26": {
+      "lead_score": 7.1,
+      "priority": "MEDIA",
+      "event_name": "Campeonato Regional da LPD",
+      "event_type": "campeonato",
+      "city": "Carmo do Paranaíba",
+      "event_date": "2027-09-26",
+      "days_until_event": 364,
+      "event_timing": "futuro",
+      "organizer": "Liga Patense",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/santa-cruz-de-lagoa-formosa-faz-jogo-decisivo-neste-sabado-pelo-campeonato-regional-da-lpd",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais",
+        "transmissao ao vivo"
+      ],
+      "target_customer": [
+        "ligas e clubes esportivos",
+        "organizadores de eventos empresariais",
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 10,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-09-27T08:23:12.182583-03:00",
+      "detected_at": "2026-09-27T08:23:12.182583-03:00",
+      "lead_id": "lev-511a361d2c",
+      "event_id": "evt-3acd3aa540",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "liga esportiva",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "liga esportiva",
+        "clube esportivo",
+        "organizador de competicao"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "replay e placar",
+        "conteudo para redes sociais",
+        "streaming pay-per-view"
+      ],
+      "commercial_need": "Levar a competicao para torcedores de outras cidades e ampliar o alcance da torcida.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'campeonato', em carmo do paranaíba, faltam 364 dias, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 6.3
     }
   },
-  "atualizado": "2026-09-27T00:34:39.350121-03:00"
+  "atualizado": "2026-09-27T08:23:14.757121-03:00"
 }
