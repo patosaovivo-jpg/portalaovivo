@@ -163,6 +163,32 @@
       "aprovado_em": "",
       "observacao": "",
       "_displayed": false
+    },
+    {
+      "lead_id": "lev-557d726a94",
+      "event_id": "evt-b654b3d7d4",
+      "event_name": "Feira, 28 de setembro, a partir das 13h, está",
+      "city": "Cruzeiro da Fortaleza",
+      "days_until_event": 6,
+      "event_timing": "em_breve",
+      "prospecting_priority": "urgente",
+      "contact_window": "urgente",
+      "potential_client_type": [
+        "prefeitura"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ],
+      "lead_score": 8.9,
+      "prospecting_score": 8.8,
+      "rascunho": "Ola! Vimos a noticia sobre Feira, 28 de setembro, a partir das 13h, está em Cruzeiro da Fortaleza. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?",
+      "status": "pendente",
+      "enviado_em": "",
+      "aprovado_em": "",
+      "observacao": "",
+      "_displayed": false
     }
   ]
 }

@@ -8744,7 +8744,79 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.4
+    },
+    "Feira, 28 de setembro, a partir das 13h, está|Cruzeiro da Fortaleza|2026-10-04": {
+      "lead_score": 8.9,
+      "priority": "FORTE",
+      "event_name": "Feira, 28 de setembro, a partir das 13h, está",
+      "event_type": "festa",
+      "city": "Cruzeiro da Fortaleza",
+      "event_date": "2026-10-04",
+      "days_until_event": 6,
+      "event_timing": "em_breve",
+      "organizer": "Prefeitura de Cruzeiro da Fortaleza",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticias-locais/",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais",
+        "transmissao hibrida"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "ligas e clubes esportivos",
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 10,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-09-28T00:32:08.688141-03:00",
+      "detected_at": "2026-09-28T00:32:08.688141-03:00",
+      "lead_id": "lev-557d726a94",
+      "event_id": "evt-b654b3d7d4",
+      "recurring_event": true,
+      "recurrence_pattern": "recorrente",
+      "previous_event_detected": false,
+      "organizer_type": "prefeitura",
+      "organizer_source": "Citado na notícia de Patrocinio Online",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "associacao",
+        "organizador de eventos"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Ampliar o alcance da festa para quem nao vai ao local e registrar a programacao.",
+      "contact_window": "urgente",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Urgente — contactar imediatamente (a menos de 20 dias)",
+      "contact_reason": "Evento 'festa', em cruzeiro da fortaleza, faltam 6 dias, organizador em evidência.",
+      "suggested_outreach": "Ola! Vimos a noticia sobre Feira, 28 de setembro, a partir das 13h, está em Cruzeiro da Fortaleza. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 8.8
     }
   },
-  "atualizado": "2026-09-27T20:38:32.321330-03:00"
+  "atualizado": "2026-09-28T00:32:10.477142-03:00"
 }
