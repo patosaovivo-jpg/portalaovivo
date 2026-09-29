@@ -9232,7 +9232,76 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 6.5
+    },
+    "Feira, 29/09/2026|Patrocínio|2026-09-29": {
+      "lead_score": 6.6,
+      "priority": "MEDIA",
+      "event_name": "Feira, 29/09/2026",
+      "event_type": "feira",
+      "city": "Patrocínio",
+      "event_date": "2026-09-29",
+      "days_until_event": 0,
+      "event_timing": "hoje",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticia/nota-de-falecimento-sr-jose-dos-reis-ze-chico-aos-82-anos-88197.html",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-09-29T09:09:32.669367-03:00",
+      "detected_at": "2026-09-29T09:09:32.669367-03:00",
+      "lead_id": "lev-a682ab5933",
+      "event_id": "evt-9902ca5335",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "urgente",
+      "prospecting_priority": "muito_urgente",
+      "recommended_contact_window": "Urgente — contactar imediatamente (a menos de 20 dias)",
+      "contact_reason": "Evento 'feira', em patrocínio, faltam 0 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 6.0
     }
   },
-  "atualizado": "2026-09-29T01:10:52.591075-03:00"
+  "atualizado": "2026-09-29T09:09:34.886780-03:00"
 }
