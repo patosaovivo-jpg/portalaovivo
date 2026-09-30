@@ -2,18 +2,18 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 140  
+**Leads ativos:** 144  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
 | muito_urgente | 11 |
-| urgente | 42 |
+| urgente | 44 |
 | alto | 2 |
 | médio | 1 |
-| monitorar | 84 |
-| **Total** | **140** |
+| monitorar | 86 |
+| **Total** | **144** |
 
 ## Prioridade de hoje
 
@@ -44,6 +44,7 @@
 - Notícias Fique por dentro das novidades Ver mais [São Gonçalo do Abaeté] — muito perto do evento (faltam 2 dias).
 - Feira (9), a “quebra completa do sigilo das [-] — muito perto do evento (faltam 2 dias).
 - Encontro [Patos de Minas] — muito perto do evento (faltam 1 dias).
+- Feira (1/10), Minas Gerais [Triângulo Mineiro] — muito perto do evento (faltam 1 dias).
 
 ## Passados (não prospectar para transmissão)
 
