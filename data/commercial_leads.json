@@ -10598,7 +10598,75 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.2
+    },
+    "Feira (1º)|Carmo do Paranaíba|2026-04-10": {
+      "lead_score": 5.4,
+      "priority": "BAIXA",
+      "event_name": "Feira (1º)",
+      "event_type": "feira",
+      "city": "Carmo do Paranaíba",
+      "event_date": "2026-04-10",
+      "days_until_event": -175,
+      "event_timing": "passado",
+      "organizer": "Secretaria\nde Estado",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/detento-e-encontrado-morto-dentro-de-cela-no-complexo-penitenciario-de-carmo-do-paranaiba",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-10-02T06:24:14.714290-03:00",
+      "detected_at": "2026-10-02T06:24:14.714290-03:00",
+      "lead_id": "lev-2ad13d62c7",
+      "event_id": "evt-bed97cdb23",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "secretaria municipal",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "secretaria municipal",
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "nao_prospectar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Não prospectar para transmissão (evento já aconteceu)",
+      "contact_reason": "Evento 'feira', em carmo do paranaíba, evento já realizado, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.4
     }
   },
-  "atualizado": "2026-10-01T21:36:00.484296-03:00"
+  "atualizado": "2026-10-02T06:24:30.069525-03:00"
 }
