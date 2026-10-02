@@ -10809,7 +10809,74 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 6.1
+    },
+    "Feira (1/10), Lagoa Formosa realizou a Audiência|Lagoa Formosa|2027-10-01": {
+      "lead_score": 5.8,
+      "priority": "BAIXA",
+      "event_name": "Feira (1/10), Lagoa Formosa realizou a Audiência",
+      "event_type": "feira",
+      "city": "Lagoa Formosa",
+      "event_date": "2027-10-01",
+      "days_until_event": 364,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/lagoa-formosa-realiza-audiencia-publica-para-construcao-do-plano-municipal-pela-primeira-infancia",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-10-02T18:54:06.490081-03:00",
+      "detected_at": "2026-10-02T18:54:06.490081-03:00",
+      "lead_id": "lev-7270d1ac32",
+      "event_id": "evt-0d38125859",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'feira', em lagoa formosa, faltam 364 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.3
     }
   },
-  "atualizado": "2026-10-02T14:30:06.671321-03:00"
+  "atualizado": "2026-10-02T18:54:11.974885-03:00"
 }
