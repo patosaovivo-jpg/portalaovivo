@@ -2,18 +2,18 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 162  
+**Leads ativos:** 163  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
 | muito_urgente | 12 |
-| urgente | 48 |
+| urgente | 49 |
 | alto | 3 |
 | médio | 1 |
 | monitorar | 98 |
-| **Total** | **162** |
+| **Total** | **163** |
 
 ## Prioridade de hoje
 
@@ -45,6 +45,7 @@
 - Feira (9), a “quebra completa do sigilo das [-] — muito perto do evento (faltam 2 dias).
 - Encontro [Patos de Minas] — muito perto do evento (faltam 1 dias).
 - Feira (1/10), Minas Gerais [Triângulo Mineiro] — muito perto do evento (faltam 1 dias).
+- Festa de Santa Terezinha reúne fiéis [-] — muito perto do evento (faltam 1 dias).
 
 ## Passados (não prospectar para transmissão)
 

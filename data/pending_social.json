@@ -2322,5 +2322,58 @@
       }
     },
     "_priority_score": 60.0
+  },
+  {
+    "titulo": "Ponto alto da festa de Santa Terezinha reúne fiéis com Missa e procissão; programação encerra neste domingo Celebração no dia da padroeira contou com novena, homenagem e procissão pelas ruas próximas ",
+    "link": "https://www.patrocinioonline.com.br/noticia/ponto-alto-da-festa-de-santa-terezinha-reune-fieis-com-missa-e-procissao-programacao-encerra-neste-domingo-88284.html",
+    "fonte": "Patrocinio Online",
+    "tema": "Local e Cidades",
+    "resumo": "A festa em louvor a Santa Terezinha, padroeira da Paróquia Santa Terezinha e do bairro que leva o mesmo nome, segue com programação até este domingo, 4 de outubro, quando será realizado o encerramento das celebrações.\n\nPara ver todas as fotos Clique Aqui ou vá até a Seção Sociedade\n\nUm dos pontos altos da festa aconteceu na quinta-feira, 1º de outubro, dia de Santa Terezinha, celebrado com a participação de muitos fiéis. A programação contou com novena, Santa Missa, homenagem e procissão pelas ruas próximas à paróquia.\n\nAntes da celebração, o pároco, padre Marcelo Marins, rezou o 7º dia da novena em louvor a Santa Terezinha.\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+    "imagem": "/assets/images/social-ponto-alto-da-festa-de-santa-terezinha-rene-fiis-com-missa-e.jpg",
+    "category": "eventos",
+    "editorial_score": 6,
+    "commercial_score": 8,
+    "instagram_score": 6,
+    "event_related": true,
+    "sports_related": false,
+    "regional": false,
+    "commercial_angle": "alcance",
+    "target_customer": [
+      "organizadores de eventos empresariais",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual",
+      "conteudo para redes sociais",
+      "transmissao hibrida",
+      "transmissao com exposicao de patrocinadores"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Festa de Santa Terezinha reúne fiéis",
+    "event_city": "",
+    "event_date": "2026-10-04",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Ponto alto da festa de Santa Terezinha reúne fiéis com Missa e procissão; progra\n\nA festa em louvor a Santa Terezinha, padroeira da Paróquia Santa Terezinha e do bairro que leva o mesmo nome, segue com programação até este domingo, 4 de outubro, quando será realizado o encerramento das celebrações.\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu evento pode chegar muito alem do publico presente."
+      },
+      "stories": [
+        "Ponto alto da festa de Santa Terezinha reúne fiéis com Missa e procissão; progra",
+        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+        "Seu evento pode chegar muito alem do publico presente."
+      ],
+      "carousel": {
+        "title": "Ponto alto da festa de Santa Terezinha reúne fiéis com Missa e procissão; progra",
+        "slides": [
+          "A festa em louvor a Santa Terezinha, padroeira da Paróquia Santa Terezinha e do bairro que leva o mesmo nome, segue com programação até este domingo, 4 de outubro, quando será realizado o encerramento das celebrações.",
+          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+          "Seu evento pode chegar muito alem do publico presente."
+        ]
+      }
+    }
   }
 ]

@@ -11144,7 +11144,75 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 7.7
+    },
+    "Festa de Santa Terezinha reúne fiéis||2026-10-04": {
+      "lead_score": 7.5,
+      "priority": "FORTE",
+      "event_name": "Festa de Santa Terezinha reúne fiéis",
+      "event_type": "festa",
+      "city": "",
+      "event_date": "2026-10-04",
+      "days_until_event": 1,
+      "event_timing": "em_breve",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticia/ponto-alto-da-festa-de-santa-terezinha-reune-fieis-com-missa-e-procissao-programacao-encerra-neste-domingo-88284.html",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais",
+        "transmissao hibrida",
+        "transmissao com exposicao de patrocinadores"
+      ],
+      "target_customer": [
+        "organizadores de eventos empresariais",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 6,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-10-03T17:40:16.966237-03:00",
+      "detected_at": "2026-10-03T17:40:16.966237-03:00",
+      "lead_id": "lev-35e5dfbd04",
+      "event_id": "evt-cf29816f4e",
+      "recurring_event": true,
+      "recurrence_pattern": "recorrente",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "associacao",
+        "organizador de eventos"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Ampliar o alcance da festa para quem nao vai ao local e registrar a programacao.",
+      "contact_window": "muito_tarde",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Muito tarde — apenas ação de emergência",
+      "contact_reason": "Evento 'festa', faltam 1 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 7.5
     }
   },
-  "atualizado": "2026-10-03T12:45:48.693151-03:00"
+  "atualizado": "2026-10-03T17:40:22.061699-03:00"
 }
