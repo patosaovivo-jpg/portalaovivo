@@ -2376,54 +2376,5 @@
       }
     },
     "_priority_score": 43.0
-  },
-  {
-    "titulo": "Últimos dias: ainda dá tempo de ingressar na graduação EAD do UNIPAM",
-    "link": "https://www.patos1.com.br/noticia/ultimos-dias-ainda-da-tempo-de-ingressar-na-graduacao-ead-do-unipam",
-    "fonte": "Patos 1",
-    "tema": "Local e Cidades",
-    "resumo": "Esta é a última oportunidade para aqueles que desejam iniciar, ainda este ano, uma graduação no formato de Educação Distância (EAD) no Centro Universitário de Patos de Minas (UNIPAM).\n\nOs interessados poderão ingressar por meio de prova on-line, por aproveitamento da nota do Exame Nacional do Ensino Médio (ENEM), por obtenção de novo título ou por transferência externa.\n\nNa oportunidade, estão sendo ofertados os cursos: Administração, Análise e Desenvolvimento de Sistemas, Ciências Contábeis, Gestão Comercial, Gestão de Negócios e Inovação, Gestão de Recursos Humanos, Gestão Financeira, Gestão Pública, Logística e Marketing.\n\nA Educação Digital conta com polos presenciais, nas seguintes cidades: Carmo do Paranaíba, João Pinheiro, Patos de Minas, Patrocínio, São Gotardo, Três Marias e Vazante, oferecendo suporte aos estudantes durante a graduação.",
-    "imagem": "/assets/images/default.jpg",
-    "category": "marketing",
-    "editorial_score": 6,
-    "commercial_score": 8,
-    "instagram_score": 7,
-    "event_related": false,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "visibilidade",
-    "target_customer": [
-      "patrocinadores e marcas"
-    ],
-    "suggested_service": [
-      "transmissao com exposicao de patrocinadores",
-      "conteudo para redes sociais"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "",
-    "event_city": "",
-    "event_date": "",
-    "conteudo_social": {
-      "reel": {
-        "hook": "Todo mundo está comentando. E quem ainda não viu?",
-        "script": "Todo mundo está comentando. E quem ainda não viu? A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Últimos dias: ainda dá tempo de ingressar na graduação EAD do UNIPAM\n\nEsta é a última oportunidade para aqueles que desejam iniciar, ainda este ano, uma graduação no formato de Educação Distância (EAD) no Centro Universitário de Patos de Minas (UNIPAM).\n\nExposicao de marca que ultrapassa o espaco fisico do evento.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Exposicao de marca que ultrapassa o espaco fisico do evento."
-      },
-      "stories": [
-        "Últimos dias: ainda dá tempo de ingressar na graduação EAD do UNIPAM",
-        "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
-        "Exposicao de marca que ultrapassa o espaco fisico do evento."
-      ],
-      "carousel": {
-        "title": "Últimos dias: ainda dá tempo de ingressar na graduação EAD do UNIPAM",
-        "slides": [
-          "Esta é a última oportunidade para aqueles que desejam iniciar, ainda este ano, uma graduação no formato de Educação Distância (EAD) no Centro Universitário de Patos de Minas (UNIPAM).",
-          "A exposicao de marcas durante eventos ganha ainda mais forca quando a transmissao amplia o alcance para alem do publico presente.",
-          "Exposicao de marca que ultrapassa o espaco fisico do evento."
-        ]
-      }
-    }
   }
 ]
