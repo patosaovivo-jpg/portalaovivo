@@ -78,6 +78,8 @@
   > Ola! Vimos a noticia sobre Festival de Pesca da Lagoa Grande em Patos de Minas. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?
 - **Casamento Comunitário** [Patrocínio] — `urgente`, score 8.6:
   > Ola! Vimos a noticia sobre Casamento Comunitário em Patrocínio. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?
+- **Feira (21)** [Patos de Minas] — `urgente`, score 8.0:
+  > Ola! Vimos a noticia sobre Feira (21) em Patos de Minas. O Portal Ao Vivo cobre feiras com transmissao ao vivo, entrevistas e exposicao ampliada dos expositores. Podemos conversar?
 - **Primeiro Pedal do Mel** [Arapuá] — `urgente`, score 8.0:
   > Ola! Vimos a noticia sobre Primeiro Pedal do Mel em Arapuá. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, ampliando o alcance da programacao municipal. Podemos conversar sobre uma transmissao para esse evento?
 - **Feira, uma capacitação** [Patrocínio] — `urgente`, score 8.1:
@@ -86,8 +88,6 @@
   > Ola! Vimos a noticia sobre Feira, um novo veículo em Patrocínio. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?
 - **Feira, 28 de setembro, a partir das 13h, está** [Cruzeiro da Fortaleza] — `urgente`, score 8.8:
   > Ola! Vimos a noticia sobre Feira, 28 de setembro, a partir das 13h, está em Cruzeiro da Fortaleza. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?
-- **Feira (25), os integrantes da comissão afirmaram** [Patos de Minas] — `urgente`, score 8.2:
-  > Ola! Vimos a noticia sobre Feira (25), os integrantes da comissão afirmaram em Patos de Minas. O Portal Ao Vivo pode transmitir e registrar a cerimonia com qualidade profissional. Podemos conversar?
 
 ---
 _Fim do relatório._
