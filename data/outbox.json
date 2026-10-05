@@ -269,6 +269,34 @@
       "aprovado_em": "",
       "observacao": "",
       "_displayed": false
+    },
+    {
+      "lead_id": "lev-b1432d926a",
+      "event_id": "evt-0ef8e5e9ba",
+      "event_name": "Campeonato Regional da LPD",
+      "city": "Serra do Salitre",
+      "days_until_event": 19,
+      "event_timing": "futuro",
+      "prospecting_priority": "urgente",
+      "contact_window": "urgente",
+      "potential_client_type": [
+        "liga esportiva"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "replay e placar",
+        "conteudo para redes sociais",
+        "streaming pay-per-view"
+      ],
+      "lead_score": 8.5,
+      "prospecting_score": 8.1,
+      "rascunho": "Ola! Vimos a noticia sobre Campeonato Regional da LPD em Serra do Salitre. O Portal Ao Vivo faz transmissao esportiva com producao multicamera, replay e cortes para redes sociais - assim a torcida de todas as cidades acompanha cada lance. Podemos conversar?",
+      "status": "pendente",
+      "enviado_em": "",
+      "aprovado_em": "",
+      "observacao": "",
+      "_displayed": false
     }
   ]
 }
