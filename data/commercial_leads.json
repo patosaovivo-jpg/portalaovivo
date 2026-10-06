@@ -11698,7 +11698,80 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.4
+    },
+    "Maratona do Cerrado começam|Patrocínio|2026-11-04": {
+      "lead_score": 8.7,
+      "priority": "FORTE",
+      "event_name": "Maratona do Cerrado começam",
+      "event_type": "feira",
+      "city": "Patrocínio",
+      "event_date": "2026-11-04",
+      "days_until_event": 29,
+      "event_timing": "futuro",
+      "organizer": "Prefeitura de Patrocínio",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticia/inscricoes-para-a-2a-meia-maratona-do-cerrado-comecam-nesta-terca-feira-em-patrocinio-saiba-mais-88324.html",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 9,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-10-06T09:47:27.020422-03:00",
+      "detected_at": "2026-10-06T09:47:27.020422-03:00",
+      "lead_id": "lev-48a9da221b",
+      "event_id": "evt-07ef6b9aa1",
+      "recurring_event": true,
+      "recurrence_pattern": "recorrente",
+      "previous_event_detected": false,
+      "organizer_type": "prefeitura",
+      "organizer_source": "Citado na notícia de Patrocinio Online",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "prospectar_prioridade",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Prospectar com prioridade (janela: 20 a 45 dias antes)",
+      "contact_reason": "Evento 'feira', em patrocínio, faltam 29 dias, organizador em evidência.",
+      "suggested_outreach": "Ola! Vimos a noticia sobre Maratona do Cerrado começam em Patrocínio. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 8.5
     }
   },
-  "atualizado": "2026-10-06T01:54:08.132510-03:00"
+  "atualizado": "2026-10-06T09:47:30.709070-03:00"
 }

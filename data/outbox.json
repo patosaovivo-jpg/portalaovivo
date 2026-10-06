@@ -297,6 +297,33 @@
       "aprovado_em": "",
       "observacao": "",
       "_displayed": false
+    },
+    {
+      "lead_id": "lev-48a9da221b",
+      "event_id": "evt-07ef6b9aa1",
+      "event_name": "Maratona do Cerrado começam",
+      "city": "Patrocínio",
+      "days_until_event": 29,
+      "event_timing": "futuro",
+      "prospecting_priority": "urgente",
+      "contact_window": "prospectar_prioridade",
+      "potential_client_type": [
+        "prefeitura"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "lead_score": 8.7,
+      "prospecting_score": 8.5,
+      "rascunho": "Ola! Vimos a noticia sobre Maratona do Cerrado começam em Patrocínio. O Portal Ao Vivo transmite eventos ao vivo e produz cobertura audiovisual, levando a programacao para quem nao pode ir ao local e ampliando a visibilidade dos patrocinadores. Podemos conversar sobre uma transmissao para esse evento?",
+      "status": "pendente",
+      "enviado_em": "",
+      "aprovado_em": "",
+      "observacao": "",
+      "_displayed": false
     }
   ]
 }
