@@ -12315,7 +12315,78 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.5
+    },
+    "Leilão e adquirido por uma nova proprietária|Patos de Minas|": {
+      "lead_score": 5.4,
+      "priority": "BAIXA",
+      "event_name": "Leilão e adquirido por uma nova proprietária",
+      "event_type": "agropecuaria",
+      "city": "Patos de Minas",
+      "event_date": "",
+      "days_until_event": null,
+      "event_timing": "passado",
+      "organizer": "Clube Notícia",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/mulher-de-53-anos-que-nao-era-vista-ha-quase-um-ano-e-encontrada-morta-dentro-de-apartamento-em-patos-de-minas",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores"
+      ],
+      "target_customer": [
+        "ligas e clubes esportivos",
+        "associacoes e sindicatos",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-11-06T21:43:58.268528-03:00",
+      "detected_at": "2026-11-06T21:43:58.268528-03:00",
+      "lead_id": "lev-b07b939396",
+      "event_id": "evt-50513817f2",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "clube esportivo",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "clube esportivo",
+        "organizador de feiras",
+        "sindicato rural",
+        "associacao",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores",
+        "transmissao de leilao"
+      ],
+      "commercial_need": "Dar visibilidade a pecuaria regional e ampliar o alcance do evento e dos patrocinadores.",
+      "contact_window": "nao_prospectar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Não prospectar para transmissão (evento já aconteceu)",
+      "contact_reason": "Evento 'agropecuaria', em patos de minas, evento já realizado, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.4
     }
   },
-  "atualizado": "2026-11-06T15:59:13.666858-03:00"
+  "atualizado": "2026-11-06T21:44:07.702533-03:00"
 }
