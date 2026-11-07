@@ -2639,5 +2639,56 @@
       }
     },
     "_priority_score": 66.0
+  },
+  {
+    "titulo": "Escola Estadual Nossa Senhora da Piedade realiza a 4ª edição da Feira do Agronegócio em Lagoa Formosa",
+    "link": "https://www.patos1.com.br/noticia/escola-estadual-nossa-senhora-da-piedade-realiza-a-4a-edicao-da-feira-do-agronegocio-em-lagoa-formosa",
+    "fonte": "Patos 1",
+    "tema": "Política",
+    "resumo": "Escola Estadual Nossa Senhora da Piedade realiza a 4ª edição da Feira do Agronegócio em Lagoa Formosa\n\nAconteceu nesta sexta-feira, 6 de novembro, na Escola Estadual\n\nNossa Senhora da Piedade, em Lagoa Formosa (MG), a 4ª edição da Feira do\n\nAgronegócio. O evento teve início às 8h, com encerramento às 16h. A professora Cíntia foi uma das coordenadores do projeto e mostrou todos as caminhos e planejamentos realizados pelos alunos (vídeo).\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+    "imagem": "/assets/images/social-escola-estadual-nossa-senhora-da-piedade-realiza-a-4-edio-da.jpg",
+    "category": "eventos",
+    "editorial_score": 8,
+    "commercial_score": 8,
+    "instagram_score": 7,
+    "event_related": true,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "alcance",
+    "target_customer": [
+      "camara municipal",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual",
+      "transmissao com exposicao de patrocinadores"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Feira do Agronegócio",
+    "event_city": "Patos de Minas",
+    "event_date": "2027-11-06",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Escola Estadual Nossa Senhora da Piedade realiza a 4ª edição da Feira do Agroneg\n\nEscola Estadual Nossa Senhora da Piedade realiza a 4ª edição da Feira do Agronegócio em Lagoa Formosa\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu evento pode chegar muito alem do publico presente."
+      },
+      "stories": [
+        "Escola Estadual Nossa Senhora da Piedade realiza a 4ª edição da Feira do Agroneg",
+        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+        "Seu evento pode chegar muito alem do publico presente."
+      ],
+      "carousel": {
+        "title": "Escola Estadual Nossa Senhora da Piedade realiza a 4ª edição da Feira do Agroneg",
+        "slides": [
+          "Escola Estadual Nossa Senhora da Piedade realiza a 4ª edição da Feira do Agronegócio em Lagoa Formosa",
+          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+          "Seu evento pode chegar muito alem do publico presente."
+        ]
+      }
+    }
   }
 ]

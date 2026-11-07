@@ -12792,7 +12792,76 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.0
+    },
+    "Feira do Agronegócio|Patos de Minas|2027-11-06": {
+      "lead_score": 6.2,
+      "priority": "MEDIA",
+      "event_name": "Feira do Agronegócio",
+      "event_type": "feira",
+      "city": "Patos de Minas",
+      "event_date": "2027-11-06",
+      "days_until_event": 364,
+      "event_timing": "futuro",
+      "organizer": "Câmara Municipal de Patos de Minas",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": 4,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/escola-estadual-nossa-senhora-da-piedade-realiza-a-4a-edicao-da-feira-do-agronegocio-em-lagoa-formosa",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores"
+      ],
+      "target_customer": [
+        "camara municipal",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-11-07T18:32:34.895898-03:00",
+      "detected_at": "2026-11-07T18:32:34.895898-03:00",
+      "lead_id": "lev-5b5993925f",
+      "event_id": "evt-ac17979db8",
+      "recurring_event": true,
+      "recurrence_pattern": "edição 4",
+      "previous_event_detected": true,
+      "organizer_type": "camara municipal",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "camara municipal",
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'feira', em patos de minas, faltam 364 dias, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 6.4
     }
   },
-  "atualizado": "2026-11-07T14:31:17.524375-03:00"
+  "atualizado": "2026-11-07T18:32:43.283712-03:00"
 }
