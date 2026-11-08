@@ -2641,57 +2641,6 @@
     "_priority_score": 66.0
   },
   {
-    "titulo": "Lagoa Grande - Suspeito de matar homem e balear outras três pessoas é preso em Paracatu",
-    "link": "https://www.patos1.com.br/noticia/lagoa-grande-suspeito-de-matar-homem-e-balear-outras-tres-pessoas-e-preso-em-paracatu",
-    "fonte": "Patos 1",
-    "tema": "Local e Cidades",
-    "resumo": "Lagoa Grande - Suspeito de matar homem e balear outras três pessoas é preso em Paracatu\n\nDurante a operação, os militares apreenderam uma pistola calibre 9 mm, uma carabina calibre .22 e munições.\n\nA Polícia Militar prendeu, na noite deste sábado (7), um homem de 31 anos suspeito de matar um homem de 39 anos e ferir outras três pessoas durante um tiroteio em Lagoa Grande, no Noroeste de Minas. O crime teria sido motivado por desentendimentos envolvendo episódios de bullying contra o filho do suspeito; veja entrevista com o Capitão Caixeta no final da matéria.\n\nApós os disparos, o homem fugiu do local, mas foi localizado e preso em Paracatu, durante diligências realizadas pela Polícia Militar. Ele foi encaminhado à Delegacia de Polícia Civil de Patos de Minas.\n\nCom transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
-    "imagem": "/assets/images/social-lagoa-grande-suspeito-de-matar-homem-e-balear-outras-trs-pes.jpg",
-    "category": "esportes",
-    "editorial_score": 7,
-    "commercial_score": 10,
-    "instagram_score": 8,
-    "event_related": true,
-    "sports_related": true,
-    "regional": true,
-    "commercial_angle": "esporte",
-    "target_customer": [
-      "ligas e clubes esportivos",
-      "associacoes e sindicatos",
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao esportiva",
-      "producao multicamera"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Lagoa Grande - Suspeito de matar homem e balear",
-    "event_city": "Patos de Minas",
-    "event_date": "2026-11-14",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Lagoa Grande - Suspeito de matar homem e balear outras três pessoas é preso em P\n\nLagoa Grande - Suspeito de matar homem e balear outras três pessoas é preso em Paracatu\n\nA transmissao esportiva profissional leva cada lance para a torcida de toda a regiao.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
-      },
-      "stories": [
-        "Lagoa Grande - Suspeito de matar homem e balear outras três pessoas é preso em P",
-        "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
-        "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
-      ],
-      "carousel": {
-        "title": "Lagoa Grande - Suspeito de matar homem e balear outras três pessoas é preso em P",
-        "slides": [
-          "Lagoa Grande - Suspeito de matar homem e balear outras três pessoas é preso em Paracatu",
-          "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
-          "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
-        ]
-      }
-    }
-  },
-  {
     "titulo": "5ª edição da Semana Municipal da Consciência Negra acontece de 15 a 29 de novembro em Patos de Minas 06 Nov 2026 87 visualizações CONTINUAR LENDO",
     "link": "https://www.patosdeminas.mg.gov.br/portal/noticias/0/3/2580/5-edicao-da-semana-municipal-da-consciencia-negra-acontece-de-15-a-29-de-novembro-em-patos-de-minas",
     "fonte": "Prefeitura de Patos de Minas",
@@ -2739,6 +2688,7 @@
           "Seu evento pode chegar muito alem do publico presente."
         ]
       }
-    }
+    },
+    "_priority_score": 60.0
   }
 ]
