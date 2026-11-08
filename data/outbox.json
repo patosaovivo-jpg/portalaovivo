@@ -324,6 +324,33 @@
       "aprovado_em": "",
       "observacao": "",
       "_displayed": false
+    },
+    {
+      "lead_id": "lev-50d1a66dca",
+      "event_id": "evt-f7d749049d",
+      "event_name": "Lagoa Grande - Suspeito de matar homem e balear",
+      "city": "Patos de Minas",
+      "days_until_event": 6,
+      "event_timing": "em_breve",
+      "prospecting_priority": "urgente",
+      "contact_window": "urgente",
+      "potential_client_type": [
+        "clube esportivo"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "cronometragem",
+        "conteudo para redes sociais"
+      ],
+      "lead_score": 8.3,
+      "prospecting_score": 8.2,
+      "rascunho": "Ola! Vimos a noticia sobre Lagoa Grande - Suspeito de matar homem e balear em Patos de Minas. O Portal Ao Vivo faz transmissao esportiva multicamera, levando o jogo para a torcida que nao pode ir ao estadio. Podemos conversar?",
+      "status": "pendente",
+      "enviado_em": "",
+      "aprovado_em": "",
+      "observacao": "",
+      "_displayed": false
     }
   ]
 }
