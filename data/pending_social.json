@@ -2690,5 +2690,56 @@
       }
     },
     "_priority_score": 60.0
+  },
+  {
+    "titulo": "Motorista baleado na MGC-354 na última sexta-feira (6) morre no Hospital Regional de Patos de Minas",
+    "link": "https://www.patos1.com.br/noticia/motorista-baleado-na-mgc-354-na-ultima-sexta-feira-6-morre-no-hospital-regional-de-patos-de-minas",
+    "fonte": "Patos 1",
+    "tema": "Local e Cidades",
+    "resumo": "Motorista baleado na MGC-354 na última sexta-feira (6) morre no Hospital Regional de Patos de Minas\n\nO crime teria motivação passional envolvendo uma mulher. O suspeito fugiu e até o momento não foi localizado.\n\nO caminhoneiro Edvaldo Heráclito de Sousa, de 49 anos, morreu na\n\ntarde deste domingo (8), no Hospital Regional Antônio Dias (HRAD), em Patos de\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+    "imagem": "/assets/images/social-motorista-baleado-na-mgc354-na-ltima-sextafeira-6-morre-no-h.jpg",
+    "category": "eventos",
+    "editorial_score": 7,
+    "commercial_score": 8,
+    "instagram_score": 7,
+    "event_related": true,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "alcance",
+    "target_customer": [
+      "ligas e clubes esportivos",
+      "associacoes e sindicatos",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Feira (6) morre",
+    "event_city": "Patos de Minas",
+    "event_date": "",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Motorista baleado na MGC-354 na última sexta-feira (6) morre no Hospital Regiona\n\nMotorista baleado na MGC-354 na última sexta-feira (6) morre no Hospital Regional de Patos de Minas\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu evento pode chegar muito alem do publico presente."
+      },
+      "stories": [
+        "Motorista baleado na MGC-354 na última sexta-feira (6) morre no Hospital Regiona",
+        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+        "Seu evento pode chegar muito alem do publico presente."
+      ],
+      "carousel": {
+        "title": "Motorista baleado na MGC-354 na última sexta-feira (6) morre no Hospital Regiona",
+        "slides": [
+          "Motorista baleado na MGC-354 na última sexta-feira (6) morre no Hospital Regional de Patos de Minas",
+          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+          "Seu evento pode chegar muito alem do publico presente."
+        ]
+      }
+    }
   }
 ]
