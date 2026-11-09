@@ -2747,59 +2747,6 @@
     }
   },
   {
-    "titulo": "ALERTA Completamente interditada a MGC 462  para retirada de carreta tombada na ponte do Santo Antônio, em Patrocínio Caminhões-guincho da EPR e veículos de empresas contratadas já estão posicionados ",
-    "link": "https://www.patrocinioonline.com.br/noticias/o-equipes-se-preparam-para-retirada-de-carreta-tombada-na-ponte-do-santo-antonio-em-patrocinio",
-    "fonte": "Patrocinio Online",
-    "tema": "Local e Cidades",
-    "resumo": "Caminhões-guincho da concessionária EPR e veículos de empresas contratadas já estão posicionados nas proximidades da ponte do Santo Antônio, em Patrocínio, para realizar a retirada da carreta carregada com bovinos que tombou no local nesse domingo (8).\n\nO acidente deixou o motorista ferido e provocou a morte de animais.\n\nA operação prevê a retirada da carreta e dos bovinos. Motoristas que passarem pelo trecho devem redobrar a atenção, pois há risco de acidentes e a rodovia poderá ser interditada a qualquer momento nesta segunda-feira (9), durante os trabalhos.\n\n⚠️ Atenção: evite aproximação do local e respeite a sinalização das equipes.\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-    "imagem": "/assets/images/social-alerta-completamente-interditada-a-mgc-462-para-retirada-de.jpg",
-    "category": "eventos",
-    "editorial_score": 7,
-    "commercial_score": 8,
-    "instagram_score": 7,
-    "event_related": true,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "alcance",
-    "target_customer": [
-      "organizadores de eventos empresariais",
-      "patrocinadores e marcas",
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual",
-      "transmissao com exposicao de patrocinadores",
-      "conteudo para redes sociais"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Feira (9)",
-    "event_city": "Patrocínio",
-    "event_date": "2026-11-16",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "ALERTA Completamente interditada a MGC 462  para retirada de carreta tombada na \n\nCaminhões-guincho da concessionária EPR e veículos de empresas contratadas já estão posicionados nas proximidades da ponte do Santo Antônio, em Patrocínio, para realizar a retirada da carreta carregada com bovinos que tombou no local nesse domingo (8).\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Seu evento pode chegar muito alem do publico presente."
-      },
-      "stories": [
-        "ALERTA Completamente interditada a MGC 462  para retirada de carreta tombada na ",
-        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-        "Seu evento pode chegar muito alem do publico presente."
-      ],
-      "carousel": {
-        "title": "ALERTA Completamente interditada a MGC 462  para retirada de carreta tombada na ",
-        "slides": [
-          "Caminhões-guincho da concessionária EPR e veículos de empresas contratadas já estão posicionados nas proximidades da ponte do Santo Antônio, em Patrocínio, para realizar a retirada da carreta carregada com bovinos que tombou no local nesse domingo (8).",
-          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-          "Seu evento pode chegar muito alem do publico presente."
-        ]
-      }
-    }
-  },
-  {
     "titulo": "SENAI abre inscrições para Programa de Aprendizagem Industrial em Minas Gerais",
     "link": "https://www.fiemg.com.br/regional-alto-paranaiba/noticias/senai-abre-inscricoes-para-programa-de-aprendizagem-industrial-em-minas-gerais/",
     "fonte": "FIEMG Alto Paranaiba",
@@ -2849,6 +2796,7 @@
           "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
         ]
       }
-    }
+    },
+    "_priority_score": 49.0
   }
 ]
