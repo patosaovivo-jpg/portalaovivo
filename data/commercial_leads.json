@@ -13580,10 +13580,10 @@
         "organizador de eventos"
       ],
       "commercial_score": 8,
-      "instagram_score": 7,
+      "instagram_score": 8,
       "transmission_opportunity": 9,
       "status": "novo",
-      "updated_at": "2026-11-09T18:59:17.012064-03:00",
+      "updated_at": "2026-11-10T18:15:53.076630-03:00",
       "detected_at": "2026-11-09T18:59:17.012064-03:00",
       "lead_id": "lev-ca162d13e5",
       "event_id": "evt-1c03107b42",
@@ -13617,7 +13617,14 @@
       "notes": "",
       "contato_status": "",
       "ultima_contato": "",
-      "prospecting_score": 7.5
+      "prospecting_score": 7.5,
+      "sources": [
+        {
+          "source_url": "https://www.patrocinioonline.com.br/noticias/suspeito-morre-em-confronto-com-a-policia-civil-e-armamento-pesado-e-apreendido-no-sul-de-minas",
+          "fonte": "Patrocinio Online",
+          "detected_at": "2026-11-10T18:15:53.076630-03:00"
+        }
+      ]
     },
     "Feira (8/10) e vão até 20 de outubro as||2027-10-20": {
       "lead_score": 6.2,
@@ -13887,7 +13894,79 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.0
+    },
+    "Campeonato Regional da LPD 2026|Cruzeiro da Fortaleza|2026-11-14": {
+      "lead_score": 9.1,
+      "priority": "MUITO FORTE",
+      "event_name": "Campeonato Regional da LPD 2026",
+      "event_type": "campeonato",
+      "city": "Cruzeiro da Fortaleza",
+      "event_date": "2026-11-14",
+      "days_until_event": 4,
+      "event_timing": "em_breve",
+      "organizer": "Liga\nPatense",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/nacional-da-serra-e-paranaiba-vencem-semifinais-nos-penaltis-e-decidem-o-titulo-do-campeonato-regional-da-lpd-2026",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "ligas e clubes esportivos",
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 8,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-11-10T18:15:45.903353-03:00",
+      "detected_at": "2026-11-10T18:15:45.903353-03:00",
+      "lead_id": "lev-be03239780",
+      "event_id": "evt-0f9b2141a2",
+      "recurring_event": true,
+      "recurrence_pattern": "recorrente",
+      "previous_event_detected": false,
+      "organizer_type": "liga esportiva",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "liga esportiva",
+        "clube esportivo",
+        "organizador de competicao"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "replay e placar",
+        "conteudo para redes sociais",
+        "streaming pay-per-view"
+      ],
+      "commercial_need": "Levar a competicao para torcedores de outras cidades e ampliar o alcance da torcida.",
+      "contact_window": "urgente",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Urgente — contactar imediatamente (a menos de 20 dias)",
+      "contact_reason": "Evento 'campeonato', em cruzeiro da fortaleza, faltam 4 dias, organizador em evidência.",
+      "suggested_outreach": "Ola! Vimos a noticia sobre Campeonato Regional da LPD 2026 em Cruzeiro da Fortaleza. O Portal Ao Vivo faz transmissao esportiva com producao multicamera, replay e cortes para redes sociais - assim a torcida de todas as cidades acompanha cada lance. Podemos conversar?",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 8.8
     }
   },
-  "atualizado": "2026-11-10T11:21:36.075136-03:00"
+  "atualizado": "2026-11-10T18:16:15.469278-03:00"
 }

@@ -351,6 +351,34 @@
       "aprovado_em": "",
       "observacao": "",
       "_displayed": false
+    },
+    {
+      "lead_id": "lev-be03239780",
+      "event_id": "evt-0f9b2141a2",
+      "event_name": "Campeonato Regional da LPD 2026",
+      "city": "Cruzeiro da Fortaleza",
+      "days_until_event": 4,
+      "event_timing": "em_breve",
+      "prospecting_priority": "urgente",
+      "contact_window": "urgente",
+      "potential_client_type": [
+        "liga esportiva"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "replay e placar",
+        "conteudo para redes sociais",
+        "streaming pay-per-view"
+      ],
+      "lead_score": 9.1,
+      "prospecting_score": 8.8,
+      "rascunho": "Ola! Vimos a noticia sobre Campeonato Regional da LPD 2026 em Cruzeiro da Fortaleza. O Portal Ao Vivo faz transmissao esportiva com producao multicamera, replay e cortes para redes sociais - assim a torcida de todas as cidades acompanha cada lance. Podemos conversar?",
+      "status": "pendente",
+      "enviado_em": "",
+      "aprovado_em": "",
+      "observacao": "",
+      "_displayed": false
     }
   ]
 }
