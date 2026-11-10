@@ -2798,5 +2798,56 @@
       }
     },
     "_priority_score": 49.0
+  },
+  {
+    "titulo": "MGC-462 é totalmente liberada após destombamento e remoção de carreta em Perdizes O tráfego flui normalmente nos dois sentidos da rodovia. há 6 horas",
+    "link": "https://www.patrocinioonline.com.br/noticias/pistas-da-mgc-462-sao-totalmente-liberadas-apos-destombamento-e-remocao-de-carreta-em-perdizes",
+    "fonte": "Patrocinio Online",
+    "tema": "Local e Cidades",
+    "resumo": "As pistas da MGC-462, no quilômetro 19, em Perdizes (MG), foram totalmente liberadas nesta segunda-feira (9), após os trabalhos de destombamento e remoção de uma carreta que havia tombado na tarde de domingo (8).\n\nO tráfego flui normalmente nos dois sentidos da rodovia.\n\nacidente foi registrado às 14h22 de domingo. Para o atendimento da ocorrência, a concessionária mobilizou duas viaturas de resgate, uma viatura de inspeção, um guincho pesado e um guincho leve. A Polícia Militar Rodoviária (PMRv) e o Corpo de Bombeiros também compareceram ao local.\n\nUma vítima foi socorrida pelas equipes de atendimento médico e encaminhada a uma unidade hospitalar pelo Serviço de Atendimento Móvel de Urgência (SAMU).\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+    "imagem": "/assets/images/social-mgc462-totalmente-liberada-aps-destombamento-e-remoo-de-carr.jpg",
+    "category": "eventos",
+    "editorial_score": 6,
+    "commercial_score": 8,
+    "instagram_score": 6,
+    "event_related": true,
+    "sports_related": false,
+    "regional": false,
+    "commercial_angle": "alcance",
+    "target_customer": [
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual",
+      "transmissao esportiva",
+      "producao multicamera"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Feira (9), após os trabalhos de destombamento e",
+    "event_city": "",
+    "event_date": "2026-11-16",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "MGC-462 é totalmente liberada após destombamento e remoção de carreta em Perdize\n\nAs pistas da MGC-462, no quilômetro 19, em Perdizes (MG), foram totalmente liberadas nesta segunda-feira (9), após os trabalhos de destombamento e remoção de uma carreta que havia tombado na tarde de domingo (8).\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu evento pode chegar muito alem do publico presente."
+      },
+      "stories": [
+        "MGC-462 é totalmente liberada após destombamento e remoção de carreta em Perdize",
+        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+        "Seu evento pode chegar muito alem do publico presente."
+      ],
+      "carousel": {
+        "title": "MGC-462 é totalmente liberada após destombamento e remoção de carreta em Perdize",
+        "slides": [
+          "As pistas da MGC-462, no quilômetro 19, em Perdizes (MG), foram totalmente liberadas nesta segunda-feira (9), após os trabalhos de destombamento e remoção de uma carreta que havia tombado na tarde de domingo (8).",
+          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+          "Seu evento pode chegar muito alem do publico presente."
+        ]
+      }
+    }
   }
 ]
