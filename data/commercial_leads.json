@@ -14304,7 +14304,79 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.0
+    },
+    "Feira (10) à Comissão Parlamentar de Inquérito|Patos de Minas|2027-05-29": {
+      "lead_score": 6.5,
+      "priority": "MEDIA",
+      "event_name": "Feira (10) à Comissão Parlamentar de Inquérito",
+      "event_type": "festa",
+      "city": "Patos de Minas",
+      "event_date": "2027-05-29",
+      "days_until_event": 199,
+      "event_timing": "futuro",
+      "organizer": "Prefeitura de Patos de Minas",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/patos-de-minas-ex-secretaria-de-saude-nega-irregularidades-em-contratos-e-pagamentos-investigados-pela-cpi-da-saude",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera",
+        "transmissao hibrida",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "camara municipal",
+        "ligas e clubes esportivos",
+        "associacoes e sindicatos",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 9,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-11-11T18:47:55.289549-03:00",
+      "detected_at": "2026-11-11T18:47:55.289549-03:00",
+      "lead_id": "lev-cdc0276240",
+      "event_id": "evt-8c39f4ba23",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "prefeitura",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "associacao",
+        "organizador de eventos"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Ampliar o alcance da festa para quem nao vai ao local e registrar a programacao.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'festa', em patos de minas, faltam 199 dias, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 6.2
     }
   },
-  "atualizado": "2026-11-11T10:35:08.250483-03:00"
+  "atualizado": "2026-11-11T18:48:00.059695-03:00"
 }
