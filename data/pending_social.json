@@ -3056,58 +3056,5 @@
         ]
       }
     }
-  },
-  {
-    "titulo": "Projeto Sanitaristas Mirins encerra atividades de 2026 em Lagoa Formosa",
-    "link": "https://www.patos1.com.br/noticia/projeto-sanitaristas-mirins-encerra-atividades-de-2026-em-lagoa-formosa",
-    "fonte": "Patos 1",
-    "tema": "Política",
-    "resumo": "Projeto Sanitaristas Mirins encerra atividades de 2026 em Lagoa Formosa\n\nNesta edição, o Sanitaristas Mirins contou também com a parceria do Projeto Semeando o Futuro, desenvolvido pela Secretaria Municipal de Meio Ambiente.\n\nO Instituto Mineiro de Agropecuária (IMA) encerrou, em Lagoa\n\nFormosa nesta quinta-feira (12/11), mais uma edição do Projeto Sanitaristas\n\nAudiências que acompanham esse tipo de conteudo crescem quando existe transmissao profissional: alem do publico presente, ha milhares de pessoas esperando acompanhar online.",
-    "imagem": "/assets/images/default.jpg",
-    "category": "eventos",
-    "editorial_score": 8,
-    "commercial_score": 10,
-    "instagram_score": 8,
-    "event_related": true,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "audiencia",
-    "target_customer": [
-      "prefeitura",
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual",
-      "transmissao hibrida",
-      "conteudo para redes sociais",
-      "transmissao com exposicao de patrocinadores"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Feira (12/11), mais uma edição do Projeto",
-    "event_city": "Lagoa Formosa",
-    "event_date": "2027-11-12",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Audiências que acompanham esse tipo de conteudo crescem quando existe transmissao profissional: alem do publico presente, ha milhares de pessoas esperando acompanhar online. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Projeto Sanitaristas Mirins encerra atividades de 2026 em Lagoa Formosa\n\nProjeto Sanitaristas Mirins encerra atividades de 2026 em Lagoa Formosa\n\nAlem do publico presente, existe uma audiencia esperando online.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Alem do publico presente, existe uma audiencia esperando online."
-      },
-      "stories": [
-        "Projeto Sanitaristas Mirins encerra atividades de 2026 em Lagoa Formosa",
-        "Audiências que acompanham esse tipo de conteudo crescem quando existe transmissao profissional: alem do publico presente, ha milhares de pessoas esperando acompanhar online.",
-        "Alem do publico presente, existe uma audiencia esperando online."
-      ],
-      "carousel": {
-        "title": "Projeto Sanitaristas Mirins encerra atividades de 2026 em Lagoa Formosa",
-        "slides": [
-          "Projeto Sanitaristas Mirins encerra atividades de 2026 em Lagoa Formosa",
-          "Audiências que acompanham esse tipo de conteudo crescem quando existe transmissao profissional: alem do publico presente, ha milhares de pessoas esperando acompanhar online.",
-          "Alem do publico presente, existe uma audiencia esperando online."
-        ]
-      }
-    }
   }
 ]
