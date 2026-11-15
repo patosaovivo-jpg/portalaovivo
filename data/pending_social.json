@@ -3056,5 +3056,114 @@
         ]
       }
     }
+  },
+  {
+    "titulo": "Vestibular UNIPAM 2027 será realizado neste mês",
+    "link": "https://www.patos1.com.br/noticia/vestibular-unipam-2027-sera-realizado-neste-mes",
+    "fonte": "Patos 1",
+    "tema": "Política",
+    "resumo": "Vestibular UNIPAM 2027 será realizado neste mês\n\nO Centro Universitário de Patos de Minas (UNIPAM) promoverá, no dia 29 de novembro (domingo), das 13h às 18h, no campus da instituição, o Processo Seletivo Vestibular para ingressantes no primeiro semestre de 2027. A novidade, deste ano, é a oferta do curso de Odontologia no período noturno.\n\nA prova será realizada presencialmente no campus da instituição. O processo seletivo será constituído de uma prova de redação e de provas com questões objetivas do tipo múltipla escolha, abrangendo as matérias da Base Nacional Comum do Ensino Médio.\n\nO investimento é de R$95,00. As inscrições serão realizadas, até o dia 24 de novembro (terça-feira), no site https://vestibular.unipam.edu.br/. De 25 a 27 de novembro, as inscrições ocorrem na Secretaria Acadêmica do UNIPAM, das 9h às 21h.",
+    "imagem": "/assets/images/social-vestibular-unipam-2027-ser-realizado-neste-ms.jpg",
+    "category": "eventos",
+    "editorial_score": 8,
+    "commercial_score": 8,
+    "instagram_score": 7,
+    "event_related": true,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "alcance",
+    "target_customer": [
+      "prefeitura",
+      "ligas e clubes esportivos",
+      "associacoes e sindicatos",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Feira)",
+    "event_city": "Patos de Minas",
+    "event_date": "2026-11-29",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Vestibular UNIPAM 2027 será realizado neste mês\n\nVestibular UNIPAM 2027 será realizado neste mês\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu evento pode chegar muito alem do publico presente."
+      },
+      "stories": [
+        "Vestibular UNIPAM 2027 será realizado neste mês",
+        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+        "Seu evento pode chegar muito alem do publico presente."
+      ],
+      "carousel": {
+        "title": "Vestibular UNIPAM 2027 será realizado neste mês",
+        "slides": [
+          "Vestibular UNIPAM 2027 será realizado neste mês",
+          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+          "Seu evento pode chegar muito alem do publico presente."
+        ]
+      }
+    }
+  },
+  {
+    "titulo": "Esportes Competição internacional de Enduro na próxima semana promete movimentar o esporte e o turismo em Patrocínio há 21 horas",
+    "link": "https://www.patrocinioonline.com.br/noticias/competicao-internacional-de-enduro-na-proxima-semana-promete-movimentar-o-esporte-e-o-turismo-em-patrocinio",
+    "fonte": "Patrocinio Online",
+    "tema": "Política",
+    "resumo": "Patrocínio se prepara para receber o Latino-Americano de Enduro, que será realizado entre os dias 18 e 22 de novembro, com a participação da Prefeitura Municipal na organização e apoio institucional. Diferentes secretarias municipais estão mobilizadas para garantir a estrutura necessária à realização do evento.\n\nA competição reunirá pilotos de diversas localidades e contará também com disputas dos campeonatos Brasileiro de Enduro, Brasileiro Kids, Mineiro de Enduro e Copa Cerrado.\n\nO apoio municipal contempla serviços de infraestrutura, logística, organização do trânsito, segurança, saúde, limpeza e comunicação, além da preparação dos espaços para receber atletas, equipes e visitantes. A atuação integrada das secretarias busca oferecer condições adequadas para a realização das atividades e contribuir para o atendimento ao público durante os dias de competição.\n\nO prefeito Gustavo Brasileiro destaca a importância de sediar eventos internacionais para fortalecer o turismo e movimentar...\n\nCom transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
+    "imagem": "/assets/images/social-esportes-competio-internacional-de-enduro-na-prxima-semana-p.jpg",
+    "category": "esportes",
+    "editorial_score": 8,
+    "commercial_score": 10,
+    "instagram_score": 8,
+    "event_related": true,
+    "sports_related": true,
+    "regional": true,
+    "commercial_angle": "esporte",
+    "target_customer": [
+      "prefeitura",
+      "ligas e clubes esportivos",
+      "patrocinadores e marcas",
+      "associacoes e sindicatos",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual",
+      "transmissao esportiva",
+      "producao multicamera",
+      "transmissao com exposicao de patrocinadores",
+      "conteudo para redes sociais"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Copa Cerrado",
+    "event_city": "Patrocínio",
+    "event_date": "2026-11-22",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Esportes Competição internacional de Enduro na próxima semana promete movimentar\n\nPatrocínio se prepara para receber o Latino-Americano de Enduro, que será realizado entre os dias 18 e 22 de novembro, com a participação da Prefeitura Municipal na organização e apoio institucional. Diferentes secretarias municipais estão mobilizadas para garantir a estrutura necessária à realizaçã\n\nA transmissao esportiva profissional leva cada lance para a torcida de toda a regiao.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
+      },
+      "stories": [
+        "Esportes Competição internacional de Enduro na próxima semana promete movimentar",
+        "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
+        "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
+      ],
+      "carousel": {
+        "title": "Esportes Competição internacional de Enduro na próxima semana promete movimentar",
+        "slides": [
+          "Patrocínio se prepara para receber o Latino-Americano de Enduro, que será realizado entre os dias 18 e 22 de novembro, com a participação da Prefeitura Municipal na organização e apoio institucional. Diferentes secretarias municipais estão mobilizadas para garantir a estrutura necessária à realizaçã",
+          "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
+          "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
+        ]
+      }
+    }
   }
 ]
