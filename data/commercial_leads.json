@@ -15753,7 +15753,76 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 8.3
+    },
+    "Feira (13/11)|Presidente Olegário|2027-11-13": {
+      "lead_score": 6.4,
+      "priority": "MEDIA",
+      "event_name": "Feira (13/11)",
+      "event_type": "feira",
+      "city": "Presidente Olegário",
+      "event_date": "2027-11-13",
+      "days_until_event": 362,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticias/cafeicultores-apoiados-pelo-sebrae-minas-sao-destaque-no-premio-coffee-of-the-year-2026",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera",
+        "transmissao com exposicao de patrocinadores"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 8,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-11-16T18:41:29.773934-03:00",
+      "detected_at": "2026-11-16T18:41:29.773934-03:00",
+      "lead_id": "lev-393c370a90",
+      "event_id": "evt-7ac65e870a",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'feira', em presidente olegário, faltam 362 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.5
     }
   },
-  "atualizado": "2026-11-16T07:40:58.351007-03:00"
+  "atualizado": "2026-11-16T18:41:32.768735-03:00"
 }
