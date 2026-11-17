@@ -3151,56 +3151,8 @@
           "Alem do publico presente, existe uma audiencia esperando online."
         ]
       }
-    }
-  },
-  {
-    "titulo": "Afogamento Jovem de 23 anos desaparece após se afogar durante pescaria em ribeirão de Santa Juliana Vítima pescava com tarrafa quando entrou em uma área mais profunda do Ribeirão Santa Juliana e foi s",
-    "link": "https://www.patrocinioonline.com.br/noticias/jovem-de-23-anos-desaparece-apos-se-afogar-durante-pescaria-em-ribeirao-de-santa-juliana",
-    "fonte": "Patrocinio Online",
-    "tema": "Local e Cidades",
-    "resumo": "O Corpo de Bombeiros Militar de Minas Gerais, por meio da equipe de Araxá, atendeu, na noite de segunda-feira (16), uma ocorrência de afogamento no município de Santa Juliana, nas proximidades do trevo de acesso à cidade, às margens da BR-452.\n\nA corporação foi acionada pela Polícia Militar por volta das 18h10, e a equipe chegou ao local aproximadamente às 19h10.\n\nVeja o video abaixo e nos siga no instagram\n\nSegundo informações preliminares repassadas pela Polícia Militar, dois homens estavam pescando com tarrafa no Ribeirão Santa Juliana quando um deles avançou para uma região mais profunda do curso d’água e acabou sendo submerso, não sendo mais visto.\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-    "imagem": "/assets/images/social-afogamento-jovem-de-23-anos-desaparece-aps-se-afogar-durante.jpg",
-    "category": "eventos",
-    "editorial_score": 7,
-    "commercial_score": 8,
-    "instagram_score": 7,
-    "event_related": true,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "alcance",
-    "target_customer": [
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Feira (16), uma ocorrência de afogamento",
-    "event_city": "Araxá",
-    "event_date": "",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Afogamento Jovem de 23 anos desaparece após se afogar durante pescaria em ribeir\n\nO Corpo de Bombeiros Militar de Minas Gerais, por meio da equipe de Araxá, atendeu, na noite de segunda-feira (16), uma ocorrência de afogamento no município de Santa Juliana, nas proximidades do trevo de acesso à cidade, às margens da BR-452.\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Seu evento pode chegar muito alem do publico presente."
-      },
-      "stories": [
-        "Afogamento Jovem de 23 anos desaparece após se afogar durante pescaria em ribeir",
-        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-        "Seu evento pode chegar muito alem do publico presente."
-      ],
-      "carousel": {
-        "title": "Afogamento Jovem de 23 anos desaparece após se afogar durante pescaria em ribeir",
-        "slides": [
-          "O Corpo de Bombeiros Militar de Minas Gerais, por meio da equipe de Araxá, atendeu, na noite de segunda-feira (16), uma ocorrência de afogamento no município de Santa Juliana, nas proximidades do trevo de acesso à cidade, às margens da BR-452.",
-          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
-          "Seu evento pode chegar muito alem do publico presente."
-        ]
-      }
-    }
+    },
+    "_priority_score": 36.0
   },
   {
     "titulo": "Em Destaque Conteúdo de Marca Natal com sabor de novidade: Confeittaria lança coleção exclusiva com panetones especiais Em clima natalino, a Confeittaria selecionou clientes para provarem as deliciosa",
@@ -3253,6 +3205,7 @@
           "Seu evento pode chegar muito alem do publico presente."
         ]
       }
-    }
+    },
+    "_priority_score": 45.0
   }
 ]
