@@ -3261,5 +3261,55 @@
       }
     },
     "_priority_score": 60.0
+  },
+  {
+    "titulo": "Ambulância que será usada na base do SAMU em Lagoa Formosa chega à cidade e reforça estrutura para início dos atendimentos",
+    "link": "https://www.patos1.com.br/noticia/ambulancia-que-sera-usada-na-base-do-samu-em-lagoa-formosa-chega-a-cidade-e-reforca-estrutura-para-inicio-dos-atendimentos",
+    "fonte": "Patos 1",
+    "tema": "Local e Cidades",
+    "resumo": "Ambulância que será usada na base do SAMU em Lagoa Formosa chega à cidade e reforça estrutura para início dos atendimentos\n\nVeículo fará parte da Base Descentralizada do serviço, que será inaugurada no dia 27 de novembro; previsão é que os atendimentos à população comecem em 7 de dezembro.\n\nA ambulância que atenderá à Base Descentralizada do Serviço de\n\nAtendimento Móvel de Urgência (SAMU) já está em Lagoa Formosa. O veículo chegou\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+    "imagem": "/assets/images/social-ambulncia-que-ser-usada-na-base-do-samu-em-lagoa-formosa-che.jpg",
+    "category": "eventos",
+    "editorial_score": 8,
+    "commercial_score": 8,
+    "instagram_score": 7,
+    "event_related": true,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "alcance",
+    "target_customer": [
+      "prefeitura",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Feira, dia 27 de novembro",
+    "event_city": "Lagoa Formosa",
+    "event_date": "2026-11-27",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Ambulância que será usada na base do SAMU em Lagoa Formosa chega à cidade e refo\n\nAmbulância que será usada na base do SAMU em Lagoa Formosa chega à cidade e reforça estrutura para início dos atendimentos\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu evento pode chegar muito alem do publico presente."
+      },
+      "stories": [
+        "Ambulância que será usada na base do SAMU em Lagoa Formosa chega à cidade e refo",
+        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+        "Seu evento pode chegar muito alem do publico presente."
+      ],
+      "carousel": {
+        "title": "Ambulância que será usada na base do SAMU em Lagoa Formosa chega à cidade e refo",
+        "slides": [
+          "Ambulância que será usada na base do SAMU em Lagoa Formosa chega à cidade e reforça estrutura para início dos atendimentos",
+          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+          "Seu evento pode chegar muito alem do publico presente."
+        ]
+      }
+    }
   }
 ]
