@@ -5133,7 +5133,7 @@
       "event_id": "evt-b12cbb9e5e",
       "recurring_event": false,
       "recurrence_pattern": "",
-      "previous_event_detected": false,
+      "previous_event_detected": true,
       "organizer_type": "prefeitura",
       "organizer_source": "Citado na notícia de Noticias do Triangulo",
       "organizer_url": "",
@@ -5159,7 +5159,7 @@
       "notes": "",
       "contato_status": "",
       "ultima_contato": "",
-      "prospecting_score": 5.8
+      "prospecting_score": 6.2
     },
     "Campeonato Regional da Liga Patense|Carmo do Paranaíba|2026-09-19": {
       "lead_score": 7.6,
@@ -17179,7 +17179,76 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 6.0
+    },
+    "Feira (18)|Patrocínio|2026-11-25": {
+      "lead_score": 7.9,
+      "priority": "FORTE",
+      "event_name": "Feira (18)",
+      "event_type": "feira",
+      "city": "Patrocínio",
+      "event_date": "2026-11-25",
+      "days_until_event": 6,
+      "event_timing": "em_breve",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticias/video-motociclista-fica-ferida-apos-carro-avancar-em-conversao-no-bairro-morada-nova-em-patrocinio",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-11-19T23:04:38.380732-03:00",
+      "detected_at": "2026-11-19T23:04:38.380732-03:00",
+      "lead_id": "lev-b51f9cfe75",
+      "event_id": "evt-8e085f556e",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": true,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "urgente",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Urgente — contactar imediatamente (a menos de 20 dias)",
+      "contact_reason": "Evento 'feira', em patrocínio, faltam 6 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 7.8
     }
   },
-  "atualizado": "2026-11-19T17:00:18.613460-03:00"
+  "atualizado": "2026-11-19T23:04:41.220575-03:00"
 }

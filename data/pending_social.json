@@ -3417,5 +3417,57 @@
         ]
       }
     }
+  },
+  {
+    "titulo": "Acidente VÍDEO - Motociclista fica ferida após carro avançar em conversão no bairro Morada Nova, em Patrocínio há 4 horas",
+    "link": "https://www.patrocinioonline.com.br/noticias/video-motociclista-fica-ferida-apos-carro-avancar-em-conversao-no-bairro-morada-nova-em-patrocinio",
+    "fonte": "Patrocinio Online",
+    "tema": "Local e Cidades",
+    "resumo": "Uma motociclista de 31 anos ficou ferida após uma colisão transversal envolvendo um carro e uma motocicleta na noite desta quarta-feira (18), no bairro Morada Nova, em Patrocínio. O acidente ocorreu por volta das 17h58M, no cruzamento da Avenida dos Bálsamos com a Alameda dos Angazeiros.\n\nDe acordo com o Registro de Eventos de Defesa Social (REDS) da Polícia Militar, chovia no momento da batida e a pista estava molhada. A condutora de um automóvel VW/Voyage prata, uma mulher de 67 anos, relatou aos militares que trafegava pela Avenida dos Bálsamos e, ao tentar realizar uma conversão à esquerda para acessar a Alameda dos Angazeiros, não percebeu a aproximação de uma motocicleta Motocicleta Honda Titan / Ks 150 preta, que seguia em sentido oposto pela mesma avenida.\n\nCom o impacto, a motociclista. A.C.R, de 31 anos caiu ao solo e sofreu ferimentos leves. Antes mesmo da chegada da equipe policial, uma Unidade dos Bombeiros realizou o resgate da vítima, encaminhando-a ao Pronto-Socorro ...\n\nPara quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+    "imagem": "/assets/images/social-acidente-vdeo-motociclista-fica-ferida-aps-carro-avanar-em-c.jpg",
+    "category": "eventos",
+    "editorial_score": 7,
+    "commercial_score": 8,
+    "instagram_score": 7,
+    "event_related": true,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "alcance",
+    "target_customer": [
+      "patrocinadores e marcas",
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao ao vivo",
+      "cobertura audiovisual",
+      "transmissao com exposicao de patrocinadores",
+      "conteudo para redes sociais"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "Feira (18)",
+    "event_city": "Patrocínio",
+    "event_date": "2026-11-25",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Acidente VÍDEO - Motociclista fica ferida após carro avançar em conversão no bai\n\nUma motociclista de 31 anos ficou ferida após uma colisão transversal envolvendo um carro e uma motocicleta na noite desta quarta-feira (18), no bairro Morada Nova, em Patrocínio. O acidente ocorreu por volta das 17h58M, no cruzamento da Avenida dos Bálsamos com a Alameda dos Angazeiros.\n\nSeu evento pode chegar muito alem do publico presente.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu evento pode chegar muito alem do publico presente."
+      },
+      "stories": [
+        "Acidente VÍDEO - Motociclista fica ferida após carro avançar em conversão no bai",
+        "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+        "Seu evento pode chegar muito alem do publico presente."
+      ],
+      "carousel": {
+        "title": "Acidente VÍDEO - Motociclista fica ferida após carro avançar em conversão no bai",
+        "slides": [
+          "Uma motociclista de 31 anos ficou ferida após uma colisão transversal envolvendo um carro e uma motocicleta na noite desta quarta-feira (18), no bairro Morada Nova, em Patrocínio. O acidente ocorreu por volta das 17h58M, no cruzamento da Avenida dos Bálsamos com a Alameda dos Angazeiros.",
+          "Para quem nao consegue estar no local, uma transmissao ao vivo amplia o alcance do evento e permite acompanhar a programacao de qualquer lugar.",
+          "Seu evento pode chegar muito alem do publico presente."
+        ]
+      }
+    }
   }
 ]
