@@ -406,6 +406,33 @@
       "aprovado_em": "",
       "observacao": "",
       "_displayed": false
+    },
+    {
+      "lead_id": "lev-ffdd16d308",
+      "event_id": "evt-bd12ab6882",
+      "event_name": "Corrida da Paróquia São João Paulo II",
+      "city": "Patrocínio",
+      "days_until_event": 2,
+      "event_timing": "em_breve",
+      "prospecting_priority": "urgente",
+      "contact_window": "muito_tarde",
+      "potential_client_type": [
+        "liga esportiva"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "cronometragem",
+        "conteudo para redes sociais"
+      ],
+      "lead_score": 8.8,
+      "prospecting_score": 8.1,
+      "rascunho": "Ola! Vimos a noticia sobre Corrida da Paróquia São João Paulo II em Patrocínio. O Portal Ao Vivo faz transmissao esportiva com producao multicamera, replay e cortes para redes sociais - assim a torcida de todas as cidades acompanha cada lance. Podemos conversar?",
+      "status": "pendente",
+      "enviado_em": "",
+      "aprovado_em": "",
+      "observacao": "",
+      "_displayed": false
     }
   ]
 }

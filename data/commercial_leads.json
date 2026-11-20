@@ -17248,7 +17248,77 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 7.8
+    },
+    "Corrida da Paróquia São João Paulo II|Patrocínio|2026-11-22": {
+      "lead_score": 8.8,
+      "priority": "FORTE",
+      "event_name": "Corrida da Paróquia São João Paulo II",
+      "event_type": "corrida",
+      "city": "Patrocínio",
+      "event_date": "2026-11-22",
+      "days_until_event": 2,
+      "event_timing": "em_breve",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticias/2-corrida-da-paroquia-sao-joao-paulo-ii-sera-realizada-neste-domingo-em-patrocinio-confira-as-novidades-e-inscricoes",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 9,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-11-20T07:58:39.917290-03:00",
+      "detected_at": "2026-11-20T07:58:39.917290-03:00",
+      "lead_id": "lev-ffdd16d308",
+      "event_id": "evt-bd12ab6882",
+      "recurring_event": true,
+      "recurrence_pattern": "recorrente",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "liga esportiva",
+        "produtor de eventos",
+        "prefeitura"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "cronometragem",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Cobrir a prova em varios pontos do percurso e crescer a audiencia online.",
+      "contact_window": "muito_tarde",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Muito tarde — apenas ação de emergência",
+      "contact_reason": "Evento 'corrida', em patrocínio, faltam 2 dias.",
+      "suggested_outreach": "Ola! Vimos a noticia sobre Corrida da Paróquia São João Paulo II em Patrocínio. O Portal Ao Vivo faz transmissao esportiva com producao multicamera, replay e cortes para redes sociais - assim a torcida de todas as cidades acompanha cada lance. Podemos conversar?",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 8.1
     }
   },
-  "atualizado": "2026-11-19T23:04:45.047483-03:00"
+  "atualizado": "2026-11-20T07:58:42.266822-03:00"
 }

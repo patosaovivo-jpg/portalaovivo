@@ -2,19 +2,19 @@
 
 > Gerado automaticamente pelo pipeline. `suggested_outreach` é **rascunho** — nada é enviado automaticamente.
 
-**Leads ativos:** 251  
+**Leads ativos:** 252  
 
 ## Agenda de contato
 
 | Prioridade | Quantidade |
 |---|---|
 | muito_urgente | 19 |
-| urgente | 74 |
+| urgente | 75 |
 | alto | 5 |
 | médio | 1 |
 | baixo | 2 |
 | monitorar | 150 |
-| **Total** | **251** |
+| **Total** | **252** |
 
 ## Prioridade de hoje
 
@@ -48,6 +48,7 @@
 - Feira (1/10), Minas Gerais [Triângulo Mineiro] — muito perto do evento (faltam 1 dias).
 - Festa de Santa Terezinha reúne fiéis [-] — muito perto do evento (faltam 1 dias).
 - Feira (05) [Patos de Minas] — muito perto do evento (faltam 2 dias).
+- Corrida da Paróquia São João Paulo II [Patrocínio] — muito perto do evento (faltam 2 dias).
 
 ## Passados (não prospectar para transmissão)
 
