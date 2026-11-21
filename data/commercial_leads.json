@@ -17452,7 +17452,75 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.9
+    },
+    "Feira, 20 de novembro|Arapuá|2026-11-20": {
+      "lead_score": 6.3,
+      "priority": "MEDIA",
+      "event_name": "Feira, 20 de novembro",
+      "event_type": "feira",
+      "city": "Arapuá",
+      "event_date": "2026-11-20",
+      "days_until_event": 0,
+      "event_timing": "hoje",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticias/passageira-fica-gravemente-ferida-apos-fiat-strada-sair-da-pista-e-capotar-na-lmg-638",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-11-20T23:01:54.768374-03:00",
+      "detected_at": "2026-11-20T23:01:54.768374-03:00",
+      "lead_id": "lev-b4fb4357b6",
+      "event_id": "evt-44f7f71372",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "urgente",
+      "prospecting_priority": "muito_urgente",
+      "recommended_contact_window": "Urgente — contactar imediatamente (a menos de 20 dias)",
+      "contact_reason": "Evento 'feira', em arapuá, faltam 0 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.9
     }
   },
-  "atualizado": "2026-11-20T16:42:21.688818-03:00"
+  "atualizado": "2026-11-20T23:01:57.351544-03:00"
 }
