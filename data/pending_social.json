@@ -3575,54 +3575,5 @@
       }
     },
     "_priority_score": 45.0
-  },
-  {
-    "titulo": "Colisão frontal na MG-410 envolvendo dois veículos deixa três mortos e dois feridos, em Presidente Olegário",
-    "link": "https://www.patos1.com.br/noticia/colisao-frontal-na-mg-410-envolvendo-dois-veiculos-deixa-tres-mortos-e-dois-feridos-em-presidente-olegario",
-    "fonte": "Patos 1",
-    "tema": "Local e Cidades",
-    "resumo": "Colisão frontal na MG-410 envolvendo dois veículos deixa três mortos e dois feridos, em Presidente Olegário\n\nO acidente aconteceu na tarde deste sábado (21), no km 54 da rodovia, duas pessoas sobreviveram e foram socorridas pelo SAMU.\n\nautomobilístico registrado na tarde deste sábado (21/11) deixou três pessoas\n\nmortas e outras duas feridas na rodovia MG-410, na altura do km 54, no\n\nA cobertura esportiva com transmissao ao vivo e producao multicamera permite que a torcida acompanhe cada lance de onde estiver.",
-    "imagem": "/assets/images/default.jpg",
-    "category": "eventos",
-    "editorial_score": 7,
-    "commercial_score": 8,
-    "instagram_score": 7,
-    "event_related": true,
-    "sports_related": false,
-    "regional": true,
-    "commercial_angle": "esporte",
-    "target_customer": [
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao esportiva",
-      "producao multicamera"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Corrida",
-    "event_city": "Presidente Olegário",
-    "event_date": "2027-11-21",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. A cobertura esportiva com transmissao ao vivo e producao multicamera permite que a torcida acompanhe cada lance de onde estiver. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Colisão frontal na MG-410 envolvendo dois veículos deixa três mortos e dois feri\n\nColisão frontal na MG-410 envolvendo dois veículos deixa três mortos e dois feridos, em Presidente Olegário\n\nSeu campeonato tambem pode ser acompanhado de qualquer lugar.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
-      },
-      "stories": [
-        "Colisão frontal na MG-410 envolvendo dois veículos deixa três mortos e dois feri",
-        "A cobertura esportiva com transmissao ao vivo e producao multicamera permite que a torcida acompanhe cada lance de onde estiver.",
-        "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
-      ],
-      "carousel": {
-        "title": "Colisão frontal na MG-410 envolvendo dois veículos deixa três mortos e dois feri",
-        "slides": [
-          "Colisão frontal na MG-410 envolvendo dois veículos deixa três mortos e dois feridos, em Presidente Olegário",
-          "A cobertura esportiva com transmissao ao vivo e producao multicamera permite que a torcida acompanhe cada lance de onde estiver.",
-          "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
-        ]
-      }
-    }
   }
 ]
