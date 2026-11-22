@@ -17983,7 +17983,72 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.2
+    },
+    "Corrida|Presidente Olegário|2027-11-21": {
+      "lead_score": 5.8,
+      "priority": "BAIXA",
+      "event_name": "Corrida",
+      "event_type": "corrida",
+      "city": "Presidente Olegário",
+      "event_date": "2027-11-21",
+      "days_until_event": 364,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/colisao-frontal-na-mg-410-envolvendo-dois-veiculos-deixa-tres-mortos-e-dois-feridos-em-presidente-olegario",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao esportiva",
+        "producao multicamera"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-11-22T16:04:14.377143-03:00",
+      "detected_at": "2026-11-22T16:04:14.377143-03:00",
+      "lead_id": "lev-6cb3571c6e",
+      "event_id": "evt-22805822fb",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "liga esportiva",
+        "produtor de eventos",
+        "prefeitura"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "cronometragem",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Cobrir a prova em varios pontos do percurso e crescer a audiencia online.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'corrida', em presidente olegário, faltam 364 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.3
     }
   },
-  "atualizado": "2026-11-22T07:45:17.827385-03:00"
+  "atualizado": "2026-11-22T16:04:16.797853-03:00"
 }
