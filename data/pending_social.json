@@ -3575,5 +3575,54 @@
       }
     },
     "_priority_score": 45.0
+  },
+  {
+    "titulo": "Em Destaque Acidente na MG-410 deixa três mortos e dois feridos graves em Presidente Olegário Batida frontal entre dois carros provocou a interdição total da pista no quilômetro 58. Um dos veículos se",
+    "link": "https://noticiasdotriangulo.com.br/noticia/acidente-mg-410-presidente-olegario-tres-mortos",
+    "fonte": "Noticias do Triangulo",
+    "tema": "Local e Cidades",
+    "resumo": "Acidente na MG-410 deixa três mortos e dois feridos graves em Presidente Olegário\n\nBatida frontal entre dois carros provocou a interdição total da pista no quilômetro 58. Um dos veículos se partiu ao meio com o impacto.\n\nTrês pessoas morreram e duas ficaram gravemente feridas em uma colisão frontal registrada no quilômetro 58 da MG-410, em Presidente Olegário, na tarde deste sábado. A violência do impacto fez com que o automóvel Chevrolet Tracker se partisse ao meio no momento da batida contra uma caminhonete GM/S10.\n\nReceba as principais notícias diretamente no seu celular.\n\nA cobertura esportiva com transmissao ao vivo e producao multicamera permite que a torcida acompanhe cada lance de onde estiver.",
+    "imagem": "/assets/images/social-em-destaque-acidente-na-mg410-deixa-trs-mortos-e-dois-ferido.jpg",
+    "category": "eventos",
+    "editorial_score": 7,
+    "commercial_score": 8,
+    "instagram_score": 8,
+    "event_related": true,
+    "sports_related": false,
+    "regional": true,
+    "commercial_angle": "esporte",
+    "target_customer": [
+      "organizador de eventos"
+    ],
+    "suggested_service": [
+      "transmissao esportiva",
+      "producao multicamera"
+    ],
+    "generate_reel": true,
+    "generate_cta": true,
+    "event_name": "",
+    "event_city": "Presidente Olegário",
+    "event_date": "2026-11-28",
+    "conteudo_social": {
+      "reel": {
+        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
+        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. A cobertura esportiva com transmissao ao vivo e producao multicamera permite que a torcida acompanhe cada lance de onde estiver. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
+        "caption": "Em Destaque Acidente na MG-410 deixa três mortos e dois feridos graves em Presid\n\nAcidente na MG-410 deixa três mortos e dois feridos graves em Presidente Olegário\n\nSeu campeonato tambem pode ser acompanhado de qualquer lugar.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
+        "cta": "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
+      },
+      "stories": [
+        "Em Destaque Acidente na MG-410 deixa três mortos e dois feridos graves em Presid",
+        "A cobertura esportiva com transmissao ao vivo e producao multicamera permite que a torcida acompanhe cada lance de onde estiver.",
+        "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
+      ],
+      "carousel": {
+        "title": "Em Destaque Acidente na MG-410 deixa três mortos e dois feridos graves em Presid",
+        "slides": [
+          "Acidente na MG-410 deixa três mortos e dois feridos graves em Presidente Olegário",
+          "A cobertura esportiva com transmissao ao vivo e producao multicamera permite que a torcida acompanhe cada lance de onde estiver.",
+          "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
+        ]
+      }
+    }
   }
 ]

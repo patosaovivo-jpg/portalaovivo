@@ -18048,7 +18048,72 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.3
+    },
+    "Em Destaque Acidente na MG-410 deixa três mortos e dois feri|Presidente Olegário|2026-11-28": {
+      "lead_score": 7.5,
+      "priority": "FORTE",
+      "event_name": "Em Destaque Acidente na MG-410 deixa três mortos e dois feri",
+      "event_type": "corrida",
+      "city": "Presidente Olegário",
+      "event_date": "2026-11-28",
+      "days_until_event": 6,
+      "event_timing": "em_breve",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Noticias do Triangulo",
+      "source_url": "https://noticiasdotriangulo.com.br/noticia/acidente-mg-410-presidente-olegario-tres-mortos",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao esportiva",
+        "producao multicamera"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 8,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-11-22T22:30:54.053419-03:00",
+      "detected_at": "2026-11-22T22:30:54.053419-03:00",
+      "lead_id": "lev-b7eb349ced",
+      "event_id": "evt-c639ca73b0",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "liga esportiva",
+        "produtor de eventos",
+        "prefeitura"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "cronometragem",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Cobrir a prova em varios pontos do percurso e crescer a audiencia online.",
+      "contact_window": "urgente",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Urgente — contactar imediatamente (a menos de 20 dias)",
+      "contact_reason": "Evento 'corrida', em presidente olegário, faltam 6 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 7.3
     }
   },
-  "atualizado": "2026-11-22T16:04:20.362670-03:00"
+  "atualizado": "2026-11-22T22:30:58.753628-03:00"
 }
