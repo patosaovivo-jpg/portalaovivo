@@ -7126,11 +7126,11 @@
         "associacoes e sindicatos",
         "organizador de eventos"
       ],
-      "commercial_score": 8,
+      "commercial_score": 10,
       "instagram_score": 7,
-      "transmission_opportunity": 9,
+      "transmission_opportunity": 10,
       "status": "novo",
-      "updated_at": "2026-09-24T00:06:17.522391-03:00",
+      "updated_at": "2026-11-24T05:21:55.068295-03:00",
       "detected_at": "2026-09-24T00:06:17.522391-03:00",
       "lead_id": "lev-628b080758",
       "event_id": "evt-f73917cb33",
@@ -7165,7 +7165,14 @@
       "notes": "",
       "contato_status": "",
       "ultima_contato": "",
-      "prospecting_score": 8.4
+      "prospecting_score": 8.4,
+      "sources": [
+        {
+          "source_url": "https://www.patrocinioonline.com.br/noticias/capotamento-na-br-135-deixa-tres-mortos-da-mesma-familia-incluindo-bebe-de-sete-meses-em-bocaiuva",
+          "fonte": "Patrocinio Online",
+          "detected_at": "2026-11-24T05:21:55.068295-03:00"
+        }
+      ]
     },
     "Primeiro Pedal do Mel|Arapuá|2026-10-11": {
       "lead_score": 8.2,
@@ -18314,7 +18321,143 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.9
+    },
+    "Encontro, lazer e confraternização|Lagoa Formosa|2027-01-06": {
+      "lead_score": 7.9,
+      "priority": "FORTE",
+      "event_name": "Encontro, lazer e confraternização",
+      "event_type": "festival",
+      "city": "Lagoa Formosa",
+      "event_date": "2027-01-06",
+      "days_until_event": 43,
+      "event_timing": "futuro",
+      "organizer": "Prefeitura de Lagoa Formosa",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 2,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/prefeitura-de-lagoa-formosa-realiza-primeira-edicao-do-natal-iluminado-na-praca-zuza-fonseca-em-parceira-com-a-cdl",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "camara municipal",
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-11-24T05:21:44.980291-03:00",
+      "detected_at": "2026-11-24T05:21:44.980291-03:00",
+      "lead_id": "lev-6766e1c129",
+      "event_id": "evt-15a5b4920f",
+      "recurring_event": true,
+      "recurrence_pattern": "recorrente",
+      "previous_event_detected": false,
+      "organizer_type": "prefeitura",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": true,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "produtor de eventos",
+        "organizador de shows"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "cortes para redes sociais",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Alcancar quem nao pode estar presencialmente e dar visibilidade a patrocinadores. Ampliar a visibilidade dos patrocinadores.",
+      "contact_window": "prospectar_prioridade",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Prospectar com prioridade (janela: 20 a 45 dias antes)",
+      "contact_reason": "Evento 'festival', em lagoa formosa, 2 patrocinador(es), faltam 43 dias, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 8.4
+    },
+    "Maratona Oficial de BH|Serra do Salitre|": {
+      "lead_score": 5.9,
+      "priority": "BAIXA",
+      "event_name": "Maratona Oficial de BH",
+      "event_type": "corrida",
+      "city": "Serra do Salitre",
+      "event_date": "",
+      "days_until_event": null,
+      "event_timing": "sem_data",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Prefeitura de Serra do Salitre",
+      "source_url": "https://serradosalitre.mg.gov.br/noticias/maratona-oficial-de-bh",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao esportiva",
+        "producao multicamera"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-11-24T05:21:57.230454-03:00",
+      "detected_at": "2026-11-24T05:21:57.230454-03:00",
+      "lead_id": "lev-d2580c5895",
+      "event_id": "evt-7f3996bce5",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "liga esportiva",
+        "produtor de eventos",
+        "prefeitura"
+      ],
+      "recommended_services": [
+        "transmissao esportiva",
+        "producao multicamera",
+        "cronometragem",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Cobrir a prova em varios pontos do percurso e crescer a audiencia online.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'corrida', em serra do salitre.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.4
     }
   },
-  "atualizado": "2026-11-23T20:26:15.281091-03:00"
+  "atualizado": "2026-11-24T05:22:00.233863-03:00"
 }
