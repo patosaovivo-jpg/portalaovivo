@@ -3678,58 +3678,8 @@
           "Seu evento pode chegar muito alem do publico presente."
         ]
       }
-    }
-  },
-  {
-    "titulo": "Acidente Capotamento na BR-135 deixa três mortos da mesma família, incluindo bebê de sete meses, em Bocaiúva Segundo os bombeiros, o veículo envolvido — um automóvel Honda, de cor prata, emplacado em ",
-    "link": "https://www.patrocinioonline.com.br/noticias/capotamento-na-br-135-deixa-tres-mortos-da-mesma-familia-incluindo-bebe-de-sete-meses-em-bocaiuva",
-    "fonte": "Patrocinio Online",
-    "tema": "Local e Cidades",
-    "resumo": "BOCAIÚVA, MG – Três pessoas da mesma família, entre elas um bebê de apenas sete meses de idade, morreram em um grave acidente automobilístico registrado no final da tarde desta segunda-feira (23), na rodovia BR-135, na altura do km 401, em Bocaiúva, no Norte de Minas.\n\nDe acordo com informações do Corpo de Bombeiros Militar de Minas Gerais (CBMMG), a ocorrência foi atendida por volta das 16h52 por militares do Posto Avançado de Bocaiúva, unidade subordinada ao 7º Batalhão de Bombeiros Militar (7º BBM). O acidente aconteceu nas proximidades da praça de pedágio da rodovia.\n\nSegundo os bombeiros, o veículo envolvido — um automóvel Honda, de cor prata, emplacado em Pedro Leopoldo (MG) — capotou e parou na pista contrária, no sentido norte da via.\n\nNo interior do carro estavam o motorista, de 30 anos (iniciais I.S.V.A.), uma passageira, de 27 anos (iniciais K.V.S.T.), e o filho do casal, um menino de sete meses (iniciais S.A.T.). Com o impacto do capotamento, o homem e a mulher ficaram p...\n\nCom transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
-    "imagem": "/assets/images/social-acidente-capotamento-na-br135-deixa-trs-mortos-da-mesma-faml.jpg",
-    "category": "esportes",
-    "editorial_score": 6,
-    "commercial_score": 10,
-    "instagram_score": 7,
-    "event_related": true,
-    "sports_related": true,
-    "regional": false,
-    "commercial_angle": "esporte",
-    "target_customer": [
-      "organizador de eventos"
-    ],
-    "suggested_service": [
-      "transmissao ao vivo",
-      "cobertura audiovisual",
-      "transmissao esportiva",
-      "producao multicamera"
-    ],
-    "generate_reel": true,
-    "generate_cta": true,
-    "event_name": "Feira (23)",
-    "event_city": "",
-    "event_date": "",
-    "conteudo_social": {
-      "reel": {
-        "hook": "O crescimento dos eventos regionais está mudando a forma de viver a cultura.",
-        "script": "O crescimento dos eventos regionais está mudando a forma de viver a cultura. Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao. Hoje, o evento não precisa terminar no local: a transmissão ao vivo leva a experiência para quem está em casa.",
-        "caption": "Acidente Capotamento na BR-135 deixa três mortos da mesma família, incluindo beb\n\nBOCAIÚVA, MG – Três pessoas da mesma família, entre elas um bebê de apenas sete meses de idade, morreram em um grave acidente automobilístico registrado no final da tarde desta segunda-feira (23), na rodovia BR-135, na altura do km 401, em Bocaiúva, no Norte de Minas.\n\nA transmissao esportiva profissional leva cada lance para a torcida de toda a regiao.\n\n#PortalAoVivo #Noticias #PatosDeMinas #AltoParanai #TrianguloMineiro #MinasGerais #NoticiasRegionais #UltimaHora",
-        "cta": "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
-      },
-      "stories": [
-        "Acidente Capotamento na BR-135 deixa três mortos da mesma família, incluindo beb",
-        "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
-        "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
-      ],
-      "carousel": {
-        "title": "Acidente Capotamento na BR-135 deixa três mortos da mesma família, incluindo beb",
-        "slides": [
-          "BOCAIÚVA, MG – Três pessoas da mesma família, entre elas um bebê de apenas sete meses de idade, morreram em um grave acidente automobilístico registrado no final da tarde desta segunda-feira (23), na rodovia BR-135, na altura do km 401, em Bocaiúva, no Norte de Minas.",
-          "Com transmissao esportiva profissional, cada lance, analise e emocao da partida chegam para quem nao consegue ir ao estadio - ampliando o alcance e o valor da competicao.",
-          "A transmissao esportiva profissional leva cada lance para a torcida de toda a regiao."
-        ]
-      }
-    }
+    },
+    "_priority_score": 60.0
   },
   {
     "titulo": "Maratona Oficial de BH",
@@ -3778,6 +3728,7 @@
           "Seu campeonato tambem pode ser acompanhado de qualquer lugar."
         ]
       }
-    }
+    },
+    "_priority_score": 60.0
   }
 ]
