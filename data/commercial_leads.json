@@ -18457,7 +18457,75 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.4
+    },
+    "Feira, 23/11, informações sobre a morte de uma|Carmo do Paranaíba|2027-11-23": {
+      "lead_score": 6.4,
+      "priority": "MEDIA",
+      "event_name": "Feira, 23/11, informações sobre a morte de uma",
+      "event_type": "feira",
+      "city": "Carmo do Paranaíba",
+      "event_date": "2027-11-23",
+      "days_until_event": 363,
+      "event_timing": "futuro",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticias/policia-civil-divulga-nota-sobre-morte-de-menina-de-um-ano-apos-possivel-afogamento-em-balde",
+      "commercial_angle": "esporte",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao esportiva",
+        "producao multicamera"
+      ],
+      "target_customer": [
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 8,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-11-25T01:02:15.688837-03:00",
+      "detected_at": "2026-11-25T01:02:15.688837-03:00",
+      "lead_id": "lev-714b432500",
+      "event_id": "evt-c7b10c97ec",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "monitorar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Monitorar (evento ainda distante ou sem data)",
+      "contact_reason": "Evento 'feira', em carmo do paranaíba, faltam 363 dias.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 5.5
     }
   },
-  "atualizado": "2026-11-24T17:01:28.152098-03:00"
+  "atualizado": "2026-11-25T01:02:19.004010-03:00"
 }
