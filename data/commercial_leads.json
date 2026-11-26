@@ -18665,7 +18665,77 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.9
+    },
+    "Feira, 16||2026-11-30": {
+      "lead_score": 9.5,
+      "priority": "MUITO FORTE",
+      "event_name": "Feira, 16",
+      "event_type": "feira",
+      "city": "",
+      "event_date": "2026-11-30",
+      "days_until_event": 5,
+      "event_timing": "em_breve",
+      "organizer": "",
+      "estimated_audience": 50000,
+      "porte": "grande",
+      "recurring": true,
+      "edition": 13,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/sicredi-esta-entre-as-50-empresas-com-melhor-reputacao-do-brasil",
+      "commercial_angle": "audiencia",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "organizadores de eventos empresariais",
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 10,
+      "instagram_score": 9,
+      "transmission_opportunity": 10,
+      "status": "novo",
+      "updated_at": "2026-11-25T22:36:49.285580-03:00",
+      "detected_at": "2026-11-25T22:36:49.285580-03:00",
+      "lead_id": "lev-839686d1f0",
+      "event_id": "evt-71ab02c991",
+      "recurring_event": true,
+      "recurrence_pattern": "edição 13",
+      "previous_event_detected": true,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "organizador de feiras",
+        "associacao",
+        "sindicato",
+        "empresa"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Mostrar os expositores para um publico maior que o da visita presencial.",
+      "contact_window": "urgente",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Urgente — contactar imediatamente (a menos de 20 dias)",
+      "contact_reason": "Evento 'feira', público estimado de 50000 pessoas, faltam 5 dias.",
+      "suggested_outreach": "Ola! Vimos a noticia sobre Feira, 16 em nossa região. O Portal Ao Vivo cobre feiras com transmissao ao vivo, entrevistas e exposicao ampliada dos expositores. Podemos conversar?",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 8.5
     }
   },
-  "atualizado": "2026-11-25T13:50:33.516681-03:00"
+  "atualizado": "2026-11-25T22:36:57.016824-03:00"
 }
