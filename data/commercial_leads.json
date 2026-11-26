@@ -18735,7 +18735,71 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 8.5
+    },
+    "De Volta a Patrocínio Após sete anos, delegada Laís retorna |Patrocínio|": {
+      "lead_score": 5.3,
+      "priority": "BAIXA",
+      "event_name": "De Volta a Patrocínio Após sete anos, delegada Laís retorna ",
+      "event_type": "inauguracao",
+      "city": "Patrocínio",
+      "event_date": "",
+      "days_until_event": null,
+      "event_timing": "passado",
+      "organizer": "",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": false,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 0,
+      "source": "Patrocinio Online",
+      "source_url": "https://www.patrocinioonline.com.br/noticias/apos-sete-anos-delegada-lais-retorna-a-patrocinio-depois-de-trajetoria-no-sul-de-minas",
+      "commercial_angle": "visibilidade",
+      "suggested_services": [
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-11-26T08:57:49.094717-03:00",
+      "detected_at": "2026-11-26T08:57:49.094717-03:00",
+      "lead_id": "lev-32f70b1362",
+      "event_id": "evt-6d18ee0ee1",
+      "recurring_event": false,
+      "recurrence_pattern": "",
+      "previous_event_detected": false,
+      "organizer_type": "",
+      "organizer_source": "",
+      "organizer_url": "",
+      "sponsors_detected": false,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "empresa"
+      ],
+      "recommended_services": [
+        "cobertura audiovisual",
+        "gravacao",
+        "conteudo para redes sociais"
+      ],
+      "commercial_need": "Registrar e divulgar a entrega da obra/iniciativa para a populacao.",
+      "contact_window": "nao_prospectar",
+      "prospecting_priority": "monitorar",
+      "recommended_contact_window": "Não prospectar para transmissão (evento já aconteceu)",
+      "contact_reason": "Evento 'inauguracao', em patrocínio, evento já realizado.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 4.7
     }
   },
-  "atualizado": "2026-11-25T22:37:01.899368-03:00"
+  "atualizado": "2026-11-26T08:57:52.396979-03:00"
 }
