@@ -19539,7 +19539,78 @@
       "contato_status": "",
       "ultima_contato": "",
       "prospecting_score": 5.5
+    },
+    "Festival Gastronômico, inauguração do Natal|Lagoa Formosa|2027-01-06": {
+      "lead_score": 7.9,
+      "priority": "FORTE",
+      "event_name": "Festival Gastronômico, inauguração do Natal",
+      "event_type": "festival",
+      "city": "Lagoa Formosa",
+      "event_date": "2027-01-06",
+      "days_until_event": 39,
+      "event_timing": "futuro",
+      "organizer": "Prefeitura de Lagoa Formosa",
+      "estimated_audience": null,
+      "porte": "",
+      "recurring": true,
+      "edition": null,
+      "sponsors": [],
+      "sponsors_count": 1,
+      "source": "Patos 1",
+      "source_url": "https://www.patos1.com.br/noticia/abertura-do-1o-festival-gastronomico-inauguracao-do-natal-iluminado-e-chegada-do-papai-noel-sao-marcadas-por-grande-participacao-popular-em-lagoa-formosa",
+      "commercial_angle": "alcance",
+      "suggested_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "transmissao com exposicao de patrocinadores",
+        "conteudo para redes sociais"
+      ],
+      "target_customer": [
+        "prefeitura",
+        "camara municipal",
+        "patrocinadores e marcas",
+        "organizador de eventos"
+      ],
+      "commercial_score": 8,
+      "instagram_score": 7,
+      "transmission_opportunity": 9,
+      "status": "novo",
+      "updated_at": "2026-11-28T08:25:47.796719-03:00",
+      "detected_at": "2026-11-28T08:25:47.796719-03:00",
+      "lead_id": "lev-b60ead0ef1",
+      "event_id": "evt-2ffb4ad10b",
+      "recurring_event": true,
+      "recurrence_pattern": "recorrente",
+      "previous_event_detected": false,
+      "organizer_type": "prefeitura",
+      "organizer_source": "Citado na notícia de Patos 1",
+      "organizer_url": "",
+      "sponsors_detected": true,
+      "sponsors_evidence": [],
+      "potential_client_type": [
+        "prefeitura",
+        "produtor de eventos",
+        "organizador de shows"
+      ],
+      "recommended_services": [
+        "transmissao ao vivo",
+        "cobertura audiovisual",
+        "cortes para redes sociais",
+        "entrevistas",
+        "exposicao de patrocinadores"
+      ],
+      "commercial_need": "Alcancar quem nao pode estar presencialmente e dar visibilidade a patrocinadores. Ampliar a visibilidade dos patrocinadores.",
+      "contact_window": "prospectar_prioridade",
+      "prospecting_priority": "urgente",
+      "recommended_contact_window": "Prospectar com prioridade (janela: 20 a 45 dias antes)",
+      "contact_reason": "Evento 'festival', em lagoa formosa, 1 patrocinador(es), faltam 39 dias, organizador em evidência.",
+      "suggested_outreach": "",
+      "contact_history": [],
+      "notes": "",
+      "contato_status": "",
+      "ultima_contato": "",
+      "prospecting_score": 8.4
     }
   },
-  "atualizado": "2026-11-27T22:09:11.882276-03:00"
+  "atualizado": "2026-11-28T08:25:51.556512-03:00"
 }
